@@ -1,0 +1,75 @@
+require('dotenv').config();
+const express = require('express');
+const cors = require('cors');
+const db = require('./db');
+const authRoutes = require('./routes/auth');
+const progressRoutes = require('./routes/progress');
+
+const app = express();
+const port = process.env.PORT || 5000;
+
+app.use(cors());
+app.use(express.json());
+
+app.get('/', (req, res) => {
+  res.send('Hello from the AI Masterclass backend!');
+});
+
+app.use('/api/auth', authRoutes);
+app.use('/api/progress', progressRoutes);
+
+app.get('/api/courses', async (req, res) => {
+  try {
+    const { rows } = await db.query('SELECT * FROM courses');
+    res.json(rows);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server error');
+  }
+});
+
+app.get('/api/courses/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { rows } = await db.query('SELECT * FROM courses WHERE id = $1', [id]);
+    if (rows.length === 0) {
+      return res.status(404).json({ msg: 'Course not found' });
+    }
+    res.json(rows[0]);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server error');
+  }
+});
+
+app.get('/api/courses/:id/modules', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { rows: modules } = await db.query('SELECT * FROM modules WHERE course_id = $1 ORDER BY order_index', [id]);
+
+    for (let module of modules) {
+      const { rows: exercises } = await db.query('SELECT * FROM exercises WHERE module_id = $1', [module.id]);
+      module.exercises = exercises;
+    }
+
+    res.json(modules);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server error');
+  }
+});
+
+app.get('/api/progress/:user_id', async (req, res) => {
+  try {
+    const { user_id } = req.params;
+    const { rows } = await db.query('SELECT exercise_id, status FROM user_progress WHERE user_id = $1', [user_id]);
+    res.json(rows);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server error');
+  }
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on port: ${port}`);
+});

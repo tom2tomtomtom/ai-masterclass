@@ -1,0 +1,966 @@
+{"level":"info","message":"Server is running on port: 5000","timestamp":"2025-07-07 12:13:18:1318"}
+{"level":"info","message":"Environment: development","timestamp":"2025-07-07 12:13:18:1318"}
+{"level":"info","message":"Server is running on port: 5000","timestamp":"2025-07-07 12:14:51:1451"}
+{"level":"info","message":"Environment: development","timestamp":"2025-07-07 12:14:51:1451"}
+{"level":"http","message":"GET / - ::1","timestamp":"2025-07-07 12:16:57:1657"}
+{"level":"http","message":"GET /health - ::1","timestamp":"2025-07-07 12:17:06:176"}
+{"level":"http","message":"GET /api/courses?status=draft - ::1","timestamp":"2025-07-07 12:17:12:1712"}
+{"level":"http","message":"POST /api/auth/register - ::1","timestamp":"2025-07-07 12:17:22:1722"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-07 12:18:13:1813"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-07 12:18:13:1813"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-07 12:18:13:1813"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-07 12:18:13:1813"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-07 12:18:13:1813"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-07 12:18:13:1813"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-07 12:18:13:1813"}
+{"body":"{\"email\":\"testuser@example.com\",\"password\":\"SecurePass123\\!\",\"first_name\":\"Test\",\"last_name\":\"User\"}","expose":true,"level":"error","message":"Unhandled error: Bad escaped character in JSON at position 58 (line 1 column 59)","stack":"SyntaxError: Bad escaped character in JSON at position 58 (line 1 column 59)\n    at JSON.parse (<anonymous>)\n    at parse (/Users/thomasdowuona-hyde/AI-Masterclass/backend/node_modules/body-parser/lib/types/json.js:92:19)\n    at /Users/thomasdowuona-hyde/AI-Masterclass/backend/node_modules/body-parser/lib/read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)\n    at invokeCallback (/Users/thomasdowuona-hyde/AI-Masterclass/backend/node_modules/raw-body/index.js:238:16)\n    at done (/Users/thomasdowuona-hyde/AI-Masterclass/backend/node_modules/raw-body/index.js:227:7)\n    at IncomingMessage.onEnd (/Users/thomasdowuona-hyde/AI-Masterclass/backend/node_modules/raw-body/index.js:287:7)\n    at IncomingMessage.emit (node:events:513:28)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)","status":400,"statusCode":400,"timestamp":"2025-07-07 12:18:25:1825","type":"entity.parse.failed"}
+{"level":"http","message":"POST /api/auth/register - ::1","timestamp":"2025-07-07 12:18:34:1834"}
+{"level":"http","message":"GET / - ::1","timestamp":"2025-07-07 12:23:51:2351"}
+{"level":"http","message":"GET /favicon.ico - ::1","timestamp":"2025-07-07 12:23:51:2351"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-07 12:23:52:2352"}
+{"level":"info","message":"Server is running on port: 5000","timestamp":"2025-07-07 12:30:53:3053"}
+{"level":"info","message":"Environment: development","timestamp":"2025-07-07 12:30:53:3053"}
+{"level":"info","message":"Starting periodic database health checks every 5 minutes","timestamp":"2025-07-07 12:30:53:3053"}
+{"level":"http","message":"GET /health - ::1","timestamp":"2025-07-07 12:33:00:330"}
+{"level":"http","message":"GET /health/database - ::1","timestamp":"2025-07-07 12:33:05:335"}
+{"error":"this.pool.connect is not a function","level":"error","message":"Database health check failed","responseTime":1,"timestamp":"2025-07-07 12:33:05:335"}
+{"level":"info","message":"Server is running on port: 5000","timestamp":"2025-07-07 12:33:51:3351"}
+{"level":"info","message":"Environment: development","timestamp":"2025-07-07 12:33:51:3351"}
+{"level":"info","message":"Starting periodic database health checks every 5 minutes","timestamp":"2025-07-07 12:33:51:3351"}
+{"level":"http","message":"GET /health/database - ::1","timestamp":"2025-07-07 12:33:59:3359"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 12:33:59:3359"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":86,"timestamp":"2025-07-07 12:33:59:3359"}
+{"level":"http","message":"GET /api/courses?status=published&level=1 - ::1","timestamp":"2025-07-07 12:34:17:3417"}
+{"level":"http","message":"GET /api/courses?status=published&level=1 - ::1","timestamp":"2025-07-07 12:34:23:3423"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 13:35:05:355"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":5214,"timestamp":"2025-07-07 13:35:06:356"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 13:39:59:3959"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":810,"timestamp":"2025-07-07 13:39:59:3959"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 13:44:57:4457"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":241,"timestamp":"2025-07-07 13:44:57:4457"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 13:49:57:4957"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":283,"timestamp":"2025-07-07 13:49:57:4957"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 13:54:57:5457"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":220,"timestamp":"2025-07-07 13:54:57:5457"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to generate maintenance recommendations","timestamp":"2025-07-07 13:54:57:5457"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 13:59:57:5957"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":120,"timestamp":"2025-07-07 13:59:57:5957"}
+{"level":"http","message":"GET /metrics - ::1","timestamp":"2025-07-07 14:03:29:329"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 14:04:57:457"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":267,"timestamp":"2025-07-07 14:04:57:457"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 14:10:02:102"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":3305,"timestamp":"2025-07-07 14:10:02:102"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 14:14:58:1458"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":871,"timestamp":"2025-07-07 14:14:58:1458"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 14:19:57:1957"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":109,"timestamp":"2025-07-07 14:19:57:1957"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 14:24:57:2457"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":209,"timestamp":"2025-07-07 14:24:57:2457"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 14:29:57:2957"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":95,"timestamp":"2025-07-07 14:29:57:2957"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 14:34:57:3457"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":127,"timestamp":"2025-07-07 14:34:57:3457"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 14:39:58:3958"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":477,"timestamp":"2025-07-07 14:39:58:3958"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 16:04:21:421"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":2446,"timestamp":"2025-07-07 16:04:21:421"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 16:36:16:3616"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":386,"timestamp":"2025-07-07 16:36:16:3616"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 16:59:03:593"}
+{"connections":{"idle":0,"total":2,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":1115,"timestamp":"2025-07-07 16:59:03:593"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 16:59:03:593"}
+{"connections":{"idle":0,"total":2,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":988179,"timestamp":"2025-07-07 16:59:03:593"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 17:29:21:2921"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":373,"timestamp":"2025-07-07 17:29:21:2921"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 17:43:33:4333"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":63,"timestamp":"2025-07-07 17:43:33:4333"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 18:16:19:1619"}
+{"connections":{"idle":0,"total":2,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":928243,"timestamp":"2025-07-07 18:16:19:1619"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 18:16:19:1619"}
+{"connections":{"idle":1,"total":2,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":916,"timestamp":"2025-07-07 18:16:19:1619"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 18:32:02:322"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":563,"timestamp":"2025-07-07 18:32:02:322"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 18:44:36:4436"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":1043,"timestamp":"2025-07-07 18:44:36:4436"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 19:19:25:1925"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":873,"timestamp":"2025-07-07 19:19:25:1925"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 19:45:32:4532"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":130,"timestamp":"2025-07-07 19:45:32:4532"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 20:35:57:3557"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":47,"timestamp":"2025-07-07 20:35:57:3557"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 20:46:39:4639"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":127,"timestamp":"2025-07-07 20:46:39:4639"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 21:03:36:336"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":58,"timestamp":"2025-07-07 21:03:36:336"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 21:35:32:3532"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":1042,"timestamp":"2025-07-07 21:35:32:3532"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 21:47:36:4736"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":92,"timestamp":"2025-07-07 21:47:36:4736"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 21:55:01:551"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":128,"timestamp":"2025-07-07 21:55:01:551"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 22:04:07:47"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":20,"timestamp":"2025-07-07 22:04:07:47"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 22:48:33:4833"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":52,"timestamp":"2025-07-07 22:48:33:4833"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 23:38:46:3846"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":1146,"timestamp":"2025-07-07 23:38:46:3846"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-07 23:49:38:4938"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":232,"timestamp":"2025-07-07 23:49:38:4938"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-08 00:07:14:714"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":11,"timestamp":"2025-07-08 00:07:14:714"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to generate maintenance recommendations","timestamp":"2025-07-08 00:07:14:714"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-08 00:40:15:4015"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":19,"timestamp":"2025-07-08 00:40:15:4015"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-08 00:50:41:5041"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":49,"timestamp":"2025-07-08 00:50:41:5041"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-08 01:06:10:610"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":28,"timestamp":"2025-07-08 01:06:10:610"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to generate maintenance recommendations","timestamp":"2025-07-08 01:06:10:610"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-08 01:40:58:4058"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":29,"timestamp":"2025-07-08 01:40:58:4058"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-08 01:51:39:5139"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":125,"timestamp":"2025-07-08 01:51:39:5139"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-08 02:08:13:813"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":11,"timestamp":"2025-07-08 02:08:13:813"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to generate maintenance recommendations","timestamp":"2025-07-08 02:08:13:813"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-08 02:42:16:4216"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":13,"timestamp":"2025-07-08 02:42:16:4216"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to generate maintenance recommendations","timestamp":"2025-07-08 02:42:16:4216"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-08 03:13:40:1340"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":320,"timestamp":"2025-07-08 03:13:40:1340"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-08 03:46:54:4654"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":327,"timestamp":"2025-07-08 03:46:54:4654"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-08 04:18:36:1836"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":240,"timestamp":"2025-07-08 04:18:36:1836"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-08 04:51:38:5138"}
+{"connections":{"idle":0,"total":2,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":978175,"timestamp":"2025-07-08 04:51:38:5138"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-08 04:51:38:5138"}
+{"connections":{"idle":1,"total":2,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":354,"timestamp":"2025-07-08 04:51:38:5138"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-08 05:09:35:935"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":11,"timestamp":"2025-07-08 05:09:35:935"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-08 05:25:16:2516"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":152,"timestamp":"2025-07-08 05:25:16:2516"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-08 05:40:55:4055"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":41,"timestamp":"2025-07-08 05:40:55:4055"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-08 05:56:39:5639"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":51,"timestamp":"2025-07-08 05:56:39:5639"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-08 06:17:18:1718"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":28,"timestamp":"2025-07-08 06:17:18:1718"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-08 06:33:03:333"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":55,"timestamp":"2025-07-08 06:33:03:333"}
+{"error":"column \"tablename\" does not exist","level":"error","message":"Failed to get table statistics","timestamp":"2025-07-08 06:46:38:4638"}
+{"connections":{"idle":0,"total":1,"waiting":0},"level":"info","message":"Database health check completed successfully","responseTime":4953,"timestamp":"2025-07-08 06:46:38:4638"}
+{"level":"info","message":"Server is running on port: 5001","timestamp":"2025-07-08 07:46:34:4634"}
+{"level":"info","message":"Environment: development","timestamp":"2025-07-08 07:46:34:4634"}
+{"level":"http","message":"GET /health - ::1","timestamp":"2025-07-08 07:48:40:4840"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 07:51:30:5130"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 07:51:41:5141"}
+{"level":"info","message":"SIGTERM signal received: closing HTTP server","timestamp":"2025-07-08 07:52:01:521"}
+{"level":"info","message":"Server is running on port: 5001","timestamp":"2025-07-08 07:52:36:5236"}
+{"level":"info","message":"Environment: development","timestamp":"2025-07-08 07:52:36:5236"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 07:54:44:5444"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 07:55:19:5519"}
+{"level":"http","message":"GET /api/interactive/lessons - ::1","timestamp":"2025-07-08 07:56:40:5640"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 07:56:56:5656"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 08:04:43:443"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 08:04:43:443"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 08:04:43:443"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 08:04:43:443"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 08:04:44:444"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 08:04:44:444"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 08:04:44:444"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 08:04:44:444"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 08:04:44:444"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 08:04:44:444"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 08:04:44:444"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 08:04:44:444"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 08:04:44:444"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:19:05:195"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:19:05:195"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:19:05:195"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:19:05:195"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:19:05:195"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:19:05:195"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:19:05:195"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 09:20:22:2022"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:20:22:2022"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:20:22:2022"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:20:22:2022"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:20:23:2023"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:20:23:2023"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 09:20:23:2023"}
+{"level":"http","message":"GET /health - ::1","timestamp":"2025-07-08 09:20:23:2023"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 09:20:23:2023"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 09:20:23:2023"}
+{"level":"http","message":"GET /api/courses/8deb9cc4-b283-48bc-a62e-eed246a171fc - ::1","timestamp":"2025-07-08 09:20:23:2023"}
+{"level":"http","message":"GET /api/courses/8deb9cc4-b283-48bc-a62e-eed246a171fc/modules - ::1","timestamp":"2025-07-08 09:20:23:2023"}
+{"level":"http","message":"GET /api/courses/64dda68e-468f-40f9-8952-931e968afad8 - ::1","timestamp":"2025-07-08 09:20:23:2023"}
+{"level":"http","message":"GET /api/courses/64dda68e-468f-40f9-8952-931e968afad8/modules - ::1","timestamp":"2025-07-08 09:20:23:2023"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:20:23:2023"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:20:23:2023"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 09:20:23:2023"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 09:20:23:2023"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:20:24:2024"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:20:24:2024"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:20:24:2024"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:20:24:2024"}
+{"level":"http","message":"GET /health - ::1","timestamp":"2025-07-08 09:20:24:2024"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 09:20:24:2024"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 09:20:24:2024"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 09:20:24:2024"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 09:20:24:2024"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:20:24:2024"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:20:24:2024"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:20:24:2024"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:20:24:2024"}
+{"level":"http","message":"POST /api/auth/register - ::1","timestamp":"2025-07-08 09:26:36:2636"}
+{"level":"http","message":"POST /api/auth/register - ::1","timestamp":"2025-07-08 09:26:44:2644"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-08 09:26:45:2645"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-08 09:26:50:2650"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-08 09:27:42:2742"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-08 09:30:02:302"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-08 09:34:23:3423"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-08 09:34:23:3423"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-08 09:34:24:3424"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:24:3424"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:24:3424"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:34:3434"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:34:3434"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:34:3434"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:34:3434"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:35:3435"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:35:3435"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:35:3435"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:35:3435"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:35:3435"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:35:3435"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:35:3435"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:35:3435"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:35:3435"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:35:3435"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:35:3435"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:35:3435"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 09:34:36:3436"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:36:3436"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:36:3436"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:36:3436"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:36:3436"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:36:3436"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:36:3436"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-08 09:34:38:3438"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:38:3438"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:38:3438"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-08 09:34:39:3439"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-08 09:34:39:3439"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:39:3439"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:39:3439"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 09:34:40:3440"}
+{"level":"http","message":"GET /health - ::1","timestamp":"2025-07-08 09:34:40:3440"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 09:34:40:3440"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 09:34:40:3440"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 09:34:40:3440"}
+{"level":"http","message":"GET /api/courses/8deb9cc4-b283-48bc-a62e-eed246a171fc - ::1","timestamp":"2025-07-08 09:34:40:3440"}
+{"level":"http","message":"GET /api/courses/8deb9cc4-b283-48bc-a62e-eed246a171fc/modules - ::1","timestamp":"2025-07-08 09:34:40:3440"}
+{"level":"http","message":"GET /api/courses/64dda68e-468f-40f9-8952-931e968afad8 - ::1","timestamp":"2025-07-08 09:34:40:3440"}
+{"level":"http","message":"GET /api/courses/64dda68e-468f-40f9-8952-931e968afad8/modules - ::1","timestamp":"2025-07-08 09:34:40:3440"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:40:3440"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:40:3440"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:40:3440"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 09:34:40:3440"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:40:3440"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:40:3440"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /health - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:41:3441"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:42:3442"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:42:3442"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:42:3442"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:42:3442"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:42:3442"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:42:3442"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:42:3442"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:42:3442"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:42:3442"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:42:3442"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:42:3442"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:42:3442"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:42:3442"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:42:3442"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:42:3442"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:42:3442"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:42:3442"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:42:3442"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:42:3442"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:34:42:3442"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-08 09:51:44:5144"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:51:44:5144"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:51:44:5144"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:55:11:5511"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:55:11:5511"}
+{"level":"http","message":"GET /api/courses/8deb9cc4-b283-48bc-a62e-eed246a171fc - ::1","timestamp":"2025-07-08 09:55:13:5513"}
+{"level":"http","message":"GET /api/courses/8deb9cc4-b283-48bc-a62e-eed246a171fc - ::1","timestamp":"2025-07-08 09:55:13:5513"}
+{"level":"http","message":"GET /api/courses/8deb9cc4-b283-48bc-a62e-eed246a171fc/modules - ::1","timestamp":"2025-07-08 09:55:13:5513"}
+{"level":"http","message":"GET /api/courses/8deb9cc4-b283-48bc-a62e-eed246a171fc/modules - ::1","timestamp":"2025-07-08 09:55:13:5513"}
+{"level":"http","message":"GET /api/progress/undefined - ::1","timestamp":"2025-07-08 09:55:13:5513"}
+{"level":"http","message":"GET /api/progress/undefined - ::1","timestamp":"2025-07-08 09:55:13:5513"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:55:20:5520"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:55:20:5520"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 09:55:20:5520"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 09:55:31:5531"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 09:55:31:5531"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 09:55:31:5531"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 09:55:31:5531"}
+{"level":"http","message":"GET /api/progress/undefined - ::1","timestamp":"2025-07-08 09:55:31:5531"}
+{"level":"http","message":"GET /api/progress/undefined - ::1","timestamp":"2025-07-08 09:55:31:5531"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 09:55:32:5532"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 09:55:33:5533"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 09:55:33:5533"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 09:55:33:5533"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 09:55:33:5533"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 09:55:33:5533"}
+{"level":"http","message":"GET /api/progress/undefined - ::1","timestamp":"2025-07-08 09:55:33:5533"}
+{"level":"info","message":"Server is running on port: 5001","timestamp":"2025-07-08 09:59:35:5935"}
+{"level":"info","message":"Environment: development","timestamp":"2025-07-08 09:59:35:5935"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:03:15:315"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:03:15:315"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:03:15:315"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:03:15:315"}
+{"level":"http","message":"GET /api/courses/invalid-course-id/modules - ::1","timestamp":"2025-07-08 10:03:15:315"}
+{"level":"http","message":"GET /api/courses/invalid-course-id/modules - ::1","timestamp":"2025-07-08 10:03:15:315"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:03:16:316"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:03:16:316"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-08 10:03:16:316"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:03:16:316"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:03:17:317"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:03:17:317"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:03:17:317"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:03:17:317"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:03:17:317"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:03:17:317"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-08 10:03:17:317"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:03:17:317"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:03:17:317"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:03:20:320"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:03:20:320"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:03:20:320"}
+{"level":"http","message":"GET /health - ::1","timestamp":"2025-07-08 10:03:21:321"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:03:21:321"}
+{"level":"http","message":"GET /api/auth/login - ::1","timestamp":"2025-07-08 10:03:21:321"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:03:21:321"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:03:21:321"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:03:21:321"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-08 10:06:50:650"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:06:51:651"}
+{"level":"info","message":"SIGTERM signal received: closing HTTP server","timestamp":"2025-07-08 10:09:50:950"}
+{"level":"info","message":"Server is running on port: 5001","timestamp":"2025-07-08 10:09:52:952"}
+{"level":"info","message":"Environment: development","timestamp":"2025-07-08 10:09:52:952"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:11:55:1155"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:18:1218"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:18:1218"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:18:1218"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:18:1218"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:12:19:1219"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:12:19:1219"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:12:19:1219"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:12:19:1219"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-08 10:12:19:1219"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:19:1219"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:19:1219"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:22:1222"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:22:1222"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:22:1222"}
+{"level":"http","message":"GET /health - ::1","timestamp":"2025-07-08 10:12:23:1223"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:23:1223"}
+{"level":"http","message":"GET /api/auth/login - ::1","timestamp":"2025-07-08 10:12:23:1223"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:23:1223"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:23:1223"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:23:1223"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses/invalid-course-id - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:46:1246"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:47:1247"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:47:1247"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:12:47:1247"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:12:47:1247"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:12:47:1247"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:12:47:1247"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-08 10:12:47:1247"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:48:1248"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:48:1248"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:51:1251"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:51:1251"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:51:1251"}
+{"level":"http","message":"GET /health - ::1","timestamp":"2025-07-08 10:12:51:1251"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:51:1251"}
+{"level":"http","message":"GET /api/auth/login - ::1","timestamp":"2025-07-08 10:12:51:1251"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:51:1251"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:51:1251"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:12:51:1251"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:14:15:1415"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:14:15:1415"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:14:15:1415"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:14:15:1415"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:14:15:1415"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:14:15:1415"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:14:25:1425"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:14:25:1425"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:14:25:1425"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:14:27:1427"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:14:27:1427"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:14:27:1427"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:14:27:1427"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:14:42:1442"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:14:42:1442"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:14:44:1444"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:14:44:1444"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:14:44:1444"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:14:44:1444"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 10:16:35:1635"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:16:35:1635"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 10:16:35:1635"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 10:16:35:1635"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 10:16:35:1635"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:16:35:1635"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:16:35:1635"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:16:36:1636"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:16:36:1636"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:16:36:1636"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:16:36:1636"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:16:36:1636"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:16:36:1636"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-08 10:16:36:1636"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:16:36:1636"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:16:36:1636"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:16:39:1639"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:16:39:1639"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:16:39:1639"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:16:39:1639"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:16:39:1639"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:16:39:1639"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 10:16:40:1640"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 10:16:40:1640"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 10:16:40:1640"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 10:16:40:1640"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 10:16:40:1640"}
+{"level":"http","message":"GET /health - ::1","timestamp":"2025-07-08 10:16:40:1640"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:16:40:1640"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:16:40:1640"}
+{"level":"info","message":"SIGTERM signal received: closing HTTP server","timestamp":"2025-07-08 10:19:12:1912"}
+{"level":"info","message":"Server is running on port: 5001","timestamp":"2025-07-08 10:19:25:1925"}
+{"level":"info","message":"Environment: development","timestamp":"2025-07-08 10:19:25:1925"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 10:21:34:2134"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 10:21:58:2158"}
+{"code":"42703","file":"parse_relation.c","length":114,"level":"error","line":"3657","message":"Error fetching course prompts: column p.usage_context does not exist","name":"error","position":"170","routine":"errorMissingColumn","severity":"ERROR","stack":"error: column p.usage_context does not exist\n    at /Users/thomasdowuona-hyde/AI-Masterclass/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async /Users/thomasdowuona-hyde/AI-Masterclass/backend/index.js:320:22","timestamp":"2025-07-08 10:21:58:2158"}
+{"level":"info","message":"SIGTERM signal received: closing HTTP server","timestamp":"2025-07-08 10:25:39:2539"}
+{"level":"info","message":"Server is running on port: 5001","timestamp":"2025-07-08 10:25:42:2542"}
+{"level":"info","message":"Environment: development","timestamp":"2025-07-08 10:25:42:2542"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:27:46:2746"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:28:43:2843"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:28:43:2843"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:28:44:2844"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:28:44:2844"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:28:44:2844"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:28:44:2844"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:28:44:2844"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:28:44:2844"}
+{"level":"http","message":"POST /api/auth/login - ::1","timestamp":"2025-07-08 10:28:45:2845"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:28:45:2845"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:28:45:2845"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:28:48:2848"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:28:48:2848"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:28:48:2848"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:28:48:2848"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:28:48:2848"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:28:48:2848"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 10:28:48:2848"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 10:28:48:2848"}
+{"code":"42703","file":"parse_relation.c","length":114,"level":"error","line":"3657","message":"Error fetching course prompts: column p.usage_context does not exist","name":"error","position":"170","routine":"errorMissingColumn","severity":"ERROR","stack":"error: column p.usage_context does not exist\n    at /Users/thomasdowuona-hyde/AI-Masterclass/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async /Users/thomasdowuona-hyde/AI-Masterclass/backend/index.js:322:22","timestamp":"2025-07-08 10:28:48:2848"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 10:28:48:2848"}
+{"code":"42703","file":"parse_relation.c","length":108,"level":"error","line":"3657","message":"Error fetching course quizzes: column q.question does not exist","name":"error","position":"38","routine":"errorMissingColumn","severity":"ERROR","stack":"error: column q.question does not exist\n    at /Users/thomasdowuona-hyde/AI-Masterclass/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async /Users/thomasdowuona-hyde/AI-Masterclass/backend/index.js:361:22","timestamp":"2025-07-08 10:28:48:2848"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 10:28:48:2848"}
+{"code":"42703","file":"parse_relation.c","length":116,"level":"error","line":"3657","message":"Error fetching course tasks: column t.submission_type does not exist","name":"error","position":"102","routine":"errorMissingColumn","severity":"ERROR","stack":"error: column t.submission_type does not exist\n    at /Users/thomasdowuona-hyde/AI-Masterclass/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async /Users/thomasdowuona-hyde/AI-Masterclass/backend/index.js:401:22","timestamp":"2025-07-08 10:28:48:2848"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 10:28:48:2848"}
+{"level":"http","message":"GET /health - ::1","timestamp":"2025-07-08 10:28:48:2848"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:28:48:2848"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:28:48:2848"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:30:37:3037"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:30:38:3038"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:30:38:3038"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:30:39:3039"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:30:39:3039"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:30:39:3039"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:30:39:3039"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:30:48:3048"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:30:48:3048"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:30:48:3048"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:30:48:3048"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:30:48:3048"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:30:48:3048"}
+{"level":"http","message":"POST /api/progress/complete-exercise - ::1","timestamp":"2025-07-08 10:30:51:3051"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:30:51:3051"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:30:51:3051"}
+{"level":"http","message":"POST /api/progress/complete-exercise - ::1","timestamp":"2025-07-08 10:30:52:3052"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:30:52:3052"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:30:52:3052"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:30:55:3055"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:30:55:3055"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:30:56:3056"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:30:56:3056"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:30:57:3057"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:30:57:3057"}
+{"level":"http","message":"GET /health - ::1","timestamp":"2025-07-08 10:31:31:3131"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:31:59:3159"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:31:59:3159"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:31:59:3159"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:32:01:321"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:32:01:321"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:32:01:321"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:32:01:321"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:33:02:332"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:33:02:332"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:33:02:332"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:33:03:333"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:33:03:333"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:33:03:333"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:33:03:333"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:33:40:3340"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:33:41:3341"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:33:41:3341"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:33:43:3343"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:33:43:3343"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:33:43:3343"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:33:43:3343"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:37:14:3714"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:37:14:3714"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:37:39:3739"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:37:39:3739"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:38:08:388"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:38:08:388"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:38:09:389"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:38:09:389"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:38:09:389"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:38:09:389"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:39:28:3928"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:39:28:3928"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:39:28:3928"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:39:28:3928"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:39:28:3928"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:39:28:3928"}
+{"level":"http","message":"GET /api/interactive/lessons/8fc1879d-0da3-4b6c-85e2-56ba9af903cd - ::1","timestamp":"2025-07-08 10:39:30:3930"}
+{"level":"http","message":"GET /api/interactive/lessons/8fc1879d-0da3-4b6c-85e2-56ba9af903cd - ::1","timestamp":"2025-07-08 10:39:30:3930"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:48:04:484"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:48:04:484"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:48:04:484"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:48:04:484"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:48:04:484"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:48:04:484"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:48:08:488"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:48:08:488"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:48:08:488"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:48:08:488"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:48:08:488"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:48:08:488"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:48:15:4815"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:48:15:4815"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:48:15:4815"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:48:17:4817"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:48:17:4817"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:48:17:4817"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:48:17:4817"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:48:53:4853"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:48:53:4853"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:48:54:4854"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:48:54:4854"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:48:54:4854"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:48:54:4854"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:49:19:4919"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:49:19:4919"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:49:20:4920"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:49:20:4920"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:49:20:4920"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:49:20:4920"}
+{"level":"http","message":"GET /api/interactive/lessons/8fc1879d-0da3-4b6c-85e2-56ba9af903cd - ::1","timestamp":"2025-07-08 10:49:22:4922"}
+{"level":"http","message":"GET /api/interactive/lessons/8fc1879d-0da3-4b6c-85e2-56ba9af903cd - ::1","timestamp":"2025-07-08 10:49:22:4922"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:51:49:5149"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:51:49:5149"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:51:49:5149"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:51:49:5149"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:51:49:5149"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:51:49:5149"}
+{"level":"http","message":"GET /api/interactive/lessons/8fc1879d-0da3-4b6c-85e2-56ba9af903cd - ::1","timestamp":"2025-07-08 10:51:49:5149"}
+{"level":"http","message":"GET /api/interactive/lessons/8fc1879d-0da3-4b6c-85e2-56ba9af903cd - ::1","timestamp":"2025-07-08 10:51:49:5149"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 10:51:52:5152"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 10:52:01:521"}
+{"level":"http","message":"GET /api/interactive/lessons/8fc1879d-0da3-4b6c-85e2-56ba9af903cd - ::1","timestamp":"2025-07-08 10:52:08:528"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:53:02:532"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:53:02:532"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:53:02:532"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:53:02:532"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:53:02:532"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:53:03:533"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 10:53:03:533"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 10:53:03:533"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 10:53:03:533"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 10:53:03:533"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 10:53:03:533"}
+{"code":"42703","file":"parse_relation.c","length":114,"level":"error","line":"3657","message":"Error fetching course prompts: column p.usage_context does not exist","name":"error","position":"170","routine":"errorMissingColumn","severity":"ERROR","stack":"error: column p.usage_context does not exist\n    at /Users/thomasdowuona-hyde/AI-Masterclass/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async /Users/thomasdowuona-hyde/AI-Masterclass/backend/index.js:322:22","timestamp":"2025-07-08 10:53:03:533"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 10:53:03:533"}
+{"code":"42703","file":"parse_relation.c","length":114,"level":"error","line":"3657","message":"Error fetching course prompts: column p.usage_context does not exist","name":"error","position":"170","routine":"errorMissingColumn","severity":"ERROR","stack":"error: column p.usage_context does not exist\n    at /Users/thomasdowuona-hyde/AI-Masterclass/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async /Users/thomasdowuona-hyde/AI-Masterclass/backend/index.js:322:22","timestamp":"2025-07-08 10:53:03:533"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 10:53:05:535"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:53:34:5334"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:53:34:5334"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:53:34:5334"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:53:34:5334"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:53:34:5334"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:53:34:5334"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 10:53:34:5334"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 10:53:34:5334"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 10:53:34:5334"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 10:53:34:5334"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 10:53:34:5334"}
+{"code":"42703","file":"parse_relation.c","length":114,"level":"error","line":"3657","message":"Error fetching course prompts: column p.usage_context does not exist","name":"error","position":"170","routine":"errorMissingColumn","severity":"ERROR","stack":"error: column p.usage_context does not exist\n    at /Users/thomasdowuona-hyde/AI-Masterclass/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async /Users/thomasdowuona-hyde/AI-Masterclass/backend/index.js:322:22","timestamp":"2025-07-08 10:53:34:5334"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 10:53:34:5334"}
+{"code":"42703","file":"parse_relation.c","length":114,"level":"error","line":"3657","message":"Error fetching course prompts: column p.usage_context does not exist","name":"error","position":"170","routine":"errorMissingColumn","severity":"ERROR","stack":"error: column p.usage_context does not exist\n    at /Users/thomasdowuona-hyde/AI-Masterclass/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async /Users/thomasdowuona-hyde/AI-Masterclass/backend/index.js:322:22","timestamp":"2025-07-08 10:53:34:5334"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:53:35:5335"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:53:35:5335"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:53:35:5335"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:53:35:5335"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:54:15:5415"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:54:15:5415"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:54:15:5415"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:54:15:5415"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:54:15:5415"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:54:15:5415"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:54:19:5419"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:54:19:5419"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:54:19:5419"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:54:20:5420"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:54:20:5420"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:54:20:5420"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:54:20:5420"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:54:27:5427"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 10:54:27:5427"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:54:29:5429"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 10:54:29:5429"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:54:29:5429"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 10:54:29:5429"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 10:54:47:5447"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 10:54:47:5447"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 10:54:47:5447"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 10:54:47:5447"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 10:54:47:5447"}
+{"code":"42703","file":"parse_relation.c","length":114,"level":"error","line":"3657","message":"Error fetching course prompts: column p.usage_context does not exist","name":"error","position":"170","routine":"errorMissingColumn","severity":"ERROR","stack":"error: column p.usage_context does not exist\n    at /Users/thomasdowuona-hyde/AI-Masterclass/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async /Users/thomasdowuona-hyde/AI-Masterclass/backend/index.js:322:22","timestamp":"2025-07-08 10:54:47:5447"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 10:54:47:5447"}
+{"code":"42703","file":"parse_relation.c","length":114,"level":"error","line":"3657","message":"Error fetching course prompts: column p.usage_context does not exist","name":"error","position":"170","routine":"errorMissingColumn","severity":"ERROR","stack":"error: column p.usage_context does not exist\n    at /Users/thomasdowuona-hyde/AI-Masterclass/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async /Users/thomasdowuona-hyde/AI-Masterclass/backend/index.js:322:22","timestamp":"2025-07-08 10:54:47:5447"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 10:56:07:567"}
+{"code":"42703","file":"parse_relation.c","length":114,"level":"error","line":"3657","message":"Error fetching course prompts: column p.usage_context does not exist","name":"error","position":"170","routine":"errorMissingColumn","severity":"ERROR","stack":"error: column p.usage_context does not exist\n    at /Users/thomasdowuona-hyde/AI-Masterclass/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async /Users/thomasdowuona-hyde/AI-Masterclass/backend/index.js:322:22","timestamp":"2025-07-08 10:56:07:567"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 10:56:07:567"}
+{"code":"42703","file":"parse_relation.c","length":108,"level":"error","line":"3657","message":"Error fetching course quizzes: column q.question does not exist","name":"error","position":"38","routine":"errorMissingColumn","severity":"ERROR","stack":"error: column q.question does not exist\n    at /Users/thomasdowuona-hyde/AI-Masterclass/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async /Users/thomasdowuona-hyde/AI-Masterclass/backend/index.js:361:22","timestamp":"2025-07-08 10:56:07:567"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 10:56:07:567"}
+{"code":"42703","file":"parse_relation.c","length":116,"level":"error","line":"3657","message":"Error fetching course tasks: column t.submission_type does not exist","name":"error","position":"102","routine":"errorMissingColumn","severity":"ERROR","stack":"error: column t.submission_type does not exist\n    at /Users/thomasdowuona-hyde/AI-Masterclass/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async /Users/thomasdowuona-hyde/AI-Masterclass/backend/index.js:401:22","timestamp":"2025-07-08 10:56:07:567"}
+{"level":"http","message":"GET /health - ::1","timestamp":"2025-07-08 11:00:45:045"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 11:00:45:045"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 11:00:45:045"}
+{"code":"42703","file":"parse_relation.c","length":114,"level":"error","line":"3657","message":"Error fetching course prompts: column p.usage_context does not exist","name":"error","position":"170","routine":"errorMissingColumn","severity":"ERROR","stack":"error: column p.usage_context does not exist\n    at /Users/thomasdowuona-hyde/AI-Masterclass/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async /Users/thomasdowuona-hyde/AI-Masterclass/backend/index.js:322:22","timestamp":"2025-07-08 11:00:45:045"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 11:00:45:045"}
+{"code":"42703","file":"parse_relation.c","length":108,"level":"error","line":"3657","message":"Error fetching course quizzes: column q.question does not exist","name":"error","position":"38","routine":"errorMissingColumn","severity":"ERROR","stack":"error: column q.question does not exist\n    at /Users/thomasdowuona-hyde/AI-Masterclass/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async /Users/thomasdowuona-hyde/AI-Masterclass/backend/index.js:361:22","timestamp":"2025-07-08 11:00:45:045"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 11:00:45:045"}
+{"code":"42703","file":"parse_relation.c","length":116,"level":"error","line":"3657","message":"Error fetching course tasks: column t.submission_type does not exist","name":"error","position":"102","routine":"errorMissingColumn","severity":"ERROR","stack":"error: column t.submission_type does not exist\n    at /Users/thomasdowuona-hyde/AI-Masterclass/backend/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async /Users/thomasdowuona-hyde/AI-Masterclass/backend/index.js:401:22","timestamp":"2025-07-08 11:00:45:045"}
+{"level":"info","message":"SIGTERM signal received: closing HTTP server","timestamp":"2025-07-08 11:00:47:047"}
+{"level":"info","message":"Server is running on port: 5001","timestamp":"2025-07-08 11:03:37:337"}
+{"level":"info","message":"Environment: development","timestamp":"2025-07-08 11:03:37:337"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 11:05:47:547"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 11:05:47:547"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 11:05:47:547"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 11:05:54:554"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 11:05:59:559"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 11:06:03:63"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 11:06:47:647"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 11:06:47:647"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 11:06:48:648"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 11:06:48:648"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 11:06:48:648"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 11:06:48:648"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 11:06:48:648"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 11:06:48:648"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 11:06:48:648"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 11:06:48:648"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 11:06:48:648"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 11:06:48:648"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 11:06:48:648"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 11:06:48:648"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 11:06:48:648"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 11:06:48:648"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 11:07:06:76"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 11:07:50:750"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 11:07:57:757"}
+{"level":"http","message":"GET /api/interactive/lessons/8fc1879d-0da3-4b6c-85e2-56ba9af903cd/prompts - ::1","timestamp":"2025-07-08 11:08:06:86"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 11:08:32:832"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 11:08:32:832"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 11:08:33:833"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 11:08:33:833"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 11:08:33:833"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 11:08:33:833"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 11:08:33:833"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 11:08:33:833"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 11:08:33:833"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 11:08:33:833"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 11:08:33:833"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 11:08:33:833"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 11:08:33:833"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 11:08:33:833"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 11:08:33:833"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 11:08:33:833"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 13:31:19:3119"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 13:31:19:3119"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 13:31:20:3120"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 13:31:20:3120"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 13:31:20:3120"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 13:31:20:3120"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 13:31:20:3120"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 13:31:20:3120"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 13:31:20:3120"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 13:31:20:3120"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 13:31:20:3120"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 13:31:20:3120"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 13:31:20:3120"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 13:31:20:3120"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 13:31:20:3120"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 13:31:20:3120"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 13:32:01:321"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 13:32:01:321"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 13:32:01:321"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 13:32:01:321"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 13:32:01:321"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 13:32:01:321"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 13:32:01:321"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 13:32:01:321"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 13:32:01:321"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 13:32:01:321"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 13:32:01:321"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 13:32:01:321"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 13:32:01:321"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 13:32:01:321"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 13:32:01:321"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 13:32:01:321"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 13:41:53:4153"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 13:41:53:4153"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 13:41:53:4153"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 13:41:53:4153"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 13:41:53:4153"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 13:41:53:4153"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 13:41:53:4153"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 13:41:53:4153"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 13:41:53:4153"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 13:41:53:4153"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 13:41:53:4153"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 13:41:53:4153"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 13:41:53:4153"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 13:41:53:4153"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 13:41:53:4153"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 13:41:55:4155"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 13:41:55:4155"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 13:41:55:4155"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 13:41:57:4157"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 13:41:57:4157"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 13:41:57:4157"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 13:41:57:4157"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 13:42:04:424"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 13:42:04:424"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 13:42:04:424"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 13:42:04:424"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 13:42:04:424"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 13:42:04:424"}
+{"level":"http","message":"GET /health - ::1","timestamp":"2025-07-08 13:42:46:4246"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 13:43:40:4340"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 13:43:40:4340"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 13:43:41:4341"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 13:43:41:4341"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 13:43:41:4341"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 13:43:41:4341"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 13:43:41:4341"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 13:43:41:4341"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 13:43:41:4341"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 13:43:41:4341"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 13:43:41:4341"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 13:43:41:4341"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 13:43:41:4341"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 13:43:42:4342"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 13:43:42:4342"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 13:43:42:4342"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 13:43:46:4346"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 13:43:46:4346"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 13:43:46:4346"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 13:43:49:4349"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 13:43:49:4349"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 13:43:49:4349"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 13:43:49:4349"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 13:43:55:4355"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 13:43:55:4355"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 13:43:55:4355"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 13:43:56:4356"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 13:43:56:4356"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 13:43:56:4356"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 13:43:56:4356"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 13:43:56:4356"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 13:43:56:4356"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 13:43:56:4356"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 13:48:40:4840"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-08 13:48:40:4840"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 13:48:41:4841"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-08 13:48:41:4841"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 13:48:41:4841"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-08 13:48:41:4841"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 13:48:41:4841"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-08 13:48:41:4841"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 13:48:41:4841"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-08 13:48:41:4841"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 13:48:41:4841"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-08 13:48:41:4841"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 13:48:41:4841"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-08 13:48:41:4841"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 13:48:41:4841"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-08 13:48:41:4841"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-09 11:52:23:5223"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-09 11:52:23:5223"}
+{"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-09 11:52:23:5223"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-09 11:52:29:5229"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4 - ::1","timestamp":"2025-07-09 11:52:29:5229"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-09 11:52:29:5229"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/modules - ::1","timestamp":"2025-07-09 11:52:29:5229"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-09 11:52:40:5240"}
+{"level":"http","message":"GET /api/courses - ::1","timestamp":"2025-07-09 11:52:40:5240"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-09 11:52:40:5240"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/lessons - ::1","timestamp":"2025-07-09 11:52:40:5240"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-09 11:52:40:5240"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/prompts - ::1","timestamp":"2025-07-09 11:52:40:5240"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-09 11:52:40:5240"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/quizzes - ::1","timestamp":"2025-07-09 11:52:40:5240"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-09 11:52:40:5240"}
+{"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-09 11:52:40:5240"}

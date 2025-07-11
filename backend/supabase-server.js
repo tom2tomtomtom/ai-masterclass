@@ -89,14 +89,22 @@ app.get('/health', async (req, res) => {
   }
 });
 
-// Root endpoint
+// Root endpoint - serve React app
 app.get('/', (req, res) => {
-  res.json({ 
-    message: 'AI Masterclass API',
-    version: '1.0.0',
-    status: 'active',
-    database: 'supabase',
-    documentation: '/api/docs'
+  const frontendPath = path.join(__dirname, '../frontend/build/index.html');
+  res.sendFile(frontendPath, (err) => {
+    if (err) {
+      // Fallback to API response if frontend not found
+      res.json({ 
+        message: 'AI Masterclass API',
+        version: '2.0.0',
+        status: 'active',
+        database: 'supabase',
+        documentation: '/api/docs',
+        frontend: 'not_found',
+        error: err.message
+      });
+    }
   });
 });
 

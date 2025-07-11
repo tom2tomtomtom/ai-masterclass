@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const compression = require('compression');
+const path = require('path');
 const { createClient } = require('@supabase/supabase-js');
 
 // Try to import logger, fallback to console if not available
@@ -46,6 +47,9 @@ app.use(cors({
 }));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+
+// Serve static files from React build
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 // Health check endpoint
 app.get('/health', async (req, res) => {
@@ -275,12 +279,17 @@ app.use((error, req, res, next) => {
   });
 });
 
-// 404 handler
-app.use((req, res) => {
-  res.status(404).json({
-    success: false,
-    message: 'Endpoint not found'
-  });
+// Serve React app for all non-API routes
+app.get('*', (req, res) => {
+  // Don't serve React app for API routes
+  if (req.path.startsWith('/api/') || req.path.startsWith('/health')) {
+    return res.status(404).json({
+      success: false,
+      message: 'Endpoint not found'
+    });
+  }
+  
+  res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
 });
 
 app.listen(port, () => {

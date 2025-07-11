@@ -1,0 +1,15 @@
+[phases.build]
+dependsOn = ["install"]
+
+[phases.install]
+dependsOn = ["setup"]
+
+[phases.setup]
+nixPkgs = ["nodejs", "npm"]
+
+[start]
+cmd = "cd backend && npm start"
+
+[variables]
+NODE_ENV = "production"
+NPM_CONFIG_PRODUCTION = "false"

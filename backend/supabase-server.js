@@ -3,7 +3,18 @@ const cors = require('cors');
 const helmet = require('helmet');
 const compression = require('compression');
 const { createClient } = require('@supabase/supabase-js');
-const logger = require('./utils/logger');
+
+// Try to import logger, fallback to console if not available
+let logger;
+try {
+  logger = require('./utils/logger');
+} catch (error) {
+  logger = {
+    info: console.log,
+    error: console.error,
+    warn: console.warn
+  };
+}
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -273,8 +284,16 @@ app.use((req, res) => {
 });
 
 app.listen(port, () => {
-  logger.info(`AI Masterclass Server running on port ${port}`);
-  logger.info(`Environment: ${process.env.NODE_ENV}`);
-  logger.info(`Supabase URL: ${supabaseUrl}`);
-  logger.info(`Service Role Key configured: ${supabaseServiceKey ? 'Yes' : 'No'}`);
+  console.log(`🚀 AI Masterclass Supabase Server running on port ${port}`);
+  console.log(`Environment: ${process.env.NODE_ENV}`);
+  console.log(`Supabase URL: ${supabaseUrl}`);
+  console.log(`Service Role Key configured: ${supabaseServiceKey ? 'Yes' : 'No'}`);
+  
+  // Use logger if available
+  if (logger) {
+    logger.info(`AI Masterclass Server running on port ${port}`);
+    logger.info(`Environment: ${process.env.NODE_ENV}`);
+    logger.info(`Supabase URL: ${supabaseUrl}`);
+    logger.info(`Service Role Key configured: ${supabaseServiceKey ? 'Yes' : 'No'}`);
+  }
 });

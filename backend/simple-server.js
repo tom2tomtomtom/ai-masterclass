@@ -95,5 +95,7 @@ app.post('/init-db', async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+  console.log(`AI Masterclass Server running on port ${port}`);
+  console.log(`Environment: ${process.env.NODE_ENV}`);
+  console.log(`Database URL configured: ${process.env.DATABASE_URL ? 'Yes' : 'No'}`);
 });

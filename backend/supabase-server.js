@@ -63,6 +63,14 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 // Trust proxy for Railway deployment
 app.set('trust proxy', 1);
 
+// Mount API routes
+try {
+  const authRoutes = require('./routes/auth');
+  app.use('/api/auth', authRoutes);
+} catch (error) {
+  console.log('Auth routes not available:', error.message);
+}
+
 // Serve static files from React build
 app.use(express.static(path.join(__dirname, 'build')));
 

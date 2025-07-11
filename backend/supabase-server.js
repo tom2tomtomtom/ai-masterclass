@@ -64,7 +64,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.set('trust proxy', 1);
 
 // Serve static files from React build
-app.use(express.static(path.join(__dirname, '../frontend/build')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 // Health check endpoint
 app.get('/health', async (req, res) => {
@@ -104,7 +104,7 @@ app.get('/health', async (req, res) => {
 
 // Root endpoint - serve React app
 app.get('/', (req, res) => {
-  const frontendPath = path.join(__dirname, '../frontend/build/index.html');
+  const frontendPath = path.join(__dirname, 'build/index.html');
   res.sendFile(frontendPath, (err) => {
     if (err) {
       // Fallback to API response if frontend not found
@@ -323,7 +323,7 @@ app.get('*', (req, res) => {
     });
   }
   
-  res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
+  res.sendFile(path.join(__dirname, 'build/index.html'));
 });
 
 app.listen(port, () => {

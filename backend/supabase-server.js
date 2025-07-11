@@ -110,7 +110,7 @@ app.get('/', (req, res) => {
       // Fallback to API response if frontend not found
       res.json({ 
         message: 'AI Masterclass API',
-        version: '2.0.0',
+        version: '2.1.0',
         status: 'active',
         database: 'supabase',
         documentation: '/api/docs',

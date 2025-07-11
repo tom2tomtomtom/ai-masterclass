@@ -1,8 +1,10 @@
 [phases.build]
 dependsOn = ["install"]
+cmds = ["cd frontend && REACT_APP_API_URL='' npm run build"]
 
 [phases.install]
 dependsOn = ["setup"]
+cmds = ["cd backend && npm install", "cd frontend && npm install"]
 
 [phases.setup]
 nixPkgs = ["nodejs", "npm"]

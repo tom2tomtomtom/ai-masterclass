@@ -65,10 +65,27 @@ app.set('trust proxy', 1);
 
 // Mount API routes
 try {
-  const authRoutes = require('./routes/auth');
+  const authRoutes = require('./routes/supabase-auth');
   app.use('/api/auth', authRoutes);
+  console.log('✅ Supabase authentication routes loaded');
 } catch (error) {
-  console.log('Auth routes not available:', error.message);
+  console.log('❌ Supabase auth routes not available:', error.message);
+}
+
+try {
+  const progressRoutes = require('./routes/supabase-progress');
+  app.use('/api/progress', progressRoutes);
+  console.log('✅ Supabase progress routes loaded');
+} catch (error) {
+  console.log('❌ Supabase progress routes not available:', error.message);
+}
+
+try {
+  const interactiveRoutes = require('./routes/supabase-interactive');
+  app.use('/api/interactive', interactiveRoutes);
+  console.log('✅ Supabase interactive routes loaded');
+} catch (error) {
+  console.log('❌ Supabase interactive routes not available:', error.message);
 }
 
 // Serve static files from React build
@@ -174,13 +191,24 @@ app.post('/init-db', async (req, res) => {
   }
 });
 
-// Get all courses
+// Get all courses with pagination and filtering
 app.get('/api/courses', async (req, res) => {
   try {
-    const { data, error } = await supabase
+    const { page = 1, limit = 10, level, status = 'published' } = req.query;
+    const offset = (page - 1) * limit;
+    
+    let query = supabase
       .from('courses')
-      .select('*')
-      .order('level', { ascending: true });
+      .select('id, title, description, level, duration_minutes, created_at, updated_at', { count: 'exact' })
+      .order('level', { ascending: true })
+      .order('created_at', { ascending: true })
+      .range(offset, offset + limit - 1);
+    
+    if (level) {
+      query = query.eq('level', level);
+    }
+    
+    const { data, error, count } = await query;
     
     if (error) {
       logger.error('Get courses error:', error);
@@ -192,7 +220,16 @@ app.get('/api/courses', async (req, res) => {
       });
     }
     
-    res.json({ success: true, data: data || [] });
+    res.json({ 
+      success: true, 
+      data: data || [],
+      pagination: {
+        page: parseInt(page),
+        limit: parseInt(limit),
+        total: count || 0,
+        pages: Math.ceil((count || 0) / limit)
+      }
+    });
   } catch (error) {
     logger.error('Get courses error:', error);
     res.json({ 
@@ -215,13 +252,23 @@ app.get('/api/courses/:id', async (req, res) => {
       .eq('id', id)
       .single();
     
-    if (courseError) throw courseError;
+    if (courseError) {
+      if (courseError.code === 'PGRST116') {
+        return res.status(404).json({
+          success: false,
+          msg: 'Course not found or not available'
+        });
+      }
+      throw courseError;
+    }
     
+    // Get lessons for this specific course
     const { data: lessons, error: lessonsError } = await supabase
       .from('lessons')
       .select('*')
       .eq('course_id', id)
-      .order('order_index', { ascending: true });
+      .limit(10)
+      .order('created_at', { ascending: true });
     
     if (lessonsError) throw lessonsError;
     
@@ -243,13 +290,21 @@ app.get('/api/lessons/:id', async (req, res) => {
       .eq('id', id)
       .single();
     
-    if (lessonError) throw lessonError;
+    if (lessonError) {
+      if (lessonError.code === 'PGRST116') {
+        return res.status(404).json({
+          success: false,
+          msg: 'Lesson not found'
+        });
+      }
+      throw lessonError;
+    }
     
     // Get related content
     const [promptsResult, quizzesResult, tasksResult] = await Promise.all([
-      supabase.from('prompts').select('*').eq('lesson_id', id),
-      supabase.from('quizzes').select('*').eq('lesson_id', id),
-      supabase.from('tasks').select('*').eq('lesson_id', id)
+      supabase.from('prompts').select('*').eq('lesson_id', id).order('created_at', { ascending: true }),
+      supabase.from('quizzes').select('*').eq('lesson_id', id).order('created_at', { ascending: true }),
+      supabase.from('tasks').select('*').eq('lesson_id', id).order('created_at', { ascending: true })
     ]);
     
     res.json({ 
@@ -264,6 +319,239 @@ app.get('/api/lessons/:id', async (req, res) => {
   } catch (error) {
     logger.error('Get lesson error:', error);
     res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// Course modules endpoint (simplified - modules table doesn't exist yet)
+app.get('/api/courses/:id/modules', async (req, res) => {
+  try {
+    const { id } = req.params;
+    
+    // Return empty modules for now since table doesn't exist
+    res.json({
+      success: true,
+      data: [],
+      message: 'Modules table not yet implemented'
+    });
+  } catch (error) {
+    logger.error('Error fetching course modules:', error);
+    res.status(500).json({
+      success: false,
+      msg: 'Unable to fetch course modules. Please try again later.'
+    });
+  }
+});
+
+// Course lessons endpoint (fixed to filter by course_id)
+app.get('/api/courses/:id/lessons', async (req, res) => {
+  try {
+    const { id } = req.params;
+    
+    // Filter lessons by course_id
+    const { data: lessons, error } = await supabase
+      .from('lessons')
+      .select('*')
+      .eq('course_id', id)
+      .order('created_at', { ascending: true });
+    
+    if (error) throw error;
+    
+    res.json({
+      success: true,
+      data: lessons || []
+    });
+  } catch (error) {
+    logger.error('Error fetching course lessons:', error);
+    res.status(500).json({
+      success: false,
+      msg: 'Unable to fetch course lessons. Please try again later.'
+    });
+  }
+});
+
+// Course prompts endpoint (fixed to filter by course_id through lessons)
+app.get('/api/courses/:id/prompts', async (req, res) => {
+  try {
+    const { id } = req.params;
+    
+    // Get lessons for this course first, then their prompts
+    const { data: lessons, error: lessonsError } = await supabase
+      .from('lessons')
+      .select('id')
+      .eq('course_id', id);
+    
+    if (lessonsError) throw lessonsError;
+    
+    if (!lessons || lessons.length === 0) {
+      return res.json({
+        success: true,
+        data: []
+      });
+    }
+    
+    const lessonIds = lessons.map(lesson => lesson.id);
+    
+    // Get prompts for these lessons
+    const { data: prompts, error } = await supabase
+      .from('prompts')
+      .select('*')
+      .in('lesson_id', lessonIds)
+      .order('created_at', { ascending: true });
+    
+    if (error) throw error;
+    
+    res.json({
+      success: true,
+      data: prompts || []
+    });
+  } catch (error) {
+    logger.error('Error fetching course prompts:', error);
+    res.status(500).json({
+      success: false,
+      msg: 'Unable to fetch course prompts. Please try again later.'
+    });
+  }
+});
+
+// Course quizzes endpoint (fixed to filter by course_id through lessons)
+app.get('/api/courses/:id/quizzes', async (req, res) => {
+  try {
+    const { id } = req.params;
+    
+    // Get lessons for this course first, then their quizzes
+    const { data: lessons, error: lessonsError } = await supabase
+      .from('lessons')
+      .select('id')
+      .eq('course_id', id);
+    
+    if (lessonsError) throw lessonsError;
+    
+    if (!lessons || lessons.length === 0) {
+      return res.json({
+        success: true,
+        data: []
+      });
+    }
+    
+    const lessonIds = lessons.map(lesson => lesson.id);
+    
+    // Get quizzes for these lessons
+    const { data: quizzes, error } = await supabase
+      .from('quizzes')
+      .select('*')
+      .in('lesson_id', lessonIds)
+      .order('created_at', { ascending: true });
+    
+    if (error) throw error;
+    
+    res.json({
+      success: true,
+      data: quizzes || []
+    });
+  } catch (error) {
+    logger.error('Error fetching course quizzes:', error);
+    res.status(500).json({
+      success: false,
+      msg: 'Unable to fetch course quizzes. Please try again later.'
+    });
+  }
+});
+
+// Course tasks endpoint (fixed to filter by course_id through lessons)
+app.get('/api/courses/:id/tasks', async (req, res) => {
+  try {
+    const { id } = req.params;
+    
+    // Get lessons for this course first, then their tasks
+    const { data: lessons, error: lessonsError } = await supabase
+      .from('lessons')
+      .select('id')
+      .eq('course_id', id);
+    
+    if (lessonsError) throw lessonsError;
+    
+    if (!lessons || lessons.length === 0) {
+      return res.json({
+        success: true,
+        data: []
+      });
+    }
+    
+    const lessonIds = lessons.map(lesson => lesson.id);
+    
+    // Get tasks for these lessons
+    const { data: tasks, error } = await supabase
+      .from('tasks')
+      .select('*')
+      .in('lesson_id', lessonIds)
+      .order('created_at', { ascending: true });
+    
+    if (error) throw error;
+    
+    res.json({
+      success: true,
+      data: tasks || []
+    });
+  } catch (error) {
+    logger.error('Error fetching course tasks:', error);
+    res.status(500).json({
+      success: false,
+      msg: 'Unable to fetch course tasks. Please try again later.'
+    });
+  }
+});
+
+// User progress endpoint
+app.get('/api/progress/:user_id', async (req, res) => {
+  try {
+    const { user_id } = req.params;
+    const authHeader = req.headers.authorization;
+    
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+      return res.status(401).json({
+        success: false,
+        msg: 'Authorization token required'
+      });
+    }
+    
+    const token = authHeader.substring(7);
+    
+    // Verify token with Supabase
+    const { data: authData, error: authError } = await supabase.auth.getUser(token);
+    
+    if (authError) {
+      return res.status(401).json({
+        success: false,
+        msg: 'Invalid token'
+      });
+    }
+    
+    // Verify user can access this progress (either their own or admin)
+    if (authData.user.id !== user_id) {
+      return res.status(403).json({
+        success: false,
+        msg: 'Access denied'
+      });
+    }
+    
+    const { data: progress, error } = await supabase
+      .from('user_progress')
+      .select('exercise_id, status, score, completion_percentage, time_spent_minutes, updated_at')
+      .eq('user_id', user_id)
+      .order('updated_at', { ascending: false });
+    
+    if (error) throw error;
+    
+    res.json({
+      success: true,
+      data: progress || []
+    });
+  } catch (error) {
+    logger.error('Error fetching user progress:', error);
+    res.status(500).json({
+      success: false,
+      msg: 'Unable to fetch progress. Please try again later.'
+    });
   }
 });
 

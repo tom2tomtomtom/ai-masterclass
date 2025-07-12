@@ -1,0 +1,305 @@
+const { createClient } = require('@supabase/supabase-js');
+
+const supabaseUrl = 'https://fsohtauqtcftdjcjfdpq.supabase.co';
+const supabaseServiceKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZzb2h0YXVxdGNmdGRqY2pmZHBxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1MjIyNjc4MCwiZXhwIjoyMDY3ODAyNzgwfQ.vLRzjcMIrpn8m3nEDI7pE7bSZg20Msdw60CHcsV1otI';
+
+const supabase = createClient(supabaseUrl, supabaseServiceKey);
+
+async function seedCourseContentSimple() {
+  try {
+    console.log('🌱 SEEDING COURSE CONTENT FOR ALL COURSES');
+    console.log('=========================================');
+    
+    // Clear existing content
+    console.log('🧹 Clearing existing content...');
+    await supabase.from('prompts').delete().neq('id', '00000000-0000-0000-0000-000000000000');
+    await supabase.from('lessons').delete().neq('id', '00000000-0000-0000-0000-000000000000');
+    console.log('✅ Cleared existing content');
+    
+    // Get all courses
+    const { data: courses } = await supabase.from('courses').select('*').order('level', { ascending: true });
+    console.log(`📚 Found ${courses.length} courses`);
+    
+    // Course-specific lessons
+    const courseLessons = {
+      'AI Fundamentals': [
+        {
+          title: 'What is AI?',
+          content: 'Artificial Intelligence (AI) is the simulation of human intelligence in machines. This lesson covers AI basics, types of AI (Narrow, General, Superintelligence), and how AI works using Large Language Models, Neural Networks, and Training Data. You will learn about AI in daily life through examples like email spam detection, recommendation systems, and voice assistants.'
+        },
+        {
+          title: 'AI vs Machine Learning',
+          content: 'Understanding the difference between AI and Machine Learning is crucial. AI is the broad field of creating intelligent machines, while ML is a subset focused on learning from data. Deep Learning uses neural networks for complex pattern recognition. Modern AI tools like Claude and ChatGPT use Machine Learning to understand text and demonstrate Artificial Intelligence in their responses.'
+        },
+        {
+          title: 'Popular AI Tools',
+          content: 'The AI landscape includes Conversational AI (Claude for reasoning and analysis, ChatGPT for versatile tasks, Gemini for Google integration), Specialized Tools (Jasper for content, GitHub Copilot for code, Zapier for automation). When choosing tools, consider task type, integration needs, budget, learning curve, and data privacy. Start with Claude or ChatGPT for beginners.'
+        }
+      ],
+      'Claude Mastery': [
+        {
+          title: 'Getting Started with Claude',
+          content: 'Claude is Anthropics AI assistant trained using Constitutional AI for helpful, harmless, and honest responses. Strengths include long-form reasoning, document analysis, creative writing, and code assistance. Create account at claude.ai, use natural language, be specific, provide context, and iterate. Common use cases: research, writing, problem-solving, learning, and code review.'
+        },
+        {
+          title: 'Advanced Claude Techniques',
+          content: 'Master the CLEAR Framework: Context (background), Length (specify response length), Examples (show what you want), Audience (define who for), Role (tell Claude what role to take). Use Chain of Thought prompting with phrases like "step by step" and "show your reasoning". Build context in multi-turn conversations and use document analysis for structured outputs.'
+        },
+        {
+          title: 'Claude for Business',
+          content: 'Business applications include email communication, reports and documentation, marketing content, market research, business intelligence, strategic planning, project management, customer service, policy development, and risk management. Best practices: protect data privacy, always review outputs, ensure compliance, integrate thoughtfully, and measure success through time saved and quality improvement.'
+        }
+      ],
+      'ChatGPT Professional': [
+        {
+          title: 'ChatGPT for Professional Use',
+          content: 'ChatGPT by OpenAI is based on GPT architecture, available in free (GPT-3.5) and paid (GPT-4) versions. Key capabilities: text generation, code assistance, data analysis, creative tasks, problem-solving. Professional applications: business communication, project management, research and analysis. Create account at chat.openai.com, be specific, provide context, ask follow-ups.'
+        },
+        {
+          title: 'Advanced ChatGPT Techniques',
+          content: 'Few-Shot Learning: provide examples to guide responses. Chain of Thought: ask to show reasoning step by step. Role-Based Prompting: assign specific roles for better responses. Custom Instructions: set context and preferences. Advanced features: Code Interpreter for data analysis, Plugins for web browsing, Custom GPTs for specialized tasks.'
+        },
+        {
+          title: 'ChatGPT Integration Strategies',
+          content: 'Workflow integration: email management, content creation, project management. Team collaboration: meeting enhancement, knowledge management, communication. API automation: connect to systems, automate tasks, create custom workflows. Industry applications: marketing campaigns, sales proposals, HR documentation, financial analysis. Security: protect data, implement controls, monitor usage.'
+        }
+      ],
+      'AI in Business': [
+        {
+          title: 'AI Business Applications',
+          content: 'Business AI applies artificial intelligence to solve business problems through process automation, predictive analytics, customer intelligence, decision support, and content generation. Core applications: customer service (chatbots, automated responses), sales and marketing (lead scoring, personalization), operations (supply chain, inventory), finance (fraud detection, risk assessment).'
+        },
+        {
+          title: 'AI Implementation Framework',
+          content: 'SMART AI Framework: Strategic alignment with business goals, Maturity assessment of capabilities, Application selection and prioritization, Resource planning and allocation, Technology integration and testing. Implementation phases: Foundation (establish groundwork), Pilot (prove value), Scale (expand solutions), Optimize (continuous improvement). Success factors: leadership support, data quality, user adoption, technical excellence.'
+        },
+        {
+          title: 'AI Business Case Studies',
+          content: 'Real-world examples: Retail personalization (35% conversion increase), Manufacturing predictive maintenance (50% downtime reduction), Healthcare diagnostic assistance (40% faster turnaround), Financial fraud detection (70% loss reduction), Logistics route optimization (25% fuel savings). Best practices: clear objectives, executive support, data quality, phased approach, user training, change management.'
+        }
+      ],
+      'Advanced AI Techniques': [
+        {
+          title: 'Chain of Thought Reasoning',
+          content: 'Chain of Thought prompting encourages AI to show reasoning step-by-step for complex problems. Techniques: step-by-step prompting ("lets think about this step by step"), reasoning prompts ("explain your reasoning"), multi-step analysis. Advanced patterns: THINK framework (Task, Hypothesis, Information, Next steps, Knowledge), REASON protocol (Recognize, Explore, Analyze, Synthesize, Outline, Note).'
+        },
+        {
+          title: 'Few-Shot Learning Mastery',
+          content: 'Few-shot learning teaches AI new tasks with 2-10 examples. Types: Zero-shot (no examples), One-shot (single example), Few-shot (2-10 examples), Many-shot (10+ examples). Pattern: Example 1: Input → Output, Example 2: Input → Output, Now do: Your Input. Advanced techniques: progressive complexity, multi-modal examples, conditional logic, hierarchical examples.'
+        },
+        {
+          title: 'AI System Design',
+          content: 'AI system architecture includes Data Layer (collection, storage, processing), Model Layer (AI algorithms), Application Layer (interfaces, APIs), Integration Layer (system connections), Monitoring Layer (performance tracking). Architecture patterns: Pipeline (linear processing), Microservices (distributed components), Event-driven (reactive systems). Design principles: scalability, reliability, maintainability, security, usability.'
+        }
+      ],
+      'AI Automation Workflows': [
+        {
+          title: 'Workflow Automation Fundamentals',
+          content: 'Workflow automation streamlines business processes using triggers (events that start workflow), actions (automated tasks), conditions (logic paths), integrations (system connections), monitoring (tracking). Types: task automation, process automation, decision automation, exception handling. Design principles: start simple, map current process, identify bottlenecks, plan for exceptions, measure impact.'
+        },
+        {
+          title: 'Zapier and n8n Integration',
+          content: 'Zapier: no-code automation platform, 5000+ apps, trigger-action model, cloud-based. Features: easy setup, extensive ecosystem, AI-powered features, team collaboration. n8n: open-source workflow automation, node-based editor, self-hosted/cloud options, custom node development. Zapier for simple workflows, n8n for complex requirements. Both support AI integration with OpenAI and custom services.'
+        },
+        {
+          title: 'Enterprise AI Integration',
+          content: 'Enterprise AI requires scale (large volumes), integration (existing systems), governance (policies and controls), security (enterprise-grade), compliance (regulatory requirements). Architecture patterns: centralized (single platform), federated (multiple platforms), hybrid (combined approach). Implementation: API-first architecture, event-driven integration, microservices, data architecture, security framework, governance structure.'
+        }
+      ]
+    };
+    
+    // Course-specific prompts
+    const coursePrompts = {
+      'AI Fundamentals': [
+        {
+          title: 'Basic Question Prompt',
+          prompt_text: 'Please explain [TOPIC] in simple terms that a beginner can understand. Include practical examples and real-world applications.',
+          platform: 'claude',
+          category: 'basic'
+        },
+        {
+          title: 'Follow-up Question Prompt',
+          prompt_text: 'Can you elaborate on [SPECIFIC ASPECT] from your previous explanation? I would like to understand this part better.',
+          platform: 'claude',
+          category: 'basic'
+        },
+        {
+          title: 'Comparison Prompt',
+          prompt_text: 'Compare and contrast [CONCEPT A] and [CONCEPT B]. Create a table showing their similarities, differences, and use cases.',
+          platform: 'claude',
+          category: 'advanced'
+        }
+      ],
+      'Claude Mastery': [
+        {
+          title: 'Claude Analysis Prompt',
+          prompt_text: 'Please analyze [DOCUMENT/SITUATION] and provide insights on [SPECIFIC ASPECT]. Structure your response with key findings, implications, and recommendations.',
+          platform: 'claude',
+          category: 'analysis'
+        },
+        {
+          title: 'Claude Writing Assistant',
+          prompt_text: 'Help me write [TYPE OF CONTENT] for [AUDIENCE]. The tone should be [TONE] and the purpose is [PURPOSE]. Please provide a draft and suggest improvements.',
+          platform: 'claude',
+          category: 'writing'
+        },
+        {
+          title: 'Claude Problem Solver',
+          prompt_text: 'I have a challenge with [PROBLEM]. Please help me think through this step by step, considering different perspectives and potential solutions.',
+          platform: 'claude',
+          category: 'problem_solving'
+        }
+      ],
+      'ChatGPT Professional': [
+        {
+          title: 'Professional Email Draft',
+          prompt_text: 'Draft a professional email to [RECIPIENT] about [TOPIC]. The tone should be [TONE] and include [KEY POINTS]. Make it clear, concise, and actionable.',
+          platform: 'chatgpt',
+          category: 'communication'
+        },
+        {
+          title: 'Content Creation Template',
+          prompt_text: 'Create [TYPE OF CONTENT] for [AUDIENCE] about [TOPIC]. Include [SPECIFIC ELEMENTS] and maintain a [TONE] throughout. Format as [FORMAT].',
+          platform: 'chatgpt',
+          category: 'content'
+        },
+        {
+          title: 'Business Analysis Framework',
+          prompt_text: 'Analyze [BUSINESS SITUATION] and provide insights on [SPECIFIC ASPECTS]. Structure your response with executive summary, key findings, and recommendations.',
+          platform: 'chatgpt',
+          category: 'analysis'
+        }
+      ],
+      'AI in Business': [
+        {
+          title: 'Business Case Development',
+          prompt_text: 'Help me develop a business case for implementing [AI SOLUTION] in [INDUSTRY/DEPARTMENT]. Include problem statement, proposed solution, costs, benefits, and ROI analysis.',
+          platform: 'claude',
+          category: 'strategy'
+        },
+        {
+          title: 'Process Optimization Analysis',
+          prompt_text: 'Analyze [BUSINESS PROCESS] and identify opportunities for AI automation. Consider current pain points, potential solutions, and implementation challenges.',
+          platform: 'claude',
+          category: 'optimization'
+        },
+        {
+          title: 'Competitive Analysis',
+          prompt_text: 'Research how [INDUSTRY] companies are using AI for [SPECIFIC APPLICATION]. Identify best practices, trends, and competitive advantages.',
+          platform: 'claude',
+          category: 'research'
+        }
+      ],
+      'Advanced AI Techniques': [
+        {
+          title: 'Chain of Thought Analysis',
+          prompt_text: 'Lets think through [PROBLEM] step by step: 1) First, identify the key components 2) Then, analyze each component 3) Consider interactions between components 4) Finally, synthesize insights and recommendations.',
+          platform: 'claude',
+          category: 'reasoning'
+        },
+        {
+          title: 'Few-Shot Learning Template',
+          prompt_text: 'Here are examples of [TASK]: Example 1: [INPUT] → [OUTPUT] Example 2: [INPUT] → [OUTPUT] Example 3: [INPUT] → [OUTPUT] Now apply this pattern to: [YOUR INPUT]',
+          platform: 'claude',
+          category: 'learning'
+        },
+        {
+          title: 'System Design Framework',
+          prompt_text: 'Design an AI system for [USE CASE] considering: 1) Data architecture 2) Model architecture 3) Integration requirements 4) User interface design 5) Security and compliance 6) Monitoring and maintenance.',
+          platform: 'claude',
+          category: 'architecture'
+        }
+      ],
+      'AI Automation Workflows': [
+        {
+          title: 'Workflow Design Template',
+          prompt_text: 'Design an automated workflow for [BUSINESS PROCESS] that includes: 1) Trigger events 2) Processing steps 3) Decision points 4) Actions and outputs 5) Error handling 6) Monitoring and optimization opportunities.',
+          platform: 'claude',
+          category: 'automation'
+        },
+        {
+          title: 'Integration Architecture',
+          prompt_text: 'Create an integration architecture for [SYSTEM/PLATFORM] that addresses: 1) Data flow requirements 2) API specifications 3) Security considerations 4) Scalability needs 5) Monitoring and maintenance.',
+          platform: 'claude',
+          category: 'architecture'
+        },
+        {
+          title: 'Enterprise AI Strategy',
+          prompt_text: 'Develop an enterprise AI strategy for [ORGANIZATION] covering: 1) Current state assessment 2) Strategic objectives 3) Implementation roadmap 4) Governance framework 5) Success metrics and ROI.',
+          platform: 'claude',
+          category: 'strategy'
+        }
+      ]
+    };
+    
+    // Process each course
+    for (const course of courses) {
+      console.log(`\n🔨 Processing: ${course.title}`);
+      
+      const lessons = courseLessons[course.title];
+      const prompts = coursePrompts[course.title];
+      
+      if (!lessons || !prompts) {
+        console.log(`❌ No content defined for ${course.title}`);
+        continue;
+      }
+      
+      // Insert lessons
+      const lessonsToInsert = lessons.map(lesson => ({
+        ...lesson,
+        course_id: course.id
+      }));
+      
+      const { data: insertedLessons, error: lessonsError } = await supabase
+        .from('lessons')
+        .insert(lessonsToInsert)
+        .select();
+      
+      if (lessonsError) {
+        console.log(`❌ Lessons error for ${course.title}:`, lessonsError.message);
+        continue;
+      }
+      
+      console.log(`✅ Added ${insertedLessons.length} lessons`);
+      
+      // Insert prompts
+      const promptsToInsert = prompts.map((prompt, index) => ({
+        ...prompt,
+        lesson_id: insertedLessons[index % insertedLessons.length].id
+      }));
+      
+      const { data: insertedPrompts, error: promptsError } = await supabase
+        .from('prompts')
+        .insert(promptsToInsert)
+        .select();
+      
+      if (promptsError) {
+        console.log(`❌ Prompts error for ${course.title}:`, promptsError.message);
+      } else {
+        console.log(`✅ Added ${insertedPrompts.length} prompts`);
+      }
+      
+      console.log(`🎉 Completed content for ${course.title}`);
+    }
+    
+    console.log('\n🎉 ALL COURSE CONTENT SEEDED!');
+    console.log('============================');
+    
+    // Final verification
+    console.log('\n🔍 Verifying content...');
+    for (const course of courses) {
+      const lessonsResponse = await fetch(`https://web-production-98afb.up.railway.app/api/courses/${course.id}/lessons`);
+      const lessonsData = await lessonsResponse.json();
+      
+      const promptsResponse = await fetch(`https://web-production-98afb.up.railway.app/api/courses/${course.id}/prompts`);
+      const promptsData = await promptsResponse.json();
+      
+      console.log(`📚 ${course.title}: ${lessonsData.data?.length || 0} lessons, ${promptsData.data?.length || 0} prompts`);
+    }
+    
+  } catch (error) {
+    console.error('💥 Seeding failed:', error);
+  }
+}
+
+seedCourseContentSimple();

@@ -555,6 +555,24 @@ app.get('/api/progress/:user_id', async (req, res) => {
   }
 });
 
+// Simple progress tracking endpoint (no auth required for demo)
+app.post('/api/progress/complete', async (req, res) => {
+  try {
+    // For demo purposes, just return success without storing
+    res.json({
+      success: true,
+      msg: 'Progress marked as complete (demo mode)',
+      data: { status: 'completed' }
+    });
+  } catch (error) {
+    logger.error('Error marking progress:', error);
+    res.status(500).json({
+      success: false,
+      msg: 'Unable to mark progress. Please try again later.'
+    });
+  }
+});
+
 // Test endpoint for database operations
 app.get('/api/test', async (req, res) => {
   try {

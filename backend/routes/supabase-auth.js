@@ -2,16 +2,11 @@ const express = require('express');
 const router = express.Router();
 const { createClient } = require('@supabase/supabase-js');
 
-// Initialize Supabase client
+// Initialize Supabase client with anon key for client-side auth
 const supabaseUrl = process.env.SUPABASE_URL || 'https://fsohtauqtcftdjcjfdpq.supabase.co';
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZzb2h0YXVxdGNmdGRqY2pmZHBxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1MjIyNjc4MCwiZXhwIjoyMDY3ODAyNzgwfQ.vLRzjcMIrpn8m3nEDI7pE7bSZg20Msdw60CHcsV1otI';
+const supabaseAnonKey = process.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZzb2h0YXVxdGNmdGRqY2pmZHBxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIyMjY3ODAsImV4cCI6MjA2NzgwMjc4MH0.p8V9W-7hqm0DlLe9F9s-_HK4I3mKrT5eL0YFbJfVTw4';
 
-const supabase = createClient(supabaseUrl, supabaseServiceKey, {
-  auth: {
-    autoRefreshToken: false,
-    persistSession: false
-  }
-});
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 // Register a new user using Supabase Auth
 router.post('/register', async (req, res) => {
@@ -37,15 +32,16 @@ router.post('/register', async (req, res) => {
       });
     }
 
-    // Create user with Supabase Auth
-    const { data, error } = await supabase.auth.admin.createUser({
+    // Create user with Supabase Auth (will send verification email automatically)
+    const { data, error } = await supabase.auth.signUp({
       email: email,
       password: password,
-      email_confirm: true, // Auto-confirm email for development
-      user_metadata: {
-        first_name: first_name || '',
-        last_name: last_name || '',
-        full_name: `${first_name || ''} ${last_name || ''}`.trim()
+      options: {
+        data: {
+          first_name: first_name || '',
+          last_name: last_name || '',
+          full_name: `${first_name || ''} ${last_name || ''}`.trim()
+        }
       }
     });
 
@@ -58,19 +54,21 @@ router.post('/register', async (req, res) => {
       });
     }
 
-    console.log('User created successfully:', data.user.id);
+    console.log('User registration initiated:', data.user?.id || 'pending verification');
 
-    // Return success response
+    // Return success response with email verification instruction
     res.json({ 
       success: true,
       data: { 
-        user: {
+        user: data.user ? {
           id: data.user.id,
           email: data.user.email,
-          user_metadata: data.user.user_metadata
-        }
+          user_metadata: data.user.user_metadata,
+          email_confirmed_at: data.user.email_confirmed_at
+        } : null,
+        session: data.session
       },
-      msg: 'Registration successful! You can now sign in.'
+      msg: 'Registration successful! Please check your email and click the verification link to activate your account.'
     });
 
   } catch (err) {
@@ -114,6 +112,14 @@ router.post('/login', async (req, res) => {
           success: false,
           error: 'Invalid credentials',
           msg: 'Invalid email or password'
+        });
+      }
+      
+      if (error.message.includes('Email not confirmed')) {
+        return res.status(401).json({ 
+          success: false,
+          error: 'Email not verified',
+          msg: 'Please check your email and click the verification link before signing in.'
         });
       }
       

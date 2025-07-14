@@ -270,6 +270,38 @@ Each course includes 3-5 hands-on projects that build real portfolio pieces:
 5. **Project Development**: Create portfolio-worthy deliverables
 6. **Assessment Creation**: Develop competency-based evaluations
 
+## 🔄 **Git Workflow - CRITICAL**
+
+**⚠️ IMPORTANT**: Keep local and git repo synced after each module completion
+
+### **After Each Module Enhancement:**
+1. **Test changes locally** (if possible)
+2. **Add files**: `git add [modified files]`
+3. **Commit with descriptive message**: `git commit -m "Phase X Day Y: [Module Name] - [key improvements]"`
+4. **Push to main**: `git push origin main`
+5. **Update contentdev.md progress** and commit that too
+
+### **Commit Message Format:**
+```
+"Phase [X] Day [Y]: [Module Title] - [brief description of enhancements]"
+
+Examples:
+"Phase 1 Day 1-2: Enhanced 'What is AI?' lesson - expanded from 800 to 2500+ words with business case studies"
+"Phase 1 Day 3-4: AI vs ML vs Deep Learning - added comparison framework and decision tree tool"
+```
+
+### **Files to Track:**
+- `backend/seed-complete-courses.js` (main content)
+- `worksheets/[new-worksheets].md` (deliverables)
+- `contentdev.md` (progress updates)
+- Any new resource files created
+
+### **Why This Matters:**
+- **Backup protection**: Don't lose hours of work
+- **Progress tracking**: Clear history of improvements
+- **Team coordination**: Others can see what's been completed
+- **Quality assurance**: Each module can be reviewed independently
+
 This plan transforms the AI Masterclass from basic educational content into a comprehensive, practical learning experience that delivers immediate business value and career advancement opportunities.
 
 ---

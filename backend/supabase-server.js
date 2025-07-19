@@ -91,41 +91,50 @@ try {
 // Serve static files from React build
 app.use(express.static(path.join(__dirname, 'build')));
 
-// Health check endpoint
-app.get('/health', async (req, res) => {
-  try {
-    // Test Supabase connection
-    const { data, error } = await supabase.from('courses').select('count', { count: 'exact' }).limit(1);
-    
-    res.json({ 
-      status: 'OK', 
-      timestamp: new Date().toISOString(),
-      uptime: process.uptime(),
-      environment: process.env.NODE_ENV || 'development',
-      database: error ? 'error' : 'connected',
-      supabase: {
-        url: supabaseUrl,
-        connected: !error,
-        tables_accessible: !error,
-        error: error?.message || null
-      }
-    });
-  } catch (error) {
-    logger.error('Health check failed:', error);
-    res.json({ 
-      status: 'OK', 
-      timestamp: new Date().toISOString(),
-      uptime: process.uptime(),
-      environment: process.env.NODE_ENV || 'development',
-      database: 'error',
-      supabase: {
-        url: supabaseUrl,
-        connected: false,
-        error: error.message
-      }
-    });
-  }
-});
+// Mount health check routes
+try {
+  const healthRoutes = require('./routes/health');
+  app.use('/api', healthRoutes);
+  console.log('✅ Health check routes loaded');
+} catch (error) {
+  console.log('❌ Health check routes not available:', error.message);
+  
+  // Fallback health check endpoint
+  app.get('/api/health', async (req, res) => {
+    try {
+      // Test Supabase connection
+      const { data, error } = await supabase.from('courses').select('count', { count: 'exact' }).limit(1);
+      
+      res.json({ 
+        status: 'OK', 
+        timestamp: new Date().toISOString(),
+        uptime: process.uptime(),
+        environment: process.env.NODE_ENV || 'development',
+        database: error ? 'error' : 'connected',
+        supabase: {
+          url: supabaseUrl,
+          connected: !error,
+          tables_accessible: !error,
+          error: error?.message || null
+        }
+      });
+    } catch (error) {
+      logger.error('Health check failed:', error);
+      res.json({ 
+        status: 'OK', 
+        timestamp: new Date().toISOString(),
+        uptime: process.uptime(),
+        environment: process.env.NODE_ENV || 'development',
+        database: 'error',
+        supabase: {
+          url: supabaseUrl,
+          connected: false,
+          error: error.message
+        }
+      });
+    }
+  });
+}
 
 // Root endpoint - serve React app
 app.get('/', (req, res) => {

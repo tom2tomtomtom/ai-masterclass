@@ -5033,9 +5033,28 @@ Include 10+ strategy-specific frameworks and complex analysis templates."
 - **Module 4.1**: Microsoft 365 AI Suite Mastery
 - **Module 9.1**: Complete Multi-Tool Campaign Workflows
 
-**🎯 Remember**: Advanced prompting transforms Claude from a writing assistant into a strategic thinking partner. Master these techniques to unlock unprecedented agency capabilities and competitive advantages.`
-
-**Problem-Solving Methodology**:
+**🎯 Remember**: Advanced prompting transforms Claude from a writing assistant into a strategic thinking partner. Master these techniques to unlock unprecedented agency capabilities and competitive advantages.`,
+      order_index: 3,
+      estimated_minutes: 45,
+      resources: [
+        'Advanced Claude Prompting Templates for Agencies',
+        'Multi-Tool Integration Workflow Guides', 
+        'Claude Performance Optimization Techniques',
+        'Agency-Specific Prompt Template Library',
+        'Advanced Reasoning Framework Templates'
+      ],
+      learning_objectives: [
+        'Master advanced Claude prompting techniques for complex agency workflows',
+        'Develop sophisticated reasoning frameworks for strategic business challenges', 
+        'Create custom prompt templates for agency-specific use cases',
+        'Implement multi-step prompting strategies for complex project coordination',
+        'Optimize Claude performance for professional agency environments'
+      ]
+    },
+    {
+      title: 'Problem-Solving Methodology',
+      description: 'Advanced problem-solving frameworks using structured analytical approaches',
+      content: `**Problem-Solving Methodology**:
 1. **Problem Deconstruction**:
    - Break down the complex problem into smaller, manageable components
    - Identify interdependencies between different aspects
@@ -5453,22 +5472,25 @@ Include 10+ strategy-specific frameworks and complex analysis templates."
 **⏭️ Next Lesson**: "Claude for Business Applications - Strategic Implementation and ROI Optimization"
 
 **📧 Questions or Stuck?** Start with Templates 1, 4, and 7 as they cover the most common business applications. Practice the chain-of-thought reasoning framework first, then progressively add Constitutional AI considerations for more sophisticated analysis.`,
-          order_index: 1,
-          lesson_type: 'tutorial',
-          estimated_minutes: 60,
-          difficulty: 'intermediate',
-          platform_focus: 'claude',
-          learning_objectives: ['Master chain-of-thought reasoning techniques for complex business analysis and multi-step problem solving', 'Implement Constitutional AI prompting frameworks for ethical decision-making and strategic planning', 'Apply 20 professional prompt templates for immediate business value and productivity gains', 'Create custom prompting systems optimized for specific role and industry requirements']
-        }
-      );
-    }
-
-    // Find the Claude for Business Applications module
-    const claudeBusinessApps = insertedModules.find(m => m.title === 'Claude for Business Applications');
-    if (claudeBusinessApps) {
-      lessonsData.push(
+          order_index: 4,
+          estimated_minutes: 75,
+          resources: [
+            'Problem-Solving Methodology Framework Templates',
+            'Chain-of-Thought Reasoning Guide',
+            'Constitutional AI Decision-Making Templates',
+            '20 Professional Business Analysis Prompt Templates',
+            'Custom Template Development Toolkit'
+          ],
+          learning_objectives: [
+            'Master systematic problem-solving methodology for complex business challenges',
+            'Implement chain-of-thought reasoning techniques for multi-step analysis',
+            'Apply Constitutional AI principles for ethical decision-making',
+            'Develop custom prompt templates optimized for specific business needs',
+            'Create measurable productivity improvements through advanced prompting techniques'
+          ]
+        },
         {
-          module_id: claudeBusinessApps.id,
+          module_id: moduleId,
           title: 'Claude for Business Applications - Strategic Implementation and ROI Optimization',
           description: 'Master Claude for strategic business applications including meeting analysis, report writing, data insights, and competitive analysis with comprehensive ROI measurement frameworks',
           content: `# 🎯 Claude for Business Applications - Strategic Implementation and ROI Optimization

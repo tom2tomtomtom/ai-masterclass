@@ -1,38 +1,43 @@
-# 🚀 QA Quick Reference Guide
-## Railway Deployment + Playwright Testing Commands & Procedures
+# 🚀 QA QUICK REFERENCE GUIDE
+## Instant Commands & Procedures for AI Masterclass QA System
 
-**Project**: AI-Masterclass-Agency-Complete-Stack  
-**Last Updated**: January 19, 2025  
+**⚡ Use this guide for instant access to all QA and deployment commands**  
 
 ---
 
-## 🔧 Essential Commands
+## 🎯 ONE-COMMAND DEPLOYMENT
 
-### Railway Commands
+### 🚀 Deploy Everything (Full Pipeline)
 ```bash
-# Install Railway CLI
-npm install -g @railway/cli
+# Complete automated deployment with all checks
+./scripts/deploy.sh
 
-# Login and setup
-railway login
-railway link [PROJECT-ID]
-railway status
+# OR using npm script
+npm run deploy
+```
 
-# Deployment
-railway up                    # Deploy current directory
-railway up --detach          # Deploy and continue
-railway logs                 # View logs
-railway variables            # Manage environment variables
+### 🧪 Test Everything
+```bash
+# Run complete test suite
+npm test
 
-# Environment management
-railway variables set NODE_ENV=production
-railway variables set DATABASE_URL=${{Railway.DATABASE_URL}}
-railway variables set PORT=${{PORT}}
+# Run specific test types
+npm run test:backend
+npm run test:frontend
+npm run test:e2e
+npm run test:coverage
+```
 
-# Project management
-railway domains               # Manage custom domains
-railway service               # Manage services
-railway rollback [DEPLOYMENT-ID]  # Rollback deployment
+### 🔍 Check Everything
+```bash
+# Run complete error detection and fixes
+./scripts/error-detection.sh
+
+# Run quality gates validation
+./scripts/quality-check.sh
+
+# Run security audit
+npm run audit:security
 ```
 
 ### Playwright Commands

@@ -204,19 +204,20 @@
 ## 📋 Deliverables Tracker
 
 ### Worksheets Created
-- [x] AI Fundamentals Worksheet
-- [x] AI Tool Selection Worksheet
-- [x] Personal AI Toolkit Builder
-- [x] Claude Optimization Checklist
+- [x] AI Fundamentals Worksheet (original)
+- [x] AI Tool Selection Worksheet (original)
+- [x] Personal AI Toolkit Builder (original)  
+- [x] Claude Optimization Checklist (original)
+- [x] **NEW**: Agency AI Readiness Assessment (Module 1.1)
+- [x] **NEW**: Agency ROI Calculator with real metrics (Module 1.1)
+- [x] **NEW**: Client Confidentiality Guidelines (Module 1.1)
 
 ### Worksheets Needed
-- [ ] Platform Comparison Worksheet
+- [ ] Platform Comparison Worksheet (comprehensive matrix)
 - [ ] Multi-Tool Workflow Designer
-- [ ] ROI Calculator (All Platforms)
-- [ ] Agency AI Readiness Assessment
 - [ ] Tool Integration Planner
 - [ ] Campaign AI Strategy Template
-- [ ] Client Presentation Templates
+- [ ] Client Presentation Templates  
 - [ ] Cost Optimization Calculator
 
 ### Code Examples Needed
@@ -231,10 +232,10 @@
 ## 🚀 Next Development Steps
 
 ### Immediate (This Week)
-1. **Adapt Module 1.1**: Add agency examples and multi-tool context
-2. **Start Module 2.1**: ChatGPT Core Features
+1. **✅ Adapt Module 1.1**: ~~Add agency examples and multi-tool context~~ **COMPLETED**
+2. **Start Module 1.2**: Adapt "AI vs ML vs Deep Learning" for agencies
 3. **Create Tool Comparison Worksheet**: Comprehensive platform matrix
-4. **Update seed-complete-courses.js**: Begin integration
+4. **Update seed-complete-courses.js**: ~~Begin integration~~ **COMPLETED**
 
 ### Short-term (Next 2 Weeks)
 1. Complete all Phase 1 adaptations

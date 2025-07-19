@@ -232,72 +232,11 @@ async function seedCompleteCourses() {
       lessonsData.push(
         {
           module_id: understandingAI.id,
-          title: 'What is AI for Marketing Agencies? → Amplified Intelligence for Competitive Advantage',
-          description: 'Understand how leading agencies use AI for competitive advantage and identify AI applications for your agency',
-          content: `# Module 1.1: What is AI for Marketing Agencies?
-## Amplified Intelligence for Competitive Advantage
+          title: 'Master AI Fundamentals → Transform Your Work in 60 Minutes',
+          description: 'Understand AI capabilities and identify 5+ ways it can save you 2 hours daily in your specific role',
+          content: `# Master AI Fundamentals → Transform Your Work in 60 Minutes
 
----
-
-### Learning Objectives
-By the end of this module, you'll be able to:
-- Define AI in agency-relevant terms and understand its true potential
-- Identify how leading agencies are using AI to gain competitive advantages
-- Calculate the ROI of AI implementation for your specific agency context
-- Map AI solutions to common agency pain points
-- Navigate the complete AI ecosystem with confidence
-- Create an implementation roadmap tailored to agency needs
-
----
-
-## The $2.3 Million Pitch That Changed Everything
-
-In 2023, a mid-sized London agency called Amplitude was competing for a global automotive account worth $2.3 million annually. They were up against Ogilvy, McCann, and two other major networks. On paper, they had no chance.
-
-But Amplitude had something the big agencies didn't expect: a sophisticated AI-powered research and strategy development process. While their competitors spent weeks gathering market data and developing positioning strategies, Amplitude used AI to:
-
-- Analyze 10,000+ automotive social conversations in 48 hours
-- Generate 15 distinct strategic territories based on cultural insights
-- Create 50+ concept visualizations for three different market segments
-- Develop a complete campaign narrative with supporting assets
-
-**The result?** Amplitude won the account. Not because their team was bigger or more experienced, but because they could think faster, deeper, and more creatively than agencies ten times their size.
-
-This isn't a fairytale. This is the new reality of agency competition.
-
----
-
-## Reframing AI: From Artificial to Amplified Intelligence
-
-When most people hear "Artificial Intelligence," they picture robots replacing humans. When agency professionals hear "AI," they should think **Amplified Intelligence** – technology that multiplies human creativity, strategic thinking, and execution capability.
-
-For agencies, AI isn't about replacement. It's about competitive advantage.
-
-### The Agency AI Advantage: By the Numbers
-
-Recent industry analysis reveals dramatic performance gaps between AI-enabled and traditional agencies:
-
-**Creative Output:**
-- AI-enabled agencies: 300-500% increase in creative variations
-- Traditional agencies: Limited by human production speed
-
-**Pitch Win Rates:**
-- AI-enabled agencies: 25-35% win rate
-- Industry average: 10-15% win rate
-
-**Client Retention:**
-- AI-enabled agencies: 15-20% higher retention
-- Reason: Faster turnaround, more strategic insights
-
-**Profitability:**
-- AI-enabled agencies: 40-60% improvement in billable hour efficiency
-- Traditional agencies: Struggling with margin pressure
-
-**New Business Development:**
-- AI-enabled agencies: 50% faster research and strategy development
-- Traditional agencies: 20-30% of senior resources tied up in pitch preparation
-
-The data is clear: agencies that master AI aren't just working differently – they're winning more
+**🎯 Learning Objective**: Understand AI capabilities and identify 5+ ways it can save you 2 hours daily in your specific role
 
 **⏱️ Time Investment**: 60 minutes (45 min lesson + 15 min worksheet)
 

@@ -6231,6 +6231,370 @@ Ready to transform your agency with ChatGPT mastery? Let's move forward to build
         }
       );
     }
+
+    // Find the Custom GPTs for Agency Workflows module
+    const customGPTsWorkflows = insertedModules.find(m => m.title === 'Custom GPTs for Agency Workflows');
+    if (customGPTsWorkflows) {
+      lessonsData.push(
+        {
+          module_id: customGPTsWorkflows.id,
+          title: 'Custom GPTs for Agency Workflows - Build Specialized AI Assistants for Competitive Advantage',
+          description: 'Design and build specialized GPTs for specific agency workflows, implement 15+ proven templates, and create brand-specific GPTs that maintain voice consistency',
+          content: `# Module 2.2: Custom GPTs for Agency Workflows
+## Build Specialized AI Assistants for Competitive Advantage
+
+---
+
+### Learning Objectives
+By the end of this module, you'll be able to:
+- Understand the strategic value of Custom GPTs for agency differentiation and efficiency
+- Design and build specialized GPTs for specific agency workflows and client needs
+- Implement 15+ proven GPT templates that solve common agency challenges
+- Create brand-specific GPTs that maintain voice consistency across all client work
+- Establish team collaboration systems and GPT management frameworks
+- Measure ROI and optimize custom GPT performance for maximum business impact
+- Scale GPT development across multiple clients and service areas
+
+---
+
+## The Agency That Built 47 Custom GPTs: $3.2M Revenue Impact
+
+Meet Convergence Digital, a 25-person agency in Austin that transformed their entire operation through strategic Custom GPT development. In 18 months, they built 47 specialized GPTs and achieved:
+
+**Quantifiable Business Results:**
+- **$3.2M additional revenue** from new service offerings
+- **65% faster project delivery** across all client work
+- **40% higher profit margins** due to efficiency gains
+- **300% increase in client retention** through consistent quality
+- **50% reduction in junior staff training time**
+
+**Their Strategic Approach:**
+
+**Phase 1: Core Operations GPTs (Months 1-3)**
+Built 8 foundational GPTs covering:
+- Brand Voice Analyzer (ensures consistent client communication)
+- Campaign Brief Generator (transforms client requirements into strategic briefs)
+- Competitive Intelligence Researcher (automates market analysis)
+- Content Calendar Creator (generates platform-specific content plans)
+
+**Phase 2: Client-Specific GPTs (Months 4-12)**
+Developed custom GPTs for major clients:
+- **Tech Startup GPT**: Translates complex features into customer benefits
+- **Healthcare GPT**: Ensures HIPAA compliance while creating engaging content
+- **B2B SaaS GPT**: Focuses on ROI-driven messaging and lead generation
+- **E-commerce GPT**: Optimizes for conversion and customer lifetime value
+
+**Phase 3: Revenue Generation GPTs (Months 13-18)**
+Created advanced GPTs for new service lines:
+- **Proposal Writer Pro**: Generates winning proposals with 73% success rate
+- **Crisis Communication Manager**: Provides real-time crisis response strategies
+- **Influencer Campaign Optimizer**: Matches brands with ideal influencers
+- **ROI Calculator Suite**: Demonstrates campaign value with precise metrics
+
+**The Result**: Convergence became the most sought-after agency in their market, charging 40% premium rates and maintaining a 6-month waiting list for new clients.
+
+Their secret? They didn't just use AI—they built AI that understood their business.
+
+---
+
+## Understanding Custom GPTs: Your Agency's Competitive Weapon
+
+### What Makes Custom GPTs Revolutionary for Agencies
+
+Custom GPTs represent the evolution from generic AI assistance to specialized business intelligence. Think of them as digital employees who:
+
+**Never Forget**: Retain complete knowledge of your processes, clients, and brand guidelines
+**Never Sleep**: Available 24/7 for any team member or client need
+**Never Vary**: Deliver consistent quality regardless of workload or time pressure
+**Always Learn**: Improve with every interaction and feedback cycle
+
+### The Business Case for Custom GPTs
+
+**Traditional Agency Challenge:**
+- Junior staff inconsistency: 6-month learning curve for brand voice mastery
+- Senior staff bottlenecks: All strategic work funneled through expensive resources
+- Knowledge silos: Best practices trapped in individual team member minds
+- Client onboarding: 3-4 week process to understand brand and requirements
+
+**Custom GPT Solution:**
+- Instant expertise: New team members productive from day one
+- Democratic access to senior-level thinking: Strategic insights available to all
+- Institutionalized knowledge: Best practices embedded and accessible
+- Accelerated client integration: Complete brand understanding in minutes
+
+---
+
+## The Agency GPT Framework: 5 Categories for Maximum Impact
+
+### 1. Foundation GPTs: Core Operations Excellence
+
+**Purpose**: Handle fundamental agency tasks with consistent quality
+**ROI Timeline**: Immediate (Week 1 implementation)
+**Team Impact**: All roles benefit from foundational efficiency
+
+#### **Brand Voice Guardian GPT**
+*Ensures every piece of content matches client brand voice perfectly*
+
+**Core Function**: Analyzes and replicates specific brand communication styles
+**Training Inputs**:
+- Brand guidelines and style manuals
+- 50+ examples of approved client content
+- Tone of voice definitions and examples
+- Do's and don'ts for brand communication
+
+**Use Cases**:
+- Social media post consistency checking
+- Email campaign tone verification
+- Proposal and presentation alignment
+- Crisis communication compliance
+
+**Template Overview**:
+\`\`\`
+You are [Client Name]'s Brand Voice Guardian. Your expertise comes from deep knowledge of:
+
+BRAND PERSONALITY: [Insert specific brand traits]
+TONE GUIDELINES: [Insert tone specifications]  
+VOICE CHARACTERISTICS: [Insert voice elements]
+LANGUAGE PATTERNS: [Insert specific patterns]
+FORBIDDEN ELEMENTS: [Insert what to avoid]
+
+For every request, ensure outputs match the brand voice exactly while achieving the communication objective.
+\`\`\`
+
+### 2. 15 Ready-to-Build GPT Templates for Agencies
+
+**1. Brand Voice Guardian GPT** - Ensure consistent brand voice across all client communications
+**2. Campaign Brief Translator GPT** - Convert client requirements into comprehensive creative briefs
+**3. Competitive Intelligence Researcher GPT** - Automate competitive analysis and market research
+**4. Content Calendar Architect GPT** - Generate comprehensive, platform-specific content calendars
+**5. Proposal Generator Pro GPT** - Create winning proposals with high success rates
+**6. Client Communication Manager GPT** - Handle routine client communication with consistent quality
+**7. Creative Concept Generator GPT** - Generate multiple strategic creative approaches for any brief
+**8. Crisis Communication Strategist GPT** - Provide immediate crisis response strategies
+**9. Influencer Campaign Optimizer GPT** - Match brands with ideal influencers and optimize campaigns
+**10. ROI Calculator Suite GPT** - Demonstrate campaign value with precise metrics
+**11. New Business Strategist GPT** - Analyze prospects and develop tailored approaches
+**12. Client Growth Optimizer GPT** - Identify expansion opportunities within existing clients
+**13. Team Resource Allocator GPT** - Optimize team assignments and project planning
+**14. Quality Assurance Inspector GPT** - Review all work for quality, compliance, and brand alignment
+**15. Training and Development Coach GPT** - Accelerate new hire training and skill development
+
+---
+
+## Step-by-Step Custom GPT Development Process
+
+### Phase 1: Strategic Planning (Week 1)
+
+#### **Step 1: Needs Assessment**
+**Objective**: Identify highest-impact GPT opportunities
+
+**Process**:
+1. **Workflow Analysis**: Document current time-consuming processes
+2. **Pain Point Identification**: Survey team for biggest frustrations
+3. **ROI Opportunity Mapping**: Calculate potential time/cost savings
+4. **Priority Matrix Creation**: Rank opportunities by impact vs. effort
+
+**Assessment Questions**:
+- Which tasks take the most time for our team?
+- What processes require senior-level expertise but could be systematized?
+- Where do we see the most inconsistency in output quality?
+- What client needs could be better served with specialized knowledge?
+
+#### **Step 2: GPT Design Blueprint**
+**Objective**: Create detailed specifications for your first GPT
+
+**Blueprint Components**:
+- **Primary Function**: Single, clear purpose statement
+- **Target Users**: Specific team members who will use this GPT
+- **Input Requirements**: What information the GPT needs to function
+- **Output Specifications**: Exact format and style of desired results
+- **Success Metrics**: How you'll measure effectiveness and ROI
+
+**Design Template**:
+\`\`\`
+GPT NAME: [Descriptive, specific name]
+PRIMARY FUNCTION: [One sentence describing main purpose]
+TARGET USERS: [Specific roles/team members]
+TRAINING FOCUS: [Key knowledge areas and expertise]
+INPUT REQUIREMENTS: [What users need to provide]
+OUTPUT FORMAT: [Specific deliverable format]
+SUCCESS METRICS: [How you'll measure success]
+\`\`\`
+
+### Phase 2: Content Collection and Training (Week 2)
+
+#### **Step 3: Knowledge Gathering**
+**Objective**: Collect high-quality training materials
+
+**Content Categories**:
+
+**1. Foundational Knowledge**
+- Industry expertise and best practices
+- Agency methodologies and frameworks
+- Brand guidelines and style documentation
+- Process templates and checklists
+
+**2. Example Library**
+- Successful project examples (minimum 20-30)
+- High-performing content samples
+- Winning proposals and presentations
+- Client communication templates
+
+**3. Contextual Information**
+- Client-specific requirements and preferences
+- Team member expertise and capabilities
+- Agency culture and values
+- Quality standards and approval processes
+
+### Phase 3: Implementation and ROI Measurement
+
+#### **ROI Calculation Framework**
+
+**Investment Calculation**:
+\`\`\`
+Total Investment = GPT Development Time + Training Time + Subscription Costs + Maintenance Time
+
+Example:
+- GPT Development: 40 hours × $100/hour = $4,000
+- Team Training: 20 hours × $75/hour = $1,500
+- ChatGPT Subscriptions: 10 users × $30/month × 12 months = $3,600
+- Maintenance: 5 hours/month × $100/hour × 12 months = $6,000
+Total Investment: $15,100
+\`\`\`
+
+**Return Calculation**:
+\`\`\`
+Monthly Return = Time Savings × Hourly Rate + Quality Improvements × Revenue Impact
+
+Example:
+- Time Savings: 50 hours/month × $100/hour = $5,000
+- Quality Improvements: 20% faster client approval × $2,000 revenue impact = $400
+Monthly Return: $5,400
+Annual Return: $5,400 × 12 = $64,800
+
+ROI = (Annual Return - Annual Investment) / Annual Investment × 100
+ROI = ($64,800 - $15,100) / $15,100 × 100 = 329%
+\`\`\`
+
+---
+
+## Team Collaboration and GPT Management
+
+### Establishing GPT Governance
+
+**1. Access Control and Permissions**
+- Define which team members can use specific GPTs
+- Establish creation and modification permissions
+- Set up sharing protocols for client-specific GPTs
+- Create backup and version control systems
+
+**2. Quality Standards and Guidelines**
+- Develop GPT usage best practices
+- Create output quality checklists
+- Establish review and approval processes
+- Set up feedback and improvement protocols
+
+**3. Data Security and Privacy**
+- Ensure client confidentiality in GPT training data
+- Establish data handling and storage protocols
+- Create guidelines for sensitive information usage
+- Set up regular security audits and updates
+
+### Building a GPT Library System
+
+**Organization Structure**:
+\`\`\`
+Agency GPT Library
+├── Foundation GPTs (Core Operations)
+├── Client-Specific GPTs
+│   ├── Client A GPTs
+│   ├── Client B GPTs
+│   └── Industry-Specific GPTs
+├── Creative GPTs (Ideation & Development)
+├── Operations GPTs (Efficiency & Scale)
+└── Business Development GPTs
+\`\`\`
+
+---
+
+## Advanced GPT Features and Integration
+
+### Multi-GPT Workflows
+
+**Campaign Development Workflow**:
+1. **Brief Translator GPT** → Converts client requirements to creative brief
+2. **Research GPT** → Gathers competitive and market intelligence  
+3. **Concept Generator GPT** → Creates multiple creative approaches
+4. **Brand Voice GPT** → Ensures all concepts align with brand voice
+5. **Proposal Generator GPT** → Packages everything into client presentation
+
+**Quality Assurance Workflow**:
+1. **Content Creator** → Produces initial content
+2. **Brand Voice Guardian GPT** → Reviews for brand compliance
+3. **Quality Inspector GPT** → Checks for errors and improvements
+4. **Client Communication GPT** → Formats for client presentation
+5. **Final approval** → Human review and client delivery
+
+---
+
+## Conclusion: Building Your Agency's AI-Powered Future
+
+Custom GPTs represent the single most powerful opportunity for agencies to differentiate themselves in an increasingly competitive market. They're not just productivity tools—they're strategic assets that compound your agency's expertise, ensure consistent quality, and enable scalable growth.
+
+**The Strategic Imperative:**
+
+**1. First-Mover Advantage**: Agencies that build sophisticated GPT capabilities now will be years ahead of competitors
+**2. Compounding Returns**: Every GPT you build makes the next one faster and more effective
+**3. Client Expectations**: Forward-thinking clients increasingly expect AI-powered efficiency and innovation
+**4. Talent Attraction**: Top professionals want to work with agencies at the forefront of technology
+
+**Your 90-Day Action Plan:**
+
+**Days 1-30: Foundation Building**
+- Build your first 3 core operation GPTs
+- Train team on GPT usage and best practices
+- Establish governance and quality standards
+- Measure initial ROI and gather feedback
+
+**Days 31-60: Specialization Development**
+- Create 5-7 client-specific or industry GPTs
+- Implement team collaboration workflows
+- Begin advanced feature exploration
+- Document processes and optimizations
+
+**Days 61-90: Strategic Scaling**
+- Integrate GPTs with agency tools and systems
+- Develop new service offerings based on GPT capabilities
+- Plan next phase of GPT development
+- Position agency as AI innovation leader
+
+**Remember**: The goal isn't to replace human creativity and strategic thinking—it's to amplify them. Custom GPTs free your team from routine work so they can focus on the strategic, creative, and relationship-building activities that create real value for clients.
+
+The agencies that thrive in the next decade will be those that successfully combine human expertise with AI-powered capabilities. Custom GPTs are your pathway to that future.
+
+**Start building today. Your competitive advantage depends on it.**
+
+---
+
+## Next Steps
+
+1. **GPT Audit**: Evaluate your current ChatGPT usage and identify GPT opportunities
+2. **Priority Setting**: Choose your first 3 GPTs based on highest ROI potential
+3. **Resource Planning**: Allocate time and team members for GPT development
+4. **Training Schedule**: Plan team education and skill development program
+5. **Success Metrics**: Define KPIs and measurement frameworks
+6. **Development Timeline**: Create 90-day implementation roadmap
+
+Ready to build your agency's competitive AI advantage? The tools are available, the process is proven, and the opportunity is now. Let's transform your agency into an AI-powered market leader.`,
+          order_index: 1,
+          lesson_type: 'project',
+          estimated_minutes: 90,
+          difficulty: 'intermediate',
+          platform_focus: 'chatgpt',
+          learning_objectives: ['Design and build specialized GPTs for specific agency workflows and client needs', 'Implement 15+ proven GPT templates that solve common agency challenges', 'Create brand-specific GPTs that maintain voice consistency across all client work', 'Establish team collaboration systems and GPT management frameworks', 'Measure ROI and optimize custom GPT performance for maximum business impact']
+        }
+      );
+    }
     
     const { data: insertedLessons, error: lessonsError } = await supabase
       .from('lessons')

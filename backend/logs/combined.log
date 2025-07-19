@@ -965,3 +965,7 @@
 {"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-09 11:52:40:5240"}
 {"level":"http","message":"GET /api/courses/fe234f63-65b1-4c04-b627-9f2ee47f71b4/tasks - ::1","timestamp":"2025-07-09 11:52:40:5240"}
 {"level":"http","message":"GET /api/courses?status=published - ::1","timestamp":"2025-07-11 14:53:01:531"}
+{"level":"info","message":"AI Masterclass Server running on port 5002","timestamp":"2025-07-19 21:05:58:558"}
+{"level":"info","message":"Environment: undefined","timestamp":"2025-07-19 21:05:58:558"}
+{"level":"info","message":"Supabase URL: https://fsohtauqtcftdjcjfdpq.supabase.co","timestamp":"2025-07-19 21:05:58:558"}
+{"level":"info","message":"Service Role Key configured: Yes","timestamp":"2025-07-19 21:05:58:558"}

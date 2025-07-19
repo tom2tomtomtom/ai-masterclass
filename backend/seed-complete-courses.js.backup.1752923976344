@@ -2764,7 +2764,7 @@ Role: Act as a strategic business analyst with expertise in performance metrics 
 #### **2. The Multi-Perspective Decision Matrix**
 
 **Template**:
-\`\`\`
+```
 "I need to make a decision about [business situation]. Please analyze this from the perspectives of:
 1. Financial impact and ROI
 2. Operational feasibility and resource requirements  
@@ -2773,19 +2773,19 @@ Role: Act as a strategic business analyst with expertise in performance metrics 
 5. Risk factors and mitigation strategies
 
 Provide a structured analysis with recommendations weighted by importance."
-\`\`\`
+```
 
 #### **3. The Constitutional AI Ethics Check**
 
 **For Sensitive Business Decisions**:
-\`\`\`
+```
 "Before we implement this strategy, please conduct an ethical impact assessment considering:
 - Stakeholder fairness and transparency
 - Potential unintended consequences
 - Regulatory compliance requirements
 - Long-term reputation implications
 - Alternative approaches that might achieve similar results with better ethical outcomes"
-\`\`\`
+```
 
 ---
 
@@ -2951,14 +2951,8 @@ Provide a structured analysis with recommendations weighted by importance."
 **⏭️ Next Lesson**: "Advanced Claude Prompting Techniques - 20 Professional Business Templates"
 
 **📧 Questions or Stuck?** Focus on the Constitutional AI advantages and the 200K context window first. These two capabilities alone will transform how you approach complex business analysis and strategic decision-making. Download and complete the Claude Business Optimization Checklist for a structured 30-day path to mastery.`,
-          order_index: 2,
-          estimated_minutes: 60
-        },
-        {
-          module_id: understandingAI.id,
-          title: 'The Definitive Guide to Claude\'s Business-Critical Features and Competitive Advantages',
-          description: 'Master Claude\'s Constitutional AI advantages and optimize business workflows for measurable productivity gains',
-          content: `## The Definitive Guide to Claude's Business-Critical Features and Competitive Advantages
+
+## The Definitive Guide to Claude's Business-Critical Features and Competitive Advantages
 
 **⏱️ Estimated Time**: 60 minutes (45 min lesson + 15 min Claude optimization checklist)  
 **🎯 Learning Outcome**: Master Claude's Constitutional AI advantages and optimize business workflows for measurable productivity gains  
@@ -3090,9 +3084,9 @@ Constitutional AI is Anthropic's approach to training AI systems to be helpful, 
 **Purpose**: Guide Claude to deeper analysis through questioning
 
 **Example Prompt**:
-\`\`\`
+```
 I'm analyzing whether to expand our business into a new market. Instead of giving me direct advice, please ask me the key questions I should consider. Help me think through this decision systematically.
-\`\`\`
+```
 
 **When to Use**: Strategic decisions, complex problem-solving, learning new concepts
 
@@ -3103,14 +3097,14 @@ I'm analyzing whether to expand our business into a new market. Instead of givin
 **Purpose**: Get comprehensive viewpoints on complex issues
 
 **Example Prompt**:
-\`\`\`
+```
 Analyze our new remote work policy from three perspectives:
 1. As an employee who prefers remote work
 2. As a manager concerned about team collaboration
 3. As a senior executive focused on company culture and productivity
 
 For each perspective, identify the main concerns, benefits, and potential compromises.
-\`\`\`
+```
 
 **When to Use**: Policy decisions, stakeholder analysis, change management
 
@@ -3121,7 +3115,7 @@ For each perspective, identify the main concerns, benefits, and potential compro
 **Purpose**: Apply proven business frameworks with AI assistance
 
 **Example Prompt**:
-\`\`\`
+```
 Help me conduct a SWOT analysis for our Q4 marketing campaign. Guide me through each quadrant systematically:
 
 1. Strengths: What internal advantages do we have?
@@ -3130,7 +3124,7 @@ Help me conduct a SWOT analysis for our Q4 marketing campaign. Guide me through 
 4. Threats: What external challenges should we prepare for?
 
 After each section, ask clarifying questions to help me think deeper.
-\`\`\`
+```
 
 **When to Use**: Strategic planning, project analysis, competitive positioning
 
@@ -3141,13 +3135,13 @@ After each section, ask clarifying questions to help me think deeper.
 **Purpose**: Progressively improve ideas through multiple iterations
 
 **Example Prompt Pattern**:
-\`\`\`
+```
 Round 1: "Help me brainstorm 10 potential solutions for improving customer retention."
 
 Round 2: "Take the top 3 solutions and analyze their feasibility, cost, and potential impact."
 
 Round 3: "For the highest-scoring solution, create a detailed implementation plan with timeline and resources needed."
-\`\`\`
+```
 
 **When to Use**: Innovation, problem-solving, project planning
 
@@ -3158,7 +3152,7 @@ Round 3: "For the highest-scoring solution, create a detailed implementation pla
 **Purpose**: Establish comprehensive context for complex projects
 
 **Example Prompt**:
-\`\`\`
+```
 I'm going to work with you on optimizing our sales process over the next several messages. Here's our context:
 
 Company: B2B SaaS, 50 employees
@@ -3168,7 +3162,7 @@ Key Challenges: [specific issues]
 Success Metrics: [defined goals]
 
 Please confirm you understand this context and suggest how we should structure our collaboration.
-\`\`\`
+```
 
 **When to Use**: Long-term projects, ongoing consultation, complex analysis
 
@@ -3251,30 +3245,30 @@ Please confirm you understand this context and suggest how we should structure o
 **Solution**: Provide more specific context and constraints
 
 **Example Fix**:
-\`\`\`
+```
 Instead of: "Help me write an email"
 Try: "Help me write a follow-up email to a potential client who attended our product demo last week but hasn't responded to our initial proposal. The tone should be professional but friendly, and I want to offer additional value without being pushy."
-\`\`\`
+```
 
 ### **❌ Problem: Claude Misunderstands Context**
 
 **Solution**: Restart conversation or explicitly restate context
 
 **Example Fix**:
-\`\`\`
+```
 "Let me clarify the context: [restate key information]. Given this background, please revise your previous response."
-\`\`\`
+```
 
 ### **❌ Problem: Responses Are Too Long/Short**
 
 **Solution**: Specify desired length and format
 
 **Example Fix**:
-\`\`\`
+```
 "Please provide a concise summary in 3 bullet points" 
 or 
 "Please provide a comprehensive analysis of at least 500 words"
-\`\`\`
+```
 
 ### **❌ Problem: Technical Errors or Glitches**
 
@@ -3328,7 +3322,7 @@ or
 **Challenge**: Quarterly business planning with multiple stakeholders
 
 **Claude Approach**:
-\`\`\`
+```
 I'm facilitating a Q4 planning session. Help me structure a 2-hour agenda that covers:
 - Performance review of Q3 metrics
 - Market analysis and competitive positioning
@@ -3336,7 +3330,7 @@ I'm facilitating a Q4 planning session. Help me structure a 2-hour agenda that c
 - Risk assessment and mitigation strategies
 
 For each section, suggest discussion questions, time allocation, and expected outcomes.
-\`\`\`
+```
 
 **Expected Outcome**: Structured agenda with facilitation guidance
 
@@ -3345,14 +3339,14 @@ For each section, suggest discussion questions, time allocation, and expected ou
 **Challenge**: Monthly sales report analysis and recommendations
 
 **Claude Approach**:
-\`\`\`
+```
 I'm uploading our monthly sales data (CSV file). Please:
 1. Identify key trends and patterns
 2. Compare performance against targets
 3. Highlight areas of concern
 4. Suggest actionable recommendations for improvement
 5. Format findings for executive presentation
-\`\`\`
+```
 
 **Expected Outcome**: Executive-ready analysis with actionable insights
 
@@ -3361,14 +3355,14 @@ I'm uploading our monthly sales data (CSV file). Please:
 **Challenge**: Complex stakeholder communication requiring nuanced messaging
 
 **Claude Approach**:
-\`\`\`
+```
 I need to communicate a significant product delay to three different audiences:
 1. Internal team (engineering focus)
 2. Key customers (relationship preservation)
 3. Executive leadership (strategic implications)
 
 Help me craft appropriate messages for each audience, considering their concerns and communication preferences.
-\`\`\`
+```
 
 **Expected Outcome**: Tailored communications for each stakeholder group
 
@@ -3377,14 +3371,14 @@ Help me craft appropriate messages for each audience, considering their concerns
 **Challenge**: Comprehensive competitor research and positioning analysis
 
 **Claude Approach**:
-\`\`\`
+```
 Analyze our competitive landscape in the project management software market. I'll provide:
 - Our product positioning and features
 - Three main competitor profiles
 - Market research data
 
 Help me identify differentiation opportunities and develop our unique value proposition.
-\`\`\`
+```
 
 **Expected Outcome**: Strategic competitive analysis with positioning recommendations
 
@@ -3479,12 +3473,8 @@ Help me identify differentiation opportunities and develop our unique value prop
           difficulty: 'beginner',
           platform_focus: 'claude',
           learning_objectives: ['Master Claude interface and Constitutional AI principles', 'Implement advanced conversation techniques for complex analysis', 'Optimize workflows for 90+ minute daily time savings', 'Create personalized Claude optimization system']
-        },
-        {
-          module_id: understandingAI.id,
-          title: 'Claude\'s Advanced Business Features and Optimization Techniques',
-          description: 'Master Claude\'s unique capabilities and optimize your conversations for 10x productivity gains',
-          content: `**🎯 Learning Outcome**: Master Claude's unique capabilities and optimize your conversations for 10x productivity gains  
+        }  
+**🎯 Learning Outcome**: Master Claude's unique capabilities and optimize your conversations for 10x productivity gains  
 **🔧 Deliverable**: Complete Claude optimization checklist with advanced conversation techniques  
 
 ---
@@ -3596,7 +3586,7 @@ By the end of this lesson, you will:
 **R** - **Refine**: Iteratively improve the output
 
 **Example Using CLEAR**:
-\`\`\`
+```
 Context: I'm a sales manager preparing a quarterly review presentation for the executive team.
 
 Level: I need executive-level insights, not technical details. My audience includes the CEO, CFO, and VP of Operations.
@@ -3606,7 +3596,7 @@ Expectations: I need 5 key insights about our Q3 performance with specific recom
 Approach: Please use a data-driven analysis format with clear metrics and action items.
 
 Refine: After your initial analysis, I'll provide the actual numbers and ask you to refine the recommendations.
-\`\`\`
+```
 
 ### **🔍 Advanced Prompting Strategies**
 
@@ -3615,55 +3605,55 @@ Refine: After your initial analysis, I'll provide the actual numbers and ask you
 **Format**: "Think through this step by step..."
 
 **Example**:
-\`\`\`
+```
 "I need to decide between two marketing strategies for our product launch. Think through this step by step:
 
 Strategy A: Digital-first approach with $50K budget
 Strategy B: Hybrid approach with $75K budget
 
 Consider: target audience, ROI potential, timeline, risks, and resource requirements."
-\`\`\`
+```
 
 #### **2. The Role-Playing Method**
 **Purpose**: Get specialized expertise perspectives
 **Format**: "Act as a [expert role] and..."
 
 **Example**:
-\`\`\`
+```
 "Act as a seasoned CFO reviewing our expansion proposal. What are the top 3 financial risks I should address before presenting to the board?"
-\`\`\`
+```
 
 #### **3. The Collaborative Analysis**
 **Purpose**: Work through complex problems together
 **Format**: "Let's work through this together..."
 
 **Example**:
-\`\`\`
+```
 "Let's work through this customer retention challenge together. I'll share our current metrics, and you help me identify patterns and solutions. First, here's our data..."
-\`\`\`
+```
 
 #### **4. The Scenario Planning Technique**
 **Purpose**: Prepare for multiple outcomes
 **Format**: "Help me plan for these scenarios..."
 
 **Example**:
-\`\`\`
+```
 "Help me plan for these three scenarios for our product launch:
 1. Best case: 150% of projected sales
 2. Expected case: 100% of projected sales  
 3. Worst case: 60% of projected sales
 
 For each scenario, what should our response strategy be?"
-\`\`\`
+```
 
 #### **5. The Devil's Advocate Method**
 **Purpose**: Stress-test ideas and decisions
 **Format**: "Challenge this idea by..."
 
 **Example**:
-\`\`\`
+```
 "Challenge this marketing campaign idea by identifying potential weaknesses, competitor responses, and market risks. Be brutally honest about what could go wrong."
-\`\`\`
+```
 
 ---
 
@@ -3697,17 +3687,17 @@ For each scenario, what should our response strategy be?"
 4. **Synthesis and Action**: "Based on the entire report, create a 2-page executive summary with 5 specific action items for our team."
 
 #### **Multi-Document Comparison**:
-\`\`\`
+```
 "I'm going to share three competitor analysis reports. Please:
 1. Read each one carefully
 2. Identify common themes across all three
 3. Highlight unique insights from each
 4. Create a unified competitive strategy recommendation
 5. Maintain this context as we discuss implementation"
-\`\`\`
+```
 
 #### **Complex Project Management**:
-\`\`\`
+```
 "I'm managing a complex product launch with multiple stakeholders. I'll share:
 - Project timeline and milestones
 - Budget constraints and resource allocation
@@ -3715,7 +3705,7 @@ For each scenario, what should our response strategy be?"
 - Stakeholder communication plans
 
 Please help me identify potential conflicts and optimization opportunities across all these elements."
-\`\`\`
+```
 
 ---
 
@@ -3726,13 +3716,13 @@ Please help me identify potential conflicts and optimization opportunities acros
 **Strength**: Claude excels at analyzing structured data and creating actionable insights.
 
 **Optimal Approach**:
-\`\`\`
+```
 "I have Q3 sales data showing [specific metrics]. Help me:
 1. Identify the 3 most significant trends
 2. Analyze potential causes for performance variations
 3. Create recommendations for Q4 strategy
 4. Format this into an executive summary with clear action items"
-\`\`\`
+```
 
 **Pro Tips**:
 - Provide specific numbers and context
@@ -3745,30 +3735,30 @@ Please help me identify potential conflicts and optimization opportunities acros
 **Strength**: Claude's Constitutional AI makes it excellent for professional communication that needs to be thoughtful and well-reasoned.
 
 **Email Enhancement**:
-\`\`\`
+```
 "I need to write a difficult email to a client about project delays. The situation is [context]. Help me:
 1. Structure the message professionally
 2. Acknowledge the issue without over-apologizing
 3. Provide a clear action plan
 4. Maintain a positive relationship focus"
-\`\`\`
+```
 
 **Report Writing**:
-\`\`\`
+```
 "Create a comprehensive project status report for executive stakeholders. Include:
 - Executive summary (2 paragraphs)
 - Key accomplishments and challenges
 - Risk assessment and mitigation strategies
 - Resource needs and timeline adjustments
 - Clear next steps and decision points"
-\`\`\`
+```
 
 ### **🔍 Strategic Analysis and Planning**
 
 **Strength**: Claude's ability to consider multiple perspectives and ethical implications makes it ideal for strategic work.
 
 **Market Analysis**:
-\`\`\`
+```
 "Analyze our market entry strategy for [specific market]. Consider:
 - Competitive landscape and positioning
 - Regulatory and compliance requirements
@@ -3777,41 +3767,41 @@ Please help me identify potential conflicts and optimization opportunities acros
 - Success metrics and milestones
 
 Walk me through your reasoning for each area."
-\`\`\`
+```
 
 **Decision Framework**:
-\`\`\`
+```
 "I need to make a decision about [specific business decision]. Help me create a decision framework that includes:
 - Key criteria and weightings
 - Pros and cons for each option
 - Risk assessment for each path
 - Implementation considerations
 - Recommendation with reasoning"
-\`\`\`
+```
 
 ### **🎯 Problem-Solving and Innovation**
 
 **Strength**: Claude's thoughtful approach is perfect for complex problem-solving that requires careful consideration.
 
 **Root Cause Analysis**:
-\`\`\`
+```
 "We're experiencing [specific business problem]. Help me conduct a thorough root cause analysis:
 1. What are the most likely underlying causes?
 2. How can we test each hypothesis?
 3. What data would we need to confirm each cause?
 4. What would be the most effective interventions?
 5. How should we prioritize our response?"
-\`\`\`
+```
 
 **Innovation Brainstorming**:
-\`\`\`
+```
 "I need creative solutions for [specific challenge]. Use a structured innovation approach:
 1. Reframe the problem from multiple angles
 2. Generate diverse solution categories
 3. Evaluate each approach's feasibility and impact
 4. Recommend the 3 most promising options
 5. Outline implementation strategies for each"
-\`\`\`
+```
 
 ---
 
@@ -3829,7 +3819,7 @@ Walk me through your reasoning for each area."
 **Conversation Templates**:
 
 **Project Kickoff**:
-\`\`\`
+```
 "I'm starting a new project: [project description]. 
 Context: [background, stakeholders, constraints]
 Goals: [specific objectives and success metrics]
@@ -3837,10 +3827,10 @@ My role: [your responsibilities and authority]
 Timeline: [key milestones and deadlines]
 
 Let's work together to create a comprehensive project plan."
-\`\`\`
+```
 
 **Weekly Review**:
-\`\`\`
+```
 "Time for our weekly review of [project/initiative]. 
 Here's what happened: [key developments]
 Current status: [progress against goals]
@@ -3848,7 +3838,7 @@ Challenges: [obstacles and concerns]
 Decisions needed: [pending choices]
 
 Help me prioritize next week's actions and identify any risks."
-\`\`\`
+```
 
 ### **🔧 Technical Optimization**
 
@@ -3860,7 +3850,7 @@ Help me prioritize next week's actions and identify any risks."
 5. **Iterate Deliberately**: Build on previous responses to refine output
 
 **Advanced Formatting**:
-\`\`\`
+```
 "Create a competitive analysis report with this exact structure:
 1. Executive Summary (2 paragraphs)
 2. Market Overview (3 key trends)
@@ -3870,7 +3860,7 @@ Help me prioritize next week's actions and identify any risks."
 6. Implementation Timeline (next 90 days)
 
 Use professional business language appropriate for C-level executives."
-\`\`\`
+```
 
 ### **🎨 Creative and Analytical Balance**
 
@@ -3881,13 +3871,13 @@ Use professional business language appropriate for C-level executives."
 - **Communication**: Use Claude's Constitutional AI for thoughtful, professional messaging
 
 **Balancing Creativity and Analysis**:
-\`\`\`
+```
 "I need both creative and analytical thinking for our product positioning. 
 Analytically: Review our market research data and identify positioning gaps
 Creatively: Generate 5 unique value propositions that differentiate us
 Synthesis: Combine analysis and creativity into a recommended positioning strategy
 Validation: Help me test this positioning against our target customer personas"
-\`\`\`
+```
 
 ---
 
@@ -3951,7 +3941,7 @@ Validation: Help me test this positioning against our target customer personas"
 **Purpose**: Get Claude to help you create better prompts for future use.
 
 **Template**:
-\`\`\`
+```
 "I frequently need to [specific task]. Help me create a reusable prompt template that will:
 1. Provide the right context every time
 2. Ensure consistent quality output
@@ -3959,7 +3949,7 @@ Validation: Help me test this positioning against our target customer personas"
 4. Be adaptable to different situations
 
 Then test the template with a specific example."
-\`\`\`
+```
 
 ### **🔄 The Iterative Refinement Method**
 
@@ -3973,24 +3963,24 @@ Then test the template with a specific example."
 5. **Final Optimization**: Polish for specific use case
 
 **Example Workflow**:
-\`\`\`
+```
 Initial: "Write a project proposal for our new initiative"
 Refinement: "Good start. Now add more specific budget details and timeline milestones"
 Optimization: "Perfect. Now format this for a 15-minute executive presentation"
-\`\`\`
+```
 
 ### **🎭 The Role-Specific Customization**
 
 **Purpose**: Adapt Claude's responses to your specific professional context.
 
 **Setup Template**:
-\`\`\`
+```
 "For our ongoing work together, remember that I'm a [your role] at a [company type] company. When I ask for advice or analysis:
 - Consider my specific responsibilities and constraints
 - Use terminology appropriate for my industry
 - Focus on actionable insights I can implement
 - Consider the typical challenges someone in my role faces"
-\`\`\`
+```
 
 ---
 
@@ -4121,7 +4111,7 @@ By the end of this lesson, you will:
 ### **🎯 The Campaign Strategy Reasoning Chain**
 
 **Agency Template Structure**:
-\`\`\`
+```
 "Please develop a comprehensive campaign strategy for [CLIENT/BRAND] using step-by-step agency reasoning:
 
 1. **Brand & Market Analysis**: What are the brand positioning, competitive landscape, and market dynamics?
@@ -4133,7 +4123,7 @@ By the end of this lesson, you will:
 7. **Risk Mitigation**: What could go wrong and how do we prepare for those scenarios?
 
 For each step, consider client constraints, budget implications, and competitive responses."
-\`\`\`
+```
 
 ### **🚀 Advanced Agency Chain-of-Thought Techniques**
 
@@ -4142,7 +4132,7 @@ For each step, consider client constraints, budget implications, and competitive
 **Use Case**: Complex campaigns with multiple decision-makers and constituencies
 
 **Agency Template**:
-\`\`\`
+```
 "I'm developing a campaign for [CLIENT/BRAND] targeting [AUDIENCE]. Please analyze this through multiple agency stakeholder lenses:
 
 **Creative Director Perspective**: 
@@ -4171,14 +4161,14 @@ For each step, consider client constraints, budget implications, and competitive
 - What risk factors could impact delivery and how do we mitigate them?
 
 **Final Integration**: Synthesize these perspectives into a unified campaign recommendation with clear next steps, success metrics, and stakeholder alignment strategy."
-\`\`\`
+```
 
 #### **2. Creative Brief Development Chain**
 
 **Use Case**: Transforming client briefs into actionable creative direction
 
 **Agency Template**:
-\`\`\`
+```
 "Help me develop a comprehensive creative brief from this client input: [CLIENT BRIEF/REQUIREMENTS]
 
 **Brief Analysis Phase**: 
@@ -4213,14 +4203,14 @@ Prepare for internal and client alignment:
 - Implementation timeline and resource requirements
 
 Provide the output as a comprehensive creative brief document ready for client presentation and team activation."
-\`\`\`
+```
 
 #### **3. Client Communication Strategy Chain**
 
 **Use Case**: Preparing for challenging client conversations and presentations
 
 **Agency Template**:
-\`\`\`
+```
 "I need to communicate [SITUATION/RECOMMENDATION] to [CLIENT TYPE/STAKEHOLDERS]. Help me develop a strategic communication approach:
 
 **Stakeholder Analysis Phase**: 
@@ -4259,7 +4249,7 @@ How do we maximize approval probability?
 - Post-communication follow-up strategy
 
 Provide a complete communication plan with key messages, delivery recommendations, and tactical execution guidance."
-\`\`\`
+```
 
 ---
 
@@ -4268,7 +4258,7 @@ Provide a complete communication plan with key messages, delivery recommendation
 ### **🎯 Campaign Strategy Templates**
 
 #### **Template 1: Brand Positioning Analysis for Campaign Development**
-\`\`\`
+```
 **Brand Context**: I'm developing a campaign for [BRAND NAME] in the [INDUSTRY] sector.
 
 **Analysis Request**: Please conduct a comprehensive brand positioning analysis for campaign planning:
@@ -4305,10 +4295,10 @@ Provide a complete communication plan with key messages, delivery recommendation
 
 **Business Context**: [Campaign objectives, budget range, timeline, key stakeholders]
 **Output Format**: Executive briefing document with strategic recommendations and creative implications
-\`\`\`
+```
 
 #### **Template 2: Target Audience Insight Development**
-\`\`\`
+```
 **Campaign Challenge**: Develop deep audience insights for [CAMPAIGN/BRAND] targeting [AUDIENCE DESCRIPTION].
 
 **Insight Development Framework**:
@@ -4345,10 +4335,10 @@ Provide a complete communication plan with key messages, delivery recommendation
 
 **Research Context**: [Available research data, budget for additional research, timeline constraints]
 **Application Focus**: Use insights to inform [creative strategy, media planning, message development]
-\`\`\`
+```
 
 #### **Template 3: Creative Concept Development and Evaluation**
-\`\`\`
+```
 **Creative Challenge**: Develop and evaluate creative concepts for [CAMPAIGN NAME] with objectives of [CAMPAIGN GOALS].
 
 **Creative Development Process**:
@@ -4390,12 +4380,12 @@ Provide a complete communication plan with key messages, delivery recommendation
 
 **Campaign Parameters**: [Budget range, timeline, channel requirements, brand guidelines]
 **Client Context**: [Client personality, risk tolerance, previous creative preferences]
-\`\`\`
+```
 
 ### **📞 Client Management Templates**
 
 #### **Template 4: Client Brief Analysis and Strategic Response**
-\`\`\`
+```
 **Client Brief Input**: [Insert client brief or description of client request]
 
 **Brief Analysis Framework**:
@@ -4432,10 +4422,10 @@ Provide a complete communication plan with key messages, delivery recommendation
 
 **Client Context**: [Client industry, company size, key contacts, relationship history]
 **Internal Context**: [Agency capabilities, resource availability, strategic priorities]
-\`\`\`
+```
 
 #### **Template 5: Difficult Client Conversation Preparation**
-\`\`\`
+```
 **Conversation Context**: I need to discuss [SENSITIVE TOPIC/ISSUE] with [CLIENT NAME/TYPE].
 
 **Conversation Preparation Strategy**:
@@ -4477,7 +4467,7 @@ Provide a complete communication plan with key messages, delivery recommendation
    - Long-term relationship impact mitigation
 
 #### **Template 6: New Business Pitch Strategy Development**
-\`\`\`
+```
 **Pitch Context**: Preparing for [CLIENT/COMPANY] new business pitch worth [BUDGET/SCOPE].
 
 **Pitch Strategy Framework**:
@@ -4521,12 +4511,12 @@ Provide a complete communication plan with key messages, delivery recommendation
 
 **Pitch Parameters**: [Timeline, format, audience, presentation constraints]
 **Agency Context**: [Team availability, previous relationship, strategic importance]
-\`\`\`
+```
 
 ### **🎨 Creative Development Templates**
 
 #### **Template 7: Creative Brief Development and Optimization**
-\`\`\`
+```
 **Client Input**: [Insert client brief, requirements, or campaign description]
 
 **Creative Brief Development Process**:
@@ -4565,10 +4555,10 @@ Provide a complete communication plan with key messages, delivery recommendation
 
 **Team Context**: [Creative team composition, experience level, previous work on brand]
 **Project Context**: [Budget range, timeline, client expectations, strategic importance]
-\`\`\`
+```
 
 #### **Template 8: Creative Concept Evaluation and Client Presentation**
-\`\`\`
+```
 **Creative Concepts**: [Describe the creative concepts/campaigns to evaluate]
 
 **Concept Evaluation Framework**:
@@ -4605,10 +4595,10 @@ Provide a complete communication plan with key messages, delivery recommendation
 
 **Client Context**: [Risk tolerance, previous creative preferences, decision-making style]
 **Presentation Format**: [Meeting format, time constraints, audience composition]
-\`\`\`
+```
 
 #### **Template 9: Production Planning and Resource Optimization**
-\`\`\`
+```
 **Production Scope**: [Campaign/project requiring production planning]
 
 **Production Planning Framework**:
@@ -4651,12 +4641,12 @@ Provide a complete communication plan with key messages, delivery recommendation
 
 **Project Context**: [Budget range, timeline constraints, quality requirements]
 **Team Context**: [Internal capabilities, vendor relationships, previous experience]
-\`\`\`
+```
 
 ### **📊 Analytics and Performance Templates**
 
 #### **Template 10: Campaign Performance Analysis and Optimization**
-\`\`\`
+```
 **Campaign Data**: [Insert performance data, metrics, or describe available analytics]
 
 **Performance Analysis Framework**:
@@ -4693,12 +4683,12 @@ Provide a complete communication plan with key messages, delivery recommendation
 
 **Analysis Context**: [Campaign objectives, budget, timeline, client expectations]
 **Decision Timeline**: [When optimizations need to be implemented, approval process]
-\`\`\`
+```
 
 ### **🔗 Multi-Tool Integration Templates**
 
 #### **Template 11: Claude + ChatGPT + Gemini Campaign Development Workflow**
-\`\`\`
+```
 **Campaign Brief**: [Insert campaign requirements and objectives]
 
 **Multi-Tool Strategic Workflow**:
@@ -4743,10 +4733,10 @@ Use your multimodal capabilities for comprehensive analysis."
 
 **Workflow Benefits**: Complete campaign development leveraging each platform's strengths
 **Time Savings**: 50-70% reduction vs. traditional single-tool approach
-\`\`\`
+```
 
 #### **Template 12: Claude + Microsoft Copilot Enterprise Integration**
-\`\`\`
+```
 **Enterprise Context**: [Describe client Microsoft requirements and agency integration needs]
 
 **Integrated Workflow Strategy**:
@@ -4791,10 +4781,10 @@ Provide detailed strategic rationale and implementation guidance."
 - Professional deliverable format meeting corporate standards
 
 **Agency Implementation**: [How to set up and optimize this integrated workflow]
-\`\`\`
+```
 
 #### **Template 13: Real-Time Intelligence Integration (Claude + Grok)**
-\`\`\`
+```
 **Campaign Context**: [Campaign requiring real-time social and market intelligence]
 
 **Dynamic Intelligence Workflow**:
@@ -4837,12 +4827,12 @@ Provide hourly/daily intelligence briefings with actionable insights."
 - Continuous campaign optimization based on social signals
 
 **Agency Competitive Advantage**: First-mover advantage in real-time responsive campaigning
-\`\`\`
+```
 
 ### **👥 Team Collaboration and Training Templates**
 
 #### **Template 14: Claude Training for Agency Teams**
-\`\`\`
+```
 **Team Training Context**: [Department/role requiring Claude optimization training]
 
 **Customized Training Framework**:
@@ -4885,10 +4875,10 @@ Include 10+ strategy-specific frameworks and complex analysis templates."
 - Cross-functional collaboration and workflow integration
 
 **ROI Measurement**: Track time savings, output quality, and client satisfaction improvements
-\`\`\`
+```
 
 #### **Template 15: Agency Workflow Optimization Assessment**
-\`\`\`
+```
 **Current Workflow Analysis**: [Describe existing agency processes and pain points]
 
 **Optimization Assessment Framework**:
@@ -4923,7 +4913,7 @@ Include 10+ strategy-specific frameworks and complex analysis templates."
 
 **Assessment Output**: Comprehensive optimization plan with implementation roadmap and ROI projections
 **Change Management**: Team adoption strategy and success measurement framework
-\`\`\`
+```
 
 ---
 
@@ -5060,10 +5050,10 @@ Include 10+ strategy-specific frameworks and complex analysis templates."
 **Resource Assessment**: What capabilities, budget, and timeline are required for successful implementation?
 
 **Success Definition**: How will we know when this problem is effectively solved?
-\`\`\`
+```
 
 #### **Template 12: Process Optimization and Efficiency Improvement**
-\`\`\`
+```
 **Process Optimization Target**: [Specific process, workflow, or operation to improve]
 
 **Current State Analysis**:
@@ -5085,12 +5075,12 @@ Include 10+ strategy-specific frameworks and complex analysis templates."
 - Resource requirements and ROI projections
 
 **Change Management**: How to implement process changes while maintaining current operations and team buy-in
-\`\`\`
+```
 
 ### **📈 Financial and Business Planning Templates**
 
 #### **Template 13: Business Case Development**
-\`\`\`
+```
 **Business Case Objective**: [What you're seeking approval/funding for]
 
 **Business Case Structure**:
@@ -5128,10 +5118,10 @@ Include 10+ strategy-specific frameworks and complex analysis templates."
 **Approval Requirements**: [Budget threshold, stakeholders, decision criteria]
 
 **Competitive Context**: How this compares to alternative investments and strategic priorities
-\`\`\`
+```
 
 #### **Template 14: Budget Planning and Resource Allocation**
-\`\`\`
+```
 **Budget Planning Scope**: [Department, project, or time period for budget development]
 
 **Budget Development Framework**:
@@ -5160,10 +5150,10 @@ Include 10+ strategy-specific frameworks and complex analysis templates."
    - Adjustment mechanisms and approval processes
 
 **Stakeholder Context**: Budget presentation required for [audience] by [deadline]
-\`\`\`
+```
 
 #### **Template 15: ROI Analysis and Investment Evaluation**
-\`\`\`
+```
 **Investment Evaluation**: [Specific investment, project, or initiative to analyze]
 
 **ROI Analysis Framework**:
@@ -5197,12 +5187,12 @@ Include 10+ strategy-specific frameworks and complex analysis templates."
 **Decision Framework**: Recommendation on whether to proceed with investment based on financial analysis and strategic considerations
 
 **Context**: This analysis supports [specific business decision] for [stakeholder audience]
-\`\`\`
+```
 
 ### **🎯 Project Management and Execution Templates**
 
 #### **Template 16: Project Planning and Management Framework**
-\`\`\`
+```
 **Project Overview**: [Project name, scope, and strategic objectives]
 
 **Project Planning Structure**:
@@ -5236,10 +5226,10 @@ Include 10+ strategy-specific frameworks and complex analysis templates."
 **Project Context**: [Urgency, complexity, organizational impact, change management needs]
 
 **Success Metrics**: How will project success be measured and validated?
-\`\`\`
+```
 
 #### **Template 17: Team Performance and Development Planning**
-\`\`\`
+```
 **Team Assessment Scope**: [Team/department for performance and development analysis]
 
 **Performance and Development Framework**:
@@ -5270,10 +5260,10 @@ Include 10+ strategy-specific frameworks and complex analysis templates."
 **Implementation Timeline**: 30/60/90-day development milestones and long-term career development goals
 
 **Resource Requirements**: Budget, time, and external resources needed for development initiatives
-\`\`\`
+```
 
 #### **Template 18: Change Management and Implementation Strategy**
-\`\`\`
+```
 **Change Initiative**: [Describe the organizational change or transformation]
 
 **Change Management Framework**:
@@ -5304,12 +5294,12 @@ Include 10+ strategy-specific frameworks and complex analysis templates."
 **Communication Strategy**: Key messages, timing, and channels for change communication
 
 **Risk Mitigation**: Strategies for managing resistance and ensuring successful adoption
-\`\`\`
+```
 
 ### **🌟 Leadership and Decision-Making Templates**
 
 #### **Template 19: Executive Decision-Making Framework**
-\`\`\`
+```
 **Decision Context**: [Describe the strategic decision requiring executive input]
 
 **Decision-Making Structure**:
@@ -5340,10 +5330,10 @@ Include 10+ strategy-specific frameworks and complex analysis templates."
 **Stakeholder Considerations**: How to communicate this decision and manage organizational impact
 
 **Decision Documentation**: Create decision record for accountability and future reference
-\`\`\`
+```
 
 #### **Template 20: Crisis Response and Management Planning**
-\`\`\`
+```
 **Crisis Situation**: [Describe the crisis or potential crisis scenario]
 
 **Crisis Management Framework**:
@@ -5374,7 +5364,7 @@ Include 10+ strategy-specific frameworks and complex analysis templates."
 **Constitutional AI Considerations**: Ensure response considers ethical implications, stakeholder fairness, and long-term reputation impact
 
 **Crisis Communication Timeline**: Immediate (first hour), short-term (first day), and medium-term (first week) communication priorities
-\`\`\`
+```
 
 ---
 
@@ -5510,7 +5500,7 @@ By the end of this lesson, you will:
 
 #### **Professional Meeting Analysis Template**
 
-\`\`\`
+```
 Context: I need you to analyze meeting notes and extract actionable insights.
 
 Format: Use the MART framework for comprehensive analysis:
@@ -5538,7 +5528,7 @@ Format: Use the MART framework for comprehensive analysis:
 Meeting Notes: [INSERT MEETING NOTES]
 
 Please provide a comprehensive analysis that I can immediately distribute to attendees and stakeholders for maximum accountability and follow-through.
-\`\`\`
+```
 
 ### **🚀 Real-World Business Case Study: Executive Team Meeting**
 
@@ -5605,7 +5595,7 @@ Please provide a comprehensive analysis that I can immediately distribute to att
 
 #### **Professional Executive Report Template**
 
-\`\`\`
+```
 Context: Transform this business analysis into an executive-ready report for C-level leadership review.
 
 Executive Audience: [CEO/Board/Department Heads] with [specific context about their priorities]
@@ -5639,7 +5629,7 @@ Report Framework:
 Source Data: [INSERT ANALYSIS, DATA, OR DETAILED REPORT]
 
 Please create an executive report that drives immediate decision-making and clear action planning.
-\`\`\`
+```
 
 ### **📊 Business Case Study: Quarterly Performance Report**
 
@@ -5693,7 +5683,7 @@ Q3 revenue of $14.2M represents 12% growth but falls 8% short of $15.4M target d
 
 #### **Professional Data Analysis Template**
 
-\`\`\`
+```
 Context: Analyze this business data to generate strategic insights and recommendations for [specific business objective].
 
 Analysis Framework:
@@ -5727,7 +5717,7 @@ Business Context: [Describe specific business goals, challenges, or decisions th
 Data: [INSERT DATA, SPREADSHEET, OR DATABASE EXPORT]
 
 Please provide comprehensive analysis that transforms this data into actionable business strategy.
-\`\`\`
+```
 
 ### **📊 Business Case Study: Customer Churn Analysis**
 
@@ -5785,7 +5775,7 @@ Analysis of 47,000 customers (Jan 2023 - June 2024) with 89% data completeness. 
 
 #### **Professional Strategic Analysis Template**
 
-\`\`\`
+```
 Context: I need comprehensive strategic analysis to support [specific business decision] with clear recommendations and implementation guidance.
 
 Analysis Framework:
@@ -5819,7 +5809,7 @@ Business Context: [Provide specific strategic challenge, market dynamics, and de
 Available Information: [INSERT MARKET DATA, COMPETITIVE INTELLIGENCE, FINANCIAL DATA]
 
 Please provide analysis that enables confident strategic decision-making with clear implementation guidance.
-\`\`\`
+```
 
 ### **🚀 Business Case Study: Market Entry Strategy**
 
@@ -5896,13 +5886,13 @@ Strong product-market fit in North America (34% market share in mid-market segme
 #### **Productivity Metrics Tracking**
 
 **Time Savings Calculation**:
-\`\`\`
+```
 Weekly Time Investment in Claude: _____ hours
 Weekly Time Saved Through Claude: _____ hours
 Net Weekly Productivity Gain: _____ hours
 Monthly Value (hourly rate × savings): $______
 Annual ROI Projection: $______
-\`\`\`
+```
 
 **Quality Improvement Metrics**:
 - Decision-making speed improvement: _____%
@@ -6199,12 +6189,12 @@ Released February 2025, GPT-4.5 represents a fundamental shift in AI interaction
 - **Better Context Understanding**: Superior comprehension of brand voice and client needs
 
 **Agency Applications:**
-\`\`\`
+```
 Brand Voice Development:
 "Help me develop a brand voice for a luxury sustainable fashion brand. The tone should be sophisticated but accessible, environmentally conscious but not preachy, and aspirational yet authentic."
 
 GPT-4.5 Response: [Delivers nuanced, personality-rich brand guidelines with specific examples]
-\`\`\`
+```
 
 **When to Use GPT-4.5 vs Other Models:**
 - **GPT-4.5**: Creative work, client communication, brand development
@@ -6228,7 +6218,7 @@ The o-series models revolutionize agency strategic work with enhanced reasoning 
 - **Math & Coding Excellence**: Superior performance in analytical tasks
 
 **Strategic Campaign Analysis Example:**
-\`\`\`
+```
 Prompt: "Using o3, analyze our client's Q4 performance data, competitor actions, and market trends to develop a comprehensive strategy for their 2025 brand repositioning."
 
 o3 Process:
@@ -6237,7 +6227,7 @@ o3 Process:
 3. Market Dynamics: Economic factors, consumer behavior shifts
 4. Strategic Synthesis: Integrated recommendations with risk assessment
 5. Implementation Planning: Phased approach with success metrics
-\`\`\`
+```
 
 ### 3. Advanced Voice Mode 2.0: Real-Time Collaboration Revolution
 
@@ -6250,7 +6240,7 @@ The upgraded Advanced Voice Mode transforms agency meetings and client interacti
 - **Background Integration**: Works with other apps during meetings
 
 **Agency Meeting Applications:**
-\`\`\`
+```
 Creative Review Sessions:
 - Screen share campaign mockups while discussing
 - Real-time voice feedback and iteration
@@ -6262,7 +6252,7 @@ Client Presentations:
 - Real-time Q&A with sophisticated responses
 - Multi-language support for global clients
 - Emotional intelligence for difficult conversations
-\`\`\`
+```
 
 ### 4. Canvas 2.0: The Collaborative Workspace Revolution
 
@@ -6275,14 +6265,14 @@ Canvas 2.0 transforms how agencies collaborate on projects internally and with c
 - **AI-Powered Suggestions**: Context-aware improvements and alternatives
 
 **Agency Workflow Examples:**
-\`\`\`
+```
 Campaign Development Canvas:
 - Strategy section with AI-generated frameworks
 - Creative concepts with DALL-E integration
 - Copy variations with brand voice consistency
 - Timeline and budget planning with smart suggestions
 - Client feedback integration with revision tracking
-\`\`\`
+```
 
 ### 5. Deep Research: Enterprise Intelligence Engine
 
@@ -6295,7 +6285,7 @@ Deep Research transforms how agencies gather and analyze information.
 - **Enterprise Connectors**: Direct integration with company data
 
 **Agency Research Applications:**
-\`\`\`
+```
 Competitive Intelligence Report:
 1. Input: Competitor names, market category, time period
 2. Deep Research Process:
@@ -6303,7 +6293,7 @@ Competitive Intelligence Report:
    - Private document review (previous research, client briefs)
    - Market data synthesis from multiple sources
 3. Output: Comprehensive report with full citations and strategic insights
-\`\`\`
+```
 
 ### 6. Enterprise Connectors: Seamless Agency Integration
 
@@ -6317,14 +6307,14 @@ Enterprise Connectors revolutionize how agencies access and utilize their data e
 - **Storage Systems**: Dropbox, Box, AWS S3
 
 **Agency Workflow Example:**
-\`\`\`
+```
 New Business Pitch Development:
 1. ChatGPT accesses Google Drive for previous client work
 2. Reviews Gmail for client communication history
 3. Pulls competitive analysis from SharePoint
 4. Integrates budget data from project management tools
 5. Creates comprehensive pitch deck with all context
-\`\`\`
+```
 
 ### 7. Scheduled Tasks & Proactive AI: Autonomous Agency Operations
 
@@ -6337,14 +6327,14 @@ The newest automation features enable proactive agency management.
 - **Follow-Up Management**: Intelligent client communication scheduling
 
 **Agency Automation Examples:**
-\`\`\`
+```
 Daily Agency Intelligence:
 - 7 AM: Client social media performance summary
 - 9 AM: Competitor activity and news alerts
 - 12 PM: Campaign performance midday check
 - 5 PM: Daily accomplishments and tomorrow's priorities
 - Weekly: Comprehensive client portfolio health reports
-\`\`\`
+```
 
 ---
 
@@ -6535,7 +6525,7 @@ By mastering ChatGPT's core features and integrating them strategically into age
 - **Multi-Language Support**: Python, JavaScript, CSS, SQL, and more
 
 **Agency Applications:**
-\`\`\`
+```
 Website Development Workflow:
 1. Open Visual Studio Code with client project
 2. ChatGPT analyzes existing codebase structure
@@ -6548,7 +6538,7 @@ Landing Page Optimization:
 2. Suggests A/B test variations
 3. Implements code changes for testing
 4. Monitors performance and iterates
-\`\`\`
+```
 
 **Business Impact:**
 - **Development Speed**: 60% faster implementation times
@@ -6566,7 +6556,7 @@ Landing Page Optimization:
 - **Mobile App Enhancements**: Improved smartphone and tablet experience
 
 **Strategic Advantage for Agencies:**
-\`\`\`
+```
 Client Onboarding Strategy:
 1. Demonstrate AI capabilities using free tier
 2. Show immediate value without upfront investment
@@ -6578,14 +6568,14 @@ Team Training Program:
 2. Provide hands-on experience without cost pressure
 3. Identify power users for paid upgrades
 4. Build organization-wide AI literacy
-\`\`\`
+```
 
 ### 10. Codex CLI: Command-Line AI Excellence
 
 **Revolutionary Developer Tool**: Open-source command-line interface for ChatGPT integration.
 
 **Agency Technical Applications:**
-\`\`\`bash
+```bash
 # Direct campaign analysis from terminal
 $ codex "Analyze website traffic data and suggest conversion optimizations"
 
@@ -6597,7 +6587,7 @@ $ codex "Review this CSS file and optimize for performance and mobile"
 
 # Batch content processing
 $ codex "Process 100 product descriptions for SEO optimization"
-\`\`\`
+```
 
 **Enterprise Integration Benefits:**
 - **Workflow Automation**: Seamless integration with existing systems
@@ -6610,7 +6600,7 @@ $ codex "Process 100 product descriptions for SEO optimization"
 **Game-Changing Integration**: Build custom connectors for any data source or business system.
 
 **Agency Implementation Examples:**
-\`\`\`
+```
 Custom Client Dashboard:
 1. Connect ChatGPT to client CRM systems
 2. Integrate social media analytics platforms
@@ -6622,7 +6612,7 @@ Proprietary Knowledge Base:
 2. Integrate historical campaign data
 3. Link to client preference databases
 4. Create institutional memory AI assistant
-\`\`\`
+```
 
 **Competitive Advantages:**
 - **Unique Capabilities**: Custom AI solutions competitors can't replicate
@@ -6635,7 +6625,7 @@ Proprietary Knowledge Base:
 **New Commercial Capabilities**: ChatGPT now includes sophisticated e-commerce functionality.
 
 **Agency E-commerce Applications:**
-\`\`\`
+```
 Product Research & Strategy:
 "Research trending products in sustainable fashion, analyze competitor pricing, and identify market gaps for our client's new eco-luxury line."
 
@@ -6644,7 +6634,7 @@ Customer Journey Optimization:
 
 Product Description Generation:
 "Create compelling product descriptions for 500 items in our client's outdoor gear catalog, optimized for SEO and conversion, maintaining brand voice consistency."
-\`\`\`
+```
 
 **ROI for E-commerce Agencies:**
 - **Research Speed**: 80% faster market analysis
@@ -6657,7 +6647,7 @@ Product Description Generation:
 **Persistent Context**: ChatGPT now maintains long-term memory of projects, preferences, and agency-specific requirements.
 
 **Agency Memory Applications:**
-\`\`\`
+```
 Client Brand Voice Memory:
 - Learns and maintains each client's unique tone
 - Remembers approved messaging frameworks
@@ -6669,7 +6659,7 @@ Project Context Retention:
 - Remembers strategic decisions and rationale
 - Tracks creative evolution and client feedback
 - Preserves learning from previous campaigns
-\`\`\`
+```
 
 **Organizational Benefits:**
 - **Consistency**: Brand voice maintained across team members
@@ -6682,7 +6672,7 @@ Project Context Retention:
 **Self-Directed Operations**: ChatGPT can now operate independently on complex, multi-step projects.
 
 **Agency Autonomous Workflows:**
-\`\`\`
+```
 Competitive Monitoring Agent:
 1. Continuously monitor competitor social media
 2. Track pricing and promotional changes
@@ -6696,7 +6686,7 @@ Campaign Performance Optimization:
 3. Generate optimization recommendations
 4. Implement approved changes automatically
 5. Report results and learnings
-\`\`\`
+```
 
 **Business Impact Metrics:**
 - **24/7 Operations**: Continuous monitoring and optimization
@@ -6718,7 +6708,7 @@ Campaign Performance Optimization:
 - **Real-time Research**: Web browsing and current information
 
 **Ideal Agency Scenarios:**
-\`\`\`
+```
 Creative Brainstorming:
 "Generate 20 campaign concepts for sustainable fashion brand targeting Gen Z professionals with $50K+ household income."
 
@@ -6727,7 +6717,7 @@ Technical Implementation:
 
 Content Creation at Scale:
 "Create 60 days of social media content across LinkedIn, Instagram, and Twitter for B2B SaaS client."
-\`\`\`
+```
 
 ### ChatGPT vs. Claude Comparison
 
@@ -6752,7 +6742,7 @@ Content Creation at Scale:
 ### Multi-Tool Agency Workflows
 
 **The Triple-AI Campaign Strategy:**
-\`\`\`
+```
 Phase 1 - ChatGPT: Rapid Concept Development
 - Generate 30 initial campaign concepts
 - Create quick visual mockups with DALL-E
@@ -6767,7 +6757,7 @@ Phase 3 - Gemini: Multimodal Execution
 - Generate video content with Veo
 - Create comprehensive visual assets
 - Analyze campaign performance data
-\`\`\`
+```
 
 ---
 
@@ -6776,7 +6766,7 @@ Phase 3 - Gemini: Multimodal Execution
 ### 1. Team Training & Adoption Framework
 
 **Phase 1: Foundation Building (Week 1-2)**
-\`\`\`
+```
 All Team Members:
 - Complete ChatGPT basics training
 - Practice core prompt engineering
@@ -6784,10 +6774,10 @@ All Team Members:
 - Understand agency usage guidelines
 
 Deliverable: Team ChatGPT competency certification
-\`\`\`
+```
 
 **Phase 2: Role-Specific Mastery (Week 3-4)**
-\`\`\`
+```
 Account Managers:
 - Client communication templates
 - Research and analysis workflows
@@ -6804,10 +6794,10 @@ Strategists:
 - Campaign planning methodologies
 
 Deliverable: Role-specific workflow documentation
-\`\`\`
+```
 
 **Phase 3: Advanced Integration (Week 5-8)**
-\`\`\`
+```
 Cross-Functional Teams:
 - Multi-tool workflow development
 - Client-specific AI assistants
@@ -6815,12 +6805,12 @@ Cross-Functional Teams:
 - Performance measurement frameworks
 
 Deliverable: Fully integrated agency AI operations
-\`\`\`
+```
 
 ### 2. Client Integration & Value Demonstration
 
 **Client Onboarding with AI:**
-\`\`\`
+```
 Week 1: Assessment & Strategy
 - Use ChatGPT to analyze client's current digital presence
 - Generate competitive landscape analysis
@@ -6837,12 +6827,12 @@ Week 3: Presentation & Refinement
 - Demonstrate speed and quality advantages
 
 Result: 40% faster client onboarding with 25% higher satisfaction scores
-\`\`\`
+```
 
 ### 3. Competitive Advantage Development
 
 **AI-Powered Proposal Process:**
-\`\`\`
+```
 RFP Response Enhancement:
 1. ChatGPT analyzes RFP requirements and client background
 2. Generates initial strategic approach and methodology
@@ -6852,10 +6842,10 @@ RFP Response Enhancement:
 
 Time Savings: 60% reduction in proposal development time
 Win Rate Improvement: 35% increase in new business success
-\`\`\`
+```
 
 **Proprietary AI Tools Development:**
-\`\`\`
+```
 Custom Agency Assistants:
 - Client-specific ChatGPT configurations
 - Industry-specialized knowledge bases
@@ -6867,7 +6857,7 @@ Competitive Moats:
 - Faster response times than traditional agencies
 - Higher quality output through AI enhancement
 - Scalable service delivery models
-\`\`\`
+```
 
 ---
 
@@ -6876,7 +6866,7 @@ Competitive Moats:
 ### 1. AI Output Quality Assurance
 
 **Quality Control Framework:**
-\`\`\`
+```
 Pre-Output Review:
 - Prompt accuracy and completeness verification
 - Context and background information confirmation
@@ -6887,12 +6877,12 @@ Post-Output Analysis:
 - Brand voice consistency assessment
 - Legal and compliance review
 - Client-specific requirement fulfillment
-\`\`\`
+```
 
 ### 2. Brand Voice Consistency
 
 **Brand Voice Training Process:**
-\`\`\`
+```
 Client Brand Voice Development:
 1. Analyze existing client communications (emails, websites, social media)
 2. Extract key voice characteristics and guidelines
@@ -6902,12 +6892,12 @@ Client Brand Voice Development:
 
 Example Brand Voice Prompt:
 "Adopt the brand voice for [Client Name]: [Sophisticated yet approachable, environmentally conscious but not preachy, innovative but not overwhelming, premium but accessible]. Reference previous approved content for consistency."
-\`\`\`
+```
 
 ### 3. Ethical AI Usage Guidelines
 
 **Agency AI Ethics Framework:**
-\`\`\`
+```
 Transparency Requirements:
 - Always disclose AI assistance in client deliverables
 - Maintain clear records of AI vs. human contribution
@@ -6922,7 +6912,7 @@ Data Privacy:
 - No sensitive client information in AI training data
 - Secure handling of all AI-generated content
 - Compliance with client confidentiality agreements
-\`\`\`
+```
 
 ---
 
@@ -6931,7 +6921,7 @@ Data Privacy:
 ### 1. Performance Metrics Framework
 
 **Efficiency Metrics:**
-\`\`\`
+```
 Time Savings Measurements:
 - Content creation: 70% time reduction
 - Research and analysis: 60% efficiency gain
@@ -6943,10 +6933,10 @@ Quality Improvements:
 - Strategic insight depth: 85% improvement
 - Client satisfaction: 25% improvement
 - Campaign performance: 20% better results
-\`\`\`
+```
 
 **Financial Impact Analysis:**
-\`\`\`
+```
 Cost-Benefit Calculation:
 Monthly Investment: $2,000 (team subscriptions)
 Monthly Time Savings: 160 hours
@@ -6959,12 +6949,12 @@ Annual Impact:
 - Value Creation: $288,000
 - Client Capacity Increase: 40%
 - Revenue Growth Potential: $500,000+
-\`\`\`
+```
 
 ### 2. Continuous Optimization Strategies
 
 **Weekly Optimization Reviews:**
-\`\`\`
+```
 Performance Analysis:
 - Review AI usage analytics across team members
 - Identify high-performing prompts and workflows
@@ -6976,10 +6966,10 @@ Process Improvements:
 - Update quality control standards
 - Enhance team training based on gaps
 - Optimize tool selection for different tasks
-\`\`\`
+```
 
 **Monthly Strategic Assessment:**
-\`\`\`
+```
 Competitive Positioning:
 - Analyze market response to AI-enhanced services
 - Assess competitive advantages gained
@@ -6991,7 +6981,7 @@ Client Value Enhancement:
 - Identify additional AI application opportunities
 - Develop new service offerings based on AI capabilities
 - Plan client education and engagement strategies
-\`\`\`
+```
 
 ---
 
@@ -7000,19 +6990,19 @@ Client Value Enhancement:
 ### 1. Emerging ChatGPT Capabilities
 
 **Anticipated 2025-2026 Developments:**
-\`\`\`
+```
 Advanced Features on Roadmap:
 - Enhanced multimodal capabilities (better video/audio integration)
 - Improved enterprise security and compliance features
 - Advanced customization and fine-tuning options
 - Deeper integration with business software ecosystems
 - Autonomous agent orchestration for complex workflows
-\`\`\`
+```
 
 ### 2. Strategic Preparation Framework
 
 **Technology Roadmap Planning:**
-\`\`\`
+```
 Quarterly Review Process:
 Q1: Assess new ChatGPT feature releases and integration opportunities
 Q2: Evaluate competitive landscape and technology adoption rates
@@ -7024,12 +7014,12 @@ Annual Strategic Planning:
 - Team skill development requirements
 - Client service enhancement opportunities
 - Competitive differentiation strategies
-\`\`\`
+```
 
 ### 3. Change Management Excellence
 
 **Organizational Adaptation Strategy:**
-\`\`\`
+```
 Culture Development:
 - Foster AI-first thinking across all team members
 - Encourage experimentation and learning from failures
@@ -7041,7 +7031,7 @@ Client Education:
 - Demonstrate value through case studies and results
 - Address concerns about AI replacing human creativity
 - Position agency as AI thought leader and educator
-\`\`\`
+```
 
 ---
 
@@ -7068,7 +7058,7 @@ Agencies that master ChatGPT today are building the foundation for tomorrow's ma
 The question isn't whether to adopt ChatGPT—it's how quickly and thoroughly you can transform your agency to leverage its full potential. Your clients, your team, and your bottom line are waiting for your answer.
 4. ChatGPT writes code directly in the IDE
 5. Real-time testing and optimization
-\`\`\`
+```
 
 ### 9. Enhanced Analytics & Usage Intelligence
 
@@ -7150,14 +7140,14 @@ The question isn't whether to adopt ChatGPT—it's how quickly and thoroughly yo
 ### 2. ChatGPT Quality Control Framework
 
 **Prompt Engineering Standards:**
-\`\`\`
+```
 Standard Format:
 1. Context: [Detailed background and requirements]
 2. Task: [Specific deliverable request]
 3. Constraints: [Brand guidelines, tone, length requirements]
 4. Format: [Exact output structure needed]
 5. Examples: [Reference materials or previous work]
-\`\`\`
+```
 
 **Quality Assurance Checklist:**
 - [ ] Brand voice consistency verified
@@ -7170,7 +7160,7 @@ Standard Format:
 ### 3. Advanced Workflow Automation
 
 **Campaign Launch Automation:**
-\`\`\`
+```
 Trigger: New campaign brief uploaded to shared folder
 Process:
 1. ChatGPT analyzes brief and extracts key requirements
@@ -7179,17 +7169,17 @@ Process:
 4. Drafts initial client presentation outline
 5. Schedules team review meeting and populates agenda
 6. Sends summary email to stakeholders with next steps
-\`\`\`
+```
 
 **Performance Monitoring Automation:**
-\`\`\`
+```
 Daily Schedule:
 - 8 AM: Client social media performance summary
 - 12 PM: Campaign metrics update and optimization suggestions
 - 5 PM: Daily accomplishments report and tomorrow's priorities
 - Weekly: Comprehensive portfolio health assessment
 - Monthly: Strategic recommendations and growth opportunities
-\`\`\`
+```
 
 ---
 
@@ -7210,7 +7200,7 @@ Daily Schedule:
 - **Team Morale**: 60% reduction in repetitive task frustration
 
 **Financial Impact Calculator:**
-\`\`\`
+```
 Monthly Calculations:
 Time Saved: [Hours] × [Average Hourly Rate] = Base Savings
 Quality Improvements: [Error Reduction %] × [Rework Costs] = Quality Savings
@@ -7218,7 +7208,7 @@ New Revenue: [Faster Delivery] × [Additional Projects] = Growth Revenue
 Client Retention: [Retention Improvement %] × [Average Client Value] = Retention Value
 
 Total Monthly ROI = Base Savings + Quality Savings + Growth Revenue + Retention Value - Subscription Costs
-\`\`\`
+```
 
 ### Strategic Competitive Advantages
 
@@ -8055,13 +8045,13 @@ ChatGPT serves as the ideal **integration hub** for agency AI ecosystems because
 **Objective**: Transform market intelligence into actionable creative strategy
 
 **Workflow Design:**
-\`\`\`
+```
 Perplexity (Market Research) → 
 Claude (Strategic Analysis) → 
 ChatGPT (Concept Generation) → 
 Gemini (Competitive Intelligence) → 
 Microsoft Copilot (Client Presentation)
-\`\`\`
+```
 
 **Integration Points:**
 - **Perplexity to Claude**: Export research summaries with structured data
@@ -8075,13 +8065,13 @@ Microsoft Copilot (Client Presentation)
 **Objective**: Scale content production while maintaining brand consistency
 
 **Workflow Design:**
-\`\`\`
+```
 Brand Guidelines (Custom GPT) → 
 ChatGPT (Content Creation) → 
 Claude (Quality Assurance) → 
 DALL-E (Visual Assets) → 
 Microsoft Power Automate (Distribution)
-\`\`\`
+```
 
 **Integration Mechanics:**
 - **Custom Brand GPT**: Trained on client voice, guidelines, and approved examples
@@ -8100,13 +8090,13 @@ Microsoft Power Automate (Distribution)
 **Objective**: Deliver proactive insights and relationship management
 
 **Workflow Design:**
-\`\`\`
+```
 Grok (Social Listening) → 
 ChatGPT (Insight Synthesis) → 
 Claude (Strategic Implications) → 
 Outlook Copilot (Client Communication) → 
 Power BI (Executive Dashboard)
-\`\`\`
+```
 
 **Automation Logic:**
 - **Grok monitors** client industry trends, competitor activities, and market shifts
@@ -8124,7 +8114,7 @@ Power BI (Executive Dashboard)
 ### Phase 1: Foundation Assessment (Week 1)
 
 **Current State Analysis:**
-\`\`\`
+```
 Agency Integration Readiness Checklist:
 
 □ Team Skills Assessment
@@ -8144,7 +8134,7 @@ Agency Integration Readiness Checklist:
   □ Inefficiency identification and quantification
   □ Integration opportunity prioritization
   □ Success metrics definition
-\`\`\`
+```
 
 **Expected Outcomes:**
 - Clear understanding of starting capabilities
@@ -8214,7 +8204,7 @@ Technologies: Python, Node.js, REST APIs
 **Challenge**: Managing different tool combinations for different clients while maintaining team efficiency.
 
 **Solution: The "Swiss Army Knife" Approach**
-\`\`\`
+```
 Core Team Tools (Everyone):
 - ChatGPT Team (universal access)
 - Claude Pro (strategic work)
@@ -8224,7 +8214,7 @@ Specialized Tool Assignment:
 - Account Manager A: + Grok (tech clients)
 - Creative Director B: + Midjourney (visual brands)
 - Strategy Lead C: + Perplexity (research-heavy accounts)
-\`\`\`
+```
 
 **Management Framework:**
 1. **Universal Baseline**: All team members master core integration patterns
@@ -8235,12 +8225,12 @@ Specialized Tool Assignment:
 ### Enterprise Integration Patterns
 
 **For Microsoft-Mandated Clients:**
-\`\`\`
+```
 Microsoft Ecosystem Integration:
 Teams (Collaboration) ↔ Copilot (AI Features) ↔ Power Platform (Automation)
 ↕
 ChatGPT API (Advanced Capabilities) ↔ Claude API (Strategic Analysis)
-\`\`\`
+```
 
 **Benefits:**
 - Maintains client compliance requirements
@@ -8249,12 +8239,12 @@ ChatGPT API (Advanced Capabilities) ↔ Claude API (Strategic Analysis)
 - Ensures data governance and security compliance
 
 **For Google Workspace Clients:**
-\`\`\`
+```
 Google Ecosystem Integration:
 Workspace (Collaboration) ↔ Gemini (Native AI) ↔ Vertex AI (Custom Models)
 ↕
 ChatGPT API (Content Creation) ↔ Claude API (Quality Assurance)
-\`\`\`
+```
 
 **Advantages:**
 - Native multimodal capabilities through Gemini
@@ -8359,34 +8349,34 @@ ChatGPT API (Content Creation) ↔ Claude API (Quality Assurance)
 *Problem*: Important context gets lost when transitioning between different AI platforms.
 
 *Solution: The Context Bridge Pattern*
-\`\`\`
+```
 Step 1: Create standardized context templates
 Step 2: Use ChatGPT to generate context summaries
 Step 3: Embed context in handoff prompts
 Step 4: Verify context retention at each transition
-\`\`\`
+```
 
 **Example Context Bridge Template:**
-\`\`\`
+```
 CONTEXT TRANSFER PACKAGE:
 - Project: [Client name, campaign type, timeline]
 - Strategic Objective: [Primary goal, success metrics]
 - Brand Guidelines: [Voice, tone, restrictions]
 - Previous AI Outputs: [Summary of prior work]
 - Specific Request: [What the next tool should accomplish]
-\`\`\`
+```
 
 **Challenge 2: Quality Inconsistency Across Tools**
 *Problem*: Different AI tools produce varying quality levels for similar tasks.
 
 *Solution: The Quality Gate System*
-\`\`\`
+```
 Tool Selection Hierarchy:
 - Claude: Final quality review and strategic validation
 - ChatGPT: Content creation and iteration
 - Gemini: Research and multimodal analysis
 - Specialized Tools: Specific technical tasks
-\`\`\`
+```
 
 **Challenge 3: Team Adoption Resistance**
 *Problem*: Team members default to familiar single-tool workflows.
@@ -8402,7 +8392,7 @@ Tool Selection Hierarchy:
 **Technique 1: Parallel Processing Architecture**
 Instead of sequential tool handoffs, run multiple AI tools simultaneously:
 
-\`\`\`
+```
 Input Brief →
 ├── Claude (Strategic Analysis)
 ├── ChatGPT (Content Creation)
@@ -8412,7 +8402,7 @@ Input Brief →
 Integration Layer (Synthesis)
 ↓
 Output (Comprehensive Solution)
-\`\`\`
+```
 
 **Benefits:**
 - 60-75% faster completion times
@@ -8423,7 +8413,7 @@ Output (Comprehensive Solution)
 **Technique 2: Dynamic Tool Selection**
 Create AI-powered selection logic for optimal tool assignment:
 
-\`\`\`
+```
 Task Analysis Engine:
 IF creative brief + visual components
   THEN ChatGPT + DALL-E + Midjourney
@@ -8431,18 +8421,18 @@ ELSE IF strategic analysis + market research
   THEN Claude + Perplexity + Gemini
 ELSE IF data analysis + reporting
   THEN ChatGPT Code Interpreter + Power BI
-\`\`\`
+```
 
 **Technique 3: Continuous Learning Integration**
 Build feedback loops that improve integration performance over time:
 
-\`\`\`
+```
 Performance Tracking:
 - Time efficiency metrics per workflow
 - Quality scores from client feedback
 - Tool selection optimization suggestions
 - Automated integration refinements
-\`\`\`
+```
 
 ---
 
@@ -8521,14 +8511,14 @@ Performance Tracking:
 - **Service Profitability**: Margin improvement through efficiency gains
 
 **Example KPI Tracking (Agency Dashboard):**
-\`\`\`
+```
 Integration Scorecard - Q3 2024:
 ✅ Time Efficiency: 67% improvement over baseline
 ✅ Client Satisfaction: 9.2/10 (target: 8.5)
 ✅ First-Round Approval: 89% (target: 75%)
 ✅ Revenue Growth: 43% YoY increase
 ⚠️ Team Training: 73% adoption (target: 85%)
-\`\`\`
+```
 
 ### Continuous Improvement Framework
 

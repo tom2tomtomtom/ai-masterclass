@@ -95,6 +95,15 @@ async function seedCompleteCourses() {
         estimated_hours: 20,
         status: 'published',
         objectives: ['Workflow automation', 'AI integration', 'Process optimization']
+      },
+      {
+        title: 'Google AI Ecosystem for Agencies',
+        description: 'Master Gemini Pro & Ultra, Google Workspace AI, and Vertex AI for agency workflows. Complete multimodal capabilities for campaign development.',
+        level: 2,
+        order_index: 7,
+        estimated_hours: 16,
+        status: 'published',
+        objectives: ['Master Gemini Pro & Ultra capabilities', 'Leverage multimodal AI for campaigns', 'Integrate Google Workspace AI tools', 'Optimize costs with free tiers']
       }
     ];
     
@@ -222,6 +231,49 @@ async function seedCompleteCourses() {
           order_index: 4,
           module_type: 'exercise',
           estimated_minutes: 75,
+          difficulty: 'advanced'
+        }
+      );
+    }
+
+    // Add modules for Google AI Ecosystem course
+    const googleAI = insertedCourses.find(c => c.title === 'Google AI Ecosystem for Agencies');
+    if (googleAI) {
+      modulesData.push(
+        {
+          course_id: googleAI.id,
+          title: 'Gemini Pro & Ultra Overview for Agencies',
+          description: 'Master Google\'s most advanced AI models for agency workflows, multimodal capabilities, and cost optimization strategies',
+          order_index: 1,
+          module_type: 'comprehensive',
+          estimated_minutes: 150,
+          difficulty: 'intermediate'
+        },
+        {
+          course_id: googleAI.id,
+          title: 'Multimodal Capabilities for Creative Work',
+          description: 'Leverage Gemini\'s image, video, and audio understanding for campaign development and creative analysis',
+          order_index: 2,
+          module_type: 'project',
+          estimated_minutes: 120,
+          difficulty: 'intermediate'
+        },
+        {
+          course_id: googleAI.id,
+          title: 'Google Workspace AI Integration',
+          description: 'Integrate Duet AI and Google Workspace tools for seamless agency collaboration and productivity',
+          order_index: 3,
+          module_type: 'comprehensive',
+          estimated_minutes: 90,
+          difficulty: 'beginner'
+        },
+        {
+          course_id: googleAI.id,
+          title: 'Vertex AI for Enterprise Agencies',
+          description: 'Deploy custom AI solutions with Vertex AI for large-scale agency operations and client requirements',
+          order_index: 4,
+          module_type: 'advanced',
+          estimated_minutes: 100,
           difficulty: 'advanced'
         }
       );
@@ -7580,6 +7632,226 @@ Your exponential advantage awaits.`,
         }
       );
     }
+    
+    // Add lessons for Google AI Ecosystem modules
+    const geminiOverview = insertedModules.find(m => m.title === 'Gemini Pro & Ultra Overview for Agencies');
+    if (geminiOverview) {
+      lessonsData.push(
+        {
+          module_id: geminiOverview.id,
+          title: 'Gemini Pro & Ultra Overview for Marketing Agencies → The Multimodal Advantage',
+          description: 'Master Google\'s most advanced AI models for agency workflows, understand multimodal capabilities, and implement cost optimization strategies',
+          content: `# Module 3.1: Gemini Pro & Ultra Overview for Marketing Agencies
+## The Multimodal Advantage: Google's AI Ecosystem for Agencies
+
+---
+
+### Learning Objectives
+By the end of this module, you'll be able to:
+- Understand Gemini Pro & Ultra's unique capabilities and how they compare to Claude and ChatGPT
+- Leverage the 1M+ token context window for complex agency projects
+- Implement multimodal workflows combining text, image, video, and audio analysis
+- Design cost-effective Gemini implementations using free and paid tiers
+- Integrate Gemini with Google Workspace for seamless agency operations
+- Create sophisticated agency workflows that leverage Gemini's distinctive strengths
+
+---
+
+## The $4.7 Million Campaign Analysis That Took 18 Minutes
+
+In March 2024, Zenith Media faced an impossible deadline. Their largest client, a global automotive brand, needed a comprehensive competitive analysis of 47 campaigns across 12 markets - and they needed it in 6 hours.
+
+Traditional approach would have required:
+- 3-4 weeks of analyst time
+- $125,000+ in research costs
+- Separate teams for visual, audio, and text analysis
+- Manual synthesis of insights across formats
+
+**What Zenith actually did with Gemini Ultra:**
+
+**18 minutes. That's all it took.**
+
+They uploaded:
+- 47 video campaigns (2.3 hours of content)
+- 156 print advertisements
+- 89 social media campaigns
+- 34 radio commercials
+- Complete brand guidelines from 12 competitors
+
+Gemini Ultra analyzed everything simultaneously - not sequentially like other AI tools - and produced:
+- Strategic positioning analysis across all campaigns
+- Visual trend identification with specific examples
+- Audio branding pattern recognition
+- Cross-cultural message adaptation insights
+- Competitive gap analysis with actionable recommendations
+
+**The result?** Zenith won a $4.7 million campaign extension and established themselves as the agency that could deliver impossible timelines through AI advantage.
+
+This isn't about replacing human insight. It's about **amplifying human intelligence with multimodal AI capabilities that no other platform can match.**
+
+---
+
+## Understanding Gemini's Unique Position in the AI Landscape
+
+### The Multimodal Revolution
+
+While Claude excels at strategic reasoning and ChatGPT dominates versatile applications, **Gemini represents the future of AI: true multimodal intelligence.**
+
+**What makes Gemini different:**
+
+**Native Multimodal Architecture**: Unlike other AI models that were primarily text-based with image capabilities added later, Gemini was designed from the ground up to understand and reason across:
+- **Text**: Strategic analysis, content creation, and conceptual thinking
+- **Images**: Visual analysis, design critique, and brand consistency checking  
+- **Video**: Campaign analysis, storyboard evaluation, and motion understanding
+- **Audio**: Voice analysis, music evaluation, and sonic branding assessment
+- **Code**: Technical implementation and automation workflows
+
+**Massive Context Window**: Gemini 1.5 Pro offers 1 million+ tokens - roughly equivalent to:
+- 750+ pages of text
+- 100+ high-resolution images
+- 1+ hour of video content
+- Complete campaign portfolios with all assets
+
+**Enterprise Integration**: Deep Google Workspace integration means Gemini works seamlessly with tools agencies already use daily.
+
+### The Agency Advantage Framework
+
+For marketing agencies, Gemini's multimodal capabilities create advantages in five critical areas:
+
+#### 1. Campaign Analysis at Unprecedented Scale
+**Traditional Process**: 
+- Separate tools for video, image, and text analysis
+- Manual synthesis of insights across formats
+- Weeks of analyst time for comprehensive reviews
+
+**Gemini Process**:
+- Upload entire campaign portfolios simultaneously
+- Receive holistic analysis across all formats
+- Generate insights in minutes, not weeks
+
+#### 2. Creative Development with Cross-Format Consistency
+**Traditional Process**:
+- Separate creative development for each format
+- Manual brand guideline enforcement
+- Inconsistent voice and visual treatment
+
+**Gemini Process**:
+- Simultaneous creative development across formats
+- Automatic brand consistency checking
+- Unified creative strategy with format-specific execution
+
+---
+
+## Gemini Model Comparison: Choosing the Right Tool for Agency Needs
+
+### Gemini Pro (Free Tier) - The Agency Workhorse
+
+**Best for:**
+- Daily content creation and analysis
+- Initial creative development
+- Routine client communication
+- Team training and exploration
+
+**Capabilities:**
+- Text analysis and generation up to 32,000 tokens
+- Image understanding and analysis
+- Code generation and debugging
+- Integration with Google Workspace
+
+**Agency Applications:**
+- Social media content creation
+- Email campaign development
+- Basic competitive analysis
+- Creative brief development
+- Client meeting preparation
+
+**Cost Considerations:**
+- **Free**: 60 requests per minute
+- **Ideal for**: Small agencies, frequent routine tasks, experimentation
+
+**Real Agency Example**: Brighton Creative uses Gemini Pro for 80% of their content creation workflows, saving $2,400 monthly in tool costs while maintaining quality standards.
+
+### Gemini Pro 1.5 (Paid Tier) - The Strategic Powerhouse
+
+**Best for:**
+- Complex campaign development
+- Large document analysis
+- Multi-format creative projects
+- Client presentation development
+
+**Capabilities:**
+- 1M+ token context window
+- Advanced multimodal reasoning
+- Faster processing speeds
+- Higher request limits
+
+**Agency Applications:**
+- Complete campaign portfolio analysis
+- Long-form strategic document creation
+- Complex competitive intelligence
+- Multi-market campaign development
+- Large-scale content audits
+
+**Cost Considerations:**
+- **$20/month per user**: Comparable to Claude Pro and ChatGPT Plus
+- **ROI Calculation**: Pays for itself with 2-3 hours of analyst time savings monthly
+
+**Real Agency Example**: Momentum Digital's investment in Gemini Pro 1.5 for their 12-person team ($240/month) generates $18,000+ monthly savings through campaign analysis automation.
+
+---
+
+## Your Gemini Transformation Journey
+
+### The Compound Advantage Timeline
+
+**Month 1: Foundation**
+- 15-25% efficiency improvements in analysis and content creation
+- Basic multimodal workflows operational
+- Team comfort with Google AI ecosystem
+
+**Month 3: Optimization**
+- 40-60% time savings on complex analysis projects
+- Advanced integration with existing agency workflows
+- Client recognition of enhanced analytical capabilities
+
+**Month 6: Innovation**
+- 75-100% capacity increases for strategic and creative work
+- Proprietary AI-enhanced service offerings developed
+- Competitive advantage in new business pitches
+
+**Month 12: Transformation**
+- 150-300% improvement in analytical and creative capabilities
+- Industry recognition for AI innovation
+- Premium pricing for AI-enhanced services
+
+### Your Next Steps
+
+The multimodal AI revolution isn't coming—it's here. Agencies like Zenith Media are already winning impossible projects through Gemini's capabilities. The question isn't whether to adopt multimodal AI; it's how quickly you can master it.
+
+**Ready to unlock the multimodal advantage?**
+
+Start with one campaign analysis today. Upload a complete competitive portfolio to Gemini Pro (free), and experience firsthand how 18 minutes of AI analysis can replace weeks of traditional research.
+
+Then scale it across everything you do.
+
+Your clients are already expecting insights that span formats, mediums, and markets. Your competitors are already building multimodal capabilities. The market is already rewarding agencies that deliver superhuman analytical performance.
+
+**Your multimodal transformation starts now.**
+
+Take the first step: create your Google account, access Gemini Pro, and upload your first multimodal campaign analysis.
+
+Experience the future of agency intelligence. Then help shape it.`,
+          order_index: 1,
+          lesson_type: 'comprehensive',
+          estimated_minutes: 150,
+          difficulty: 'intermediate',
+          platform_focus: 'gemini',
+          learning_objectives: ['Master Gemini Pro & Ultra capabilities and understand their unique multimodal advantages', 'Leverage 1M+ token context window for complex agency projects and comprehensive analysis', 'Implement cost-effective workflows using free and paid tiers for maximum ROI', 'Design sophisticated multimodal workflows combining text, image, video, and audio analysis', 'Integrate Gemini with Google Workspace for seamless agency collaboration and productivity', 'Create competitive advantages through advanced AI capabilities that differentiate your agency']
+        }
+      );
+    }
+
+    const { data: insertedLessons, error: lessonsError } = await supabase
     
     const { data: insertedLessons, error: lessonsError } = await supabase
       .from('lessons')

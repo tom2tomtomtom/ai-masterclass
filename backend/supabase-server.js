@@ -74,25 +74,25 @@ app.set('trust proxy', 1);
 try {
   const authRoutes = require('./routes/supabase-auth');
   app.use('/api/auth', authRoutes);
-  console.log('✅ Supabase authentication routes loaded');
+  logger.info('Supabase authentication routes loaded');
 } catch (error) {
-  console.log('❌ Supabase auth routes not available:', error.message);
+  logger.error('Supabase auth routes not available', { error: error.message });
 }
 
 try {
   const progressRoutes = require('./routes/supabase-progress');
   app.use('/api/progress', progressRoutes);
-  console.log('✅ Supabase progress routes loaded');
+  logger.info('Supabase progress routes loaded');
 } catch (error) {
-  console.log('❌ Supabase progress routes not available:', error.message);
+  logger.error('Supabase progress routes not available', { error: error.message });
 }
 
 try {
   const interactiveRoutes = require('./routes/supabase-interactive');
   app.use('/api/interactive', interactiveRoutes);
-  console.log('✅ Supabase interactive routes loaded');
+  logger.info('Supabase interactive routes loaded');
 } catch (error) {
-  console.log('❌ Supabase interactive routes not available:', error.message);
+  logger.error('Supabase interactive routes not available', { error: error.message });
 }
 
 // Serve static files from React build
@@ -102,9 +102,9 @@ app.use(express.static(path.join(__dirname, 'build')));
 try {
   const healthRoutes = require('./routes/health');
   app.use('/api', healthRoutes);
-  console.log('✅ Health check routes loaded');
+  logger.info('Health check routes loaded');
 } catch (error) {
-  console.log('❌ Health check routes not available:', error.message);
+  logger.error('Health check routes not available', { error: error.message });
   
   // Fallback health check endpoint
   app.get('/api/health', async (req, res) => {
@@ -358,16 +358,22 @@ app.get('/api/courses/:id/modules', async (req, res) => {
   }
 });
 
-// Course lessons endpoint (fixed to filter by course_id)
+// Course lessons endpoint (optimized with related content)
 app.get('/api/courses/:id/lessons', async (req, res) => {
   try {
     const { id } = req.params;
     
-    // Filter lessons by course_id
+    // Optimized query to include lesson count statistics
     const { data: lessons, error } = await supabase
       .from('lessons')
-      .select('*')
+      .select(`
+        *,
+        prompts(count),
+        quizzes(count),
+        tasks(count)
+      `)
       .eq('course_id', id)
+      .order('order_index', { ascending: true })
       .order('created_at', { ascending: true });
     
     if (error) throw error;
@@ -385,33 +391,19 @@ app.get('/api/courses/:id/lessons', async (req, res) => {
   }
 });
 
-// Course prompts endpoint (fixed to filter by course_id through lessons)
+// Course prompts endpoint (optimized single query with JOIN)
 app.get('/api/courses/:id/prompts', async (req, res) => {
   try {
     const { id } = req.params;
     
-    // Get lessons for this course first, then their prompts
-    const { data: lessons, error: lessonsError } = await supabase
-      .from('lessons')
-      .select('id')
-      .eq('course_id', id);
-    
-    if (lessonsError) throw lessonsError;
-    
-    if (!lessons || lessons.length === 0) {
-      return res.json({
-        success: true,
-        data: []
-      });
-    }
-    
-    const lessonIds = lessons.map(lesson => lesson.id);
-    
-    // Get prompts for these lessons
+    // Single optimized query using JOIN instead of N+1 queries
     const { data: prompts, error } = await supabase
       .from('prompts')
-      .select('*')
-      .in('lesson_id', lessonIds)
+      .select(`
+        *,
+        lessons!inner(course_id)
+      `)
+      .eq('lessons.course_id', id)
       .order('created_at', { ascending: true });
     
     if (error) throw error;
@@ -429,33 +421,19 @@ app.get('/api/courses/:id/prompts', async (req, res) => {
   }
 });
 
-// Course quizzes endpoint (fixed to filter by course_id through lessons)
+// Course quizzes endpoint (optimized single query with JOIN)
 app.get('/api/courses/:id/quizzes', async (req, res) => {
   try {
     const { id } = req.params;
     
-    // Get lessons for this course first, then their quizzes
-    const { data: lessons, error: lessonsError } = await supabase
-      .from('lessons')
-      .select('id')
-      .eq('course_id', id);
-    
-    if (lessonsError) throw lessonsError;
-    
-    if (!lessons || lessons.length === 0) {
-      return res.json({
-        success: true,
-        data: []
-      });
-    }
-    
-    const lessonIds = lessons.map(lesson => lesson.id);
-    
-    // Get quizzes for these lessons
+    // Single optimized query using JOIN instead of N+1 queries
     const { data: quizzes, error } = await supabase
       .from('quizzes')
-      .select('*')
-      .in('lesson_id', lessonIds)
+      .select(`
+        *,
+        lessons!inner(course_id)
+      `)
+      .eq('lessons.course_id', id)
       .order('created_at', { ascending: true });
     
     if (error) throw error;
@@ -473,33 +451,19 @@ app.get('/api/courses/:id/quizzes', async (req, res) => {
   }
 });
 
-// Course tasks endpoint (fixed to filter by course_id through lessons)
+// Course tasks endpoint (optimized single query with JOIN)
 app.get('/api/courses/:id/tasks', async (req, res) => {
   try {
     const { id } = req.params;
     
-    // Get lessons for this course first, then their tasks
-    const { data: lessons, error: lessonsError } = await supabase
-      .from('lessons')
-      .select('id')
-      .eq('course_id', id);
-    
-    if (lessonsError) throw lessonsError;
-    
-    if (!lessons || lessons.length === 0) {
-      return res.json({
-        success: true,
-        data: []
-      });
-    }
-    
-    const lessonIds = lessons.map(lesson => lesson.id);
-    
-    // Get tasks for these lessons
+    // Single optimized query using JOIN instead of N+1 queries
     const { data: tasks, error } = await supabase
       .from('tasks')
-      .select('*')
-      .in('lesson_id', lessonIds)
+      .select(`
+        *,
+        lessons!inner(course_id)
+      `)
+      .eq('lessons.course_id', id)
       .order('created_at', { ascending: true });
     
     if (error) throw error;
@@ -657,16 +621,11 @@ app.get('*', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`🚀 AI Masterclass Supabase Server running on port ${port}`);
-  console.log(`Environment: ${process.env.NODE_ENV}`);
-  console.log(`Supabase URL: ${supabaseUrl}`);
-  console.log(`Service Role Key configured: ${supabaseServiceKey ? 'Yes' : 'No'}`);
-  
-  // Use logger if available
-  if (logger) {
-    logger.info(`AI Masterclass Server running on port ${port}`);
-    logger.info(`Environment: ${process.env.NODE_ENV}`);
-    logger.info(`Supabase URL: ${supabaseUrl}`);
-    logger.info(`Service Role Key configured: ${supabaseServiceKey ? 'Yes' : 'No'}`);
-  }
+  // Use structured logging
+  logger.info('AI Masterclass Supabase Server started', {
+    port,
+    environment: process.env.NODE_ENV,
+    supabaseUrl,
+    serviceKeyConfigured: supabaseServiceKey ? 'Yes' : 'No'
+  });
 });

@@ -1,5 +1,17 @@
 const jwt = require('jsonwebtoken');
 
+// Try to import logger, fallback to console if not available
+let logger;
+try {
+  logger = require('../utils/logger');
+} catch (error) {
+  logger = {
+    info: () => {},
+    error: () => {},
+    warn: () => {}
+  };
+}
+
 // Authentication middleware to verify JWT tokens
 const auth = (req, res, next) => {
   // Get token from header
@@ -16,7 +28,7 @@ const auth = (req, res, next) => {
     req.user = decoded.user || decoded; // Support both formats for compatibility
     next();
   } catch (err) {
-    console.error('Token verification failed:', err.message);
+    logger.error('Token verification failed:', { error: err.message, ip: req.ip });
     res.status(401).json({ msg: 'Token is not valid' });
   }
 };

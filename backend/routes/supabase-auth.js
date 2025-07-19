@@ -3,8 +3,13 @@ const router = express.Router();
 const { createClient } = require('@supabase/supabase-js');
 
 // Initialize Supabase client with anon key for client-side auth
-const supabaseUrl = process.env.SUPABASE_URL || 'https://fsohtauqtcftdjcjfdpq.supabase.co';
-const supabaseAnonKey = process.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZzb2h0YXVxdGNmdGRqY2pmZHBxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIyMjY3ODAsImV4cCI6MjA2NzgwMjc4MH0.p8V9W-7hqm0DlLe9F9s-_HK4I3mKrT5eL0YFbJfVTw4';
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseAnonKey = process.env.SUPABASE_ANON_KEY;
+
+if (!supabaseUrl || !supabaseAnonKey) {
+  console.error('CRITICAL: Supabase environment variables not configured');
+  process.exit(1);
+}
 
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 

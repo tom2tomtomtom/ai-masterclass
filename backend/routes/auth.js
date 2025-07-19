@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const db = require('../db');
 const { validateRegistration, validateLogin } = require('../middleware/validation');
+const auth = require('../middleware/auth');
 const logger = require('../utils/logger');
 
 // Register a new user
@@ -111,6 +112,46 @@ router.post('/login', validateLogin, async (req, res) => {
     res.status(500).json({
       success: false,
       msg: 'Server error during login'
+    });
+  }
+});
+
+// Validate token endpoint
+router.get('/validate', auth, async (req, res) => {
+  try {
+    // If we reach here, the token is valid (auth middleware passed)
+    // Get user details from database
+    const { rows } = await db.query(
+      'SELECT id, email, first_name, last_name, role, created_at FROM users WHERE id = $1',
+      [req.user.id]
+    );
+    
+    if (rows.length === 0) {
+      return res.status(404).json({
+        success: false,
+        msg: 'User not found'
+      });
+    }
+    
+    const user = rows[0];
+    
+    res.json({
+      success: true,
+      data: {
+        id: user.id,
+        email: user.email,
+        firstName: user.first_name,
+        lastName: user.last_name,
+        role: user.role,
+        createdAt: user.created_at
+      },
+      msg: 'Token is valid'
+    });
+  } catch (err) {
+    logger.error('Token validation error:', err);
+    res.status(500).json({
+      success: false,
+      msg: 'Server error during token validation'
     });
   }
 });

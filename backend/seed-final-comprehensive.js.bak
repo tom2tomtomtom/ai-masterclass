@@ -6,10 +6,6 @@ const path = require('path');
 const supabaseUrl = process.env.SUPABASE_URL || 'https://fsohtauqtcftdjcjfdpq.supabase.co';
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
-if (!supabaseServiceKey) {
-  console.error("CRITICAL: SUPABASE_SERVICE_ROLE_KEY environment variable not set");
-  process.exit(1);
-}
 console.log('🚀 FINAL COMPREHENSIVE SEEDING - 163,000+ Words + Interactive Elements');
 
 const supabase = createClient(supabaseUrl, supabaseServiceKey, {

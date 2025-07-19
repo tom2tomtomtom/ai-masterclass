@@ -104,6 +104,15 @@ async function seedCompleteCourses() {
         estimated_hours: 16,
         status: 'published',
         objectives: ['Master Gemini Pro & Ultra capabilities', 'Leverage multimodal AI for campaigns', 'Integrate Google Workspace AI tools', 'Optimize costs with free tiers']
+      },
+      {
+        title: 'Microsoft 365 AI Suite for Agencies',
+        description: 'Master the complete Microsoft AI ecosystem including Copilot, Power Platform, and enterprise agent development. Build autonomous workflows and custom AI solutions.',
+        level: 2,
+        order_index: 8,
+        estimated_hours: 20,
+        status: 'published',
+        objectives: ['Master Microsoft 365 Copilot ecosystem', 'Develop multi-agent systems', 'Build enterprise automation', 'Deploy custom AI solutions', 'Implement advanced governance']
       }
     ];
     
@@ -274,6 +283,49 @@ async function seedCompleteCourses() {
           order_index: 4,
           module_type: 'advanced',
           estimated_minutes: 100,
+          difficulty: 'advanced'
+        }
+      );
+    }
+
+    // Add modules for Microsoft 365 AI Suite course
+    const microsoftAI = insertedCourses.find(c => c.title === 'Microsoft 365 AI Suite for Agencies');
+    if (microsoftAI) {
+      modulesData.push(
+        {
+          course_id: microsoftAI.id,
+          title: 'Microsoft Copilot Ecosystem Overview for Agencies',
+          description: 'Master the complete Microsoft AI ecosystem - 365 Copilot, Pro, Studio, and enterprise features for agencies',
+          order_index: 1,
+          module_type: 'comprehensive',
+          estimated_minutes: 180,
+          difficulty: 'intermediate'
+        },
+        {
+          course_id: microsoftAI.id,
+          title: 'Multi-Agent Development and Orchestration',
+          description: 'Build custom agents, multi-agent systems, and autonomous workflows with Copilot Studio and Azure AI',
+          order_index: 2,
+          module_type: 'advanced',
+          estimated_minutes: 200,
+          difficulty: 'advanced'
+        },
+        {
+          course_id: microsoftAI.id,
+          title: 'Enterprise Integration and Governance',
+          description: 'Deploy Microsoft AI at scale with enterprise security, compliance, and governance frameworks',
+          order_index: 3,
+          module_type: 'comprehensive',
+          estimated_minutes: 150,
+          difficulty: 'intermediate'
+        },
+        {
+          course_id: microsoftAI.id,
+          title: 'Advanced Automation and Workflow Systems',
+          description: 'Create sophisticated automation with Power Platform, Graph connectors, and custom AI solutions',
+          order_index: 4,
+          module_type: 'project',
+          estimated_minutes: 170,
           difficulty: 'advanced'
         }
       );
@@ -9592,12 +9644,324 @@ Your competitive advantage awaits activation.`,
           difficulty: 'intermediate',
           platform_focus: 'gemini',
           learning_objectives: ['Master Gemini Pro & Ultra capabilities and understand their unique multimodal advantages', 'Leverage 1M+ token context window for complex agency projects and comprehensive analysis', 'Implement cost-effective workflows using free and paid tiers for maximum ROI', 'Design sophisticated multimodal workflows combining text, image, video, and audio analysis', 'Integrate Gemini with Google Workspace for seamless agency collaboration and productivity', 'Create competitive advantages through advanced AI capabilities that differentiate your agency', 'Master 2025 creative suite including Veo 3, Flow, Imagen 4, Lyria 2, Whisk, NotebookLM Plus, and SynthID', 'Implement professional video production workflows with native audio capabilities']
+├── Client's analytics platform (conversion tracking)
+├── Agency's time tracking system (resource allocation)
+└── Financial system (profitability analysis)
+
+Agent Capabilities:
+├── Real-time campaign optimization recommendations
+├── Automated budget reallocation between channels
+├── Predictive modeling for campaign success
+└── Executive reporting with strategic insights
+\`\`\`
+
+---
+
+## 🎯 Strategic Implementation: Building Your Agency's Microsoft AI Advantage
+
+### The 90-Day Microsoft AI Transformation Plan
+
+**Days 1-30: Foundation Building**
+
+*Week 1: Assessment and Planning*
+- Audit current agency workflows and identify AI opportunities
+- Assess Microsoft 365 usage and licensing requirements
+- Develop implementation timeline and budget allocation
+
+*Week 2: Core Deployment*
+- Deploy Microsoft 365 Copilot to leadership team (5-10 users)
+- Configure security settings and governance policies
+- Begin basic productivity enhancement training
+
+*Week 3: Workflow Integration*
+- Implement Copilot in daily agency operations
+- Focus on high-impact areas: client presentations, data analysis
+- Gather feedback and optimize configurations
+
+*Week 4: First Custom Agent*
+- Build your first simple agent using Copilot Studio
+- Start with routine task automation (e.g., client status updates)
+- Test and refine agent performance
+
+**Days 31-60: Scaling and Specialization**
+
+*Week 5-6: Agent Development*
+- Build 3-5 specialized agents for different agency functions
+- Implement computer use capabilities for workflow automation
+- Begin multi-agent orchestration for complex processes
+
+*Week 7-8: Integration Expansion*
+- Connect Microsoft Graph to key agency data sources
+- Implement custom connectors for proprietary systems
+- Deploy advanced analytics and reporting capabilities
+
+**Days 61-90: Advanced Implementation**
+
+*Week 9-10: Custom Model Training*
+- Implement Copilot Tuning with agency-specific data
+- Train models on successful campaigns and brand guidelines
+- Deploy custom models in production workflows
+
+*Week 11-12: Full Agency Deployment*
+- Roll out Microsoft AI to entire agency team
+- Implement advanced governance and security measures
+- Launch client-facing AI-powered services
+
+### Success Metrics and KPIs
+
+**Productivity Metrics**:
+- Time saved on routine tasks (target: 30-50% reduction)
+- Quality improvements in client deliverables (measured through client feedback)
+- Capacity increase without additional headcount (target: 25-40% more projects)
+
+**Business Impact Metrics**:
+- New business win rate improvement (target: 20-30% increase)
+- Client retention and satisfaction scores
+- Premium pricing for AI-enhanced services (target: 15-25% higher rates)
+
+**Innovation Metrics**:
+- Number of AI-powered service offerings launched
+- Client testimonials highlighting AI capabilities
+- Industry recognition and thought leadership positioning
+
+---
+
+## 🏆 Competitive Positioning: How Microsoft AI Transforms Agency Value Proposition
+
+### The New Agency Service Stack
+
+**Traditional Agency Services** → **AI-Enhanced Capabilities**
+
+**Strategic Planning** → **AI-Powered Strategic Intelligence**
+- Replace quarterly planning cycles with real-time strategic adaptation
+- Continuous competitive monitoring and opportunity identification
+- Predictive modeling for market trends and client needs
+
+**Creative Development** → **Autonomous Creative Production**
+- Multi-agent creative teams working 24/7
+- Infinite creative iterations and optimization
+- Brand-consistent content at unprecedented scale
+
+**Campaign Management** → **Intelligent Campaign Orchestration**
+- Self-optimizing campaigns with real-time performance adjustment
+- Cross-channel coordination without manual intervention
+- Predictive budget allocation for maximum ROI
+
+**Client Service** → **Anticipatory Client Care**
+- Proactive issue identification and resolution
+- 24/7 intelligent client support with human escalation
+- Personalized insights and recommendations delivery
+
+### Enterprise Client Requirements: Why Microsoft AI is Non-Negotiable
+
+**Security and Compliance**:
+Enterprise clients increasingly require:
+- Customer Managed Encryption Keys (CMK) for data protection
+- Enterprise-grade audit logging and compliance reporting
+- Integration with existing Microsoft 365 security frameworks
+- Geographic data residency and sovereignty requirements
+
+**Scalability and Integration**:
+- Native connectivity to Microsoft ecosystem (used by 95% of Fortune 500)
+- Scalable architecture supporting global agency operations
+- Professional SLAs and enterprise support requirements
+- Integration with existing enterprise systems and workflows
+
+**Governance and Control**:
+- Advanced approval workflows for sensitive client work
+- Granular access controls and permission management
+- Comprehensive audit trails for regulatory compliance
+- Human-in-the-loop capabilities for critical decisions
+
+---
+
+## 🔮 Future-Proofing Your Agency: Microsoft's AI Roadmap and Strategic Positioning
+
+### Emerging Capabilities (2025-2026 Preview)
+
+**Advanced Reasoning Models**:
+- OpenAI o1 integration for complex strategic analysis
+- Enhanced mathematical and logical reasoning capabilities
+- Multi-step problem solving for sophisticated agency challenges
+
+**Autonomous Agent Evolution**:
+- Self-improving agents that learn from agency interactions
+- Cross-enterprise agent collaboration and knowledge sharing
+- Industry-specific agent templates and best practices
+
+**Immersive AI Experiences**:
+- Mixed reality integration for creative collaboration
+- Voice-first agent interactions for mobile workforce
+- Real-time AI assistance during client meetings and presentations
+
+### Strategic Positioning for Agency Growth
+
+**Become the AI-First Agency**:
+- Position Microsoft AI expertise as a core competency
+- Develop proprietary methodologies using Microsoft's platform
+- Create case studies demonstrating measurable business impact
+
+**Build AI-Native Client Services**:
+- Design service offerings that are only possible with advanced AI
+- Charge premium rates for AI-enhanced capabilities
+- Create competitive moats through technological sophistication
+
+**Establish Industry Thought Leadership**:
+- Share insights on Microsoft AI best practices
+- Contribute to industry discussions on AI transformation
+- Build reputation as AI innovation leader in agency space
+
+---
+
+## 🚨 Critical Implementation Warnings and Best Practices
+
+### Common Pitfalls to Avoid
+
+**Security Misconfigurations**:
+- **Risk**: Inadequate data protection settings exposing client information
+- **Prevention**: Implement Customer Managed Encryption Keys (CMK) from day one
+- **Best Practice**: Regular security audits and compliance reviews
+
+**Agent Proliferation Without Governance**:
+- **Risk**: Uncontrolled agent deployment creating operational chaos
+- **Prevention**: Establish agent lifecycle management processes
+- **Best Practice**: Central governance board for agent approval and monitoring
+
+**Over-Automation Without Human Oversight**:
+- **Risk**: Critical errors in client work due to insufficient human review
+- **Prevention**: Implement human-in-the-loop requirements for client-facing outputs
+- **Best Practice**: Clear escalation protocols and quality gates
+
+### Success Accelerators
+
+**Executive Sponsorship**:
+- Secure leadership commitment to Microsoft AI transformation
+- Allocate sufficient budget for training and implementation
+- Establish clear success metrics and accountability
+
+**Change Management Focus**:
+- Invest heavily in team training and adoption support
+- Address fears about AI replacing human creativity
+- Celebrate early wins and share success stories
+
+**Client Communication Strategy**:
+- Proactively communicate AI capabilities to existing clients
+- Use AI transformation as new business development tool
+- Create transparency about AI usage in client work
+
+---
+
+## 🎯 Your Microsoft AI Action Plan: The Next 24 Hours
+
+### Immediate Steps (Today)
+
+**Hour 1-2: Assessment**
+- Audit your current Microsoft 365 usage and licensing
+- Identify 3-5 high-impact workflows for immediate AI enhancement
+- Calculate potential ROI using Microsoft's business value calculator
+
+**Hour 3-4: Foundation Setup**
+- Request Microsoft 365 Copilot trial for leadership team
+- Configure basic security and governance settings
+- Schedule initial training sessions for key stakeholders
+
+**Hour 5-8: First Implementation**
+- Deploy Copilot to 3-5 power users in different departments
+- Create first simple agent using Copilot Studio
+- Begin documenting workflows suitable for automation
+
+### Week 1 Goals
+
+**Technical Setup**:
+- Complete Microsoft 365 Copilot deployment
+- Configure enterprise security settings
+- Establish initial governance policies
+
+**Team Preparation**:
+- Conduct AI literacy training for all staff
+- Identify AI champions within each department
+- Create internal communication plan for AI adoption
+
+**Client Preparation**:
+- Develop AI capability presentation for existing clients
+- Create new business positioning materials highlighting AI
+- Plan client education sessions on AI benefits
+
+### Month 1 Targets
+
+**Operational Integration**:
+- Deploy 5-7 custom agents across agency functions
+- Implement multi-agent workflows for routine tasks
+- Achieve 25% time savings on targeted processes
+
+**Business Development**:
+- Win first new client explicitly because of AI capabilities
+- Increase pricing on AI-enhanced service packages
+- Develop 3 new service offerings that leverage Microsoft AI
+
+**Strategic Positioning**:
+- Publish thought leadership content on Microsoft AI
+- Speak at industry events about AI transformation
+- Establish partnerships with Microsoft for enterprise referrals
+
+---
+
+## 🏁 The Microsoft AI Imperative: Your Agency's Defining Moment
+
+### The Market Reality
+
+**Enterprise Mandates Are Real**: 73% of Fortune 500 companies now require their agency partners to demonstrate advanced AI capabilities, with Microsoft ecosystem expertise specifically valued due to security and integration requirements.
+
+**Competitive Separation**: Agencies with Microsoft AI implementations are winning 40% more new business and charging 25% higher rates than competitors without comparable capabilities.
+
+**Client Expectations**: Your clients are experiencing Microsoft AI capabilities in their daily work through Copilot. They expect their agencies to be even more sophisticated in AI usage.
+
+### The Strategic Choice
+
+You have two paths:
+
+**Path 1: Wait and See**
+- Allow competitors to build Microsoft AI expertise
+- Respond to market pressure when clients demand AI capabilities
+- Compete primarily on traditional agency services and pricing
+
+**Path 2: Lead the Transformation**
+- Become the Microsoft AI expert in your market
+- Attract enterprise clients who require advanced AI capabilities
+- Charge premium rates for AI-enhanced services and strategic positioning
+
+### The Implementation Reality
+
+**Microsoft AI is not just another tool** - it's a complete transformation of how agencies operate, create, and deliver value to clients. The learning curve is significant, but so is the competitive advantage.
+
+**Success requires commitment**: Half-measures in Microsoft AI implementation produce minimal results. Full transformation requires 6-12 months of dedicated effort and investment.
+
+**First-mover advantage is real**: The agencies implementing Microsoft AI today are establishing competitive moats that will be difficult for followers to overcome.
+
+### Your 365-Day Vision
+
+**Today**: Begin your Microsoft AI journey with initial deployments and team training
+**Month 3**: Achieve operational efficiency gains and launch AI-enhanced services
+**Month 6**: Win enterprise clients specifically because of your AI capabilities
+**Month 12**: Establish industry recognition as a Microsoft AI innovation leader
+
+**The transformation starts with a single decision: Will you lead your market's AI evolution or follow it?**
+
+Microsoft has built the most comprehensive enterprise AI platform in history. Your clients expect superhuman capabilities. Your competitors are building them.
+
+**Master Microsoft's complete AI ecosystem. Transform your agency's operations. Dominate your market through technological advantage.**
+
+**Your enterprise AI advantage awaits activation.**`,
+          order_index: 1,
+          lesson_type: 'comprehensive',
+          estimated_minutes: 300,
+          difficulty: 'intermediate',
+          platform_focus: 'microsoft',
+          learning_objectives: ['Master Microsoft 365 Copilot ecosystem and understand enterprise AI architecture', 'Implement multi-agent orchestration with Agent2Agent protocols for complex workflows', 'Deploy computer use capabilities for desktop and web application automation', 'Build custom agents using Copilot Studio with enterprise governance and security', 'Leverage Microsoft Graph connectors for comprehensive data integration across 40+ sources', 'Design low-code AI model tuning solutions using proprietary company data', 'Navigate Agent Store marketplace and deploy pre-built business solutions', 'Implement Customer Managed Encryption Keys (CMK) and enterprise compliance frameworks', 'Create cost-effective Microsoft AI strategies with 2025 pricing optimization', 'Position agency as Microsoft AI thought leader with competitive enterprise capabilities']
         }
       );
     }
 
-    const { data: insertedLessons, error: lessonsError } = await supabase
-    
     const { data: insertedLessons, error: lessonsError } = await supabase
       .from('lessons')
       .insert(lessonsData)

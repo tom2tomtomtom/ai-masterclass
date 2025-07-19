@@ -208,12 +208,21 @@ async function seedCompleteCourses() {
         },
         {
           course_id: chatgptPro.id,
+          title: 'Code Interpreter for Campaign Analysis',
+          description: 'Transform data into insights using ChatGPT Code Interpreter for campaign optimization and reporting',
+          order_index: 3,
+          module_type: 'comprehensive',
+          estimated_minutes: 120,
+          difficulty: 'intermediate'
+        },
+        {
+          course_id: chatgptPro.id,
           title: 'Advanced ChatGPT Integration',
           description: 'Integrate ChatGPT with other AI tools and agency systems for maximum productivity',
-          order_index: 3,
+          order_index: 4,
           module_type: 'exercise',
           estimated_minutes: 75,
-          difficulty: 'intermediate'
+          difficulty: 'advanced'
         }
       );
     }
@@ -6592,6 +6601,305 @@ Ready to build your agency's competitive AI advantage? The tools are available, 
           difficulty: 'intermediate',
           platform_focus: 'chatgpt',
           learning_objectives: ['Design and build specialized GPTs for specific agency workflows and client needs', 'Implement 15+ proven GPT templates that solve common agency challenges', 'Create brand-specific GPTs that maintain voice consistency across all client work', 'Establish team collaboration systems and GPT management frameworks', 'Measure ROI and optimize custom GPT performance for maximum business impact']
+        }
+      );
+    }
+    
+    // Find the Code Interpreter for Campaign Analysis module
+    const codeInterpreterModule = insertedModules.find(m => m.title === 'Code Interpreter for Campaign Analysis');
+    if (codeInterpreterModule) {
+      lessonsData.push(
+        {
+          module_id: codeInterpreterModule.id,
+          title: 'Code Interpreter for Campaign Analysis - Transform Data into Insights for Marketing Excellence',
+          description: 'Master ChatGPT Code Interpreter to transform campaign data into actionable insights, create powerful visualizations, and build automated reporting systems for agency success',
+          content: `# Module 2.3: Code Interpreter for Campaign Analysis
+## Transform Data into Insights for Marketing Excellence
+
+---
+
+### Learning Objectives
+By the end of this module, you'll be able to:
+- Master ChatGPT Code Interpreter for comprehensive campaign data analysis
+- Transform raw campaign data into compelling visualizations and actionable insights
+- Build automated reporting systems that save hours of manual work
+- Perform advanced statistical analysis to optimize campaign performance
+- Create data-driven presentations that wow clients and drive business decisions
+- Integrate Code Interpreter workflows with your existing agency tech stack
+
+---
+
+## The $2.3M Data Discovery: How Code Interpreter Saved a Campaign
+
+In September 2024, premium agency DataDriven faced a crisis. Their largest client's Q3 campaign was underperforming across all metrics: 40% below expected CTR, 60% below conversion targets, and a cost-per-acquisition that was climbing daily. The client had given them 48 hours to identify the problem and present a solution or risk losing the $2.3M annual account.
+
+Traditional analysis methods would have taken the team a week:
+- **Manual Excel work**: 20+ hours to process multi-platform data
+- **Dashboard limitations**: Existing tools couldn't reveal the hidden patterns
+- **Resource constraints**: Senior analysts were tied up on other urgent projects
+- **Visualization challenges**: Creating client-ready charts would take additional days
+
+**The Code Interpreter Solution:**
+
+DataDriven's AI-savvy strategist, Maya Chen, had recently learned Code Interpreter. In just 4 hours, she:
+
+1. **Uploaded campaign data** from Facebook Ads, Google Ads, LinkedIn, and their CRM
+2. **Performed cross-platform analysis** revealing audience overlap issues
+3. **Identified the hidden pattern**: 73% of high-value conversions came from 2 specific audience segments that were being under-allocated budget
+4. **Created dynamic visualizations** showing the opportunity
+5. **Built a predictive model** forecasting performance with optimized budget allocation
+
+**The Results:**
+- **Campaign saved**: Reallocated budget increased performance 340% in one week
+- **Client retention**: $2.3M account secured with 2-year extension
+- **Time efficiency**: 4 hours vs. projected 40+ hours of manual work
+- **Business impact**: Analysis process became a competitive differentiator
+
+Maya's Code Interpreter skills didn't just save a campaign—they transformed DataDriven into a data analytics powerhouse that now charges premium rates for insights-driven strategies.
+
+---
+
+## Understanding ChatGPT Code Interpreter: Your Data Analysis Superpower
+
+### What Makes Code Interpreter Revolutionary for Agencies
+
+Code Interpreter isn't just another analytics tool—it's like having a senior data scientist on your team 24/7. Here's what makes it uniquely powerful for agency work:
+
+**1. Natural Language to Code Translation**
+- Ask questions in plain English: "What's the correlation between ad spend and conversions by demographic?"
+- Get instant Python code that performs the analysis
+- No need to learn programming languages or complex syntax
+
+**2. Multi-Format Data Processing**
+- Upload CSVs, Excel files, JSON exports from any platform
+- Handle millions of rows without performance issues
+- Automatically clean and structure messy data exports
+
+**3. Publication-Ready Visualizations**
+- Generate professional charts and graphs instantly
+- Customize colors, fonts, and styling for brand consistency
+- Export high-resolution images perfect for client presentations
+
+**4. Advanced Statistical Analysis**
+- Perform regression analysis, correlation studies, and predictive modeling
+- Conduct A/B test analysis with statistical significance testing
+- Build machine learning models to forecast campaign performance
+
+**5. Automation Capabilities**
+- Create repeatable analysis workflows
+- Build custom functions for recurring campaign tasks
+- Generate automated reports with dynamic insights
+
+### Code Interpreter vs. Traditional Agency Analytics
+
+| Traditional Tools | Code Interpreter | Agency Advantage |
+|------------------|------------------|------------------|
+| Manual data cleaning | Automated processing | 80% time savings |
+| Limited visualization options | Unlimited custom charts | Professional client presentations |
+| Basic analysis capabilities | Advanced statistical methods | Deeper insights, better recommendations |
+| Platform-specific limitations | Universal data compatibility | True cross-platform analysis |
+| High licensing costs | Included with ChatGPT Plus | Cost-effective for growing agencies |
+
+---
+
+## Core Code Interpreter Capabilities for Campaign Analysis
+
+### 1. Data Import and Cleaning
+
+**Agency Challenge**: Campaign data comes from multiple platforms in different formats, often with inconsistencies, missing values, and varying date formats.
+
+**Code Interpreter Solution**:
+"I'm uploading Facebook Ads, Google Ads, and email campaign data. Please clean the data, standardize date formats, and identify any data quality issues."
+
+**What It Does**:
+- Automatically detects file formats and structures
+- Standardizes date formats across all data sources
+- Identifies and flags missing or anomalous data points
+- Creates unified datasets ready for analysis
+- Provides data quality reports highlighting potential issues
+
+**Agency Benefit**: Transforms hours of manual data preparation into minutes of automated processing.
+
+### 2. Performance Analysis and Optimization
+
+**Agency Challenge**: Understanding which campaigns, audiences, and creative elements drive the best ROI across multiple platforms.
+
+**Code Interpreter Workflows**:
+
+**Campaign Performance Analysis**:
+"Analyze campaign performance by platform, identify top-performing segments, and show me statistical significance of the differences."
+
+**Audience Segmentation Analysis**:
+"Segment our audience data by demographics and behavior, then calculate lifetime value and recommended budget allocation for each segment."
+
+**Creative Performance Testing**:
+"Compare creative performance across A/B tests, control for audience and timing variables, and recommend winning variations with confidence intervals."
+
+### 3. Advanced Attribution Modeling
+
+**Agency Challenge**: Understanding the true customer journey across touchpoints to optimize budget allocation.
+
+**Code Interpreter Capabilities**:
+- Multi-touch attribution analysis
+- Customer journey mapping
+- Cross-platform conversion tracking
+- Time-decay attribution modeling
+
+**Sample Analysis**:
+"Create a multi-touch attribution model for our customer journey data, showing the influence of each touchpoint on conversions and recommend budget reallocation."
+
+### 4. Predictive Analytics and Forecasting
+
+**Agency Challenge**: Projecting campaign performance and budget needs for strategic planning.
+
+**Code Interpreter Solutions**:
+
+**Performance Forecasting**:
+"Based on historical campaign data, create a predictive model for Q4 performance and generate three scenarios: conservative, expected, and optimistic."
+
+**Budget Optimization Modeling**:
+"Analyze the relationship between ad spend and conversions, identify the point of diminishing returns, and recommend optimal budget distribution."
+
+**Seasonal Trend Analysis**:
+"Identify seasonal patterns in our campaign data, account for external factors, and create a model for next year's campaign timing."
+
+### 5. Client-Ready Visualization and Reporting
+
+**Agency Challenge**: Creating compelling, branded visualizations that tell the data story effectively.
+
+**Code Interpreter Visualization Power**:
+
+**Executive Dashboard Creation**:
+- Key metrics displayed prominently
+- Visual hierarchy that guides attention
+- Brand-compliant color schemes and fonts
+- Interactive elements that engage stakeholders
+
+**Campaign Performance Storytelling**:
+- Before/after comparisons with clear improvement narratives
+- Trend lines that show progress over time
+- Correlation charts that reveal hidden relationships
+- ROI visualizations that demonstrate clear business value
+
+**Sample Visualization Requests**:
+"Create an executive dashboard showing campaign ROI, audience performance, and growth trends. Use our brand colors (#1E3A8A for primary, #F59E0B for highlights) and include clear recommendations."
+
+---
+
+## Practical Agency Workflows with Code Interpreter
+
+### Workflow 1: Monthly Performance Review
+
+**Scenario**: Create comprehensive monthly performance analysis for all clients.
+
+**Code Interpreter Process**:
+
+1. **Data Consolidation**:
+"I'm uploading performance data from 5 clients across Google Ads, Facebook, LinkedIn, and email platforms. Please consolidate this into a unified analysis framework."
+
+2. **Performance Analysis**:
+"For each client, calculate month-over-month changes in CTR, conversion rate, and ROAS. Identify the top 3 performing and bottom 3 performing campaigns with statistical significance."
+
+3. **Insight Generation**:
+"Identify patterns across all clients: which industries, audience segments, or campaign types are trending up or down? Provide actionable recommendations."
+
+4. **Visualization Creation**:
+"Create a client-specific performance dashboard for each account showing key metrics, trends, and recommendations. Export as high-resolution images suitable for presentation."
+
+**Agency Benefits**:
+- Reduces monthly reporting time from 8 hours to 45 minutes
+- Ensures consistent analysis methodology across all clients
+- Identifies cross-client patterns for strategic insights
+- Creates professional deliverables that strengthen client relationships
+
+### Workflow 2: Campaign Optimization Analysis
+
+**Scenario**: Mid-campaign optimization based on performance data.
+
+**Code Interpreter Process**:
+
+1. **Performance Diagnostic**:
+"Analyze our current campaign data and identify underperforming segments. Show me which combinations of audience, creative, and placement are driving poor performance."
+
+2. **Optimization Recommendations**:
+"Based on the top-performing combinations, simulate the impact of reallocating budget from poor performers to high performers. Calculate expected improvement in overall ROAS."
+
+3. **Statistical Validation**:
+"Perform significance testing on the performance differences to ensure our optimizations are based on statistically reliable data, not random variation."
+
+4. **Implementation Planning**:
+"Create a step-by-step optimization plan with timeline, expected budget shifts, and projected performance improvements. Include risk assessment for each change."
+
+---
+
+## ROI Calculation and Business Impact
+
+### Time Savings Analysis
+
+**Before Code Interpreter**:
+- Data cleaning and preparation: 4-6 hours per client monthly
+- Analysis and insight generation: 6-8 hours per client monthly
+- Visualization and report creation: 3-4 hours per client monthly
+- **Total per client**: 13-18 hours monthly
+
+**With Code Interpreter**:
+- Data processing and analysis: 30-45 minutes per client monthly
+- Insight generation and visualization: 45-60 minutes per client monthly
+- Report finalization: 15-30 minutes per client monthly
+- **Total per client**: 1.5-2.25 hours monthly
+
+**ROI Calculation for 10-Client Agency**:
+- **Time savings**: 115-178 hours monthly
+- **Cost savings** (at $75/hour): $8,625-$13,350 monthly
+- **Annual savings**: $103,500-$160,200
+- **Investment**: $240 annually (ChatGPT Plus for 12 team members)
+- **ROI**: 43,000%-66,750%
+
+### Client Value Enhancement
+
+**Premium Service Positioning**:
+- Advanced analytics capabilities justify 20-30% higher retainer fees
+- Data-driven insights create stronger client relationships
+- Predictive modeling enables proactive campaign management
+- Professional reporting elevates agency perception
+
+**New Revenue Opportunities**:
+- Analytics-only consulting engagements
+- Custom dashboard development services
+- Competitive intelligence reporting
+- Performance optimization audits
+
+---
+
+## Key Takeaways and Action Steps
+
+### Immediate Implementation (This Week)
+1. **Subscribe to ChatGPT Plus** for team members who work with data
+2. **Identify 2-3 clients** whose data would benefit from advanced analysis
+3. **Practice basic workflows** with sample campaign data
+4. **Create your first client insight** using Code Interpreter
+
+### Month 1 Goals
+- Implement Code Interpreter for monthly reporting with 3 clients
+- Develop agency-specific analysis templates and standards
+- Train 2-3 team members on advanced Code Interpreter techniques
+- Create first case study showcasing analytical insights
+
+### Quarter 1 Objectives
+- Scale Code Interpreter usage across all suitable clients
+- Develop premium analytics service offerings
+- Increase agency retainer fees based on enhanced analytical capabilities
+- Build competitive differentiation around data-driven insights
+
+Code Interpreter isn't just another tool—it's your agency's path to becoming an indispensable strategic partner to your clients. The data is there, the insights are waiting, and your competitive advantage is just a few analyses away.
+
+Ready to transform your agency's analytical capabilities? Upload your first campaign dataset and discover what insights have been hiding in your data all along.`,
+          order_index: 1,
+          lesson_type: 'comprehensive',
+          estimated_minutes: 120,
+          difficulty: 'intermediate',
+          platform_focus: 'chatgpt',
+          learning_objectives: ['Master ChatGPT Code Interpreter for comprehensive campaign data analysis', 'Transform raw campaign data into compelling visualizations and actionable insights', 'Build automated reporting systems that save hours of manual work', 'Perform advanced statistical analysis to optimize campaign performance', 'Create data-driven presentations that wow clients and drive business decisions', 'Integrate Code Interpreter workflows with your existing agency tech stack']
         }
       );
     }

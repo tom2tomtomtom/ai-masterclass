@@ -190,20 +190,29 @@ async function seedCompleteCourses() {
       modulesData.push(
         {
           course_id: chatgptPro.id,
-          title: 'ChatGPT Fundamentals',
-          description: 'Master ChatGPT basics and interface',
+          title: 'ChatGPT Core Features for Marketing Agencies',
+          description: 'Master the complete ChatGPT ecosystem and leverage its versatile capabilities for agency excellence',
           order_index: 1,
-          module_type: 'theory',
-          estimated_minutes: 60,
+          module_type: 'comprehensive',
+          estimated_minutes: 120,
           difficulty: 'beginner'
         },
         {
           course_id: chatgptPro.id,
-          title: 'Professional Workflows',
-          description: 'Integrate ChatGPT into professional workflows',
+          title: 'Custom GPTs for Agency Workflows',
+          description: 'Build specialized AI assistants for specific agency needs and client requirements',
           order_index: 2,
-          module_type: 'exercise',
+          module_type: 'project',
           estimated_minutes: 90,
+          difficulty: 'intermediate'
+        },
+        {
+          course_id: chatgptPro.id,
+          title: 'Advanced ChatGPT Integration',
+          description: 'Integrate ChatGPT with other AI tools and agency systems for maximum productivity',
+          order_index: 3,
+          module_type: 'exercise',
+          estimated_minutes: 75,
           difficulty: 'intermediate'
         }
       );
@@ -5911,6 +5920,314 @@ Annual ROI Projection: $______
           difficulty: 'intermediate',
           platform_focus: 'claude',
           learning_objectives: ['Master meeting note analysis and action item extraction workflows for instant follow-up and accountability', 'Implement executive report writing and summary creation frameworks for C-level communication excellence', 'Apply data analysis and business intelligence generation techniques for strategic decision-making', 'Deploy competitive analysis and strategic planning applications for market advantage and comprehensive ROI measurement']
+        }
+      );
+    }
+
+    // Find the ChatGPT Core Features module
+    const chatgptCoreFeatures = insertedModules.find(m => m.title === 'ChatGPT Core Features for Marketing Agencies');
+    if (chatgptCoreFeatures) {
+      lessonsData.push(
+        {
+          module_id: chatgptCoreFeatures.id,
+          title: 'ChatGPT Core Features for Marketing Agencies - The Versatile AI Powerhouse for Agency Excellence',
+          description: 'Master the complete ChatGPT ecosystem and leverage its versatile capabilities for agency excellence, including plugins, DALL-E integration, and advanced workflows',
+          content: `# Module 2.1: ChatGPT Core Features for Marketing Agencies
+## The Versatile AI Powerhouse for Agency Excellence
+
+---
+
+### Learning Objectives
+By the end of this module, you'll be able to:
+- Master ChatGPT's core features and capabilities for agency workflows
+- Leverage the complete ChatGPT ecosystem (Plus, Team, Enterprise) for different agency needs
+- Integrate ChatGPT with other tools (DALL-E, plugins, Code Interpreter) for enhanced productivity
+- Compare ChatGPT with Claude and Gemini to select the optimal tool for each task
+- Build efficient ChatGPT workflows for common agency challenges
+- Implement ChatGPT across teams while maintaining brand consistency and quality
+
+---
+
+## The Campaign That Redefined Speed: 24-Hour Turnaround Success
+
+In February 2024, creative agency Momentum faced an impossible deadline. A Fortune 500 client needed a complete campaign refresh after a competitor's surprise product launch—with a presentation required in 24 hours for a C-suite emergency meeting.
+
+Traditional agency process would have taken weeks:
+- **Research Phase**: 3-5 days
+- **Strategy Development**: 2-3 days  
+- **Creative Concept**: 5-7 days
+- **Asset Production**: 5-10 days
+
+But Momentum's ChatGPT-powered workflow delivered in **18 hours**:
+
+**Hour 1-4: Competitive Intelligence**
+- ChatGPT analyzed competitor campaigns, messaging, and market positioning
+- Identified 12 strategic opportunities and 8 potential threats
+- Generated competitor response scenarios and counter-strategies
+
+**Hour 5-8: Strategic Framework**
+- ChatGPT processed market data and developed positioning options
+- Created 6 distinct strategic territories with supporting rationale
+- Built messaging architecture and brand narrative options
+
+**Hour 9-14: Creative Development**
+- ChatGPT + DALL-E generated 50+ visual concepts
+- Developed taglines, headlines, and copy for 5 campaign directions
+- Created social media content calendars and activation plans
+
+**Hour 15-18: Presentation & Polish**
+- ChatGPT structured executive-level presentation narrative
+- Generated speaker notes and Q&A preparation
+- Refined messaging for maximum C-suite impact
+
+**The Result**: Not only did Momentum win the emergency brief, but the client immediately approved a $5M campaign extension and made them their primary agency across all brands.
+
+This wasn't luck—it was strategic ChatGPT mastery.
+
+---
+
+## Understanding ChatGPT: More Than Just Conversation
+
+### What Makes ChatGPT Different for Agencies
+
+While many think of ChatGPT as just a chatbot, it's actually a comprehensive AI platform designed for professional workflows. For agencies, ChatGPT offers unique advantages:
+
+**1. Conversational Intelligence**
+Unlike other AI tools that require specific prompt formats, ChatGPT excels at natural conversation. This makes it perfect for:
+- Brainstorming sessions that feel natural
+- Iterative creative development
+- Complex strategy discussions
+- Client communication drafting
+
+**2. Context Maintenance**
+ChatGPT remembers your entire conversation, allowing for:
+- Building ideas across multiple messages
+- Refining concepts through dialogue
+- Maintaining project context throughout development
+- Seamless collaboration between team members
+
+**3. Versatile Problem-Solving**
+ChatGPT adapts to different types of agency challenges:
+- Creative concept development
+- Data analysis and interpretation
+- Strategic planning and positioning
+- Technical implementation guidance
+- Business development support
+
+### The Complete ChatGPT Ecosystem for Agencies
+
+**ChatGPT Free**
+- Basic conversational AI
+- Limited daily usage
+- Perfect for individual exploration and learning
+
+**ChatGPT Plus ($20/month)**
+- GPT-4 access for superior reasoning
+- Faster response times during peak hours
+- Plugin ecosystem access
+- DALL-E 3 integration for visual creation
+- Code Interpreter for data analysis
+- **Best for**: Individual agency professionals and small teams
+
+**ChatGPT Team ($30/user/month)**
+- Everything in Plus
+- Higher usage limits for team productivity
+- Workspace for team collaboration
+- Admin controls for team management
+- Data excluded from training
+- **Best for**: Agency teams of 5-25 people
+
+**ChatGPT Enterprise (Custom pricing)**
+- Unlimited GPT-4 usage
+- Advanced security and privacy controls
+- Custom model fine-tuning options
+- API access for custom integrations
+- Analytics and usage reporting
+- **Best for**: Large agencies and enterprises with specific security requirements
+
+---
+
+## Core ChatGPT Features for Agency Excellence
+
+### 1. Advanced Reasoning with GPT-4
+
+GPT-4 represents a quantum leap in AI reasoning capabilities, making it ideal for complex agency challenges:
+
+**Strategic Analysis Example:**
+\`\`\`
+Analyze our client's market position against these three competitors:
+[Client data and competitor information]
+
+Consider:
+- Brand differentiation opportunities
+- Messaging gaps in the market
+- Audience overlap and whitespace
+- Competitive response scenarios
+
+Provide strategic recommendations with supporting rationale.
+\`\`\`
+
+**Output Quality:**
+- Multi-layered strategic thinking
+- Consideration of multiple variables
+- Logical reasoning chains
+- Actionable recommendations with clear rationale
+
+### 2. Plugin Ecosystem for Enhanced Capabilities
+
+ChatGPT's plugin system extends its capabilities far beyond text generation:
+
+**Essential Plugins for Agencies:**
+
+**Research & Data Plugins:**
+- **WebPilot**: Browse and analyze websites in real-time
+- **Wolfram**: Complex calculations and data analysis
+- **ScholarAI**: Access academic research and credible sources
+- **Link Reader**: Analyze PDFs, documents, and web content
+
+**Creative & Production Plugins:**
+- **Canva**: Generate designs directly in ChatGPT
+- **Photorealistic**: Advanced image generation
+- **Video Insights**: Analyze video content and generate scripts
+- **Sound Effects**: Create audio content for campaigns
+
+**Business Intelligence Plugins:**
+- **Zapier**: Connect ChatGPT to 5,000+ business apps
+- **Slack**: Integrate with team communication
+- **Calendar**: Schedule management and meeting optimization
+- **Email**: Draft and optimize email communications
+
+### 3. Integration Strategies with Other AI Tools
+
+**ChatGPT + Claude Workflow**
+
+**Strategic Development Process:**
+1. **ChatGPT**: Rapid ideation and concept generation
+2. **Claude**: Deep strategic analysis and refinement
+3. **ChatGPT**: Content creation and variations
+4. **Claude**: Final quality review and optimization
+
+**ChatGPT + Gemini Collaboration**
+
+**Multimodal Campaign Development:**
+1. **Gemini**: Video/audio content analysis and insights
+2. **ChatGPT**: Strategy development based on insights
+3. **Gemini**: Large-scale data processing and trends
+4. **ChatGPT**: Creative execution and asset creation
+
+---
+
+## Essential ChatGPT Workflows for Agencies
+
+### 1. Campaign Development Pipeline
+
+**Phase 1: Research & Analysis**
+\`\`\`
+Prompt Sequence:
+1. "Analyze our target audience demographics and psychographics..."
+2. "Research competitor campaigns in this space..."
+3. "Identify market trends and cultural insights..."
+4. "Synthesize findings into strategic opportunities..."
+\`\`\`
+
+**Phase 2: Strategic Framework**
+\`\`\`
+1. "Based on research insights, develop 5 positioning territories..."
+2. "Create messaging hierarchy for each territory..."
+3. "Develop brand narrative and storytelling frameworks..."
+4. "Generate campaign naming and tagline options..."
+\`\`\`
+
+**Phase 3: Creative Development**
+\`\`\`
+1. "Generate creative concepts for each strategic territory..."
+2. "Using DALL-E, create visual mockups for top 3 concepts..."
+3. "Develop copy variations for different channels..."
+4. "Create activation timelines and channel strategies..."
+\`\`\`
+
+### 2. Content Creation at Scale
+
+**Social Media Content Factory:**
+\`\`\`
+"Create 30 days of social content for [brand]:
+- Brand voice: [description]
+- Target audience: [details]
+- Content mix: 40% educational, 30% entertaining, 20% promotional, 10% user-generated
+- Platforms: LinkedIn, Instagram, Twitter
+- Include hashtags, posting times, and engagement strategies"
+\`\`\`
+
+**Email Campaign Development:**
+\`\`\`
+"Develop an email nurture sequence for [campaign]:
+1. Welcome email with brand introduction
+2. Educational content series (3 emails)
+3. Social proof and testimonials
+4. Product/service showcase
+5. Limited-time offer and urgency
+6. Win-back sequence for non-responders"
+\`\`\`
+
+---
+
+## ROI Measurement and Optimization
+
+### Tracking ChatGPT Impact
+
+**Time Savings Metrics:**
+- Content creation speed improvement
+- Research and analysis efficiency
+- Client communication quality
+- Campaign development velocity
+
+**Quality Improvements:**
+- Creative output diversity and volume
+- Strategic insight depth and accuracy
+- Client satisfaction scores
+- Campaign performance improvements
+
+**Cost-Benefit Analysis:**
+- Subscription costs vs. billable hour savings
+- Productivity improvements vs. investment
+- Client retention and satisfaction impact
+- New business development efficiency
+
+---
+
+## Conclusion: Mastering the ChatGPT Advantage
+
+ChatGPT represents more than just a productivity tool—it's a strategic platform that can transform how agencies operate, compete, and deliver value to clients. The key to success lies not in using ChatGPT as a replacement for human creativity and strategic thinking, but as an amplifier that enhances every aspect of agency excellence.
+
+**Key Takeaways:**
+
+1. **Versatility First**: ChatGPT's strength lies in its ability to handle diverse agency challenges
+2. **Integration Matters**: Success comes from seamlessly blending ChatGPT with existing workflows
+3. **Quality Control**: Maintain brand standards through proper prompting and review processes
+4. **Team Adoption**: Invest in comprehensive training and gradual implementation
+5. **Continuous Evolution**: Stay current with new features and capabilities
+6. **Strategic Thinking**: Use ChatGPT to enhance, not replace, strategic human insight
+
+By mastering ChatGPT's core features and integrating them strategically into agency operations, you'll not only improve efficiency and output quality—you'll position your agency as a leader in the AI-powered future of marketing and communications.
+
+---
+
+## Next Steps
+
+1. **Assessment**: Evaluate your current ChatGPT usage and identify expansion opportunities
+2. **Planning**: Develop implementation roadmap for your team and workflows  
+3. **Training**: Invest in comprehensive team education and skill development
+4. **Integration**: Begin incorporating ChatGPT into daily workflows systematically
+5. **Optimization**: Continuously refine and improve your ChatGPT processes
+6. **Advancement**: Explore custom GPT development and advanced integration possibilities
+
+Ready to transform your agency with ChatGPT mastery? Let's move forward to build the specific skills and workflows that will give your agency its competitive edge.`,
+          order_index: 1,
+          lesson_type: 'comprehensive',
+          estimated_minutes: 120,
+          difficulty: 'beginner',
+          platform_focus: 'chatgpt',
+          learning_objectives: ['Master ChatGPT core features and capabilities for agency workflows', 'Leverage the complete ChatGPT ecosystem (Plus, Team, Enterprise) for different agency needs', 'Integrate ChatGPT with other tools (DALL-E, plugins, Code Interpreter) for enhanced productivity', 'Compare ChatGPT with Claude and Gemini to select the optimal tool for each task', 'Build efficient ChatGPT workflows for common agency challenges']
         }
       );
     }

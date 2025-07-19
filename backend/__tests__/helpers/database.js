@@ -45,20 +45,54 @@ class TestDatabase {
     const path = require('path');
     
     try {
+      // First, drop all existing tables to ensure clean state
+      await this.dropAllTables();
+      
       // Read and execute schema
       const schemaPath = path.join(__dirname, '../../db/database.sql');
-      const schema = fs.readFileSync(schemaPath, 'utf8');
-      await this.pool.query(schema);
+      if (fs.existsSync(schemaPath)) {
+        const schema = fs.readFileSync(schemaPath, 'utf8');
+        await this.pool.query(schema);
+      }
       
       // Apply performance indexes (test version without CONCURRENTLY)
       const indexPath = path.join(__dirname, '../../db/performance_indexes_test.sql');
-      const indexes = fs.readFileSync(indexPath, 'utf8');
-      await this.pool.query(indexes);
+      if (fs.existsSync(indexPath)) {
+        const indexes = fs.readFileSync(indexPath, 'utf8');
+        await this.pool.query(indexes);
+      }
       
       console.log('Test database schema set up successfully');
     } catch (error) {
       console.error('Error setting up schema:', error);
       throw error;
+    }
+  }
+
+  async dropAllTables() {
+    try {
+      // Drop tables in reverse dependency order to handle foreign keys
+      const dropTables = [
+        'user_progress',
+        'code_submissions', 
+        'automation_workflows',
+        'exercises',
+        'modules',
+        'courses',
+        'users',
+        'companies',
+        'ai_integrations',
+        'tool_integrations'
+      ];
+
+      for (const table of dropTables) {
+        await this.pool.query(`DROP TABLE IF EXISTS ${table} CASCADE`);
+      }
+      
+      console.log('Dropped all existing tables');
+    } catch (error) {
+      console.error('Error dropping tables:', error);
+      // Don't throw error here, continue with schema setup
     }
   }
 

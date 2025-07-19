@@ -20,9 +20,16 @@ try {
 const app = express();
 const port = process.env.PORT || 5000;
 
-// Supabase configuration
-const supabaseUrl = process.env.SUPABASE_URL || 'https://fsohtauqtcftdjcjfdpq.supabase.co';
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZzb2h0YXVxdGNmdGRqY2pmZHBxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1MjIyNjc4MCwiZXhwIjoyMDY3ODAyNzgwfQ.vLRzjcMIrpn8m3nEDI7pE7bSZg20Msdw60CHcsV1otI';
+// Supabase configuration - MUST be set in environment variables
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+// Security check - fail fast if credentials not provided
+if (!supabaseUrl || !supabaseServiceKey) {
+  console.error('❌ SECURITY ERROR: Supabase credentials not configured');
+  console.error('   Please set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY environment variables');
+  process.exit(1);
+}
 
 // Create Supabase client with proper configuration
 const supabase = createClient(supabaseUrl, supabaseServiceKey, {

@@ -1,0 +1,1 @@
+/Users/thomasdowuona-hyde/.claude-suite/testing/commands/pre-deploy-check.md

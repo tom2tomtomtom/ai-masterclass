@@ -15,10 +15,31 @@ dist/
 .env.development
 .env.test
 .env.production
+
+# Local environment files (git-ignored for security)
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+
+# Secret files
 *secrets*
 *secret*
+*key*
+*keys*
 railway-secrets.txt
 .railway-secrets.txt
+supabase-keys.txt
+
+# Configuration with sensitive data
+config/env/.env.production
+config/env/.env.railway
+config/env/.env.*.local
+
+# But allow templates and examples
+!.env.example
+!**/.env.example
+!config/env/*.template
 
 # OS generated files
 .DS_Store

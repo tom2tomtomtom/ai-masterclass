@@ -41,7 +41,11 @@ app.use(helmet({
 // General middleware
 app.use(compression());
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  origin: [
+    process.env.FRONTEND_URL || 'http://localhost:3000',
+    'http://localhost:3001',
+    'http://localhost:3000'
+  ],
   credentials: true
 }));
 app.use(express.json({ limit: '10mb' }));
@@ -86,41 +90,44 @@ app.use('/api/interactive', auth, interactiveRoutes);
 // Courses endpoints with improved queries and validation
 app.get('/api/courses', courseLimiter, async (req, res) => {
   try {
-    const { page = 1, limit = 10, level, status = 'published' } = req.query;
+    const { page = 1, limit = 50, level, status = 'published' } = req.query;
     const offset = (page - 1) * limit;
-    
-    let whereClause = 'WHERE status = $1';
-    let queryParams = [status];
-    let paramCount = 1;
-    
-    if (level) {
-      paramCount++;
-      whereClause += ` AND level = $${paramCount}`;
-      queryParams.push(level);
-    }
-    
+
+    // Use modules table as courses since that's what we have
     const query = `
-      SELECT 
-        id, title, description, level, order_index, 
-        estimated_hours, status, created_at, updated_at
-      FROM courses 
-      ${whereClause}
-      ORDER BY level, order_index 
-      LIMIT $${paramCount + 1} OFFSET $${paramCount + 2}
+      SELECT
+        id, title, description, difficulty as level, order_index,
+        estimated_minutes, module_type, created_at, updated_at,
+        (estimated_minutes / 60.0) as estimated_hours
+      FROM modules
+      ORDER BY order_index, title
+      LIMIT $1 OFFSET $2
     `;
-    
-    queryParams.push(limit, offset);
-    
-    const { rows } = await db.query(query, queryParams);
-    
+
+    const { rows } = await db.query(query, [limit, offset]);
+
     // Get total count for pagination
-    const countQuery = `SELECT COUNT(*) FROM courses ${whereClause}`;
-    const { rows: countRows } = await db.query(countQuery, queryParams.slice(0, -2));
+    const countQuery = `SELECT COUNT(*) FROM modules`;
+    const { rows: countRows } = await db.query(countQuery);
     const total = parseInt(countRows[0].count);
-    
+
+    // Transform data to match expected course format
+    const courses = rows.map(row => ({
+      id: row.id,
+      title: row.title,
+      description: row.description,
+      level: row.level || 'intermediate',
+      order_index: row.order_index,
+      estimated_hours: row.estimated_hours || (row.estimated_minutes / 60),
+      status: 'published',
+      created_at: row.created_at,
+      updated_at: row.updated_at,
+      module_type: row.module_type
+    }));
+
     res.json({
       success: true,
-      data: rows,
+      data: courses,
       pagination: {
         page: parseInt(page),
         limit: parseInt(limit),
@@ -133,6 +140,94 @@ app.get('/api/courses', courseLimiter, async (req, res) => {
     res.status(500).json({
       success: false,
       msg: 'Unable to fetch courses. Please try again later.'
+    });
+  }
+});
+
+// Modules endpoint
+app.get('/api/modules', courseLimiter, async (req, res) => {
+  try {
+    const { page = 1, limit = 50 } = req.query;
+    const offset = (page - 1) * limit;
+
+    const query = `
+      SELECT
+        id, title, description, difficulty, order_index,
+        estimated_minutes, module_type, created_at, updated_at
+      FROM modules
+      ORDER BY order_index, title
+      LIMIT $1 OFFSET $2
+    `;
+
+    const { rows } = await db.query(query, [limit, offset]);
+
+    res.json(rows);
+  } catch (err) {
+    logger.error('Error fetching modules:', err);
+    res.status(500).json({
+      success: false,
+      msg: 'Unable to fetch modules. Please try again later.'
+    });
+  }
+});
+
+// Lessons endpoint
+app.get('/api/lessons', courseLimiter, async (req, res) => {
+  try {
+    const { page = 1, limit = 100, module_id } = req.query;
+    const offset = (page - 1) * limit;
+
+    let query = `
+      SELECT
+        id, module_id, title, content, order_index,
+        estimated_minutes, lesson_type, created_at, updated_at
+      FROM lessons
+    `;
+
+    let queryParams = [];
+
+    if (module_id) {
+      query += ` WHERE module_id = $1 ORDER BY order_index LIMIT $2 OFFSET $3`;
+      queryParams = [module_id, limit, offset];
+    } else {
+      query += ` ORDER BY module_id, order_index LIMIT $1 OFFSET $2`;
+      queryParams = [limit, offset];
+    }
+
+    const { rows } = await db.query(query, queryParams);
+
+    res.json(rows);
+  } catch (err) {
+    logger.error('Error fetching lessons:', err);
+    res.status(500).json({
+      success: false,
+      msg: 'Unable to fetch lessons. Please try again later.'
+    });
+  }
+});
+
+// Module lessons endpoint
+app.get('/api/modules/:id/lessons', courseLimiter, async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const query = `
+      SELECT
+        id, module_id, title, content, order_index,
+        estimated_minutes, lesson_type, created_at, updated_at
+      FROM lessons
+      WHERE module_id = $1
+      ORDER BY order_index
+    `;
+
+    const { rows } = await db.query(query, [id]);
+
+    res.json(rows);
+  } catch (err) {
+    logger.error('Error fetching module lessons:', err);
+    res.status(500).json({
+      success: false,
+      msg: 'Unable to fetch module lessons. Please try again later.'
     });
   }
 });

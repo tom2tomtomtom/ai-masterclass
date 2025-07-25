@@ -1,3 +1,9 @@
+// Load environment variables first
+require('dotenv').config();
+
+console.log('🚀 Starting AI-Masterclass Backend Server...');
+console.log('💡 Environment loaded:', process.env.NODE_ENV || 'development');
+
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
@@ -18,14 +24,14 @@ try {
 }
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8000;
 
 // Supabase configuration - MUST be set in environment variables
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 // Security check - fail fast if credentials not provided
-if (!supabaseUrl || !supabaseServiceKey) {
+if (!supabaseUrl || !supabaseServiceKey || supabaseUrl.trim() === '' || supabaseServiceKey.trim() === '') {
   console.error('❌ SECURITY ERROR: Supabase credentials not configured');
   console.error('   Please set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY environment variables');
   process.exit(1);
@@ -215,7 +221,7 @@ app.get('/api/courses', async (req, res) => {
     
     let query = supabase
       .from('courses')
-      .select('id, title, description, level, duration_minutes, created_at, updated_at', { count: 'exact' })
+      .select('id, title, description, level, estimated_hours, created_at, updated_at', { count: 'exact' })
       .order('level', { ascending: true })
       .order('created_at', { ascending: true })
       .range(offset, offset + limit - 1);
@@ -278,17 +284,21 @@ app.get('/api/courses/:id', async (req, res) => {
       throw courseError;
     }
     
-    // Get lessons for this specific course
-    const { data: lessons, error: lessonsError } = await supabase
-      .from('lessons')
-      .select('*')
+    // Get modules and lessons for this specific course
+    const { data: modules, error: modulesError } = await supabase
+      .from('modules')
+      .select(`
+        id, title, description, order_index,
+        lessons:lessons(
+          id, title, content, order_index, lesson_type, estimated_minutes
+        )
+      `)
       .eq('course_id', id)
-      .limit(10)
-      .order('created_at', { ascending: true });
+      .order('order_index', { ascending: true });
     
-    if (lessonsError) throw lessonsError;
+    if (modulesError) throw modulesError;
     
-    res.json({ success: true, data: { ...course, lessons } });
+    res.json({ success: true, data: { ...course, modules } });
   } catch (error) {
     logger.error('Get course error:', error);
     res.status(500).json({ success: false, error: error.message });
@@ -338,54 +348,79 @@ app.get('/api/lessons/:id', async (req, res) => {
   }
 });
 
-// Course modules endpoint (simplified - modules table doesn't exist yet)
+// Course modules endpoint
 app.get('/api/courses/:id/modules', async (req, res) => {
   try {
     const { id } = req.params;
     
-    // Return empty modules for now since table doesn't exist
-    res.json({
-      success: true,
-      data: [],
-      message: 'Modules table not yet implemented'
-    });
-  } catch (error) {
-    logger.error('Error fetching course modules:', error);
-    res.status(500).json({
-      success: false,
-      msg: 'Unable to fetch course modules. Please try again later.'
-    });
-  }
-});
-
-// Course lessons endpoint (optimized with related content)
-app.get('/api/courses/:id/lessons', async (req, res) => {
-  try {
-    const { id } = req.params;
-    
-    // Optimized query to include lesson count statistics
-    const { data: lessons, error } = await supabase
-      .from('lessons')
+    const { data: modules, error } = await supabase
+      .from('modules')
       .select(`
-        *,
-        prompts(count),
-        quizzes(count),
-        tasks(count)
+        id, title, description, order_index, module_type, estimated_minutes, difficulty,
+        lessons:lessons(
+          id, title, content, order_index, lesson_type, estimated_minutes, status
+        )
       `)
       .eq('course_id', id)
-      .order('order_index', { ascending: true })
-      .order('created_at', { ascending: true });
+      .order('order_index', { ascending: true });
     
     if (error) throw error;
     
     res.json({
       success: true,
-      data: lessons || []
+      data: modules || []
+    });
+  } catch (error) {
+    logger.error('Error fetching course modules:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      msg: 'Unable to fetch course modules. Please try again later.'
+    });
+  }
+});
+
+// Course lessons endpoint (through modules)
+app.get('/api/courses/:id/lessons', async (req, res) => {
+  try {
+    const { id } = req.params;
+    
+    // Get lessons through modules for this course
+    const { data: modules, error } = await supabase
+      .from('modules')
+      .select(`
+        lessons:lessons(
+          id, title, content, order_index, lesson_type, estimated_minutes, status,
+          module_id
+        )
+      `)
+      .eq('course_id', id)
+      .order('order_index', { ascending: true });
+    
+    if (error) throw error;
+    
+    // Flatten lessons from all modules
+    const allLessons = [];
+    if (modules) {
+      modules.forEach(module => {
+        if (module.lessons) {
+          allLessons.push(...module.lessons);
+        }
+      });
+    }
+    
+    // Sort lessons by order_index
+    allLessons.sort((a, b) => a.order_index - b.order_index);
+    
+    res.json({
+      success: true,
+      data: allLessons
     });
   } catch (error) {
     logger.error('Error fetching course lessons:', error);
     res.status(500).json({
       success: false,
+      error: error.message,
       msg: 'Unable to fetch course lessons. Please try again later.'
     });
   }
@@ -590,6 +625,76 @@ app.get('/api/test', async (req, res) => {
     });
   } catch (error) {
     logger.error('Database test error:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+// Direct API endpoints for testing and development
+app.get('/api/modules', async (req, res) => {
+  try {
+    const { data: modules, error } = await supabase
+      .from('modules')
+      .select('id, title, description, course_id, order_index')
+      .order('order_index', { ascending: true });
+    
+    if (error) throw error;
+    
+    res.json({
+      success: true,
+      data: modules || []
+    });
+  } catch (error) {
+    logger.error('Error fetching modules:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+app.get('/api/lessons', async (req, res) => {
+  try {
+    const { data: lessons, error } = await supabase
+      .from('lessons')
+      .select('id, title, content, module_id, order_index, lesson_type, estimated_minutes')
+      .order('order_index', { ascending: true });
+    
+    if (error) throw error;
+    
+    res.json({
+      success: true,
+      data: lessons || []
+    });
+  } catch (error) {
+    logger.error('Error fetching lessons:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+app.get('/api/modules/:id/lessons', async (req, res) => {
+  try {
+    const { id } = req.params;
+    
+    const { data: lessons, error } = await supabase
+      .from('lessons')
+      .select('id, title, content, order_index, lesson_type, estimated_minutes, status')
+      .eq('module_id', id)
+      .order('order_index', { ascending: true });
+    
+    if (error) throw error;
+    
+    res.json({
+      success: true,
+      data: lessons || []
+    });
+  } catch (error) {
+    logger.error('Error fetching module lessons:', error);
     res.status(500).json({
       success: false,
       error: error.message

@@ -1,0 +1,328 @@
+{
+  "startTime": "2025-07-21T01:32:59.504Z",
+  "courses": [
+    {
+      "index": 1,
+      "title": "Level 1Coming SoonAI FundamentalsMaster the basics of AI and prompt engineering. Learn to communicat",
+      "id": "4611417b-41c0-47c5-9dc1-4add1d23a38f",
+      "href": "http://localhost:3000/courses/4611417b-41c0-47c5-9dc1-4add1d23a38f",
+      "modules": [
+        {
+          "title": "Direct Course Content",
+          "contentLength": 8823,
+          "businessValue": true,
+          "technicalContent": true,
+          "preview": "You need to enable JavaScript to run this app.\n    AI MasterclassMaster AI-Powered DevelopmentDashboardSign InGet StartedHome/Courses/AI Fundamentals\n        .breadcrumb-nav {\n          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\n        }\n        \n        @media (max-width: 768px) {\n          .breadcrumb-container {\n            padding: 0 0.75rem;\n            font-size: 0.8rem;\n          }\n        }\n      AI FundamentalsMaster the basics of AI and prompt engineering. Learn to communicate eff"
+        }
+      ],
+      "status": "completed",
+      "startTime": "2025-07-21T01:33:06.337Z",
+      "errors": [],
+      "endTime": "2025-07-21T01:33:11.750Z"
+    },
+    {
+      "index": 2,
+      "title": "Level 1Coming SoonClaude MasteryComplete guide to using Claude AI effectively. From basic conversati",
+      "id": "60beef7d-1075-4916-8b3f-a44e5bfada1f",
+      "href": "http://localhost:3000/courses/60beef7d-1075-4916-8b3f-a44e5bfada1f",
+      "modules": [
+        {
+          "title": "Direct Course Content",
+          "contentLength": 7755,
+          "businessValue": false,
+          "technicalContent": true,
+          "preview": "You need to enable JavaScript to run this app.\n    AI MasterclassMaster AI-Powered DevelopmentDashboardSign InGet StartedHome/Courses/Claude Mastery\n        .breadcrumb-nav {\n          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\n        }\n        \n        @media (max-width: 768px) {\n          .breadcrumb-container {\n            padding: 0 0.75rem;\n            font-size: 0.8rem;\n          }\n        }\n      Claude MasteryComplete guide to using Claude AI effectively. From basic conversations to"
+        }
+      ],
+      "status": "completed",
+      "startTime": "2025-07-21T01:33:13.753Z",
+      "errors": [],
+      "endTime": "2025-07-21T01:33:18.524Z"
+    },
+    {
+      "index": 3,
+      "title": "Level 1Coming SoonAI Foundations ComprehensiveMaster fundamental AI concepts, statistical foundation",
+      "id": "718761f7-787e-4ec7-b0b1-1daff8e475ce",
+      "href": "http://localhost:3000/courses/718761f7-787e-4ec7-b0b1-1daff8e475ce",
+      "modules": [
+        {
+          "title": "Direct Course Content",
+          "contentLength": 11659,
+          "businessValue": false,
+          "technicalContent": true,
+          "preview": "You need to enable JavaScript to run this app.\n    AI MasterclassMaster AI-Powered DevelopmentDashboardSign InGet StartedHome/Courses/AI Foundations Comprehensive\n        .breadcrumb-nav {\n          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\n        }\n        \n        @media (max-width: 768px) {\n          .breadcrumb-container {\n            padding: 0 0.75rem;\n            font-size: 0.8rem;\n          }\n        }\n      AI Foundations ComprehensiveMaster fundamental AI concepts, statistical fo"
+        }
+      ],
+      "status": "completed",
+      "startTime": "2025-07-21T01:33:20.528Z",
+      "errors": [],
+      "endTime": "2025-07-21T01:33:25.448Z"
+    },
+    {
+      "index": 4,
+      "title": "Level 2Coming SoonChatGPT ProfessionalProfessional-level ChatGPT usage and strategies. Learn to inte",
+      "id": "26ddfeb6-fdc0-458a-adfa-f39d638b7a71",
+      "href": "http://localhost:3000/courses/26ddfeb6-fdc0-458a-adfa-f39d638b7a71",
+      "modules": [
+        {
+          "title": "Direct Course Content",
+          "contentLength": 17197,
+          "businessValue": true,
+          "technicalContent": true,
+          "preview": "You need to enable JavaScript to run this app.\n    AI MasterclassMaster AI-Powered DevelopmentDashboardSign InGet StartedHome/Courses/ChatGPT Professional\n        .breadcrumb-nav {\n          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\n        }\n        \n        @media (max-width: 768px) {\n          .breadcrumb-container {\n            padding: 0 0.75rem;\n            font-size: 0.8rem;\n          }\n        }\n      ChatGPT ProfessionalProfessional-level ChatGPT usage and strategies. Learn to inte"
+        }
+      ],
+      "status": "completed",
+      "startTime": "2025-07-21T01:33:27.449Z",
+      "errors": [],
+      "endTime": "2025-07-21T01:33:32.671Z"
+    },
+    {
+      "index": 5,
+      "title": "Level 2Coming SoonAI in BusinessApply AI solutions to real business problems. Learn to identify oppo",
+      "id": "7f34f9dd-8cd7-4aa9-9264-a10fc5b7c591",
+      "href": "http://localhost:3000/courses/7f34f9dd-8cd7-4aa9-9264-a10fc5b7c591",
+      "modules": [
+        {
+          "title": "Direct Course Content",
+          "contentLength": 7589,
+          "businessValue": true,
+          "technicalContent": true,
+          "preview": "You need to enable JavaScript to run this app.\n    AI MasterclassMaster AI-Powered DevelopmentDashboardSign InGet StartedHome/Courses/AI in Business\n        .breadcrumb-nav {\n          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\n        }\n        \n        @media (max-width: 768px) {\n          .breadcrumb-container {\n            padding: 0 0.75rem;\n            font-size: 0.8rem;\n          }\n        }\n      AI in BusinessApply AI solutions to real business problems. Learn to identify opportunit"
+        }
+      ],
+      "status": "completed",
+      "startTime": "2025-07-21T01:33:34.673Z",
+      "errors": [],
+      "endTime": "2025-07-21T01:33:39.487Z"
+    },
+    {
+      "index": 6,
+      "title": "Level 2Coming SoonGoogle AI Ecosystem for AgenciesMaster Gemini Pro & Ultra, Google Workspace AI, an",
+      "id": "ce1a8773-8fb5-485b-a571-cc58753634dc",
+      "href": "http://localhost:3000/courses/ce1a8773-8fb5-485b-a571-cc58753634dc",
+      "modules": [
+        {
+          "title": "Direct Course Content",
+          "contentLength": 11771,
+          "businessValue": true,
+          "technicalContent": true,
+          "preview": "You need to enable JavaScript to run this app.\n    AI MasterclassMaster AI-Powered DevelopmentDashboardSign InGet StartedHome/Courses/Google AI Ecosystem for Agencies\n        .breadcrumb-nav {\n          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\n        }\n        \n        @media (max-width: 768px) {\n          .breadcrumb-container {\n            padding: 0 0.75rem;\n            font-size: 0.8rem;\n          }\n        }\n      Google AI Ecosystem for AgenciesMaster Gemini Pro & Ultra, Google Work"
+        }
+      ],
+      "status": "completed",
+      "startTime": "2025-07-21T01:33:41.496Z",
+      "errors": [],
+      "endTime": "2025-07-21T01:33:47.070Z"
+    },
+    {
+      "index": 7,
+      "title": "Level 2Coming SoonMicrosoft 365 AI Suite for AgenciesMaster the complete Microsoft AI ecosystem incl",
+      "id": "1bbe2025-f711-4b10-85e4-3c6769716fb9",
+      "href": "http://localhost:3000/courses/1bbe2025-f711-4b10-85e4-3c6769716fb9",
+      "modules": [
+        {
+          "title": "Direct Course Content",
+          "contentLength": 14440,
+          "businessValue": true,
+          "technicalContent": true,
+          "preview": "You need to enable JavaScript to run this app.\n    AI MasterclassMaster AI-Powered DevelopmentDashboardSign InGet StartedHome/Courses/Microsoft 365 AI Suite for Agencies\n        .breadcrumb-nav {\n          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\n        }\n        \n        @media (max-width: 768px) {\n          .breadcrumb-container {\n            padding: 0 0.75rem;\n            font-size: 0.8rem;\n          }\n        }\n      Microsoft 365 AI Suite for AgenciesMaster the complete Microsoft AI"
+        }
+      ],
+      "status": "completed",
+      "startTime": "2025-07-21T01:33:49.072Z",
+      "errors": [],
+      "endTime": "2025-07-21T01:33:54.314Z"
+    },
+    {
+      "index": 8,
+      "title": "Level 2Coming SoonVideo Generation MasteryMaster professional video creation with AI. Learn Runway M",
+      "id": "c460792a-90ca-4151-8652-c32576d62dff",
+      "href": "http://localhost:3000/courses/c460792a-90ca-4151-8652-c32576d62dff",
+      "modules": [
+        {
+          "title": "Direct Course Content",
+          "contentLength": 25477,
+          "businessValue": true,
+          "technicalContent": true,
+          "preview": "You need to enable JavaScript to run this app.\n    AI MasterclassMaster AI-Powered DevelopmentDashboardSign InGet StartedHome/Courses/Video Generation Mastery\n        .breadcrumb-nav {\n          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\n        }\n        \n        @media (max-width: 768px) {\n          .breadcrumb-container {\n            padding: 0 0.75rem;\n            font-size: 0.8rem;\n          }\n        }\n      Video Generation MasteryMaster professional video creation with AI. Learn Runw"
+        }
+      ],
+      "status": "completed",
+      "startTime": "2025-07-21T01:33:56.318Z",
+      "errors": [],
+      "endTime": "2025-07-21T01:34:02.259Z"
+    },
+    {
+      "index": 9,
+      "title": "Level 2Coming SoonVoice & Audio AI MasteryProfessional voice cloning and audio production with AI. M",
+      "id": "af21cc5a-94f3-4e51-a2f8-e2009428e0cf",
+      "href": "http://localhost:3000/courses/af21cc5a-94f3-4e51-a2f8-e2009428e0cf",
+      "modules": [
+        {
+          "title": "Direct Course Content",
+          "contentLength": 16877,
+          "businessValue": true,
+          "technicalContent": true,
+          "preview": "You need to enable JavaScript to run this app.\n    AI MasterclassMaster AI-Powered DevelopmentDashboardSign InGet StartedHome/Courses/Voice & Audio AI Mastery\n        .breadcrumb-nav {\n          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\n        }\n        \n        @media (max-width: 768px) {\n          .breadcrumb-container {\n            padding: 0 0.75rem;\n            font-size: 0.8rem;\n          }\n        }\n      Voice & Audio AI MasteryProfessional voice cloning and audio production with A"
+        }
+      ],
+      "status": "completed",
+      "startTime": "2025-07-21T01:34:04.263Z",
+      "errors": [],
+      "endTime": "2025-07-21T01:34:09.792Z"
+    },
+    {
+      "index": 10,
+      "title": "Level 2Coming SoonMusic & Sound GenerationCreate professional music and sound effects with AI. Maste",
+      "id": "13509d0a-9877-42eb-bdb5-31b210452cad",
+      "href": "http://localhost:3000/courses/13509d0a-9877-42eb-bdb5-31b210452cad",
+      "modules": [
+        {
+          "title": "Direct Course Content",
+          "contentLength": 19359,
+          "businessValue": true,
+          "technicalContent": true,
+          "preview": "You need to enable JavaScript to run this app.\n    AI MasterclassMaster AI-Powered DevelopmentDashboardSign InGet StartedHome/Courses/Music & Sound Generation\n        .breadcrumb-nav {\n          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\n        }\n        \n        @media (max-width: 768px) {\n          .breadcrumb-container {\n            padding: 0 0.75rem;\n            font-size: 0.8rem;\n          }\n        }\n      Music & Sound GenerationCreate professional music and sound effects with AI. M"
+        }
+      ],
+      "status": "completed",
+      "startTime": "2025-07-21T01:34:11.793Z",
+      "errors": [],
+      "endTime": "2025-07-21T01:34:17.065Z"
+    },
+    {
+      "index": 11,
+      "title": "Level 2Coming SoonMarketing Analytics & AI StrategyTransform marketing data into strategic AI-powere",
+      "id": "6f088a4f-df10-46c6-9c4d-9c06a4222904",
+      "href": "http://localhost:3000/courses/6f088a4f-df10-46c6-9c4d-9c06a4222904",
+      "modules": [
+        {
+          "title": "Direct Course Content",
+          "contentLength": 11667,
+          "businessValue": false,
+          "technicalContent": true,
+          "preview": "You need to enable JavaScript to run this app.\n    AI MasterclassMaster AI-Powered DevelopmentDashboardSign InGet StartedHome/Courses/Marketing Analytics & AI Strategy\n        .breadcrumb-nav {\n          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\n        }\n        \n        @media (max-width: 768px) {\n          .breadcrumb-container {\n            padding: 0 0.75rem;\n            font-size: 0.8rem;\n          }\n        }\n      Marketing Analytics & AI StrategyTransform marketing data into strate"
+        }
+      ],
+      "status": "completed",
+      "startTime": "2025-07-21T01:34:19.068Z",
+      "errors": [],
+      "endTime": "2025-07-21T01:34:24.150Z"
+    },
+    {
+      "index": 12,
+      "title": "Level 2Coming SoonAI Ethics & Responsible AIBuild ethical AI systems that protect your brand and dri",
+      "id": "7ac8a3d5-f8b9-4910-a23d-49ff883e6637",
+      "href": "http://localhost:3000/courses/7ac8a3d5-f8b9-4910-a23d-49ff883e6637",
+      "modules": [
+        {
+          "title": "Direct Course Content",
+          "contentLength": 11745,
+          "businessValue": false,
+          "technicalContent": true,
+          "preview": "You need to enable JavaScript to run this app.\n    AI MasterclassMaster AI-Powered DevelopmentDashboardSign InGet StartedHome/Courses/AI Ethics & Responsible AI\n        .breadcrumb-nav {\n          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\n        }\n        \n        @media (max-width: 768px) {\n          .breadcrumb-container {\n            padding: 0 0.75rem;\n            font-size: 0.8rem;\n          }\n        }\n      AI Ethics & Responsible AIBuild ethical AI systems that protect your brand a"
+        }
+      ],
+      "status": "completed",
+      "startTime": "2025-07-21T01:34:26.152Z",
+      "errors": [],
+      "endTime": "2025-07-21T01:34:31.700Z"
+    },
+    {
+      "index": 13,
+      "title": "Level 3Coming SoonAdvanced AI TechniquesMaster advanced AI concepts and applications. Chain of thoug",
+      "id": "5862fe41-dc7a-46d4-a550-584eb9ac336a",
+      "href": "http://localhost:3000/courses/5862fe41-dc7a-46d4-a550-584eb9ac336a",
+      "modules": [
+        {
+          "title": "Direct Course Content",
+          "contentLength": 10549,
+          "businessValue": true,
+          "technicalContent": true,
+          "preview": "You need to enable JavaScript to run this app.\n    AI MasterclassMaster AI-Powered DevelopmentDashboardSign InGet StartedHome/Courses/Advanced AI Techniques\n        .breadcrumb-nav {\n          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\n        }\n        \n        @media (max-width: 768px) {\n          .breadcrumb-container {\n            padding: 0 0.75rem;\n            font-size: 0.8rem;\n          }\n        }\n      Advanced AI TechniquesMaster advanced AI concepts and applications. Chain of tho"
+        }
+      ],
+      "status": "completed",
+      "startTime": "2025-07-21T01:34:33.702Z",
+      "errors": [],
+      "endTime": "2025-07-21T01:34:38.680Z"
+    },
+    {
+      "index": 14,
+      "title": "Level 3Coming SoonAI Automation WorkflowsBuild automated workflows with AI tools. Use Zapier, n8n, a",
+      "id": "3603b5bd-bf66-440f-8427-bee48179d0ef",
+      "href": "http://localhost:3000/courses/3603b5bd-bf66-440f-8427-bee48179d0ef",
+      "modules": [
+        {
+          "title": "Direct Course Content",
+          "contentLength": 8918,
+          "businessValue": true,
+          "technicalContent": true,
+          "preview": "You need to enable JavaScript to run this app.\n    AI MasterclassMaster AI-Powered DevelopmentDashboardSign InGet StartedHome/Courses/AI Automation Workflows\n        .breadcrumb-nav {\n          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\n        }\n        \n        @media (max-width: 768px) {\n          .breadcrumb-container {\n            padding: 0 0.75rem;\n            font-size: 0.8rem;\n          }\n        }\n      AI Automation WorkflowsBuild automated workflows with AI tools. Use Zapier, n8n"
+        }
+      ],
+      "status": "completed",
+      "startTime": "2025-07-21T01:34:40.682Z",
+      "errors": [],
+      "endTime": "2025-07-21T01:34:46.163Z"
+    },
+    {
+      "index": 15,
+      "title": "Level 3Coming SoonAvatars & Virtual HumansCreate professional avatars and virtual influencers. Maste",
+      "id": "1d0c0cc1-0b4a-4ec8-b653-0b719e6d62e5",
+      "href": "http://localhost:3000/courses/1d0c0cc1-0b4a-4ec8-b653-0b719e6d62e5",
+      "modules": [
+        {
+          "title": "Direct Course Content",
+          "contentLength": 19329,
+          "businessValue": true,
+          "technicalContent": true,
+          "preview": "You need to enable JavaScript to run this app.\n    AI MasterclassMaster AI-Powered DevelopmentDashboardSign InGet StartedHome/Courses/Avatars & Virtual Humans\n        .breadcrumb-nav {\n          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\n        }\n        \n        @media (max-width: 768px) {\n          .breadcrumb-container {\n            padding: 0 0.75rem;\n            font-size: 0.8rem;\n          }\n        }\n      Avatars & Virtual HumansCreate professional avatars and virtual influencers. M"
+        }
+      ],
+      "status": "completed",
+      "startTime": "2025-07-21T01:34:48.165Z",
+      "errors": [],
+      "endTime": "2025-07-21T01:34:53.972Z"
+    },
+    {
+      "index": 16,
+      "title": "Level 3Coming SoonAI Automation & AgentsBuild intelligent automation and custom AI agents. Master Za",
+      "id": "c561ca9a-fb53-4612-9cfc-ace03263ac32",
+      "href": "http://localhost:3000/courses/c561ca9a-fb53-4612-9cfc-ace03263ac32",
+      "modules": [
+        {
+          "title": "Direct Course Content",
+          "contentLength": 19674,
+          "businessValue": true,
+          "technicalContent": true,
+          "preview": "You need to enable JavaScript to run this app.\n    AI MasterclassMaster AI-Powered DevelopmentDashboardSign InGet StartedHome/Courses/AI Automation & Agents\n        .breadcrumb-nav {\n          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\n        }\n        \n        @media (max-width: 768px) {\n          .breadcrumb-container {\n            padding: 0 0.75rem;\n            font-size: 0.8rem;\n          }\n        }\n      AI Automation & AgentsBuild intelligent automation and custom AI agents. Master"
+        }
+      ],
+      "status": "completed",
+      "startTime": "2025-07-21T01:34:55.975Z",
+      "errors": [],
+      "endTime": "2025-07-21T01:35:02.106Z"
+    }
+  ],
+  "statistics": {
+    "totalCourses": 16,
+    "totalModules": 16,
+    "totalLessons": 16,
+    "completedCourses": 16,
+    "completedModules": 16,
+    "completedLessons": 16,
+    "richContentLessons": 16,
+    "businessValueLessons": 12,
+    "technicalLessons": 16,
+    "errors": []
+  },
+  "contentQuality": {
+    "averageContentLength": 13927,
+    "totalContentLength": 222829,
+    "richContentPercentage": 100,
+    "businessValuePercentage": 75
+  },
+  "endTime": "2025-07-21T01:35:04.107Z"
+}

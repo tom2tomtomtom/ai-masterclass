@@ -1,0 +1,191 @@
+{
+  "timestamp": "2025-07-20T23:30:43.936Z",
+  "projectInfo": {
+    "created_at": "2025-07-11T09:39:40.978517Z",
+    "database": {
+      "host": "db.fsohtauqtcftdjcjfdpq.supabase.co",
+      "postgres_engine": "17",
+      "release_channel": "ga",
+      "version": "17.4.1.054"
+    },
+    "id": "fsohtauqtcftdjcjfdpq",
+    "name": "AI-MASTERCLASS",
+    "organization_id": "nzsmypvaiyjvkopyvsyl",
+    "region": "ap-southeast-1",
+    "status": "ACTIVE_HEALTHY",
+    "linked": false
+  },
+  "cliAuthTest": {
+    "code": 1,
+    "output": "",
+    "error": "unknown command \"auth\" for \"supabase\"\nTry rerunning the command with --debug to troubleshoot the error.\n"
+  },
+  "networkRequests": [
+    {
+      "url": "http://localhost:3000/auth",
+      "method": "GET",
+      "headers": {
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"139\", \"Not;A=Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      },
+      "postData": null
+    },
+    {
+      "url": "https://fsohtauqtcftdjcjfdpq.supabase.co/auth/v1/token?grant_type=password",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZzb2h0YXVxdGNmdGRqY2pmZHBxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIyMjY3ODAsImV4cCI6MjA2NzgwMjc4MH0.p8V9W-7hqm0DlLe9F9s-_HK4I3mKrT5eL0YFbJfVTw4",
+        "x-supabase-api-version": "2024-01-01",
+        "referer": "http://localhost:3000/",
+        "sec-ch-ua": "\"Chromium\";v=\"139\", \"Not;A=Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-client-info": "supabase-js-web/2.52.0",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "content-type": "application/json;charset=UTF-8",
+        "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZzb2h0YXVxdGNmdGRqY2pmZHBxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIyMjY3ODAsImV4cCI6MjA2NzgwMjc4MH0.p8V9W-7hqm0DlLe9F9s-_HK4I3mKrT5eL0YFbJfVTw4"
+      },
+      "postData": "{\"email\":\"test@gmail.com\",\"password\":\"password123\",\"gotrue_meta_security\":{}}"
+    },
+    {
+      "url": "http://127.0.0.1:3000/auth",
+      "method": "GET",
+      "headers": {
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"139\", \"Not;A=Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      },
+      "postData": null
+    },
+    {
+      "url": "https://fsohtauqtcftdjcjfdpq.supabase.co/auth/v1/token?grant_type=password",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZzb2h0YXVxdGNmdGRqY2pmZHBxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIyMjY3ODAsImV4cCI6MjA2NzgwMjc4MH0.p8V9W-7hqm0DlLe9F9s-_HK4I3mKrT5eL0YFbJfVTw4",
+        "x-supabase-api-version": "2024-01-01",
+        "referer": "http://127.0.0.1:3000/",
+        "sec-ch-ua": "\"Chromium\";v=\"139\", \"Not;A=Brand\";v=\"99\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-client-info": "supabase-js-web/2.52.0",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "content-type": "application/json;charset=UTF-8",
+        "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZzb2h0YXVxdGNmdGRqY2pmZHBxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIyMjY3ODAsImV4cCI6MjA2NzgwMjc4MH0.p8V9W-7hqm0DlLe9F9s-_HK4I3mKrT5eL0YFbJfVTw4"
+      },
+      "postData": "{\"email\":\"test@gmail.com\",\"password\":\"password123\",\"gotrue_meta_security\":{}}"
+    }
+  ],
+  "networkResponses": [
+    {
+      "url": "http://localhost:3000/auth",
+      "status": 200,
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-headers": "*",
+        "access-control-allow-methods": "*",
+        "access-control-allow-origin": "*",
+        "connection": "keep-alive",
+        "content-encoding": "br",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Sun, 20 Jul 2025 23:30:30 GMT",
+        "etag": "W/\"d27-AVpY6EFM7PNhEFMPShJznlKtMno\"",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding",
+        "x-powered-by": "Express"
+      },
+      "statusText": "OK"
+    },
+    {
+      "url": "https://fsohtauqtcftdjcjfdpq.supabase.co/auth/v1/token?grant_type=password",
+      "status": 401,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "access-control-max-age": "3600",
+        "sb-project-ref": "fsohtauqtcftdjcjfdpq",
+        "x-content-type-options": "nosniff",
+        "access-control-allow-methods": "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS,TRACE,CONNECT",
+        "cf-ray": "96263f3d380c77e1-MEL",
+        "access-control-allow-origin": "*",
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "content-length": "99",
+        "server-timing": "cfExtPri",
+        "date": "Sun, 20 Jul 2025 23:30:33 GMT",
+        "content-type": "application/json;charset=UTF-8",
+        "vary": "Accept-Encoding",
+        "server": "cloudflare",
+        "priority": "u=1,i"
+      },
+      "statusText": ""
+    },
+    {
+      "url": "http://127.0.0.1:3000/auth",
+      "status": 200,
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-headers": "*",
+        "access-control-allow-methods": "*",
+        "access-control-allow-origin": "*",
+        "connection": "keep-alive",
+        "content-encoding": "br",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Sun, 20 Jul 2025 23:30:38 GMT",
+        "etag": "W/\"d27-AVpY6EFM7PNhEFMPShJznlKtMno\"",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding",
+        "x-powered-by": "Express"
+      },
+      "statusText": "OK"
+    },
+    {
+      "url": "https://fsohtauqtcftdjcjfdpq.supabase.co/auth/v1/token?grant_type=password",
+      "status": 401,
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "access-control-max-age": "3600",
+        "sb-project-ref": "fsohtauqtcftdjcjfdpq",
+        "x-content-type-options": "nosniff",
+        "access-control-allow-methods": "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS,TRACE,CONNECT",
+        "cf-ray": "96263f71285f2ea1-MEL",
+        "access-control-allow-origin": "*",
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "content-length": "99",
+        "server-timing": "cfExtPri",
+        "date": "Sun, 20 Jul 2025 23:30:41 GMT",
+        "content-type": "application/json;charset=UTF-8",
+        "vary": "Accept-Encoding",
+        "server": "cloudflare",
+        "priority": "u=1,i"
+      },
+      "statusText": ""
+    }
+  ],
+  "consoleMessages": [
+    {
+      "type": "error",
+      "text": "[ERROR] Login error {error: Invalid API key, stack: AuthApiError: Invalid API key\n    at handleError (…static/js/src_components_Auth_js.chunk.js:522:13)}",
+      "timestamp": "2025-07-20T23:30:33.130Z"
+    },
+    {
+      "type": "error",
+      "text": "[ERROR] Login error {error: Invalid API key, stack: AuthApiError: Invalid API key\n    at handleError (…static/js/src_components_Auth_js.chunk.js:522:13)}",
+      "timestamp": "2025-07-20T23:30:41.438Z"
+    }
+  ],
+  "runtimeConfig": {
+    "processEnv": "process not available",
+    "windowLocation": "http://127.0.0.1:3000/auth",
+    "supabaseClient": "Not available",
+    "errorDetails": "No error captured"
+  },
+  "recommendations": [
+    "401 Unauthorized detected - API key issue confirmed",
+    "Invalid API key error found in console - check Supabase project settings"
+  ]
+}

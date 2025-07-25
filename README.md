@@ -106,22 +106,41 @@ cd frontend && npm test
 cd frontend && npm run test:e2e
 ```
 
-## 📊 Course Content
+## 📚 Complete Course Structure
 
-### Level 1: AI Foundations
-- Introduction to AI tools
-- Basic prompt engineering
-- ChatGPT and Claude fundamentals
+### **Level 1: AI Foundations** (3 lessons)
+- AI strategy and opportunity assessment
+- Platform selection and toolkit building  
+- Business optimization frameworks
 
-### Level 2: Business Applications  
-- AI for productivity
-- Content creation workflows
-- Data analysis with AI
+### **Level 2: Platform Mastery** (10 lessons)
+- ChatGPT fundamentals and advanced techniques
+- Claude strategic implementation and business toolkit
+- Visual AI platforms (Midjourney)
+- Enterprise AI platforms (Gemini, Copilot)
 
-### Level 3: Development Integration
-- AI-powered coding
-- API integrations
-- Building AI applications
+### **Level 3: Content Creation Mastery** (13 lessons) 🎨
+- **Video Generation**: Google Veo, OpenAI Sora, Runway ML
+- **Audio & Voice**: ElevenLabs, Adobe Speech, Audiobook Production
+- **Music & Sound**: Suno AI, Audio Branding, Sound Effects
+- **Virtual Humans**: HeyGen, Synthesia, Virtual Influencers
+
+### **Level 4: Automation & AI Development** (8 lessons) 🤖
+- **AI Automation Platforms**: Zapier, n8n, Custom Agents
+- **Vibe Coding Mastery**: Loveable.dev, Cursor AI, VS Code Augment
+- **Workflow Development**: Agency automation, business processes
+
+### **Level 5: Business Applications** (6 lessons) 💼
+- Agency workflows and client management
+- Campaign creation and social media automation
+- ROI calculators, proposals, and business templates
+
+### **Level 6: Advanced Implementation** (5 lessons) 🚀
+- Assessment frameworks and analytics
+- Learning system design and troubleshooting
+- Enterprise-scale AI implementation
+
+**Total: 45 comprehensive lessons across 6 progressive levels**
 
 ## 🔧 Configuration
 

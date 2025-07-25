@@ -1,0 +1,2930 @@
+{
+  "timestamp": "2025-07-21T00:06:27.640Z",
+  "summary": {
+    "totalFiles": 105,
+    "totalCharacters": 2221591,
+    "totalLines": 60247,
+    "averageCharactersPerFile": 21158,
+    "averageLinesPerFile": 574
+  },
+  "markdownFiles": [
+    {
+      "name": "CODE_REVIEW_REPORT.md",
+      "relativePath": "CODE_REVIEW_REPORT.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/CODE_REVIEW_REPORT.md",
+      "directory": ".",
+      "content": {
+        "characters": 6362,
+        "lines": 218,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 70,
+      "preview": "# AI-Masterclass Code Review Report  ## 🔍 Executive Summary  This comprehensive code review identified **23 critical issues** across security, performance, maintainability, and best practices. The application shows good foundational architecture but requires significant improvements for production...",
+      "isUsed": false
+    },
+    {
+      "name": "CONTENT_QA_CHECKLIST.md",
+      "relativePath": "CONTENT_QA_CHECKLIST.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/CONTENT_QA_CHECKLIST.md",
+      "directory": ".",
+      "content": {
+        "characters": 5299,
+        "lines": 140,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "lessons",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 45,
+      "preview": "# 📋 **AI-Masterclass Content Quality Assurance Checklist**  ## 🎯 **Pre-Publication Checklist**  ### **✅ Content Structure** - [ ] **Hook**: Starts with clear business problem/outcome - [ ] **Time Estimate**: Includes realistic time investment - [ ] **Learning Objectives**: 3 specific, measurable o...",
+      "isUsed": false
+    },
+    {
+      "name": "CONTENT_STRATEGY_FRAMEWORK.md",
+      "relativePath": "CONTENT_STRATEGY_FRAMEWORK.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/CONTENT_STRATEGY_FRAMEWORK.md",
+      "directory": ".",
+      "content": {
+        "characters": 10378,
+        "lines": 250,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 85,
+      "preview": "# AI Masterclass: Premium Content Strategy & Curriculum Framework  ## 🎯 Content Strategy Overview  Transform the AI Masterclass into a **world-class educational experience** that rivals premium platforms like MasterClass, Coursera Plus, and LinkedIn Learning Premium. Our strategy focuses on creatin...",
+      "isUsed": false
+    },
+    {
+      "name": "CONTENT_TRANSFORMATION_PROGRESS.md",
+      "relativePath": "CONTENT_TRANSFORMATION_PROGRESS.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/CONTENT_TRANSFORMATION_PROGRESS.md",
+      "directory": ".",
+      "content": {
+        "characters": 6883,
+        "lines": 165,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "lessons",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": false,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 55,
+      "preview": "# 📊 **AI-Masterclass Content Transformation Progress**  ## 🎯 **Implementation Status**  ### **✅ COMPLETED (Today)**  #### **Phase 1: Foundation** - [x] **Templates Created**: Lesson, Prompt, Quiz templates with UX writing principles - [x] **Style Guide**: Comprehensive writing standards and termin...",
+      "isUsed": false
+    },
+    {
+      "name": "DEPLOYMENT.md",
+      "relativePath": "DEPLOYMENT.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/DEPLOYMENT.md",
+      "directory": ".",
+      "content": {
+        "characters": 9199,
+        "lines": 382,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 55,
+      "preview": "# AI Masterclass - Production Deployment Guide  ## 🚀 Deployment Overview  This guide provides comprehensive instructions for deploying the AI Masterclass application to production environments using Docker, Kubernetes, or traditional server deployments.  ## 📋 Prerequisites  ### System Requirements...",
+      "isUsed": false
+    },
+    {
+      "name": "DEPLOYMENT_COMMANDS.md",
+      "relativePath": "DEPLOYMENT_COMMANDS.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/DEPLOYMENT_COMMANDS.md",
+      "directory": ".",
+      "content": {
+        "characters": 5349,
+        "lines": 169,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": true
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": false,
+        "hasPrompts": false,
+        "hasStepByStep": false
+      },
+      "qualityScore": 50,
+      "preview": "# 🚀 Complete Deployment Commands  ## Critical JavaScript Syntax Fixes Applied ✅  The following critical fixes have been successfully applied to `backend/seed-complete-courses.js`:  - **Fixed Pattern A Error at line 5036**: Content that was flowing outside proper JavaScript object boundaries - **Add...",
+      "isUsed": false
+    },
+    {
+      "name": "DEPLOYMENT_MASTER_PLAN.md",
+      "relativePath": "DEPLOYMENT_MASTER_PLAN.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/DEPLOYMENT_MASTER_PLAN.md",
+      "directory": ".",
+      "content": {
+        "characters": 14996,
+        "lines": 552,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": false
+      },
+      "qualityScore": 90,
+      "preview": "# 🚀 AI MASTERCLASS PREMIUM DEPLOYMENT PLAN ## Complete Fix, Test & Railway Deploy Strategy  **Target**: Deploy premium agency-focused AI Masterclass with full UX testing **Platform**: Railway.app **Timeline**: 2-3 days for complete implementation **Quality Standard**: Production-ready with comprehe...",
+      "isUsed": false
+    },
+    {
+      "name": "DEPLOYMENT_READY_REPORT.md",
+      "relativePath": "DEPLOYMENT_READY_REPORT.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/DEPLOYMENT_READY_REPORT.md",
+      "directory": ".",
+      "content": {
+        "characters": 5400,
+        "lines": 134,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": false,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 80,
+      "preview": "# 🚀 AI Masterclass - Deployment Ready Report ## Complete Code & Content Review - July 19, 2025  ### ✅ **DEPLOYMENT STATUS: READY FOR IMMEDIATE DEPLOYMENT**  ## 📋 **APPLICATION STATUS SUMMARY**  ### **Technical Infrastructure: EXCELLENT** ✅ - **Backend**: Node.js + Express + Supabase - Fully functi...",
+      "isUsed": false
+    },
+    {
+      "name": "DEPLOYMENT_SUCCESS_REPORT.md",
+      "relativePath": "DEPLOYMENT_SUCCESS_REPORT.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/DEPLOYMENT_SUCCESS_REPORT.md",
+      "directory": ".",
+      "content": {
+        "characters": 6836,
+        "lines": 161,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 60,
+      "preview": "# 🎉 AI MASTERCLASS PREMIUM DEPLOYMENT - SUCCESS REPORT ## $2,997+ Premium Platform Successfully Deployed  **Date**: July 19, 2025   **Status**: ✅ **PREMIUM PLATFORM DEPLOYED AND OPERATIONAL**   **Market Position**: Ready for immediate $2,997+ premium launch    ---  ## 🏆 DEPLOYMENT ACHIEVEMENT SUMM...",
+      "isUsed": false
+    },
+    {
+      "name": "FINAL_DIAGNOSIS_AND_FIX.md",
+      "relativePath": "FINAL_DIAGNOSIS_AND_FIX.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/FINAL_DIAGNOSIS_AND_FIX.md",
+      "directory": ".",
+      "content": {
+        "characters": 4361,
+        "lines": 132,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": false,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 55,
+      "preview": "# 🎯 FINAL COMPREHENSIVE DIAGNOSIS & FIX  ## 🔍 **ROOT CAUSE IDENTIFIED**  After comprehensive Playwright diagnosis, the fundamental issue was:  ### **PORT MISMATCH BETWEEN FRONTEND AND BACKEND**  - ❌ **Frontend Config**: Expected API on `localhost:5001` - ✅ **Backend Reality**: Running on `localhos...",
+      "isUsed": false
+    },
+    {
+      "name": "HISTORIC-ACHIEVEMENT-SUMMARY.md",
+      "relativePath": "HISTORIC-ACHIEVEMENT-SUMMARY.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/HISTORIC-ACHIEVEMENT-SUMMARY.md",
+      "directory": ".",
+      "content": {
+        "characters": 8446,
+        "lines": 175,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "other",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 70,
+      "preview": "# 🏆 HISTORIC ACHIEVEMENT SUMMARY ## 10/10 Practicality Score Achieved - July 19, 2025  **UNPRECEDENTED ACCOMPLISHMENT**: AI Masterclass project has achieved perfect 10/10 Practicality Score, exceeding all target objectives and establishing the new industry standard for AI education excellence.  ---...",
+      "isUsed": false
+    },
+    {
+      "name": "IMPLEMENTATION_GUIDE.md",
+      "relativePath": "IMPLEMENTATION_GUIDE.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/IMPLEMENTATION_GUIDE.md",
+      "directory": ".",
+      "content": {
+        "characters": 10216,
+        "lines": 458,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 60,
+      "preview": "# AI-Masterclass Implementation Guide  ## 🚀 Priority Implementation Plan  This guide provides step-by-step instructions to implement the critical fixes identified in the code review.  ## Phase 1: Critical Security Fixes (Week 1)  ### 1. Install Missing Dependencies  ```bash # Backend security depen...",
+      "isUsed": false
+    },
+    {
+      "name": "INTERACTIVE_CONTENT_README.md",
+      "relativePath": "INTERACTIVE_CONTENT_README.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/INTERACTIVE_CONTENT_README.md",
+      "directory": ".",
+      "content": {
+        "characters": 9147,
+        "lines": 230,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 75,
+      "preview": "# AI Masterclass Interactive Textbook System  ## 🎯 Overview  The AI Masterclass platform has been transformed from a basic course structure into a comprehensive **interactive textbook system** that adapts to each learner's specific workplace scenarios. Instead of building workflows within the platf...",
+      "isUsed": false
+    },
+    {
+      "name": "MISSING-MODULES-EXPANSION-PLAN.md",
+      "relativePath": "MISSING-MODULES-EXPANSION-PLAN.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/MISSING-MODULES-EXPANSION-PLAN.md",
+      "directory": ".",
+      "content": {
+        "characters": 8945,
+        "lines": 256,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 80,
+      "preview": "# 🚀 AI MASTERCLASS MISSING MODULES EXPANSION PLAN  **Transform from 16 courses to 25+ comprehensive courses with cutting-edge 2025 AI capabilities**  ---  ## 🎯 **EXECUTIVE SUMMARY**  ### **Current State Analysis** - ✅ **16 courses** successfully deployed - ✅ **52 modules** with comprehensive conte...",
+      "isUsed": false
+    },
+    {
+      "name": "MISSING-MODULES-IMPLEMENTATION-TIMELINE.md",
+      "relativePath": "MISSING-MODULES-IMPLEMENTATION-TIMELINE.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/MISSING-MODULES-IMPLEMENTATION-TIMELINE.md",
+      "directory": ".",
+      "content": {
+        "characters": 8543,
+        "lines": 261,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": false
+      },
+      "qualityScore": 65,
+      "preview": "# ⏰ MISSING MODULES IMPLEMENTATION TIMELINE  **Strategic 12-month expansion plan to capture $5.4M+ additional annual revenue**  ---  ## 🎯 **EXECUTIVE TIMELINE OVERVIEW**  ### **Q1 2025: Critical Gaps (Weeks 1-12)** - **4 new courses** | **16 new modules** | **64+ new lessons** - **Revenue Target**:...",
+      "isUsed": false
+    },
+    {
+      "name": "PORT_FIX_SUMMARY.md",
+      "relativePath": "PORT_FIX_SUMMARY.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/PORT_FIX_SUMMARY.md",
+      "directory": ".",
+      "content": {
+        "characters": 3132,
+        "lines": 104,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": false
+      },
+      "qualityScore": 40,
+      "preview": "# 🎯 PORT MISMATCH FIX - COMPLETE SUCCESS  ## 🚨 **ISSUE IDENTIFIED** Frontend was making infinite API calls to `localhost:5001` but backend was running on `localhost:8000`, causing: - ❌ `ERR_CONNECTION_REFUSED` errors   - ❌ \"Invalid API key\" error messages - ❌ Infinite retry loops - ❌ No course dat...",
+      "isUsed": false
+    },
+    {
+      "name": "PRACTICAL-ENHANCEMENT-PLAN.md",
+      "relativePath": "PRACTICAL-ENHANCEMENT-PLAN.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/PRACTICAL-ENHANCEMENT-PLAN.md",
+      "directory": ".",
+      "content": {
+        "characters": 14791,
+        "lines": 469,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 60,
+      "preview": "# 🎯 PRACTICAL ENHANCEMENT PLAN ## Transforming Strategic Content to 10/10 Practical Implementation  **Current Practicality Score**: 4/10   **Target Practicality Score**: 10/10   **Implementation Timeline**: 6 weeks   **Focus**: Convert existing strategic excellence into hands-on mastery    ---  ##...",
+      "isUsed": false
+    },
+    {
+      "name": "PREMIUM_COURSE_ENHANCEMENT_PLAN.md",
+      "relativePath": "PREMIUM_COURSE_ENHANCEMENT_PLAN.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/PREMIUM_COURSE_ENHANCEMENT_PLAN.md",
+      "directory": ".",
+      "content": {
+        "characters": 8517,
+        "lines": 197,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 70,
+      "preview": "# AI Masterclass: Premium Course Enhancement Plan  ## 🎯 Vision: Transform into Top-Tier Learning Experience  Transform the AI Masterclass from a functional platform into a **premium, engaging, and highly effective** learning experience that rivals top online education platforms like MasterClass, Co...",
+      "isUsed": false
+    },
+    {
+      "name": "PREMIUM_DEPLOYMENT_STRATEGY.md",
+      "relativePath": "PREMIUM_DEPLOYMENT_STRATEGY.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/PREMIUM_DEPLOYMENT_STRATEGY.md",
+      "directory": ".",
+      "content": {
+        "characters": 6180,
+        "lines": 172,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 70,
+      "preview": "# 🚀 PREMIUM CONTENT DEPLOYMENT STRATEGY ## Immediate Market Launch with $2,997+ Value Delivery  **SITUATION CONFIRMED**:  - ✅ **206,000+ words** of premium AI agency content exists - ✅ **220+ professional resources** worth $150,000+ in business value   - ✅ **Complete transformation capability** - f...",
+      "isUsed": false
+    },
+    {
+      "name": "PRODUCTION_DEPLOYMENT_GUIDE.md",
+      "relativePath": "PRODUCTION_DEPLOYMENT_GUIDE.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/PRODUCTION_DEPLOYMENT_GUIDE.md",
+      "directory": ".",
+      "content": {
+        "characters": 8697,
+        "lines": 313,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 70,
+      "preview": "# 🚀 AI Masterclass - Production Deployment Guide  ## Overview  This guide covers the complete deployment process for the AI Masterclass platform, transforming it from a development prototype to a production-ready A+ platform.  ## ✅ Transformation Summary  The platform has been completely transforme...",
+      "isUsed": false
+    },
+    {
+      "name": "RAILWAY_CHECKLIST.md",
+      "relativePath": "RAILWAY_CHECKLIST.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/RAILWAY_CHECKLIST.md",
+      "directory": ".",
+      "content": {
+        "characters": 3179,
+        "lines": 107,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": false
+      },
+      "qualityScore": 30,
+      "preview": "# 🚂 Railway Deployment Checklist  ## Pre-Deployment Checklist  ### ✅ Code Preparation - [ ] All code committed to Git - [ ] Repository pushed to GitHub - [ ] `railway.json` file exists - [ ] `railway.toml` file exists - [ ] `.env.railway` template exists  ### ✅ Account Setup - [ ] Railway account c...",
+      "isUsed": false
+    },
+    {
+      "name": "RAILWAY_DEPLOYMENT_GUIDE.md",
+      "relativePath": "RAILWAY_DEPLOYMENT_GUIDE.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/RAILWAY_DEPLOYMENT_GUIDE.md",
+      "directory": ".",
+      "content": {
+        "characters": 6631,
+        "lines": 262,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": true
+      },
+      "category": "guides",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": false,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 70,
+      "preview": "# 🚂 Railway Deployment Guide for AI-Masterclass  ## Complete Beginner's Step-by-Step Guide  This guide will walk you through deploying your AI-Masterclass application to Railway with **zero prior deployment experience required**.  ---  ## 📋 What You'll Need  - [ ] A GitHub account (free) - [ ] A R...",
+      "isUsed": false
+    },
+    {
+      "name": "RAILWAY_DEPLOYMENT_SUCCESS.md",
+      "relativePath": "RAILWAY_DEPLOYMENT_SUCCESS.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/RAILWAY_DEPLOYMENT_SUCCESS.md",
+      "directory": ".",
+      "content": {
+        "characters": 5130,
+        "lines": 161,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": true
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": false
+      },
+      "qualityScore": 65,
+      "preview": "# 🚀 Railway Deployment Success Report  ## ✅ Deployment Status: **SUCCESSFUL**  The AI Masterclass platform has been successfully deployed to Railway! Here's the complete deployment summary:  ### 📊 Deployment Summary  - **Platform**: Railway - **Project**: adequate-achievement   - **Environment**:...",
+      "isUsed": false
+    },
+    {
+      "name": "README.md",
+      "relativePath": "README.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/README.md",
+      "directory": ".",
+      "content": {
+        "characters": 5143,
+        "lines": 194,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": true
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": false,
+        "hasCaseStudies": true,
+        "hasMetrics": false,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 65,
+      "preview": "# 🚀 AI-Masterclass  **A comprehensive AI-powered learning platform for business professionals to master AI tools and development.**  [![Deploy to Railway](https://railway.app/button.svg)](https://railway.app/template/your-template-id)  ## 🎯 Overview  AI-Masterclass is a full-stack learning managem...",
+      "isUsed": false
+    },
+    {
+      "name": "SECURITY_FIXES_REPORT.md",
+      "relativePath": "SECURITY_FIXES_REPORT.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/SECURITY_FIXES_REPORT.md",
+      "directory": ".",
+      "content": {
+        "characters": 5874,
+        "lines": 184,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": true
+      },
+      "category": "other",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": false
+      },
+      "qualityScore": 50,
+      "preview": "# 🔒 CRITICAL SECURITY FIXES - COMPLETED  ## 🚨 Security Emergency Response Summary  **Date**: July 20, 2025   **Status**: ✅ **RESOLVED**   **Risk Level**: **CRITICAL → SECURE**  ---  ## ⚡ Immediate Actions Taken  ### 🔥 CRITICAL SECURITY BREACH - FIXED ✅  #### Issue: Hardcoded Secrets Exposed in Re...",
+      "isUsed": false
+    },
+    {
+      "name": "SYNC_VERIFICATION.md",
+      "relativePath": "SYNC_VERIFICATION.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/SYNC_VERIFICATION.md",
+      "directory": ".",
+      "content": {
+        "characters": 5041,
+        "lines": 147,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": true
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 55,
+      "preview": "# 🔄 Git Repository Sync Verification  ## Current Status of Modified Files  The following critical files have been modified and need to be synchronized with GitHub:  ### 🎯 Primary Fix: JavaScript Syntax Errors **File**: `backend/seed-complete-courses.js` - **Status**: ✅ FIXED - Pattern A error at l...",
+      "isUsed": false
+    },
+    {
+      "name": "TESTING_GUIDE.md",
+      "relativePath": "TESTING_GUIDE.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/TESTING_GUIDE.md",
+      "directory": ".",
+      "content": {
+        "characters": 6576,
+        "lines": 232,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": false,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 70,
+      "preview": "# AI Masterclass - Testing Guide  ## 🚀 **Ready to Test!**  Your AI Masterclass platform has been transformed with premium design and features. Here's how to test it:  ## ✅ **Application Status**  ### **Frontend (React App)** - ✅ **Premium Design System**: Complete with modern UI components - ✅ **En...",
+      "isUsed": false
+    },
+    {
+      "name": "TRANSFORMATION_SUMMARY.md",
+      "relativePath": "TRANSFORMATION_SUMMARY.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/TRANSFORMATION_SUMMARY.md",
+      "directory": ".",
+      "content": {
+        "characters": 8960,
+        "lines": 193,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": false
+      },
+      "qualityScore": 75,
+      "preview": "# AI Masterclass: Premium Transformation Summary  ## 🎉 **Transformation Complete: From Functional to Premium**  Your AI Masterclass platform has been successfully transformed from a basic functional application into a **premium, professional learning experience** that can compete with top-tier educ...",
+      "isUsed": false
+    },
+    {
+      "name": "VIBE-CODING-MODULE-IMPLEMENTATION.md",
+      "relativePath": "VIBE-CODING-MODULE-IMPLEMENTATION.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/VIBE-CODING-MODULE-IMPLEMENTATION.md",
+      "directory": ".",
+      "content": {
+        "characters": 10265,
+        "lines": 290,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 85,
+      "preview": "# 🎯 VIBE CODING MODULE - DETAILED IMPLEMENTATION PLAN  **Create the most comprehensive AI-powered development training available anywhere**  ---  ## 📋 **MODULE OVERVIEW**  ### **Course 17: AI-Powered Development Mastery** **Target Audience**: Developers, Technical Marketers, Agency Owners   **Busi...",
+      "isUsed": false
+    },
+    {
+      "name": "agency-module-1-1-content.md",
+      "relativePath": "agency-module-1-1-content.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/agency-module-1-1-content.md",
+      "directory": ".",
+      "content": {
+        "characters": 22538,
+        "lines": 618,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 80,
+      "preview": "# Module 1.1: What is AI for Marketing Agencies? ## Amplified Intelligence for Competitive Advantage  ---  ### Learning Objectives By the end of this module, you'll be able to: - Define AI in agency-relevant terms and understand its true potential - Identify how leading agencies are using AI to gain...",
+      "isUsed": false
+    },
+    {
+      "name": "agency-use-cases.md",
+      "relativePath": "agency-use-cases.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/agency-use-cases.md",
+      "directory": ".",
+      "content": {
+        "characters": 17954,
+        "lines": 644,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "other",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 70,
+      "preview": "# 🎬 Real Agency AI Use Cases ## Practical Scenarios Across All Platforms  **Purpose**: Demonstrate real-world agency workflows using multiple AI tools   **Format**: Scenario → Tool Selection → Step-by-Step Process → Results   **Focus**: Multi-tool integration for optimal outcomes    ---  ## 📱 Use...",
+      "isUsed": false
+    },
+    {
+      "name": "ai-automation-agents-custom-agents.md",
+      "relativePath": "ai-automation-agents-custom-agents.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/ai-automation-agents-custom-agents.md",
+      "directory": ".",
+      "content": {
+        "characters": 54771,
+        "lines": 1314,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 100,
+      "preview": "# 🤖 AI AUTOMATION & AGENTS MASTERY ## Module 16: How to Build Custom AI Agents **Advanced AI Agent Development and Deployment - 2025 Edition**  **Updated**: July 2025 with latest AI agent frameworks and autonomous system capabilities   **Audience**: Developers, AI specialists, enterprise architects...",
+      "isUsed": true
+    },
+    {
+      "name": "ai-automation-agents-n8n.md",
+      "relativePath": "ai-automation-agents-n8n.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/ai-automation-agents-n8n.md",
+      "directory": ".",
+      "content": {
+        "characters": 51145,
+        "lines": 1385,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 100,
+      "preview": "# 🤖 AI AUTOMATION & AGENTS MASTERY ## Module 15: How to Master N8N Open Source Automation **Custom Automation Solutions and Enterprise Deployment - 2025 Edition**  **Updated**: July 2025 with latest N8N features and self-hosted automation capabilities   **Audience**: Technical professionals, develo...",
+      "isUsed": true
+    },
+    {
+      "name": "ai-automation-agents-zapier.md",
+      "relativePath": "ai-automation-agents-zapier.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/ai-automation-agents-zapier.md",
+      "directory": ".",
+      "content": {
+        "characters": 43884,
+        "lines": 1081,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 90,
+      "preview": "# 🤖 AI AUTOMATION & AGENTS MASTERY ## Module 14: How to Build AI Workflows with Zapier **Complete Business Process Automation and Efficiency - 2025 Edition**  **Updated**: July 2025 with latest Zapier AI features and automation capabilities   **Audience**: Business professionals, entrepreneurs, age...",
+      "isUsed": true
+    },
+    {
+      "name": "ai-ethics-responsible-ai.md",
+      "relativePath": "ai-ethics-responsible-ai.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/ai-ethics-responsible-ai.md",
+      "directory": ".",
+      "content": {
+        "characters": 20747,
+        "lines": 417,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 90,
+      "preview": "# 🛡️ AI ETHICS & RESPONSIBLE AI MASTERCLASS  **Build Ethical AI Systems That Protect Your Brand and Drive Sustainable Growth**   *Master responsible AI practices, bias mitigation, and ethical frameworks for trustworthy AI implementation*  ---  ## 🎯 **MODULE OVERVIEW & BUSINESS IMPACT**  ### **Real...",
+      "isUsed": true
+    },
+    {
+      "name": "ai-foundations-comprehensive.md",
+      "relativePath": "ai-foundations-comprehensive.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/ai-foundations-comprehensive.md",
+      "directory": ".",
+      "content": {
+        "characters": 17581,
+        "lines": 394,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 85,
+      "preview": "# 🧠 AI FOUNDATIONS COMPREHENSIVE MASTERCLASS  **Transform from AI Beginner to Strategic AI Leader**   *Master the fundamental concepts, statistical foundations, and ethical frameworks that power all AI applications*  ---  ## 🎯 **MODULE OVERVIEW & BUSINESS IMPACT**  ### **Real-World Problem & Solut...",
+      "isUsed": true
+    },
+    {
+      "name": "capstone-project-framework.md",
+      "relativePath": "assessment-framework/capstone-project-framework.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/assessment-framework/capstone-project-framework.md",
+      "directory": "assessment-framework",
+      "content": {
+        "characters": 25807,
+        "lines": 574,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "lessons",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 65,
+      "preview": "# 🎓 Capstone Project Framework ## Enterprise Portfolio Validation with Real-World Impact  **Document Purpose**: Complete Week 4 - Capstone project requirements and validation   **Target**: 10/10 Practicality Score through real-world portfolio demonstration   **Quality Standard**: Client-ready deliv...",
+      "isUsed": false
+    },
+    {
+      "name": "complete-assessment-system.md",
+      "relativePath": "assessment-framework/complete-assessment-system.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/assessment-framework/complete-assessment-system.md",
+      "directory": "assessment-framework",
+      "content": {
+        "characters": 20322,
+        "lines": 452,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "assessments",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 65,
+      "preview": "# 🎯 Complete Assessment & Validation Framework ## AI Mastery Certification System with Practical Challenges  **Document Purpose**: Complete Week 4 - Assessment challenges and certification validation   **Target**: 10/10 Practicality Score through comprehensive assessment system   **Quality Standard...",
+      "isUsed": false
+    },
+    {
+      "name": "learning-analytics-dashboard.md",
+      "relativePath": "assessment-framework/learning-analytics-dashboard.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/assessment-framework/learning-analytics-dashboard.md",
+      "directory": "assessment-framework",
+      "content": {
+        "characters": 19646,
+        "lines": 509,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": false
+      },
+      "qualityScore": 80,
+      "preview": "# 📊 Learning Analytics Dashboard Specification ## Real-Time Progress Tracking & Optimization System  **Document Purpose**: Complete Week 4 - Learning analytics and performance tracking   **Target**: 10/10 Practicality Score achievement through comprehensive progress monitoring   **Quality Standard*...",
+      "isUsed": false
+    },
+    {
+      "name": "comprehensive-agency-automation-suite.md",
+      "relativePath": "automation-scripts/comprehensive-agency-automation-suite.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/automation-scripts/comprehensive-agency-automation-suite.md",
+      "directory": "automation-scripts",
+      "content": {
+        "characters": 61625,
+        "lines": 1800,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "other",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 90,
+      "preview": "# ⚡ AGENCY AI AUTOMATION SCRIPTS ## 20+ Workflow Automations for Complete AI Stack Integration  **Purpose**: Automate repetitive agency tasks across all AI platforms   **Coverage**: Campaign development, client management, content creation, reporting   **Value**: Save 15-25 hours per week per team m...",
+      "isUsed": true
+    },
+    {
+      "name": "avatars-virtual-humans-heygen.md",
+      "relativePath": "avatars-virtual-humans-heygen.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/avatars-virtual-humans-heygen.md",
+      "directory": ".",
+      "content": {
+        "characters": 42009,
+        "lines": 1035,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 100,
+      "preview": "# 👤 AVATARS & VIRTUAL HUMANS MASTERY ## Module 11: How to Create Professional Avatars with HeyGen **Complete Avatar Video Production and Corporate Training - 2025 Edition**  **Updated**: July 2025 with latest HeyGen features and avatar technology   **Audience**: Corporate trainers, content creators...",
+      "isUsed": true
+    },
+    {
+      "name": "avatars-virtual-humans-synthesia.md",
+      "relativePath": "avatars-virtual-humans-synthesia.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/avatars-virtual-humans-synthesia.md",
+      "directory": ".",
+      "content": {
+        "characters": 44052,
+        "lines": 1086,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 90,
+      "preview": "# 👤 AVATARS & VIRTUAL HUMANS MASTERY ## Module 12: How to Build Custom Avatars with Synthesia **Enterprise Avatar Solutions and Advanced Customization - 2025 Edition**  **Updated**: July 2025 with latest Synthesia enterprise features and custom avatar technology   **Audience**: Enterprise teams, L&...",
+      "isUsed": true
+    },
+    {
+      "name": "avatars-virtual-humans-virtual-influencers.md",
+      "relativePath": "avatars-virtual-humans-virtual-influencers.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/avatars-virtual-humans-virtual-influencers.md",
+      "directory": ".",
+      "content": {
+        "characters": 45260,
+        "lines": 1073,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 90,
+      "preview": "# 👤 AVATARS & VIRTUAL HUMANS MASTERY ## Module 13: How to Create & Launch Virtual Influencers **Complete Virtual Influencer Creation and Management - 2025 Edition**  **Updated**: July 2025 with latest virtual influencer technology and social media strategies   **Audience**: Digital marketers, agenc...",
+      "isUsed": true
+    },
+    {
+      "name": "COMPREHENSIVE_CONTENT_GAP_ANALYSIS.md",
+      "relativePath": "backend/COMPREHENSIVE_CONTENT_GAP_ANALYSIS.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/backend/COMPREHENSIVE_CONTENT_GAP_ANALYSIS.md",
+      "directory": "backend",
+      "content": {
+        "characters": 8028,
+        "lines": 179,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 80,
+      "preview": "# 🚨 COMPREHENSIVE CONTENT GAP ANALYSIS ## Database vs. Markdown Files - Critical Findings  **Date**: July 20, 2025 **Analysis Type**: Complete Database-to-Content Mapping Audit  ## 📊 EXECUTIVE SUMMARY  **CRITICAL FINDING**: You have a massive content waste problem! Despite having **104 rich markdo...",
+      "isUsed": false
+    },
+    {
+      "name": "COMPREHENSIVE_FIX_PLAN.md",
+      "relativePath": "backend/COMPREHENSIVE_FIX_PLAN.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/backend/COMPREHENSIVE_FIX_PLAN.md",
+      "directory": "backend",
+      "content": {
+        "characters": 6219,
+        "lines": 203,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": false,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 65,
+      "preview": "# 🚨 COMPREHENSIVE SYSTEM FIX PLAN  ## 📊 AUDIT RESULTS SUMMARY  ### ✅ WHAT'S WORKING: - ✅ Database connection to Supabase - ✅ All required tables exist with proper schema   - ✅ Rich content lessons exist with proper content (7,219 and 9,627 characters) - ✅ Interactive content (6 prompts, 2 quizzes,...",
+      "isUsed": false
+    },
+    {
+      "name": "DATABASE-SETUP-GUIDE.md",
+      "relativePath": "backend/DATABASE-SETUP-GUIDE.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/backend/DATABASE-SETUP-GUIDE.md",
+      "directory": "backend",
+      "content": {
+        "characters": 7363,
+        "lines": 283,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": false,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 65,
+      "preview": "# 🗄️ Complete Database Setup Guide for AI Masterclass Platform  This guide provides step-by-step instructions for setting up the database schema required for the complete AI Masterclass platform seeding system.  ## 📋 Overview  The database schema supports: - **16 Comprehensive Courses** (Foundatio...",
+      "isUsed": false
+    },
+    {
+      "name": "IMPLEMENTATION-STATUS.md",
+      "relativePath": "backend/IMPLEMENTATION-STATUS.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/backend/IMPLEMENTATION-STATUS.md",
+      "directory": "backend",
+      "content": {
+        "characters": 4497,
+        "lines": 134,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": false,
+        "hasCaseStudies": true,
+        "hasMetrics": false,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 65,
+      "preview": "# 🎯 AI MASTERCLASS IMPLEMENTATION STATUS  ## ✅ **COMPLETED SUCCESSFULLY**  ### **1. Database & Schema**  - ✅ **DEFINITIVE-SCHEMA.sql created** - Complete schema matching all seeding requirements - ✅ **Database populated with rich content**:   - **16 courses** (exactly as required)   - **52 modules*...",
+      "isUsed": false
+    },
+    {
+      "name": "SCHEMA-EXECUTION-GUIDE.md",
+      "relativePath": "backend/SCHEMA-EXECUTION-GUIDE.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/backend/SCHEMA-EXECUTION-GUIDE.md",
+      "directory": "backend",
+      "content": {
+        "characters": 3414,
+        "lines": 135,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": false,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 45,
+      "preview": "# 🗄️ Schema Execution Guide  ## ❗ CRITICAL: Read Before Proceeding  **This will DROP existing tables and recreate them. Any existing data will be LOST.**  Current database status: - ✅ 16 courses exist - ✅ 52 modules exist   - ✅ 20 lessons exist - ❌ Missing critical columns needed for advanced seedi...",
+      "isUsed": false
+    },
+    {
+      "name": "SEEDING-README.md",
+      "relativePath": "backend/SEEDING-README.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/backend/SEEDING-README.md",
+      "directory": "backend",
+      "content": {
+        "characters": 6321,
+        "lines": 202,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": false,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 80,
+      "preview": "# 🌱 Complete AI Masterclass Platform Seeding Guide  This guide explains how to seed the COMPLETE AI Masterclass platform into your Supabase database.  ## 📋 Overview  The Complete AI Masterclass Platform consists of: - **8 Foundation Courses** covering AI fundamentals and business applications - **...",
+      "isUsed": false
+    },
+    {
+      "name": "campaign-brief-templates.md",
+      "relativePath": "business-templates/campaign-brief-templates.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/business-templates/campaign-brief-templates.md",
+      "directory": "business-templates",
+      "content": {
+        "characters": 29833,
+        "lines": 842,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "templates",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 75,
+      "preview": "# 📋 Campaign Brief Templates Collection ## 5 Professional Variations for Agency Use  **Purpose**: Comprehensive campaign brief templates for different client types and campaign scales   **Quality**: Enterprise-grade, Fortune 500 agency standards   **Usage**: Immediate implementation with client pro...",
+      "isUsed": false
+    },
+    {
+      "name": "client-proposal-templates.md",
+      "relativePath": "business-templates/client-proposal-templates.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/business-templates/client-proposal-templates.md",
+      "directory": "business-templates",
+      "content": {
+        "characters": 37080,
+        "lines": 938,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "templates",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 75,
+      "preview": "# 💼 Client Proposal Templates Collection ## 5 Professional Variations for Agency Business Development  **Purpose**: Comprehensive client proposal templates for different engagement types and client sizes   **Quality**: Fortune 500 agency standards with proven win rates   **Usage**: Immediate custom...",
+      "isUsed": true
+    },
+    {
+      "name": "roi-calculator-templates.md",
+      "relativePath": "business-templates/roi-calculator-templates.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/business-templates/roi-calculator-templates.md",
+      "directory": "business-templates",
+      "content": {
+        "characters": 20790,
+        "lines": 586,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "templates",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 65,
+      "preview": "# 📊 ROI Calculator Templates Collection ## 3 Professional Variations for Agency Business Cases  **Purpose**: Comprehensive ROI calculation templates for different agency scenarios   **Quality**: Fortune 500 financial modeling standards   **Usage**: Immediate customization for client presentations a...",
+      "isUsed": false
+    },
+    {
+      "name": "team-training-materials-templates.md",
+      "relativePath": "business-templates/team-training-materials-templates.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/business-templates/team-training-materials-templates.md",
+      "directory": "business-templates",
+      "content": {
+        "characters": 12163,
+        "lines": 284,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 75,
+      "preview": "[ ] **Timeline Planning**: Create realistic implementation schedule - [ ] **Resource Allocation**: Assign training coordinators and support staff - [ ] **Communication Plan**: Develop announcement and engagement strategy - [ ] **Baseline Measurement**: Establish current performance benchmarks - [ ]...",
+      "isUsed": false
+    },
+    {
+      "name": "workflow-documentation-templates.md",
+      "relativePath": "business-templates/workflow-documentation-templates.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/business-templates/workflow-documentation-templates.md",
+      "directory": "business-templates",
+      "content": {
+        "characters": 26107,
+        "lines": 782,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "lessons",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 80,
+      "preview": "# 📋 Workflow Documentation Templates ## Professional Business Process Documentation for AI-Enabled Agencies  **Purpose**: Enterprise-ready workflow documentation templates for agencies implementing AI tools   **Target**: Operations managers, team leads, and process improvement professionals   **Val...",
+      "isUsed": false
+    },
+    {
+      "name": "chatgpt-developer-workflows.md",
+      "relativePath": "chatgpt-developer-workflows.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/chatgpt-developer-workflows.md",
+      "directory": ".",
+      "content": {
+        "characters": 36069,
+        "lines": 890,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 90,
+      "preview": "# 💬 CHATGPT DEVELOPER WORKFLOWS MASTERY  **Integrate ChatGPT into Professional Development Processes for Maximum Productivity**   *Master conversational AI assistance, custom GPTs, and automated development workflows*  ---  ## 🎯 **MODULE OVERVIEW & BUSINESS IMPACT**  ### **Real-World Problem & Sol...",
+      "isUsed": true
+    },
+    {
+      "name": "chatgpt-module-content.md",
+      "relativePath": "chatgpt-module-content.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/chatgpt-module-content.md",
+      "directory": ".",
+      "content": {
+        "characters": 21679,
+        "lines": 652,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 80,
+      "preview": "# Module 2.1: ChatGPT Core Features for Marketing Agencies ## The Versatile AI Powerhouse for Agency Excellence  ---  ### Learning Objectives By the end of this module, you'll be able to: - Master ChatGPT's core features and capabilities for agency workflows - Leverage the complete ChatGPT ecosystem...",
+      "isUsed": true
+    },
+    {
+      "name": "claude-code-generation-mastery.md",
+      "relativePath": "claude-code-generation-mastery.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/claude-code-generation-mastery.md",
+      "directory": ".",
+      "content": {
+        "characters": 52441,
+        "lines": 1796,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 100,
+      "preview": "# 🚀 CLAUDE CODE GENERATION MASTERY  **Unlock Claude's Advanced Coding Capabilities for Enterprise-Grade Development**   *Master the most sophisticated AI coding assistant for complex application development*  ---  ## 🎯 **MODULE OVERVIEW & BUSINESS IMPACT**  ### **Real-World Problem & Solution** **...",
+      "isUsed": true
+    },
+    {
+      "name": "claude-code-prompts.md",
+      "relativePath": "claude-code-prompts.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/claude-code-prompts.md",
+      "directory": ".",
+      "content": {
+        "characters": 12488,
+        "lines": 364,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": false,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 75,
+      "preview": "# Claude Code Prompts: AI Masterclass Technical Repair  ## Phase 1: Structure Analysis and Mapping  ### Prompt 1.1: Initial Syntax Error Analysis ``` I need you to analyze the JavaScript syntax errors in the AI Masterclass seed file. Please:  1. Run syntax validation on `/users/thomasdowuona-hyde/AI...",
+      "isUsed": false
+    },
+    {
+      "name": "claude.md",
+      "relativePath": "claude.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/claude.md",
+      "directory": ".",
+      "content": {
+        "characters": 12702,
+        "lines": 330,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": false,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 80,
+      "preview": "# Claude Code Integration for AI-Assisted Development Training Course  This project is a comprehensive learning management system designed to train professionals in AI-assisted development, automation, and workflow optimization.  ## Project Overview  ### Technology Stack - **Frontend**: React applic...",
+      "isUsed": true
+    },
+    {
+      "name": "clod.md",
+      "relativePath": "clod.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/clod.md",
+      "directory": ".",
+      "content": {
+        "characters": 11763,
+        "lines": 383,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": false,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 75,
+      "preview": "# Claude Code: AI Masterclass Technical Repair Roadmap  ## Executive Summary  The AI Masterclass platform contains **206,000+ words of premium content** but is currently blocked by systematic JavaScript syntax errors in the main seed file. This document provides a comprehensive technical roadmap for...",
+      "isUsed": false
+    },
+    {
+      "name": "complete-pivot-plan.md",
+      "relativePath": "complete-pivot-plan.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/complete-pivot-plan.md",
+      "directory": ".",
+      "content": {
+        "characters": 9522,
+        "lines": 293,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 70,
+      "preview": "# 🎯 Complete AI Masterclass Pivot Plan ## Comprehensive Agency-Focused AI Education Across All Platforms  **Version**: 2.0   **Date**: January 2024   **Status**: Active Development   **Repository**: https://github.com/tom2tomtomtom/ai-masterclass.git    ---  ## 📋 Executive Summary  ### The Opportu...",
+      "isUsed": false
+    },
+    {
+      "name": "contentdev.md",
+      "relativePath": "contentdev.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/contentdev.md",
+      "directory": ".",
+      "content": {
+        "characters": 8645,
+        "lines": 210,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": false
+      },
+      "qualityScore": 65,
+      "preview": "🔄 CURRENT SESSION - July 19, 2025 22:45  **🚨 CRITICAL DISCOVERY: PREMIUM CONTENT EXISTS BUT BLOCKED BY SYNTAX ERRORS**  **Current Status**: URGENT FIX REQUIRED - 12,500 lines of premium content ready for deployment **Issue**: JavaScript syntax errors in seed-complete-courses.js preventing full con...",
+      "isUsed": false
+    },
+    {
+      "name": "custom-gpts-module-content.md",
+      "relativePath": "custom-gpts-module-content.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/custom-gpts-module-content.md",
+      "directory": ".",
+      "content": {
+        "characters": 33217,
+        "lines": 929,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 90,
+      "preview": "# Module 2.2: Custom GPTs for Agency Workflows ## Build Specialized AI Assistants for Competitive Advantage  ---  ### Learning Objectives By the end of this module, you'll be able to: - Understand the strategic value of Custom GPTs for agency differentiation and efficiency - Design and build special...",
+      "isUsed": true
+    },
+    {
+      "name": "README.md",
+      "relativePath": "frontend/README.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/frontend/README.md",
+      "directory": "frontend",
+      "content": {
+        "characters": 3359,
+        "lines": 71,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": false,
+        "hasTables": false,
+        "hasLinks": true
+      },
+      "category": "other",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": false,
+        "hasPrompts": false,
+        "hasStepByStep": false
+      },
+      "qualityScore": 20,
+      "preview": "# Getting Started with Create React App  This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  ## Available Scripts  In the project directory, you can run:  ### `npm start`  Runs the app in the development mode.\\ Open [http://localhost:3000](http://loc...",
+      "isUsed": false
+    },
+    {
+      "name": "gemini.md",
+      "relativePath": "gemini.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/gemini.md",
+      "directory": ".",
+      "content": {
+        "characters": 100229,
+        "lines": 2942,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 100,
+      "preview": "# AI-Assisted Development Training Course **From Basic LLM Use to Proficient AI-Assisted Coding & Automation**  ## Course Overview Transform from a basic AI user to a proficient AI-assisted developer and automation expert through this comprehensive, hands-on training program. This course emphasizes...",
+      "isUsed": false
+    },
+    {
+      "name": "google-ai-2025-expansion.md",
+      "relativePath": "google-ai-2025-expansion.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/google-ai-2025-expansion.md",
+      "directory": ".",
+      "content": {
+        "characters": 21436,
+        "lines": 532,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 80,
+      "preview": "# 🚀 GOOGLE AI MODULE 3.1 - MASSIVE 2025 EXPANSION ## Adding 16,500+ Words of Cutting-Edge Content  **Current Status**: Module has 8,500+ words but missing 85% of 2025 features **Target**: Expand to 25,000+ words with complete 2025 creative suite coverage **Critical Features Missing**: All discovere...",
+      "isUsed": false
+    },
+    {
+      "name": "platform-deployment-guide.md",
+      "relativePath": "integration-optimization/platform-deployment-guide.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/integration-optimization/platform-deployment-guide.md",
+      "directory": "integration-optimization",
+      "content": {
+        "characters": 13396,
+        "lines": 344,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 70,
+      "preview": "# 🚀 Complete Platform Deployment Guide ## Enterprise AI Integration & Quality Assurance Framework  **Document Purpose**: Final integration optimization for Week 3 completion   **Target**: 100% deployment readiness across all AI platforms   **Quality Standard**: Fortune 500 enterprise implementation...",
+      "isUsed": false
+    },
+    {
+      "name": "structured-learning-framework.md",
+      "relativePath": "learning-progression/structured-learning-framework.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/learning-progression/structured-learning-framework.md",
+      "directory": "learning-progression",
+      "content": {
+        "characters": 16711,
+        "lines": 463,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 70,
+      "preview": "# 🎓 Structured Learning Progression Framework ## AI Mastery Journey: Foundation to Enterprise Leadership  **Document Purpose**: Week 4 - Complete competency framework and role-specific learning paths   **Target**: 10/10 Practicality Score achievement through structured skill progression   **Quality...",
+      "isUsed": false
+    },
+    {
+      "name": "error-report-20250719-224136.md",
+      "relativePath": "logs/error-report-20250719-224136.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/logs/error-report-20250719-224136.md",
+      "directory": "logs",
+      "content": {
+        "characters": 506,
+        "lines": 19,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "other",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": false,
+        "hasPrompts": false,
+        "hasStepByStep": false
+      },
+      "qualityScore": 20,
+      "preview": "# 🚨 ERROR DETECTION REPORT - Sat 19 Jul 2025 22:41:36 AEST  ## 🚨 ERROR DETECTED **Severity**: Medium **Component**: Dependencies **Error Type**: Outdated **Description**: Outdated packages detected **Fix Applied**: No fix available **Timestamp**: Sat 19 Jul 2025 22:41:37 AEST  ## 🚨 ERROR DETECTED...",
+      "isUsed": false
+    },
+    {
+      "name": "marketing-analytics-ai-strategy.md",
+      "relativePath": "marketing-analytics-ai-strategy.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/marketing-analytics-ai-strategy.md",
+      "directory": ".",
+      "content": {
+        "characters": 18319,
+        "lines": 395,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 85,
+      "preview": "# 📊 MARKETING ANALYTICS & AI STRATEGY MASTERCLASS  **Transform Marketing Data into Strategic AI-Powered Growth**   *Master advanced analytics, predictive modeling, and AI strategy for marketing excellence*  ---  ## 🎯 **MODULE OVERVIEW & BUSINESS IMPACT**  ### **Real-World Problem & Solution** **Pr...",
+      "isUsed": true
+    },
+    {
+      "name": "music-sound-mastery-audio-branding.md",
+      "relativePath": "music-sound-mastery-audio-branding.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/music-sound-mastery-audio-branding.md",
+      "directory": ".",
+      "content": {
+        "characters": 23608,
+        "lines": 572,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 90,
+      "preview": "# 🎵 MUSIC & SOUND GENERATION MASTERY ## Module 10: How to Build Audio Branding Strategies **Complete Sonic Identity and Brand Audio Development - 2025 Edition**  **Updated**: July 2025 with latest audio branding trends and AI-powered sonic identity creation   **Audience**: Brand strategists, market...",
+      "isUsed": true
+    },
+    {
+      "name": "music-sound-mastery-content-creator-music.md",
+      "relativePath": "music-sound-mastery-content-creator-music.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/music-sound-mastery-content-creator-music.md",
+      "directory": ".",
+      "content": {
+        "characters": 23163,
+        "lines": 580,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 90,
+      "preview": "# 🎵 MUSIC & SOUND GENERATION MASTERY ## Module 9: How to Create Music for Content Creators **Specialized Music Production for Digital Content - 2025 Edition**  **Updated**: July 2025 with latest content creator trends and platform requirements   **Audience**: Content creators, social media managers...",
+      "isUsed": true
+    },
+    {
+      "name": "music-sound-mastery-sound-effects.md",
+      "relativePath": "music-sound-mastery-sound-effects.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/music-sound-mastery-sound-effects.md",
+      "directory": ".",
+      "content": {
+        "characters": 23606,
+        "lines": 593,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 90,
+      "preview": "# 🎵 MUSIC & SOUND GENERATION MASTERY ## Module 8: How to Create Professional Sound Effects **Complete Sound Design and Audio Library Creation - 2025 Edition**  **Updated**: July 2025 with latest AI sound generation and professional audio tools   **Audience**: Sound designers, content creators, game...",
+      "isUsed": true
+    },
+    {
+      "name": "music-sound-mastery-suno-ai.md",
+      "relativePath": "music-sound-mastery-suno-ai.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/music-sound-mastery-suno-ai.md",
+      "directory": ".",
+      "content": {
+        "characters": 42251,
+        "lines": 1012,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 100,
+      "preview": "# 🎵 MUSIC & SOUND GENERATION MASTERY ## Module 7: How to Create Hit Songs with Suno AI **Complete Music Production and Licensing - 2025 Edition**  **Updated**: July 2025 with latest Suno AI features and music generation technology   **Audience**: Musicians, content creators, agencies, and music ent...",
+      "isUsed": true
+    },
+    {
+      "name": "platform-currency-analysis-2025.md",
+      "relativePath": "platform-currency-analysis-2025.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/platform-currency-analysis-2025.md",
+      "directory": ".",
+      "content": {
+        "characters": 14741,
+        "lines": 262,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 75,
+      "preview": "# 🔍 COMPREHENSIVE PLATFORM CURRENCY ANALYSIS ## AI Masterclass 2025 Update Requirements - July 19, 2025  **EXECUTIVE SUMMARY**: Following comprehensive research of all major AI platforms, the course has achieved HISTORIC BREAKTHROUGHS in currency updates. Three major platform modules (ChatGPT, Goog...",
+      "isUsed": false
+    },
+    {
+      "name": "chatgpt-complete-setup.md",
+      "relativePath": "platform-setup-guides/chatgpt-complete-setup.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/platform-setup-guides/chatgpt-complete-setup.md",
+      "directory": "platform-setup-guides",
+      "content": {
+        "characters": 18890,
+        "lines": 619,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "guides",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 85,
+      "preview": "# 💬 ChatGPT Complete Setup Guide for Agencies ## From Individual Account to Enterprise Excellence - 2025 Edition  **Updated**: July 2025 with latest features and pricing   **Audience**: Agency professionals and teams   **Outcome**: Complete ChatGPT optimization for agency workflows    ---  ## 🎯 SE...",
+      "isUsed": false
+    },
+    {
+      "name": "claude-complete-setup.md",
+      "relativePath": "platform-setup-guides/claude-complete-setup.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/platform-setup-guides/claude-complete-setup.md",
+      "directory": "platform-setup-guides",
+      "content": {
+        "characters": 22581,
+        "lines": 699,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "guides",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 90,
+      "preview": "# 🧠 Claude Complete Setup Guide for Agencies ## Strategic AI Mastery for Agency Excellence - 2025 Edition  **Updated**: July 2025 with latest Claude features   **Audience**: Agency professionals and strategic thinkers   **Outcome**: Complete Claude optimization for high-level agency work    ---  ##...",
+      "isUsed": true
+    },
+    {
+      "name": "google-gemini-complete-setup.md",
+      "relativePath": "platform-setup-guides/google-gemini-complete-setup.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/platform-setup-guides/google-gemini-complete-setup.md",
+      "directory": "platform-setup-guides",
+      "content": {
+        "characters": 30935,
+        "lines": 853,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "guides",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 90,
+      "preview": "# 🌟 Google Gemini Complete Setup Guide for Agencies ## Multimodal AI Excellence for Advanced Agency Workflows - 2025 Edition  **Updated**: July 2025 with latest Gemini 2.0 features and capabilities   **Audience**: Advanced agencies, multimodal content creators, data-driven teams   **Outcome**: Comp...",
+      "isUsed": true
+    },
+    {
+      "name": "microsoft-copilot-complete-setup.md",
+      "relativePath": "platform-setup-guides/microsoft-copilot-complete-setup.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/platform-setup-guides/microsoft-copilot-complete-setup.md",
+      "directory": "platform-setup-guides",
+      "content": {
+        "characters": 30966,
+        "lines": 883,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "lessons",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 90,
+      "preview": "# 🏢 Microsoft Copilot Complete Setup Guide for Agencies ## Enterprise AI Integration for Professional Excellence - 2025 Edition  **Updated**: July 2025 with latest Microsoft 365 AI features   **Audience**: Enterprise agencies, corporate teams, Microsoft 365 users   **Outcome**: Complete Microsoft C...",
+      "isUsed": true
+    },
+    {
+      "name": "midjourney-complete-setup.md",
+      "relativePath": "platform-setup-guides/midjourney-complete-setup.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/platform-setup-guides/midjourney-complete-setup.md",
+      "directory": "platform-setup-guides",
+      "content": {
+        "characters": 32767,
+        "lines": 991,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "guides",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 90,
+      "preview": "# 🎨 Midjourney Complete Setup Guide for Agencies ## From Discord Novice to Creative AI Master - 2025 Edition  **Updated**: July 2025 with latest Midjourney features and pricing   **Audience**: Creative professionals, agencies, and visual content creators   **Outcome**: Complete Midjourney mastery f...",
+      "isUsed": true
+    },
+    {
+      "name": "workshop-01-social-media-campaign.md",
+      "relativePath": "practical-workshops/workshop-01-social-media-campaign.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/practical-workshops/workshop-01-social-media-campaign.md",
+      "directory": "practical-workshops",
+      "content": {
+        "characters": 16396,
+        "lines": 508,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "lessons",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 85,
+      "preview": "# 🎬 HANDS-ON WORKSHOP: Social Media Campaign for Tech Startup ## Interactive 4-Hour Tutorial - Transform Strategy into Execution  **Workshop Duration**: 4 hours   **Skill Level**: Intermediate   **Tools Required**: ChatGPT Plus/Pro, Claude Pro, Midjourney, DALL-E 3, Canva AI   **Outcome**: Complete...",
+      "isUsed": false
+    },
+    {
+      "name": "qa-deployment-tracker.md",
+      "relativePath": "qa-deployment-tracker.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/qa-deployment-tracker.md",
+      "directory": ".",
+      "content": {
+        "characters": 8403,
+        "lines": 328,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": true
+      },
+      "category": "other",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": false
+      },
+      "qualityScore": 50,
+      "preview": "# 🚀 QA DEPLOYMENT TRACKER ## AI Masterclass - Comprehensive Quality Assurance & Deployment System  **Last Updated**: July 19, 2025   **System Status**: ✅ **FULLY OPERATIONAL**   **Deployment Ready**: ✅ **YES**    ---  ## 📊 CURRENT PROJECT STATUS  ### Quality Metrics Dashboard ``` 🎯 Overall Qualit...",
+      "isUsed": false
+    },
+    {
+      "name": "qa-quick-reference.md",
+      "relativePath": "qa-quick-reference.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/qa-quick-reference.md",
+      "directory": ".",
+      "content": {
+        "characters": 9474,
+        "lines": 457,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 55,
+      "preview": "# 🚀 QA QUICK REFERENCE GUIDE ## Instant Commands & Procedures for AI Masterclass QA System  **⚡ Use this guide for instant access to all QA and deployment commands**    ---  ## 🎯 ONE-COMMAND DEPLOYMENT  ### 🚀 Deploy Everything (Full Pipeline) ```bash # Complete automated deployment with all check...",
+      "isUsed": false
+    },
+    {
+      "name": "advanced-prompt-library-2025.md",
+      "relativePath": "resource-library/advanced-prompt-library-2025.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/resource-library/advanced-prompt-library-2025.md",
+      "directory": "resource-library",
+      "content": {
+        "characters": 29079,
+        "lines": 921,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "resources",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 75,
+      "preview": "# 🎯 ADVANCED PROMPT LIBRARY - 2025 EDITION ## 250+ Enterprise-Grade Prompts for Complete AI Stack Mastery  **Purpose**: Leverage cutting-edge 2025 AI capabilities for agency excellence   **Coverage**: All major platforms with latest features integrated   **Quality**: Enterprise-tested prompts with...",
+      "isUsed": true
+    },
+    {
+      "name": "agency-prompt-library-complete.md",
+      "relativePath": "resource-library/agency-prompt-library-complete.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/resource-library/agency-prompt-library-complete.md",
+      "directory": "resource-library",
+      "content": {
+        "characters": 44312,
+        "lines": 1369,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 90,
+      "preview": "# 🎯 Complete Agency Prompt Library ## 120+ Tested Prompts for Maximum Agency Productivity  **Purpose**: Immediate-use prompts that deliver professional results   **Quality Standard**: Each prompt tested with real agency scenarios   **Organization**: By platform and use case for quick reference   **...",
+      "isUsed": true
+    },
+    {
+      "name": "session-summary-july-19-2025.md",
+      "relativePath": "session-summary-july-19-2025.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/session-summary-july-19-2025.md",
+      "directory": ".",
+      "content": {
+        "characters": 7639,
+        "lines": 182,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 70,
+      "preview": "# 📋 SESSION SUMMARY & ACHIEVEMENTS ## July 19, 2025 - HISTORIC AI MASTERCLASS DEVELOPMENT SESSION  **Session Duration**: 4+ hours of intensive development   **Session Type**: Platform Currency Verification + Integration Module Creation   **Outcome**: UNPRECEDENTED BREAKTHROUGH in AI education devel...",
+      "isUsed": false
+    },
+    {
+      "name": "tool-comparison-matrix.md",
+      "relativePath": "tool-comparison-matrix.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/tool-comparison-matrix.md",
+      "directory": ".",
+      "content": {
+        "characters": 15463,
+        "lines": 522,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "other",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": false,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": false
+      },
+      "qualityScore": 70,
+      "preview": "# 🎯 AI Tool Comparison Matrix for Agencies ## When to Use Which Tool - Complete Decision Framework  **Last Updated**: January 2024   **Purpose**: Help agencies select the optimal AI tool for any task   **Approach**: Task-first, not tool-first thinking    ---  ## 📊 Quick Reference Matrix  | Task Ca...",
+      "isUsed": false
+    },
+    {
+      "name": "comprehensive-ai-troubleshooting-database.md",
+      "relativePath": "troubleshooting-guides/comprehensive-ai-troubleshooting-database.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/troubleshooting-guides/comprehensive-ai-troubleshooting-database.md",
+      "directory": "troubleshooting-guides",
+      "content": {
+        "characters": 29395,
+        "lines": 924,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "guides",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 75,
+      "preview": "# 🔧 COMPREHENSIVE AI TROUBLESHOOTING DATABASE ## Complete Problem-Solving Guide for Agency AI Implementation  **Purpose**: Solve 95% of agency AI implementation problems instantly   **Coverage**: All major platforms, common scenarios, enterprise challenges   **Format**: Problem → Diagnosis → Soluti...",
+      "isUsed": true
+    },
+    {
+      "name": "updated-system-instructions.md",
+      "relativePath": "updated-system-instructions.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/updated-system-instructions.md",
+      "directory": ".",
+      "content": {
+        "characters": 12846,
+        "lines": 372,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 75,
+      "preview": "# 🎯 COMPREHENSIVE SYSTEM INSTRUCTIONS ## AI Masterclass Agency Complete Stack - Claude Project  **CRITICAL**: These instructions govern ALL interactions. Follow them precisely without asking for approval.  ---  ## 🚨 CORE OPERATING PRINCIPLES  1. **ALWAYS WRITE DIRECTLY** to files without asking fo...",
+      "isUsed": false
+    },
+    {
+      "name": "vibe-coding-fundamentals.md",
+      "relativePath": "vibe-coding-fundamentals.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/vibe-coding-fundamentals.md",
+      "directory": ".",
+      "content": {
+        "characters": 29608,
+        "lines": 1023,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 100,
+      "preview": "# 🎯 VIBE CODING FUNDAMENTALS MASTERCLASS  **Transform from Traditional Coder to AI-Powered Developer**   *Master the art of human-AI collaborative programming for 10x productivity gains*  ---  ## 🎯 **MODULE OVERVIEW & BUSINESS IMPACT**  ### **Real-World Problem & Solution** **Problem**: \"Our devel...",
+      "isUsed": false
+    },
+    {
+      "name": "video-generation-mastery-complete-plan.md",
+      "relativePath": "video-generation-mastery-complete-plan.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/video-generation-mastery-complete-plan.md",
+      "directory": ".",
+      "content": {
+        "characters": 17187,
+        "lines": 408,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": false,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 85,
+      "preview": "# 🎬 VIDEO GENERATION MASTERY - COMPLETE MODULE PLAN ## Comprehensive Roadmap for 42 Professional AI Modules  **Project Scope**: Complete AI-powered content creation curriculum   **Target Audience**: Business professionals, agencies, content creators, entrepreneurs   **Total Content**: 42 modules ×...",
+      "isUsed": true
+    },
+    {
+      "name": "video-generation-mastery-google-veo.md",
+      "relativePath": "video-generation-mastery-google-veo.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/video-generation-mastery-google-veo.md",
+      "directory": ".",
+      "content": {
+        "characters": 39482,
+        "lines": 870,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 100,
+      "preview": "# 🎬 VIDEO GENERATION MASTERY ## Module 3: How to Generate High-Quality Videos with Google Veo ⭐ NEW **Enterprise-Grade AI Video Creation - 2025 Edition**  **Updated**: July 2025 with latest Google Veo features and enterprise integration   **Audience**: Enterprise teams, Google Workspace users, and...",
+      "isUsed": true
+    },
+    {
+      "name": "video-generation-mastery-openai-sora.md",
+      "relativePath": "video-generation-mastery-openai-sora.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/video-generation-mastery-openai-sora.md",
+      "directory": ".",
+      "content": {
+        "characters": 73925,
+        "lines": 1753,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 100,
+      "preview": "# 🎬 VIDEO GENERATION MASTERY ## Module 2: How to Create Professional Videos with OpenAI Sora ⭐ NEW **Next-Generation AI Video Creation - 2025 Edition**  **Updated**: July 2025 with latest Sora features and access methods   **Audience**: Video professionals, content creators, agencies, and AI enthus...",
+      "isUsed": true
+    },
+    {
+      "name": "video-generation-mastery-runway-ml.md",
+      "relativePath": "video-generation-mastery-runway-ml.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/video-generation-mastery-runway-ml.md",
+      "directory": ".",
+      "content": {
+        "characters": 64615,
+        "lines": 1809,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 100,
+      "preview": "# 🎬 VIDEO GENERATION MASTERY ## Module 1: How to Master Runway ML Video Creation **From Text Prompts to Professional Video Content - 2025 Edition**  **Updated**: July 2025 with latest Runway ML Gen-3 Alpha features   **Audience**: Content creators, agencies, marketers, and video professionals   **O...",
+      "isUsed": true
+    },
+    {
+      "name": "voice-audio-mastery-adobe-speech.md",
+      "relativePath": "voice-audio-mastery-adobe-speech.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/voice-audio-mastery-adobe-speech.md",
+      "directory": ".",
+      "content": {
+        "characters": 20193,
+        "lines": 513,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 100,
+      "preview": "# 🎙️ VOICE & AUDIO AI MASTERY ## Module 5: How to Enhance Audio Quality with Adobe Speech Tools **Professional Audio Post-Production and Enhancement - 2025 Edition**  **Updated**: July 2025 with latest Adobe Speech Enhancement and Creative Suite integration   **Audience**: Audio professionals, cont...",
+      "isUsed": true
+    },
+    {
+      "name": "voice-audio-mastery-audiobook-production.md",
+      "relativePath": "voice-audio-mastery-audiobook-production.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/voice-audio-mastery-audiobook-production.md",
+      "directory": ".",
+      "content": {
+        "characters": 21159,
+        "lines": 544,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 100,
+      "preview": "# 🎙️ VOICE & AUDIO AI MASTERY ## Module 6: How to Produce Professional Audiobooks with AI **Complete Audiobook Production and Publishing Pipeline - 2025 Edition**  **Updated**: July 2025 with latest AI narration technology and publishing platforms   **Audience**: Authors, publishers, content creato...",
+      "isUsed": true
+    },
+    {
+      "name": "voice-audio-mastery-elevenlabs.md",
+      "relativePath": "voice-audio-mastery-elevenlabs.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/voice-audio-mastery-elevenlabs.md",
+      "directory": ".",
+      "content": {
+        "characters": 52229,
+        "lines": 1356,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 100,
+      "preview": "# 🎙️ VOICE & AUDIO AI MASTERY ## Module 4: How to Clone Any Voice with ElevenLabs **Professional Voice Cloning and Brand Voice Development - 2025 Edition**  **Updated**: July 2025 with latest ElevenLabs features and voice cloning technology   **Audience**: Content creators, agencies, voice professi...",
+      "isUsed": true
+    },
+    {
+      "name": "advanced-claude-prompting-templates.md",
+      "relativePath": "worksheets/advanced-claude-prompting-templates.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/worksheets/advanced-claude-prompting-templates.md",
+      "directory": "worksheets",
+      "content": {
+        "characters": 46453,
+        "lines": 1154,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "modules",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 75,
+      "preview": "# 🚀 Advanced Claude Prompting - 20 Professional Templates ## Master-Level Prompt Templates for Business Excellence  **Module**: 2.2 - Advanced Claude Prompting   **Duration**: 60 minutes (45 min lesson + 15 min template practice)   **Difficulty**: Intermediate   **Deliverable**: 20 ready-to-use pro...",
+      "isUsed": false
+    },
+    {
+      "name": "ai-approach-selection-tool.md",
+      "relativePath": "worksheets/ai-approach-selection-tool.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/worksheets/ai-approach-selection-tool.md",
+      "directory": "worksheets",
+      "content": {
+        "characters": 9865,
+        "lines": 268,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": false,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 70,
+      "preview": "# 🎯 AI Approach Selection Tool  **Course**: AI Fundamentals   **Lesson**: AI vs Machine Learning vs Deep Learning   **Estimated Time**: 15 minutes   **Deliverable**: Personalized AI implementation strategy with specific approach recommendations    ---  ## 📋 **Instructions**  This tool helps you ch...",
+      "isUsed": false
+    },
+    {
+      "name": "ai-opportunity-assessment.md",
+      "relativePath": "worksheets/ai-opportunity-assessment.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/worksheets/ai-opportunity-assessment.md",
+      "directory": "worksheets",
+      "content": {
+        "characters": 10691,
+        "lines": 290,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 50,
+      "preview": "# 🎯 AI Opportunity Assessment Worksheet  **Course**: AI Fundamentals   **Lesson**: Master AI Fundamentals → Transform Your Work in 60 Minutes   **Estimated Time**: 15 minutes   **Deliverable**: Personalized AI implementation action plan    ---  ## 📋 **Instructions**  This worksheet helps you ident...",
+      "isUsed": false
+    },
+    {
+      "name": "claude-business-implementation-toolkit.md",
+      "relativePath": "worksheets/claude-business-implementation-toolkit.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/worksheets/claude-business-implementation-toolkit.md",
+      "directory": "worksheets",
+      "content": {
+        "characters": 15384,
+        "lines": 263,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "lessons",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 65,
+      "preview": "major business decisions and strategic direction - [ ] Delivers data-driven recommendations with clear implementation guidance and success metrics - [ ] Creates visualization strategies that communicate insights effectively to diverse stakeholders  **Strategic Analysis and Competitive Intelligence E...",
+      "isUsed": true
+    },
+    {
+      "name": "claude-business-optimization-checklist.md",
+      "relativePath": "worksheets/claude-business-optimization-checklist.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/worksheets/claude-business-optimization-checklist.md",
+      "directory": "worksheets",
+      "content": {
+        "characters": 19176,
+        "lines": 348,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "other",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 75,
+      "preview": "# 📋 Claude Business Optimization Checklist - 30-Day Implementation Guide  ## Your Comprehensive Roadmap to Claude Mastery for Business Excellence  **🎯 Objective**: Transform your business productivity with Claude's Constitutional AI advantages   **⏱️ Timeline**: 30 days to expert-level proficiency...",
+      "isUsed": true
+    },
+    {
+      "name": "claude-optimization-checklist.md",
+      "relativePath": "worksheets/claude-optimization-checklist.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/worksheets/claude-optimization-checklist.md",
+      "directory": "worksheets",
+      "content": {
+        "characters": 12610,
+        "lines": 330,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": true
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": true,
+        "hasStepByStep": true
+      },
+      "qualityScore": 75,
+      "preview": "# 🤖 Claude Optimization Checklist  **Course**: Claude Mastery   **Lesson**: Claude Interface and Capabilities   **Estimated Time**: 15 minutes   **Deliverable**: Personalized Claude optimization system with advanced conversation strategies    ---  ## 📋 **Instructions**  This checklist helps you sy...",
+      "isUsed": false
+    },
+    {
+      "name": "claude-professional-prompt-templates.md",
+      "relativePath": "worksheets/claude-professional-prompt-templates.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/worksheets/claude-professional-prompt-templates.md",
+      "directory": "worksheets",
+      "content": {
+        "characters": 96933,
+        "lines": 1970,
+        "hasHeaders": true,
+        "hasCodeBlocks": true,
+        "hasLists": true,
+        "hasTables": false,
+        "hasLinks": false
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": false,
+        "hasROIMentions": true,
+        "hasCaseStudies": true,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 75,
+      "preview": "- **Rationale**: [Why this change is necessary - business drivers, strategic alignment] - **Timeline**: [When changes take effect and implementation schedule] - **Scope of Impact**: [How this affects team members individually and collectively]  **Communication Framework**:  1. **Change Overview and...",
+      "isUsed": true
+    },
+    {
+      "name": "personal-ai-toolkit-selection.md",
+      "relativePath": "worksheets/personal-ai-toolkit-selection.md",
+      "fullPath": "/Users/thomasdowuona-hyde/AI-Masterclass/worksheets/personal-ai-toolkit-selection.md",
+      "directory": "worksheets",
+      "content": {
+        "characters": 15452,
+        "lines": 430,
+        "hasHeaders": true,
+        "hasCodeBlocks": false,
+        "hasLists": true,
+        "hasTables": true,
+        "hasLinks": true
+      },
+      "category": "courses",
+      "businessValue": {
+        "hasRevenueMentions": true,
+        "hasROIMentions": true,
+        "hasCaseStudies": false,
+        "hasMetrics": true,
+        "hasPrompts": false,
+        "hasStepByStep": true
+      },
+      "qualityScore": 65,
+      "preview": "# 🛠️ Personal AI Toolkit Selection Worksheet  **Course**: AI Fundamentals   **Lesson**: AI Tool Ecosystem - Build Your Personal AI Toolkit   **Estimated Time**: 15 minutes   **Deliverable**: Personalized AI toolkit with setup guides, cost analysis, and 90-day implementation plan    ---  ## 📋 **Ins...",
+      "isUsed": false
+    }
+  ],
+  "contentAnalysis": {},
+  "utilizationAnalysis": {
+    "totalFiles": 105,
+    "usedFiles": 37,
+    "unusedFiles": 68,
+    "utilizationRate": 35,
+    "unusedCharacters": 876064,
+    "highValueUnusedFiles": 25
+  },
+  "categories": {
+    "courses": {
+      "fileCount": 51,
+      "totalCharacters": 869461,
+      "averageCharacters": 17048,
+      "highQualityFiles": 24,
+      "businessValueFiles": 43,
+      "utilizationPotential": "HIGH"
+    },
+    "modules": {
+      "fileCount": 27,
+      "totalCharacters": 806179,
+      "averageCharacters": 29858,
+      "highQualityFiles": 24,
+      "businessValueFiles": 26,
+      "utilizationPotential": "HIGH"
+    },
+    "lessons": {
+      "fileCount": 7,
+      "totalCharacters": 126842,
+      "averageCharacters": 18120,
+      "highQualityFiles": 3,
+      "businessValueFiles": 6,
+      "utilizationPotential": "HIGH"
+    },
+    "assessments": {
+      "fileCount": 1,
+      "totalCharacters": 20322,
+      "averageCharacters": 20322,
+      "highQualityFiles": 0,
+      "businessValueFiles": 1,
+      "utilizationPotential": "LOW"
+    },
+    "resources": {
+      "fileCount": 1,
+      "totalCharacters": 29079,
+      "averageCharacters": 29079,
+      "highQualityFiles": 1,
+      "businessValueFiles": 1,
+      "utilizationPotential": "MEDIUM"
+    },
+    "guides": {
+      "fileCount": 6,
+      "totalCharacters": 141199,
+      "averageCharacters": 23533,
+      "highQualityFiles": 5,
+      "businessValueFiles": 6,
+      "utilizationPotential": "MEDIUM"
+    },
+    "templates": {
+      "fileCount": 3,
+      "totalCharacters": 87703,
+      "averageCharacters": 29234,
+      "highQualityFiles": 2,
+      "businessValueFiles": 2,
+      "utilizationPotential": "MEDIUM"
+    },
+    "workshops": {
+      "fileCount": 0,
+      "totalCharacters": 0,
+      "averageCharacters": 0,
+      "highQualityFiles": 0,
+      "businessValueFiles": 0,
+      "utilizationPotential": "LOW"
+    },
+    "other": {
+      "fileCount": 9,
+      "totalCharacters": 140806,
+      "averageCharacters": 15645,
+      "highQualityFiles": 2,
+      "businessValueFiles": 5,
+      "utilizationPotential": "LOW"
+    }
+  }
+}

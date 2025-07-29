@@ -1,4 +1,5 @@
 const { Pool } = require('pg');
+const logger = require('../utils/logger');
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
@@ -7,12 +8,12 @@ const pool = new Pool({
 
 async function initDatabase() {
   try {
-    console.log('Connecting to database...');
+    logger.info('Connecting to database...');
     
     // Test connection
     const client = await pool.connect();
     const result = await client.query('SELECT NOW()');
-    console.log('Database connected successfully:', result.rows[0]);
+    logger.info('Database connected successfully:', result.rows[0]);
     
     // Create basic tables
     await client.query(`
@@ -43,12 +44,12 @@ async function initDatabase() {
       );
     `);
     
-    console.log('Database tables created successfully');
+    logger.info('Database tables created successfully');
     
     client.release();
     
   } catch (error) {
-    console.error('Database initialization error:', error);
+    logger.error('Database initialization error:', error);
     throw error;
   }
 }
@@ -59,11 +60,11 @@ module.exports = { initDatabase };
 if (require.main === module) {
   initDatabase()
     .then(() => {
-      console.log('Database initialization completed');
+      logger.info('Database initialization completed');
       process.exit(0);
     })
     .catch((error) => {
-      console.error('Database initialization failed:', error);
+      logger.error('Database initialization failed:', error);
       process.exit(1);
     });
 }

@@ -8,16 +8,17 @@
 const fs = require('fs');
 const path = require('path');
 const { createClient } = require('@supabase/supabase-js');
+const logger = require('../utils/logger');
 require('dotenv').config();
 
-console.log('🚀 SIMPLIFIED MASTER SEEDING TEST');
-console.log('=================================');
+logger.info('🚀 SIMPLIFIED MASTER SEEDING TEST');
+logger.info('=================================');
 
 // Check environment
-console.log('📋 Environment Check:');
-console.log('- Supabase URL:', process.env.SUPABASE_URL ? 'Found' : 'Missing');
-console.log('- Service Key:', process.env.SUPABASE_SERVICE_ROLE_KEY ? 'Found' : 'Missing');
-console.log('- Current Dir:', process.cwd());
+logger.info('📋 Environment Check:');
+logger.info('- Supabase URL:', process.env.SUPABASE_URL ? 'Found' : 'Missing');
+logger.info('- Service Key:', process.env.SUPABASE_SERVICE_ROLE_KEY ? 'Found' : 'Missing');
+logger.info('- Current Dir:', process.cwd());
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
@@ -26,7 +27,7 @@ const supabase = createClient(
 
 async function simpleSeed() {
   try {
-    console.log('\n1️⃣ Testing database connection...');
+    logger.info('\n1️⃣ Testing database connection...');
     
     // Test connection
     const { data: testData, error: testError } = await supabase
@@ -34,14 +35,14 @@ async function simpleSeed() {
       .select('count', { count: 'exact', head: true });
     
     if (testError) {
-      console.error('❌ Database connection failed:', testError);
+      logger.error('❌ Database connection failed:', testError);
       return false;
     }
     
-    console.log('✅ Database connection successful');
-    console.log(`📊 Current courses: ${testData || 0}`);
+    logger.info('✅ Database connection successful');
+    logger.info(`📊 Current courses: ${testData || 0}`);
     
-    console.log('\n2️⃣ Finding markdown files...');
+    logger.info('\n2️⃣ Finding markdown files...');
     
     // Find markdown files
     const rootDir = path.join(__dirname, '..');
@@ -76,19 +77,19 @@ async function simpleSeed() {
     
     findFiles(rootDir);
     
-    console.log(`📄 Found ${markdownFiles.length} markdown files`);
+    logger.info(`📄 Found ${markdownFiles.length} markdown files`);
     
     // Show top 10 largest files
     const sortedFiles = markdownFiles
       .sort((a, b) => b.size - a.size)
       .slice(0, 10);
     
-    console.log('\n📋 Top 10 largest files:');
+    logger.info('\n📋 Top 10 largest files:');
     sortedFiles.forEach((file, i) => {
-      console.log(`  ${i + 1}. ${path.basename(file.name)} (${Math.round(file.size / 1024)}KB)`);
+      logger.info(`  ${i + 1}. ${path.basename(file.name)} (${Math.round(file.size / 1024)}KB)`);
     });
     
-    console.log('\n3️⃣ Testing content processing...');
+    logger.info('\n3️⃣ Testing content processing...');
     
     // Process first few files as test
     const testFiles = sortedFiles.slice(0, 3);
@@ -101,17 +102,17 @@ async function simpleSeed() {
           .replace(/-/g, ' ')
           .replace(/\b\w/g, l => l.toUpperCase());
         
-        console.log(`  📝 ${title}: ${content.length} characters`);
+        logger.info(`  📝 ${title}: ${content.length} characters`);
         processedCount++;
         
       } catch (error) {
-        console.error(`  ❌ Error reading ${file.name}:`, error.message);
+        logger.error(`  ❌ Error reading ${file.name}:`, error.message);
       }
     }
     
-    console.log(`✅ Successfully processed ${processedCount}/${testFiles.length} test files`);
+    logger.info(`✅ Successfully processed ${processedCount}/${testFiles.length} test files`);
     
-    console.log('\n4️⃣ Database seeding test...');
+    logger.info('\n4️⃣ Database seeding test...');
     
     // Clear existing test data
     await supabase.from('lessons').delete().eq('title', 'Test Lesson');
@@ -134,11 +135,11 @@ async function simpleSeed() {
       .single();
     
     if (courseError) {
-      console.error('❌ Course creation failed:', courseError);
+      logger.error('❌ Course creation failed:', courseError);
       return false;
     }
     
-    console.log('✅ Test course created');
+    logger.info('✅ Test course created');
     
     // Create test module
     const { data: module, error: moduleError } = await supabase
@@ -156,11 +157,11 @@ async function simpleSeed() {
       .single();
     
     if (moduleError) {
-      console.error('❌ Module creation failed:', moduleError);
+      logger.error('❌ Module creation failed:', moduleError);
       return false;
     }
     
-    console.log('✅ Test module created');
+    logger.info('✅ Test module created');
     
     // Create test lesson with real content
     const testContent = testFiles.length > 0 ? 
@@ -183,26 +184,26 @@ async function simpleSeed() {
       .single();
     
     if (lessonError) {
-      console.error('❌ Lesson creation failed:', lessonError);
+      logger.error('❌ Lesson creation failed:', lessonError);
       return false;
     }
     
-    console.log('✅ Test lesson created with real content');
+    logger.info('✅ Test lesson created with real content');
     
-    console.log('\n🎉 SIMPLIFIED SEEDING TEST SUCCESSFUL!');
-    console.log('=====================================');
-    console.log(`📄 Files found: ${markdownFiles.length}`);
-    console.log(`📝 Files processed: ${processedCount}`);
-    console.log('✅ Database operations: Working');
-    console.log('✅ Content processing: Working');
-    console.log('✅ Ready for full seeding');
+    logger.info('\n🎉 SIMPLIFIED SEEDING TEST SUCCESSFUL!');
+    logger.info('=====================================');
+    logger.info(`📄 Files found: ${markdownFiles.length}`);
+    logger.info(`📝 Files processed: ${processedCount}`);
+    logger.info('✅ Database operations: Working');
+    logger.info('✅ Content processing: Working');
+    logger.info('✅ Ready for full seeding');
     
     // Clean up test data
     await supabase.from('lessons').delete().eq('id', lesson.id);
     await supabase.from('modules').delete().eq('id', module.id);
     await supabase.from('courses').delete().eq('id', course.id);
     
-    console.log('🧹 Test data cleaned up');
+    logger.info('🧹 Test data cleaned up');
     
     return {
       success: true,
@@ -211,7 +212,7 @@ async function simpleSeed() {
     };
     
   } catch (error) {
-    console.error('❌ Simplified seeding test failed:', error);
+    logger.error('❌ Simplified seeding test failed:', error);
     return { success: false, error: error.message };
   }
 }
@@ -220,15 +221,15 @@ async function simpleSeed() {
 simpleSeed()
   .then(result => {
     if (result.success) {
-      console.log('\n✅ ALL SYSTEMS GO! Ready for full master seeding.');
-      console.log(`📊 Found ${result.filesFound} files ready for processing`);
+      logger.info('\n✅ ALL SYSTEMS GO! Ready for full master seeding.');
+      logger.info(`📊 Found ${result.filesFound} files ready for processing`);
       process.exit(0);
     } else {
-      console.log('\n❌ Test failed:', result.error);
+      logger.info('\n❌ Test failed:', result.error);
       process.exit(1);
     }
   })
   .catch(error => {
-    console.error('💥 Unexpected error:', error);
+    logger.error('💥 Unexpected error:', error);
     process.exit(1);
   });

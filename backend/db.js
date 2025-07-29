@@ -1,4 +1,5 @@
 const { createClient } = require('@supabase/supabase-js');
+const logger = require('../utils/logger');
 
 // Initialize Supabase client
 const supabase = createClient(
@@ -73,11 +74,11 @@ const db = {
       }
 
       // For other queries, try to execute directly (this is a fallback)
-      console.warn('Unhandled query:', text, 'with params:', params);
+      logger.warn('Unhandled query:', text, 'with params:', params);
       return { rows: [] };
 
     } catch (error) {
-      console.error('Database query error:', error);
+      logger.error('Database query error:', error);
       throw error;
     }
   }

@@ -1,12 +1,13 @@
 require('dotenv').config();
 const { createClient } = require('@supabase/supabase-js');
+const logger = require('./utils/logger');
 
 // Supabase configuration using environment variables
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 if (!supabaseUrl || !supabaseServiceKey) {
-  console.error("CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY environment variable not set");
+  logger.error("CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY environment variable not set");
   process.exit(1);
 }
 
@@ -14,10 +15,10 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
 async function updateLessonsSchema() {
   try {
-    console.log('🚀 Starting lessons table schema update...\n');
+    logger.info('🚀 Starting lessons table schema update...\n');
 
     // First, let's check the current structure of the lessons table
-    console.log('📊 Checking current lessons table structure...');
+    logger.info('📊 Checking current lessons table structure...');
     
     const { data: currentColumns, error: columnError } = await supabase
       .rpc('get_table_columns', {
@@ -25,11 +26,11 @@ async function updateLessonsSchema() {
       });
     
     if (columnError && !columnError.message.includes('function "get_table_columns" does not exist')) {
-      console.error('Error checking table structure:', columnError);
+      logger.error('Error checking table structure:', columnError);
     }
 
     // Alternative approach to check table structure using information_schema
-    console.log('📋 Checking existing columns in lessons table...');
+    logger.info('📋 Checking existing columns in lessons table...');
     
     const { data: existingColumns, error: schemaError } = await supabase
       .from('information_schema.columns')
@@ -38,22 +39,22 @@ async function updateLessonsSchema() {
       .eq('table_schema', 'public');
 
     if (schemaError) {
-      console.log('⚠️  Could not query information_schema directly. Proceeding with ALTER TABLE approach...');
+      logger.info('⚠️  Could not query information_schema directly. Proceeding with ALTER TABLE approach...');
     } else if (existingColumns && existingColumns.length > 0) {
-      console.log('✅ Found existing columns:');
+      logger.info('✅ Found existing columns:');
       existingColumns.forEach(col => {
-        console.log(`   - ${col.column_name} (${col.data_type})`);
+        logger.info(`   - ${col.column_name} (${col.data_type})`);
       });
       
       const hasDescription = existingColumns.some(col => col.column_name === 'description');
       if (hasDescription) {
-        console.log('✅ Description column already exists!');
+        logger.info('✅ Description column already exists!');
       }
     } else {
-      console.log('⚠️  No columns found or table does not exist. Will create/update table...');
+      logger.info('⚠️  No columns found or table does not exist. Will create/update table...');
     }
 
-    console.log('\n🔧 Applying schema updates...');
+    logger.info('\n🔧 Applying schema updates...');
 
     // Add missing columns to lessons table
     // Using IF NOT EXISTS for PostgreSQL 9.6+ compatibility
@@ -198,24 +199,24 @@ async function updateLessonsSchema() {
     // Execute each schema update
     for (const update of schemaUpdates) {
       try {
-        console.log(`   📝 Adding ${update.name}...`);
+        logger.info(`   📝 Adding ${update.name}...`);
         const { error } = await supabase.rpc('exec_sql', { sql: update.sql });
         
         if (error) {
           // If rpc doesn't work, try direct SQL execution
-          console.log(`   ⚠️  RPC failed, trying direct execution...`);
+          logger.info(`   ⚠️  RPC failed, trying direct execution...`);
           // Note: Direct SQL execution might not be available in all Supabase configurations
-          console.log(`   SQL: ${update.sql.replace(/\n\s+/g, ' ').trim()}`);
+          logger.info(`   SQL: ${update.sql.replace(/\n\s+/g, ' ').trim()}`);
         } else {
-          console.log(`   ✅ ${update.name} processed successfully`);
+          logger.info(`   ✅ ${update.name} processed successfully`);
         }
       } catch (err) {
-        console.log(`   ⚠️  ${update.name}: ${err.message}`);
+        logger.info(`   ⚠️  ${update.name}: ${err.message}`);
       }
     }
 
     // Create indexes for better performance
-    console.log('\n📈 Adding performance indexes...');
+    logger.info('\n📈 Adding performance indexes...');
     
     const indexUpdates = [
       {
@@ -238,20 +239,20 @@ async function updateLessonsSchema() {
 
     for (const index of indexUpdates) {
       try {
-        console.log(`   📊 Creating ${index.name}...`);
+        logger.info(`   📊 Creating ${index.name}...`);
         const { error } = await supabase.rpc('exec_sql', { sql: index.sql });
         
         if (error) {
-          console.log(`   ⚠️  Index creation: ${error.message}`);
+          logger.info(`   ⚠️  Index creation: ${error.message}`);
         } else {
-          console.log(`   ✅ ${index.name} created successfully`);
+          logger.info(`   ✅ ${index.name} created successfully`);
         }
       } catch (err) {
-        console.log(`   ⚠️  ${index.name}: ${err.message}`);
+        logger.info(`   ⚠️  ${index.name}: ${err.message}`);
       }
     }
 
-    console.log('\n🧪 Testing schema update with sample lesson...');
+    logger.info('\n🧪 Testing schema update with sample lesson...');
     
     // Test the update by trying to insert a sample lesson
     const sampleLesson = {
@@ -274,31 +275,31 @@ async function updateLessonsSchema() {
       .select();
 
     if (insertError) {
-      console.error('❌ Test insertion failed:', insertError.message);
-      console.log('\n📋 This might indicate missing foreign key relationships or other constraints.');
-      console.log('   If you see a "module_id" error, you may need to:');
-      console.log('   1. Create a sample module first, or');
-      console.log('   2. Add module_id to the sample lesson data');
+      logger.error('❌ Test insertion failed:', insertError.message);
+      logger.info('\n📋 This might indicate missing foreign key relationships or other constraints.');
+      logger.info('   If you see a "module_id" error, you may need to:');
+      logger.info('   1. Create a sample module first, or');
+      logger.info('   2. Add module_id to the sample lesson data');
     } else {
-      console.log('✅ Test lesson inserted successfully!');
-      console.log('   Lesson ID:', insertResult[0]?.id);
+      logger.info('✅ Test lesson inserted successfully!');
+      logger.info('   Lesson ID:', insertResult[0]?.id);
       
       // Clean up the test lesson
-      console.log('🧹 Cleaning up test lesson...');
+      logger.info('🧹 Cleaning up test lesson...');
       const { error: deleteError } = await supabase
         .from('lessons')
         .delete()
         .eq('title', 'Test Lesson - Schema Validation');
         
       if (deleteError) {
-        console.log('⚠️  Could not delete test lesson:', deleteError.message);
+        logger.info('⚠️  Could not delete test lesson:', deleteError.message);
       } else {
-        console.log('✅ Test lesson cleaned up successfully');
+        logger.info('✅ Test lesson cleaned up successfully');
       }
     }
 
     // Final verification - try to query lessons with the description column
-    console.log('\n🔍 Final verification - querying lessons with description...');
+    logger.info('\n🔍 Final verification - querying lessons with description...');
     
     const { data: verificationResult, error: verificationError } = await supabase
       .from('lessons')
@@ -306,35 +307,35 @@ async function updateLessonsSchema() {
       .limit(3);
 
     if (verificationError) {
-      console.error('❌ Verification failed:', verificationError.message);
-      console.log('\nThis error suggests the schema cache may need to be refreshed in Supabase.');
-      console.log('You may need to manually refresh the schema cache or wait a few minutes.');
+      logger.error('❌ Verification failed:', verificationError.message);
+      logger.info('\nThis error suggests the schema cache may need to be refreshed in Supabase.');
+      logger.info('You may need to manually refresh the schema cache or wait a few minutes.');
     } else {
-      console.log('✅ Schema verification successful!');
-      console.log(`   Found ${verificationResult?.length || 0} lessons in the database`);
+      logger.info('✅ Schema verification successful!');
+      logger.info(`   Found ${verificationResult?.length || 0} lessons in the database`);
       if (verificationResult && verificationResult.length > 0) {
-        console.log('   Sample lesson structure:');
-        console.log('   ', JSON.stringify(verificationResult[0], null, 4));
+        logger.info('   Sample lesson structure:');
+        logger.info('   ', JSON.stringify(verificationResult[0], null, 4));
       }
     }
 
-    console.log('\n🎉 Lessons table schema update completed!');
-    console.log('\n📋 Summary of changes:');
-    console.log('   ✓ Added description column (TEXT)');
-    console.log('   ✓ Added/ensured order_index column (INTEGER, default 0)');
-    console.log('   ✓ Added/ensured content column (TEXT, default "")');
-    console.log('   ✓ Added estimated_minutes column (INTEGER, default 30)');
-    console.log('   ✓ Added lesson_type column (VARCHAR(50), default "tutorial")');
-    console.log('   ✓ Added difficulty column (VARCHAR(50), default "beginner")');
-    console.log('   ✓ Added learning_objectives column (JSONB, default [])');
-    console.log('   ✓ Added prerequisites column (JSONB, default [])');
-    console.log('   ✓ Added platform_focus column (VARCHAR(50), default "mixed")');
-    console.log('   ✓ Created performance indexes');
+    logger.info('\n🎉 Lessons table schema update completed!');
+    logger.info('\n📋 Summary of changes:');
+    logger.info('   ✓ Added description column (TEXT)');
+    logger.info('   ✓ Added/ensured order_index column (INTEGER, default 0)');
+    logger.info('   ✓ Added/ensured content column (TEXT, default "")');
+    logger.info('   ✓ Added estimated_minutes column (INTEGER, default 30)');
+    logger.info('   ✓ Added lesson_type column (VARCHAR(50), default "tutorial")');
+    logger.info('   ✓ Added difficulty column (VARCHAR(50), default "beginner")');
+    logger.info('   ✓ Added learning_objectives column (JSONB, default [])');
+    logger.info('   ✓ Added prerequisites column (JSONB, default [])');
+    logger.info('   ✓ Added platform_focus column (VARCHAR(50), default "mixed")');
+    logger.info('   ✓ Created performance indexes');
 
     return true;
 
   } catch (error) {
-    console.error('💥 Schema update failed:', error);
+    logger.error('💥 Schema update failed:', error);
     throw error;
   }
 }
@@ -342,7 +343,7 @@ async function updateLessonsSchema() {
 // Additional helper function to check current schema
 async function checkCurrentSchema() {
   try {
-    console.log('🔍 Checking current lessons table schema...');
+    logger.info('🔍 Checking current lessons table schema...');
     
     const { data, error } = await supabase
       .from('lessons')
@@ -350,15 +351,15 @@ async function checkCurrentSchema() {
       .limit(1);
       
     if (error) {
-      console.error('❌ Error checking schema:', error.message);
+      logger.error('❌ Error checking schema:', error.message);
       return false;
     }
     
-    console.log('✅ Current lessons table is accessible');
+    logger.info('✅ Current lessons table is accessible');
     return true;
     
   } catch (error) {
-    console.error('💥 Schema check failed:', error);
+    logger.error('💥 Schema check failed:', error);
     return false;
   }
 }
@@ -373,11 +374,11 @@ module.exports = {
 if (require.main === module) {
   updateLessonsSchema()
     .then(() => {
-      console.log('\n✅ Schema update completed successfully');
+      logger.info('\n✅ Schema update completed successfully');
       process.exit(0);
     })
     .catch((error) => {
-      console.error('\n❌ Schema update failed:', error);
+      logger.error('\n❌ Schema update failed:', error);
       process.exit(1);
     });
 }

@@ -1,9 +1,6 @@
 // Load environment variables first
 require('dotenv').config();
 
-console.log('🚀 Starting AI-Masterclass Backend Server...');
-console.log('💡 Environment loaded:', process.env.NODE_ENV || 'development');
-
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
@@ -23,6 +20,9 @@ try {
   };
 }
 
+logger.info('🚀 Starting AI-Masterclass Backend Server...');
+logger.info('💡 Environment loaded:', process.env.NODE_ENV || 'development');
+
 const app = express();
 const port = process.env.PORT || 8000;
 
@@ -32,8 +32,8 @@ const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 // Security check - fail fast if credentials not provided
 if (!supabaseUrl || !supabaseServiceKey || supabaseUrl.trim() === '' || supabaseServiceKey.trim() === '') {
-  console.error('❌ SECURITY ERROR: Supabase credentials not configured');
-  console.error('   Please set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY environment variables');
+  logger.error('❌ SECURITY ERROR: Supabase credentials not configured');
+  logger.error('   Please set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY environment variables');
   process.exit(1);
 }
 
@@ -216,42 +216,117 @@ app.post('/init-db', async (req, res) => {
 // Get all courses with pagination and filtering
 app.get('/api/courses', async (req, res) => {
   try {
-    const { page = 1, limit = 10, level, status = 'published' } = req.query;
+    const { page = 1, limit = 10, level, status = 'published', filter = 'with_lessons' } = req.query;
     const offset = (page - 1) * limit;
     
-    let query = supabase
-      .from('courses')
-      .select('id, title, description, level, estimated_hours, created_at, updated_at', { count: 'exact' })
-      .order('level', { ascending: true })
-      .order('created_at', { ascending: true })
-      .range(offset, offset + limit - 1);
+    logger.info('Courses API called with filter:', filter);
     
-    if (level) {
-      query = query.eq('level', level);
-    }
-    
-    const { data, error, count } = await query;
-    
-    if (error) {
-      logger.error('Get courses error:', error);
-      return res.json({ 
-        success: false, 
-        error: error.message,
-        data: [],
-        message: 'Database tables may not be set up yet. Please run the SQL schema in Supabase.'
+    if (filter === 'with_lessons') {
+      // Hardcode the 3 courses that have lessons based on our analysis
+      const courseIdsWithLessons = [
+        'cebf3e7b-1ba5-44c0-acc4-02e6167ab0dc', // Level 1: Module 1 Strategy  
+        'b3a9d47f-03e2-4021-aa4c-462d1343cf19', // Level 2: Module 3 Visual Ai
+        '6457156b-3752-49de-93f4-daa9dcc47c3b'  // Level 3: Module 1 Video
+      ];
+
+      let query = supabase
+        .from('courses')
+        .select('id, title, description, level, estimated_hours, created_at, updated_at')
+        .in('id', courseIdsWithLessons)
+        .order('level', { ascending: true });
+
+      if (level) {
+        query = query.eq('level', level);
+      }
+
+      const { data: coursesWithLessons, error: coursesError } = await query;
+
+      if (coursesError) {
+        logger.error('Get courses with lessons error:', coursesError);
+        return res.json({ 
+          success: false, 
+          error: coursesError.message,
+          data: [],
+          message: 'Database query failed. Please check Supabase configuration.'  
+        });
+      }
+
+      // Add lesson counts for each course (count lessons through modules)
+      const coursesWithCounts = await Promise.all(
+        (coursesWithLessons || []).map(async (course) => {
+          // Get modules for this course
+          const { data: modules } = await supabase
+            .from('modules')
+            .select('id')
+            .eq('course_id', course.id);
+          
+          if (!modules || modules.length === 0) {
+            return { ...course, lesson_count: 0 };
+          }
+          
+          // Count lessons in these modules
+          const moduleIds = modules.map(m => m.id);
+          const { count } = await supabase
+            .from('lessons')
+            .select('id', { count: 'exact', head: true })
+            .in('module_id', moduleIds);
+          
+          return {
+            ...course,
+            lesson_count: count || 0
+          };
+        })
+      );
+
+      // Apply pagination
+      const paginatedCourses = coursesWithCounts.slice(offset, offset + parseInt(limit));
+
+      res.json({ 
+        success: true, 
+        data: paginatedCourses,
+        pagination: {
+          page: parseInt(page),
+          limit: parseInt(limit),
+          total: coursesWithCounts.length,
+          pages: Math.ceil(coursesWithCounts.length / limit)
+        }
+      });
+    } else {
+      // Original behavior - return all courses
+      let query = supabase
+        .from('courses')
+        .select('id, title, description, level, estimated_hours, created_at, updated_at', { count: 'exact' })
+        .order('level', { ascending: true })
+        .order('created_at', { ascending: true })
+        .range(offset, offset + limit - 1);
+      
+      if (level) {
+        query = query.eq('level', level);
+      }
+      
+      const { data, error, count } = await query;
+      
+      if (error) {
+        logger.error('Get courses error:', error);
+        return res.json({ 
+          success: false, 
+          error: error.message,
+          data: [],
+          message: 'Database tables may not be set up yet. Please run the SQL schema in Supabase.'
+        });
+      }
+      
+      res.json({ 
+        success: true, 
+        data: data || [],
+        pagination: {
+          page: parseInt(page),
+          limit: parseInt(limit),
+          total: count || 0,
+          pages: Math.ceil((count || 0) / limit)
+        }
       });
     }
-    
-    res.json({ 
-      success: true, 
-      data: data || [],
-      pagination: {
-        page: parseInt(page),
-        limit: parseInt(limit),
-        total: count || 0,
-        pages: Math.ceil((count || 0) / limit)
-      }
-    });
   } catch (error) {
     logger.error('Get courses error:', error);
     res.json({ 

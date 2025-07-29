@@ -1,13 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const { createClient } = require('@supabase/supabase-js');
+const logger = require('../utils/logger');
 
 // Initialize Supabase client
 const supabaseUrl = process.env.SUPABASE_URL || 'https://fsohtauqtcftdjcjfdpq.supabase.co';
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 if (!supabaseServiceKey) {
-  console.error("CRITICAL: SUPABASE_SERVICE_ROLE_KEY environment variable not set");
+  logger.error("CRITICAL: SUPABASE_SERVICE_ROLE_KEY environment variable not set");
   process.exit(1);
 }
 
@@ -64,7 +65,7 @@ router.get('/user/:user_id', async (req, res) => {
       data: progress || []
     });
   } catch (error) {
-    console.error('Error fetching user progress:', error);
+    logger.error('Error fetching user progress:', error);
     res.status(500).json({
       success: false,
       msg: 'Unable to fetch progress. Please try again later.'
@@ -127,7 +128,7 @@ router.post('/complete', async (req, res) => {
       msg: 'Exercise completed successfully'
     });
   } catch (error) {
-    console.error('Error completing exercise:', error);
+    logger.error('Error completing exercise:', error);
     res.status(500).json({
       success: false,
       msg: 'Unable to complete exercise. Please try again later.'
@@ -196,7 +197,7 @@ router.put('/update', async (req, res) => {
       msg: 'Progress updated successfully'
     });
   } catch (error) {
-    console.error('Error updating progress:', error);
+    logger.error('Error updating progress:', error);
     res.status(500).json({
       success: false,
       msg: 'Unable to update progress. Please try again later.'
@@ -257,7 +258,7 @@ router.get('/stats/:user_id', async (req, res) => {
       data: stats
     });
   } catch (error) {
-    console.error('Error fetching progress stats:', error);
+    logger.error('Error fetching progress stats:', error);
     res.status(500).json({
       success: false,
       msg: 'Unable to fetch progress statistics. Please try again later.'

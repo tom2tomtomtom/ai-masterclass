@@ -1,13 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const { createClient } = require('@supabase/supabase-js');
+const logger = require('../utils/logger');
 
 // Initialize Supabase client with anon key for client-side auth
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseAnonKey = process.env.SUPABASE_ANON_KEY;
 
 if (!supabaseUrl || !supabaseAnonKey) {
-  console.error('CRITICAL: Supabase environment variables not configured');
+  logger.error('CRITICAL: Supabase environment variables not configured');
   process.exit(1);
 }
 
@@ -18,7 +19,7 @@ router.post('/register', async (req, res) => {
   const { email, password, first_name, last_name } = req.body;
 
   try {
-    console.log('Registration attempt for:', email);
+    logger.info('Registration attempt for:', email);
 
     // Input validation
     if (!email || !password) {
@@ -51,7 +52,7 @@ router.post('/register', async (req, res) => {
     });
 
     if (error) {
-      console.error('Supabase registration error:', error);
+      logger.error('Supabase registration error:', error);
       return res.status(400).json({ 
         success: false,
         error: error.message,
@@ -59,7 +60,7 @@ router.post('/register', async (req, res) => {
       });
     }
 
-    console.log('User registration initiated:', data.user?.id || 'pending verification');
+    logger.info('User registration initiated:', data.user?.id || 'pending verification');
 
     // Return success response with email verification instruction
     res.json({ 
@@ -77,7 +78,7 @@ router.post('/register', async (req, res) => {
     });
 
   } catch (err) {
-    console.error('Registration error:', err);
+    logger.error('Registration error:', err);
     res.status(500).json({
       success: false,
       error: 'Internal server error',
@@ -91,7 +92,7 @@ router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    console.log('Login attempt for:', email);
+    logger.info('Login attempt for:', email);
 
     // Input validation
     if (!email || !password) {
@@ -109,7 +110,7 @@ router.post('/login', async (req, res) => {
     });
 
     if (error) {
-      console.error('Supabase login error:', error);
+      logger.error('Supabase login error:', error);
       
       // Handle specific error types
       if (error.message.includes('Invalid login credentials')) {
@@ -143,7 +144,7 @@ router.post('/login', async (req, res) => {
       });
     }
 
-    console.log('User logged in successfully:', data.user.id);
+    logger.info('User logged in successfully:', data.user.id);
 
     // Return success response with token
     res.json({ 
@@ -164,7 +165,7 @@ router.post('/login', async (req, res) => {
     });
 
   } catch (err) {
-    console.error('Login error:', err);
+    logger.error('Login error:', err);
     res.status(500).json({
       success: false,
       error: 'Internal server error',
@@ -183,7 +184,7 @@ router.post('/logout', async (req, res) => {
       msg: 'Logout successful'
     });
   } catch (err) {
-    console.error('Logout error:', err);
+    logger.error('Logout error:', err);
     res.status(500).json({
       success: false,
       error: 'Internal server error',
@@ -230,7 +231,7 @@ router.get('/verify', async (req, res) => {
     });
 
   } catch (err) {
-    console.error('Token verification error:', err);
+    logger.error('Token verification error:', err);
     res.status(500).json({
       success: false,
       error: 'Internal server error',

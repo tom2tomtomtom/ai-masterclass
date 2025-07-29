@@ -1,5 +1,6 @@
 const express = require('express');
 const { Pool } = require('pg');
+const logger = require('../utils/logger');
 const router = express.Router();
 
 const pool = new Pool({
@@ -35,7 +36,7 @@ router.get('/modules/:moduleId/lessons', async (req, res) => {
     const { rows } = await pool.query(query, [moduleId]);
     res.json(rows);
   } catch (error) {
-    console.error('Error fetching lessons:', error);
+    logger.error('Error fetching lessons:', error);
     res.status(500).json({ error: 'Failed to fetch lessons' });
   }
 });
@@ -96,7 +97,7 @@ router.get('/lessons/:lessonId', async (req, res) => {
     
     res.json(lesson);
   } catch (error) {
-    console.error('Error fetching lesson:', error);
+    logger.error('Error fetching lesson:', error);
     res.status(500).json({ error: 'Failed to fetch lesson' });
   }
 });
@@ -114,7 +115,7 @@ router.get('/lessons/:lessonId/prompts', async (req, res) => {
     const { rows } = await pool.query(query, [lessonId]);
     res.json(rows);
   } catch (error) {
-    console.error('Error fetching prompts:', error);
+    logger.error('Error fetching prompts:', error);
     res.status(500).json({ error: 'Failed to fetch prompts' });
   }
 });
@@ -138,7 +139,7 @@ router.get('/prompts/platform/:platform', async (req, res) => {
     const { rows } = await pool.query(query, [platform]);
     res.json(rows);
   } catch (error) {
-    console.error('Error fetching prompts by platform:', error);
+    logger.error('Error fetching prompts by platform:', error);
     res.status(500).json({ error: 'Failed to fetch prompts' });
   }
 });
@@ -156,7 +157,7 @@ router.get('/lessons/:lessonId/quizzes', async (req, res) => {
     const { rows } = await pool.query(query, [lessonId]);
     res.json(rows);
   } catch (error) {
-    console.error('Error fetching quizzes:', error);
+    logger.error('Error fetching quizzes:', error);
     res.status(500).json({ error: 'Failed to fetch quizzes' });
   }
 });
@@ -205,7 +206,7 @@ router.post('/quizzes/:quizId/attempt', async (req, res) => {
       explanation: isCorrect ? null : 'See lesson content for explanation'
     });
   } catch (error) {
-    console.error('Error submitting quiz attempt:', error);
+    logger.error('Error submitting quiz attempt:', error);
     res.status(500).json({ error: 'Failed to submit quiz attempt' });
   }
 });
@@ -223,7 +224,7 @@ router.get('/lessons/:lessonId/tasks', async (req, res) => {
     const { rows } = await pool.query(query, [lessonId]);
     res.json(rows);
   } catch (error) {
-    console.error('Error fetching tasks:', error);
+    logger.error('Error fetching tasks:', error);
     res.status(500).json({ error: 'Failed to fetch tasks' });
   }
 });
@@ -257,7 +258,7 @@ router.post('/tasks/:taskId/submit', async (req, res) => {
     
     res.json(rows[0]);
   } catch (error) {
-    console.error('Error submitting task:', error);
+    logger.error('Error submitting task:', error);
     res.status(500).json({ error: 'Failed to submit task' });
   }
 });
@@ -311,7 +312,7 @@ router.get('/users/:userId/lessons/:lessonId/progress', async (req, res) => {
     
     res.json(rows[0]);
   } catch (error) {
-    console.error('Error fetching lesson progress:', error);
+    logger.error('Error fetching lesson progress:', error);
     res.status(500).json({ error: 'Failed to fetch lesson progress' });
   }
 });
@@ -342,7 +343,7 @@ router.put('/users/:userId/lessons/:lessonId/progress', async (req, res) => {
     
     res.json(rows[0]);
   } catch (error) {
-    console.error('Error updating lesson progress:', error);
+    logger.error('Error updating lesson progress:', error);
     res.status(500).json({ error: 'Failed to update lesson progress' });
   }
 });
@@ -373,7 +374,7 @@ router.get('/scenario-templates', async (req, res) => {
     const { rows } = await pool.query(query, params);
     res.json(rows);
   } catch (error) {
-    console.error('Error fetching scenario templates:', error);
+    logger.error('Error fetching scenario templates:', error);
     res.status(500).json({ error: 'Failed to fetch scenario templates' });
   }
 });
@@ -416,7 +417,7 @@ router.post('/users/:userId/scenarios', async (req, res) => {
     
     res.json(rows[0]);
   } catch (error) {
-    console.error('Error creating user scenario:', error);
+    logger.error('Error creating user scenario:', error);
     res.status(500).json({ error: 'Failed to create user scenario' });
   }
 });
@@ -434,7 +435,7 @@ router.get('/users/:userId/scenarios', async (req, res) => {
     const { rows } = await pool.query(query, [userId]);
     res.json(rows);
   } catch (error) {
-    console.error('Error fetching user scenarios:', error);
+    logger.error('Error fetching user scenarios:', error);
     res.status(500).json({ error: 'Failed to fetch user scenarios' });
   }
 });
@@ -458,7 +459,7 @@ router.post('/prompts/:promptId/usage', async (req, res) => {
     
     res.json(rows[0]);
   } catch (error) {
-    console.error('Error recording prompt usage:', error);
+    logger.error('Error recording prompt usage:', error);
     res.status(500).json({ error: 'Failed to record prompt usage' });
   }
 });

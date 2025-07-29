@@ -1,10 +1,16 @@
 const express = require('express');
 const router = express.Router();
 const { createClient } = require('@supabase/supabase-js');
+const logger = require('../utils/logger');
 
 // Initialize Supabase client
-const supabaseUrl = process.env.SUPABASE_URL || 'https://fsohtauqtcftdjcjfdpq.supabase.co';
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZzb2h0YXVxdGNmdGRqY2pmZHBxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1MjIyNjc4MCwiZXhwIjoyMDY3ODAyNzgwfQ.vLRzjcMIrpn8m3nEDI7pE7bSZg20Msdw60CHcsV1otI';
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+// Validate required environment variables
+if (!supabaseUrl || !supabaseServiceKey) {
+  throw new Error('Missing required environment variables: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY');
+}
 
 const supabase = createClient(supabaseUrl, supabaseServiceKey, {
   auth: {
@@ -59,7 +65,7 @@ router.get('/scenarios/:user_id', async (req, res) => {
       data: scenarios || []
     });
   } catch (error) {
-    console.error('Error fetching user scenarios:', error);
+    logger.error('Error fetching user scenarios:', error);
     res.status(500).json({
       success: false,
       msg: 'Unable to fetch scenarios. Please try again later.'
@@ -130,7 +136,7 @@ router.post('/scenarios', async (req, res) => {
       msg: 'Scenario created successfully'
     });
   } catch (error) {
-    console.error('Error creating scenario:', error);
+    logger.error('Error creating scenario:', error);
     res.status(500).json({
       success: false,
       msg: 'Unable to create scenario. Please try again later.'
@@ -218,7 +224,7 @@ router.post('/quiz/submit', async (req, res) => {
       msg: is_correct ? 'Correct answer!' : 'Incorrect answer. Please review the explanation.'
     });
   } catch (error) {
-    console.error('Error submitting quiz:', error);
+    logger.error('Error submitting quiz:', error);
     res.status(500).json({
       success: false,
       msg: 'Unable to submit quiz. Please try again later.'
@@ -289,7 +295,7 @@ router.post('/task/submit', async (req, res) => {
       msg: 'Task submitted successfully'
     });
   } catch (error) {
-    console.error('Error submitting task:', error);
+    logger.error('Error submitting task:', error);
     res.status(500).json({
       success: false,
       msg: 'Unable to submit task. Please try again later.'
@@ -354,7 +360,7 @@ router.get('/personalized/:user_id', async (req, res) => {
       data: content || []
     });
   } catch (error) {
-    console.error('Error fetching personalized content:', error);
+    logger.error('Error fetching personalized content:', error);
     res.status(500).json({
       success: false,
       msg: 'Unable to fetch personalized content. Please try again later.'
@@ -377,7 +383,7 @@ router.get('/scenario-templates', async (req, res) => {
       data: templates || []
     });
   } catch (error) {
-    console.error('Error fetching scenario templates:', error);
+    logger.error('Error fetching scenario templates:', error);
     res.status(500).json({
       success: false,
       msg: 'Unable to fetch scenario templates. Please try again later.'

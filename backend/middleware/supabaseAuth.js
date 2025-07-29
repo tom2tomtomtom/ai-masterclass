@@ -1,4 +1,5 @@
 const { createClient } = require('@supabase/supabase-js');
+const logger = require('../utils/logger');
 require('dotenv').config();
 
 const supabaseUrl = process.env.SUPABASE_URL;
@@ -59,7 +60,7 @@ const verifySupabaseAuth = async (req, res, next) => {
 
     next();
   } catch (error) {
-    console.error('Auth middleware error:', error);
+    logger.error('Auth middleware error:', error);
     return res.status(500).json({
       success: false,
       message: 'Authentication error',
@@ -98,7 +99,7 @@ const optionalSupabaseAuth = async (req, res, next) => {
     
     next();
   } catch (error) {
-    console.error('Optional auth middleware error:', error);
+    logger.error('Optional auth middleware error:', error);
     next(); // Continue anyway for optional auth
   }
 };

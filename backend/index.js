@@ -13,6 +13,8 @@ const { validateCourseId, validateUserId } = require('./middleware/validation');
 const authRoutes = require('./routes/auth');
 const progressRoutes = require('./routes/progress');
 const interactiveRoutes = require('./routes/interactive');
+const aiPlaygroundRoutes = require('./routes/aiPlayground');
+const templateRoutes = require('./routes/templates');
 
 const app = express();
 const port = process.env.PORT || 5001;
@@ -76,7 +78,13 @@ app.get('/', (req, res) => {
     message: 'AI Masterclass API',
     version: '1.0.0',
     status: 'active',
-    documentation: '/api/docs'
+    documentation: '/api/docs',
+    features: [
+      'AI Playground - Multi-provider AI model integration',
+      'Template Library - 100+ business prompt templates',
+      'Progress Tracking - Student learning analytics',
+      'Interactive Learning - Hands-on practice exercises'
+    ]
   });
 });
 
@@ -86,6 +94,8 @@ app.use('/api/auth', authLimiter, authRoutes);
 // Protected routes
 app.use('/api/progress', auth, progressRoutes);
 app.use('/api/interactive', auth, interactiveRoutes);
+app.use('/api/ai-playground', auth, aiPlaygroundRoutes);
+app.use('/api/templates', auth, templateRoutes);
 
 // Courses endpoints with improved queries and validation
 app.get('/api/courses', courseLimiter, async (req, res) => {
@@ -579,6 +589,7 @@ process.on('SIGTERM', () => {
 app.listen(port, () => {
   logger.info(`Server is running on port: ${port}`);
   logger.info(`Environment: ${process.env.NODE_ENV || 'development'}`);
+  logger.info('Features enabled: AI Playground, Template Library, Progress Tracking');
 });
 
 module.exports = app;

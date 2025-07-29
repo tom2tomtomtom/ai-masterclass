@@ -14,6 +14,7 @@ const metricsCollector = require('./utils/metrics');
 // Import routes
 const authRoutes = require('./routes/auth');
 const progressRoutes = require('./routes/progress');
+const aiPlaygroundRoutes = require('./routes/aiPlayground');
 
 const app = express();
 const port = process.env.PORT || 5001;
@@ -25,6 +26,24 @@ for (const envVar of requiredEnvVars) {
     logger.error(`Missing required environment variable: ${envVar}`);
     process.exit(1);
   }
+}
+
+// Log AI provider availability
+const aiProviders = [];
+if (process.env.OPENAI_API_KEY && process.env.OPENAI_API_KEY !== 'your-openai-api-key-here') {
+  aiProviders.push('OpenAI');
+}
+if (process.env.ANTHROPIC_API_KEY && process.env.ANTHROPIC_API_KEY !== 'your-anthropic-api-key-here') {
+  aiProviders.push('Anthropic');
+}
+if (process.env.GOOGLE_AI_API_KEY && process.env.GOOGLE_AI_API_KEY !== 'your-google-ai-api-key-here') {
+  aiProviders.push('Google AI');
+}
+
+if (aiProviders.length > 0) {
+  logger.info(`AI providers configured: ${aiProviders.join(', ')}`);
+} else {
+  logger.warn('No AI providers configured - AI Playground will have limited functionality');
 }
 
 // Security middleware
@@ -69,7 +88,8 @@ app.get('/health', (req, res) => {
     status: 'OK',
     timestamp: new Date().toISOString(),
     uptime: process.uptime(),
-    environment: process.env.NODE_ENV || 'development'
+    environment: process.env.NODE_ENV || 'development',
+    ai_providers: aiProviders.length
   });
 });
 
@@ -111,6 +131,12 @@ app.get('/', (req, res) => {
     message: 'AI Masterclass API',
     version: '1.0.0',
     status: 'active',
+    features: {
+      courses: true,
+      auth: true,
+      progress_tracking: true,
+      ai_playground: aiProviders.length > 0
+    },
     documentation: '/api/docs'
   });
 });
@@ -120,6 +146,9 @@ app.use('/api/auth', authLimiter, authRoutes);
 
 // Protected routes
 app.use('/api/progress', auth, progressRoutes);
+
+// AI Playground routes (public for development, can be protected later)
+app.use('/api/ai-playground', aiPlaygroundRoutes);
 
 // Courses endpoints with improved queries and validation
 app.get('/api/courses', courseLimiter, async (req, res) => {
@@ -357,6 +386,12 @@ process.on('SIGTERM', () => {
 app.listen(port, () => {
   logger.info(`Server is running on port: ${port}`);
   logger.info(`Environment: ${process.env.NODE_ENV || 'development'}`);
+  
+  if (aiProviders.length > 0) {
+    logger.info(`AI Playground enabled with providers: ${aiProviders.join(', ')}`);
+  } else {
+    logger.warn('AI Playground disabled - no API keys configured');
+  }
   
   // Start periodic database health monitoring
   healthChecker.startPeriodicHealthCheck(5); // Check every 5 minutes

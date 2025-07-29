@@ -87,6 +87,33 @@ class MetricsCollector {
       labelNames: ['endpoint', 'ip']
     });
 
+    // AI Service Metrics
+    this.aiRequestDuration = new promClient.Histogram({
+      name: 'ai_request_duration_seconds',
+      help: 'Duration of AI API requests in seconds',
+      labelNames: ['provider', 'model', 'status'],
+      buckets: [0.5, 1, 2, 5, 10, 15, 30, 60]
+    });
+
+    this.aiRequestTotal = new promClient.Counter({
+      name: 'ai_requests_total',
+      help: 'Total number of AI API requests',
+      labelNames: ['provider', 'model', 'status']
+    });
+
+    this.aiTokensUsed = new promClient.Counter({
+      name: 'ai_tokens_used_total',
+      help: 'Total number of AI tokens consumed',
+      labelNames: ['provider', 'model', 'token_type']
+    });
+
+    this.aiResponseQuality = new promClient.Histogram({
+      name: 'ai_response_quality_score',
+      help: 'AI response quality scores',
+      labelNames: ['provider', 'model'],
+      buckets: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+    });
+
     // Register all metrics
     this.register.registerMetric(this.httpRequestDuration);
     this.register.registerMetric(this.httpRequestTotal);
@@ -97,6 +124,10 @@ class MetricsCollector {
     this.register.registerMetric(this.courseCompletions);
     this.register.registerMetric(this.memoryUsage);
     this.register.registerMetric(this.rateLimitHits);
+    this.register.registerMetric(this.aiRequestDuration);
+    this.register.registerMetric(this.aiRequestTotal);
+    this.register.registerMetric(this.aiTokensUsed);
+    this.register.registerMetric(this.aiResponseQuality);
 
     logger.info('Prometheus metrics initialized');
   }
@@ -167,6 +198,32 @@ class MetricsCollector {
     this.rateLimitHits.inc({ endpoint: endpoint, ip: ip });
   }
 
+  // Record AI API request metrics
+  recordAIRequest(provider, model, duration, status) {
+    const durationInSeconds = duration / 1000;
+    const labels = { provider, model, status };
+    
+    this.aiRequestDuration.observe(labels, durationInSeconds);
+    this.aiRequestTotal.inc(labels);
+  }
+
+  // Record AI token usage
+  recordAITokenUsage(provider, model, promptTokens, completionTokens) {
+    if (promptTokens > 0) {
+      this.aiTokensUsed.inc({ provider, model, token_type: 'prompt' }, promptTokens);
+    }
+    if (completionTokens > 0) {
+      this.aiTokensUsed.inc({ provider, model, token_type: 'completion' }, completionTokens);
+    }
+  }
+
+  // Record AI response quality score
+  recordAIQualityScore(provider, model, score) {
+    if (score >= 0 && score <= 1) {
+      this.aiResponseQuality.observe({ provider, model }, score);
+    }
+  }
+
   // Get metrics for Prometheus scraping
   async getMetrics() {
     return await this.register.metrics();
@@ -211,7 +268,9 @@ class MetricsCollector {
         memory_used_mb: Math.round(process.memoryUsage().heapUsed / 1024 / 1024),
         uptime_seconds: Math.round(process.uptime()),
         auth_attempts: this.extractMetricValue(lines, 'auth_attempts_total'),
-        course_completions: this.extractMetricValue(lines, 'course_completions_total')
+        course_completions: this.extractMetricValue(lines, 'course_completions_total'),
+        ai_requests_total: this.extractMetricValue(lines, 'ai_requests_total'),
+        ai_tokens_used: this.extractMetricValue(lines, 'ai_tokens_used_total')
       };
 
       return summary;

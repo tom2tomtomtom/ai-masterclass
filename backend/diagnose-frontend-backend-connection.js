@@ -1,9 +1,10 @@
 // Diagnose Frontend-Backend Connection Issues
 const { createClient } = require('@supabase/supabase-js');
+const logger = require('../utils/logger');
 require('dotenv').config();
 
-console.log('🔍 DIAGNOSING FRONTEND-BACKEND CONNECTION ISSUES');
-console.log('================================================');
+logger.info('🔍 DIAGNOSING FRONTEND-BACKEND CONNECTION ISSUES');
+logger.info('================================================');
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
@@ -12,7 +13,7 @@ const supabase = createClient(
 
 async function diagnoseConnection() {
   try {
-    console.log('\n1. 🗄️ CHECKING DATABASE CONNECTION...');
+    logger.info('\n1. 🗄️ CHECKING DATABASE CONNECTION...');
     
     // Test database connection
     const { data: courses, error: coursesError } = await supabase
@@ -21,16 +22,16 @@ async function diagnoseConnection() {
       .limit(5);
     
     if (coursesError) {
-      console.error('❌ Database connection failed:', coursesError.message);
+      logger.error('❌ Database connection failed:', coursesError.message);
       return;
     }
     
-    console.log(`✅ Database connected - Found ${courses.length} courses`);
+    logger.info(`✅ Database connected - Found ${courses.length} courses`);
     courses.forEach(course => {
-      console.log(`   📚 ${course.title} - Status: ${course.status}`);
+      logger.info(`   📚 ${course.title} - Status: ${course.status}`);
     });
     
-    console.log('\n2. 🔗 CHECKING COURSE-MODULE-LESSON RELATIONSHIPS...');
+    logger.info('\n2. 🔗 CHECKING COURSE-MODULE-LESSON RELATIONSHIPS...');
     
     // Test full course structure
     const { data: fullCourse, error: fullError } = await supabase
@@ -54,7 +55,7 @@ async function diagnoseConnection() {
       .single();
     
     if (fullError) {
-      console.error('❌ Failed to fetch course structure:', fullError.message);
+      logger.error('❌ Failed to fetch course structure:', fullError.message);
       return;
     }
     
@@ -62,24 +63,24 @@ async function diagnoseConnection() {
     const richLessons = fullCourse.modules.reduce((sum, module) => 
       sum + module.lessons.filter(lesson => lesson.content && lesson.content.length > 1000).length, 0);
     
-    console.log(`✅ Course structure verified:`);
-    console.log(`   📖 Course: ${fullCourse.title} (${fullCourse.status})`);
-    console.log(`   📂 Modules: ${fullCourse.modules.length}`);
-    console.log(`   📝 Lessons: ${lessonCount}`);
-    console.log(`   💎 Rich lessons: ${richLessons}`);
+    logger.info(`✅ Course structure verified:`);
+    logger.info(`   📖 Course: ${fullCourse.title} (${fullCourse.status})`);
+    logger.info(`   📂 Modules: ${fullCourse.modules.length}`);
+    logger.info(`   📝 Lessons: ${lessonCount}`);
+    logger.info(`   💎 Rich lessons: ${richLessons}`);
     
     // Show sample lesson content
     const sampleLesson = fullCourse.modules[0]?.lessons[0];
     if (sampleLesson) {
-      console.log(`\n   📄 Sample lesson: "${sampleLesson.title}"`);
-      console.log(`   📊 Content length: ${sampleLesson.content?.length || 0} chars`);
-      console.log(`   📋 Status: ${sampleLesson.status}`);
+      logger.info(`\n   📄 Sample lesson: "${sampleLesson.title}"`);
+      logger.info(`   📊 Content length: ${sampleLesson.content?.length || 0} chars`);
+      logger.info(`   📋 Status: ${sampleLesson.status}`);
       if (sampleLesson.content) {
-        console.log(`   🔍 Preview: ${sampleLesson.content.substring(0, 200)}...`);
+        logger.info(`   🔍 Preview: ${sampleLesson.content.substring(0, 200)}...`);
       }
     }
     
-    console.log('\n3. 🌐 CHECKING API ENDPOINT SIMULATION...');
+    logger.info('\n3. 🌐 CHECKING API ENDPOINT SIMULATION...');
     
     // Simulate what the frontend API call should return
     const apiResponse = {
@@ -101,10 +102,10 @@ async function diagnoseConnection() {
       }
     };
     
-    console.log('✅ Expected API response structure:');
-    console.log(JSON.stringify(apiResponse, null, 2));
+    logger.info('✅ Expected API response structure:');
+    logger.info(JSON.stringify(apiResponse, null, 2));
     
-    console.log('\n4. 🚨 IDENTIFYING POTENTIAL ISSUES...');
+    logger.info('\n4. 🚨 IDENTIFYING POTENTIAL ISSUES...');
     
     const issues = [];
     
@@ -129,41 +130,41 @@ async function diagnoseConnection() {
     }
     
     if (issues.length === 0) {
-      console.log('✅ No backend issues detected - problem likely in frontend configuration');
+      logger.info('✅ No backend issues detected - problem likely in frontend configuration');
       
-      console.log('\n5. 🔧 FRONTEND TROUBLESHOOTING CHECKLIST:');
-      console.log('   □ Check if React app is running on correct port (usually 3000)');
-      console.log('   □ Check if backend API is running on correct port (usually 8000)');
-      console.log('   □ Verify REACT_APP_API_BASE_URL in frontend .env file');
-      console.log('   □ Check browser console for CORS or network errors');
-      console.log('   □ Clear browser cache and cookies');
-      console.log('   □ Check if authentication is working (login/register)');
-      console.log('   □ Test API endpoints directly: http://localhost:8000/api/courses');
+      logger.info('\n5. 🔧 FRONTEND TROUBLESHOOTING CHECKLIST:');
+      logger.info('   □ Check if React app is running on correct port (usually 3000)');
+      logger.info('   □ Check if backend API is running on correct port (usually 8000)');
+      logger.info('   □ Verify REACT_APP_API_BASE_URL in frontend .env file');
+      logger.info('   □ Check browser console for CORS or network errors');
+      logger.info('   □ Clear browser cache and cookies');
+      logger.info('   □ Check if authentication is working (login/register)');
+      logger.info('   □ Test API endpoints directly: http://localhost:8000/api/courses');
       
     } else {
-      console.log('❌ Backend issues detected:');
-      issues.forEach(issue => console.log(`   - ${issue}`));
+      logger.info('❌ Backend issues detected:');
+      issues.forEach(issue => logger.info(`   - ${issue}`));
     }
     
-    console.log('\n6. ✅ SUMMARY:');
-    console.log(`   📊 Database: ${courses.length} courses, ${lessonCount} lessons`);
-    console.log(`   💎 Rich content: ${richLessons}/${lessonCount} lessons have substantial content`);
-    console.log(`   🔍 Backend status: ${issues.length === 0 ? 'HEALTHY' : 'ISSUES FOUND'}`);
-    console.log(`   🎯 Next step: ${issues.length === 0 ? 'Check frontend configuration' : 'Fix backend issues'}`);
+    logger.info('\n6. ✅ SUMMARY:');
+    logger.info(`   📊 Database: ${courses.length} courses, ${lessonCount} lessons`);
+    logger.info(`   💎 Rich content: ${richLessons}/${lessonCount} lessons have substantial content`);
+    logger.info(`   🔍 Backend status: ${issues.length === 0 ? 'HEALTHY' : 'ISSUES FOUND'}`);
+    logger.info(`   🎯 Next step: ${issues.length === 0 ? 'Check frontend configuration' : 'Fix backend issues'}`);
     
   } catch (error) {
-    console.error('❌ Diagnostic failed:', error.message);
-    console.error('🔧 Check your .env file and database configuration');
+    logger.error('❌ Diagnostic failed:', error.message);
+    logger.error('🔧 Check your .env file and database configuration');
   }
 }
 
 // Run diagnosis
 diagnoseConnection()
   .then(() => {
-    console.log('\n✅ Diagnosis completed!');
+    logger.info('\n✅ Diagnosis completed!');
     process.exit(0);
   })
   .catch(error => {
-    console.error('❌ Diagnosis failed:', error.message);
+    logger.error('❌ Diagnosis failed:', error.message);
     process.exit(1);
   });

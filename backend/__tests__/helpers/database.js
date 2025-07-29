@@ -31,10 +31,10 @@ class TestDatabase {
       if (result.rows.length === 0) {
         // Create test database
         await adminPool.query(`CREATE DATABASE "${process.env.DB_DATABASE}"`);
-        console.log(`Created test database: ${process.env.DB_DATABASE}`);
+        console.log('[TEST]', `Created test database: ${process.env.DB_DATABASE}`);
       }
     } catch (error) {
-      console.error('Error creating test database:', error);
+      console.error('[TEST ERROR]', 'Error creating test database:', error);
     } finally {
       await adminPool.end();
     }
@@ -62,9 +62,9 @@ class TestDatabase {
         await this.pool.query(indexes);
       }
       
-      console.log('Test database schema set up successfully');
+      console.log('[TEST]', 'Test database schema set up successfully');
     } catch (error) {
-      console.error('Error setting up schema:', error);
+      console.error('[TEST ERROR]', 'Error setting up schema:', error);
       throw error;
     }
   }
@@ -89,9 +89,9 @@ class TestDatabase {
         await this.pool.query(`DROP TABLE IF EXISTS ${table} CASCADE`);
       }
       
-      console.log('Dropped all existing tables');
+      console.log('[TEST]', 'Dropped all existing tables');
     } catch (error) {
-      console.error('Error dropping tables:', error);
+      console.error('[TEST ERROR]', 'Error dropping tables:', error);
       // Don't throw error here, continue with schema setup
     }
   }
@@ -140,7 +140,7 @@ class TestDatabase {
 
       return { companyId, userId, courseId, moduleId };
     } catch (error) {
-      console.error('Error seeding test data:', error);
+      console.error('[TEST ERROR]', 'Error seeding test data:', error);
       throw error;
     }
   }
@@ -159,7 +159,7 @@ class TestDatabase {
       await this.pool.query('DELETE FROM ai_integrations');
       await this.pool.query('DELETE FROM tool_integrations');
     } catch (error) {
-      console.error('Error clearing database:', error);
+      console.error('[TEST ERROR]', 'Error clearing database:', error);
       throw error;
     }
   }

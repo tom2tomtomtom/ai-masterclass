@@ -7,6 +7,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const logger = require('../utils/logger');
 
 // Files to process and their console.log replacements
 const replacements = [
@@ -14,19 +15,19 @@ const replacements = [
     file: '../supabase-server.js',
     replacements: [
       {
-        search: 'console.log(\'✅ Supabase authentication routes loaded\');',
+        search: 'logger.info(\'✅ Supabase authentication routes loaded\');',
         replace: 'logger.info(\'Supabase authentication routes loaded\');'
       },
       {
-        search: 'console.log(\'❌ Supabase auth routes not available:\', error.message);',
+        search: 'logger.info(\'❌ Supabase auth routes not available:\', error.message);',
         replace: 'logger.error(\'Supabase auth routes not available\', { error: error.message });'
       },
       {
-        search: 'console.log(\'✅ Supabase progress routes loaded\');',
+        search: 'logger.info(\'✅ Supabase progress routes loaded\');',
         replace: 'logger.info(\'Supabase progress routes loaded\');'
       },
       {
-        search: 'console.log(\'❌ Supabase progress routes not available:\', error.message);',
+        search: 'logger.info(\'❌ Supabase progress routes not available:\', error.message);',
         replace: 'logger.error(\'Supabase progress routes not available\', { error: error.message });'
       }
     ]
@@ -46,7 +47,7 @@ replacements.forEach(({ file, replacements: fileReplacements }) => {
       if (content.includes(search)) {
         content = content.replace(search, replace);
         modified = true;
-        console.log(`✅ Replaced console.log in ${file}`);
+        logger.info(`✅ Replaced console.log in ${file}`);
       }
     });
     
@@ -57,20 +58,20 @@ replacements.forEach(({ file, replacements: fileReplacements }) => {
       const insertIndex = lines.findIndex(line => line.includes('require(')) || 0;
       lines.splice(insertIndex, 0, 'const logger = require(\'./utils/logger\');');
       content = lines.join('\n');
-      console.log(`✅ Added logger import to ${file}`);
+      logger.info(`✅ Added logger import to ${file}`);
     }
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Updated ${file}`);
+      logger.info(`✅ Updated ${file}`);
     } else {
-      console.log(`ℹ️  No changes needed in ${file}`);
+      logger.info(`ℹ️  No changes needed in ${file}`);
     }
     
   } catch (error) {
-    console.error(`❌ Error processing ${file}:`, error.message);
+    logger.error(`❌ Error processing ${file}:`, error.message);
   }
 });
 
-console.log('\n🧹 Console.log cleanup completed!');
-console.log('📝 Remaining console.logs are in seed/test files (acceptable for development)');
+logger.info('\n🧹 Console.log cleanup completed!');
+logger.info('📝 Remaining console.logs are in seed/test files (acceptable for development)');

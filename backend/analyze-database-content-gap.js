@@ -2,6 +2,7 @@
 const { createClient } = require('@supabase/supabase-js');
 const fs = require('fs');
 const path = require('path');
+const logger = require('../utils/logger');
 
 // Load environment variables
 require('dotenv').config();
@@ -12,13 +13,13 @@ const supabase = createClient(
 );
 
 async function analyzeDatabaseContentGap() {
-  console.log('🔍 DATABASE CONTENT GAP ANALYSIS');
-  console.log('=====================================\n');
+  logger.info('🔍 DATABASE CONTENT GAP ANALYSIS');
+  logger.info('=====================================\n');
 
   try {
     // 1. Query current database state
-    console.log('📊 CURRENT DATABASE STATE:');
-    console.log('─'.repeat(50));
+    logger.info('📊 CURRENT DATABASE STATE:');
+    logger.info('─'.repeat(50));
 
     // Get courses
     const { data: courses, error: coursesError } = await supabase
@@ -27,13 +28,13 @@ async function analyzeDatabaseContentGap() {
       .order('order_index');
 
     if (coursesError) {
-      console.error('❌ Error fetching courses:', coursesError);
+      logger.error('❌ Error fetching courses:', coursesError);
       return;
     }
 
-    console.log(`📚 COURSES (${courses.length} total):`);
+    logger.info(`📚 COURSES (${courses.length} total):`);
     courses.forEach(course => {
-      console.log(`  ${course.order_index}. ${course.title} (ID: ${course.id})`);
+      logger.info(`  ${course.order_index}. ${course.title} (ID: ${course.id})`);
     });
 
     // Get modules
@@ -49,18 +50,18 @@ async function analyzeDatabaseContentGap() {
       .order('course_id, order_index');
 
     if (modulesError) {
-      console.error('❌ Error fetching modules:', modulesError);
+      logger.error('❌ Error fetching modules:', modulesError);
       return;
     }
 
-    console.log(`\n🎯 MODULES (${modules.length} total):`);
+    logger.info(`\n🎯 MODULES (${modules.length} total):`);
     let currentCourseId = null;
     modules.forEach(module => {
       if (module.course_id !== currentCourseId) {
-        console.log(`\n  📖 Course: ${module.courses.title}`);
+        logger.info(`\n  📖 Course: ${module.courses.title}`);
         currentCourseId = module.course_id;
       }
-      console.log(`    ${module.order_index}. ${module.title} (ID: ${module.id})`);
+      logger.info(`    ${module.order_index}. ${module.title} (ID: ${module.id})`);
     });
 
     // Get lesson count and sample
@@ -80,7 +81,7 @@ async function analyzeDatabaseContentGap() {
       .limit(5);
 
     if (lessonsError) {
-      console.error('❌ Error fetching lessons:', lessonsError);
+      logger.error('❌ Error fetching lessons:', lessonsError);
       return;
     }
 
@@ -90,27 +91,27 @@ async function analyzeDatabaseContentGap() {
       .select('*', { count: 'exact', head: true });
 
     if (countError) {
-      console.error('❌ Error counting lessons:', countError);
+      logger.error('❌ Error counting lessons:', countError);
       return;
     }
 
-    console.log(`\n📝 LESSONS (${totalLessons || 0} total) - Sample of first 5:`);
+    logger.info(`\n📝 LESSONS (${totalLessons || 0} total) - Sample of first 5:`);
     if (lessons && lessons.length > 0) {
       lessons.forEach(lesson => {
-        console.log(`  ${lesson.order_index}. ${lesson.title}`);
-        console.log(`     Module: ${lesson.modules.title}`);
-        console.log(`     Type: ${lesson.lesson_type}, Duration: ${lesson.estimated_minutes}min`);
-        console.log(`     Content Preview: ${lesson.content ? lesson.content.substring(0, 100) + '...' : 'No content'}\n`);
+        logger.info(`  ${lesson.order_index}. ${lesson.title}`);
+        logger.info(`     Module: ${lesson.modules.title}`);
+        logger.info(`     Type: ${lesson.lesson_type}, Duration: ${lesson.estimated_minutes}min`);
+        logger.info(`     Content Preview: ${lesson.content ? lesson.content.substring(0, 100) + '...' : 'No content'}\n`);
       });
     } else {
-      console.log('  ❌ No lessons found in database');
+      logger.info('  ❌ No lessons found in database');
     }
 
-    console.log('\n' + '='.repeat(70));
+    logger.info('\n' + '='.repeat(70));
 
     // 2. Analyze available markdown files
-    console.log('\n📂 AVAILABLE MARKDOWN FILES ANALYSIS:');
-    console.log('─'.repeat(50));
+    logger.info('\n📂 AVAILABLE MARKDOWN FILES ANALYSIS:');
+    logger.info('─'.repeat(50));
 
     // Look in parent directory for markdown files
     const parentDir = path.join(__dirname, '..');
@@ -141,17 +142,17 @@ async function analyzeDatabaseContentGap() {
 
     findMarkdownFiles(parentDir);
 
-    console.log(`📄 Found ${markdownFiles.length} markdown files:`);
+    logger.info(`📄 Found ${markdownFiles.length} markdown files:`);
     markdownFiles.forEach(file => {
-      console.log(`  📝 ${file.filename}`);
-      console.log(`     Path: ${file.path}`);
-      console.log(`     Size: ${file.size} characters`);
-      console.log(`     Preview: ${file.content.substring(0, 100).replace(/\n/g, ' ')}...\n`);
+      logger.info(`  📝 ${file.filename}`);
+      logger.info(`     Path: ${file.path}`);
+      logger.info(`     Size: ${file.size} characters`);
+      logger.info(`     Preview: ${file.content.substring(0, 100).replace(/\n/g, ' ')}...\n`);
     });
 
     // 3. Analyze seeding script mappings
-    console.log('\n🔧 SEEDING SCRIPT ANALYSIS:');
-    console.log('─'.repeat(50));
+    logger.info('\n🔧 SEEDING SCRIPT ANALYSIS:');
+    logger.info('─'.repeat(50));
 
     // Check the moduleFileMapping from the seeding script
     const moduleFileMapping = {
@@ -183,19 +184,19 @@ async function analyzeDatabaseContentGap() {
       'Privacy, Security & Regulatory Compliance': 'ai-ethics-responsible-ai.md'
     };
 
-    console.log('📋 Module-to-File Mappings from Seeding Script:');
+    logger.info('📋 Module-to-File Mappings from Seeding Script:');
     Object.entries(moduleFileMapping).forEach(([moduleTitle, filename]) => {
       const fileExists = markdownFiles.some(f => f.filename === filename);
       const moduleExists = modules.some(m => m.title === moduleTitle);
       
-      console.log(`  🎯 "${moduleTitle}"`);
-      console.log(`     → ${filename} ${fileExists ? '✅ EXISTS' : '❌ MISSING'}`);
-      console.log(`     → Module in DB: ${moduleExists ? '✅ YES' : '❌ NO'}\n`);
+      logger.info(`  🎯 "${moduleTitle}"`);
+      logger.info(`     → ${filename} ${fileExists ? '✅ EXISTS' : '❌ MISSING'}`);
+      logger.info(`     → Module in DB: ${moduleExists ? '✅ YES' : '❌ NO'}\n`);
     });
 
     // 4. Gap Analysis
-    console.log('\n🚨 GAP ANALYSIS:');
-    console.log('─'.repeat(50));
+    logger.info('\n🚨 GAP ANALYSIS:');
+    logger.info('─'.repeat(50));
 
     // Files that exist but aren't mapped
     const unmappedFiles = markdownFiles.filter(file => 
@@ -203,9 +204,9 @@ async function analyzeDatabaseContentGap() {
     );
 
     if (unmappedFiles.length > 0) {
-      console.log('📄 UNMAPPED MARKDOWN FILES (Rich content not being used):');
+      logger.info('📄 UNMAPPED MARKDOWN FILES (Rich content not being used):');
       unmappedFiles.forEach(file => {
-        console.log(`  ❌ ${file.filename} (${file.size} chars) - NOT BEING SEEDED`);
+        logger.info(`  ❌ ${file.filename} (${file.size} chars) - NOT BEING SEEDED`);
       });
     }
 
@@ -215,9 +216,9 @@ async function analyzeDatabaseContentGap() {
     );
 
     if (missingFiles.length > 0) {
-      console.log('\n🔍 MAPPED FILES THAT DON\'T EXIST:');
+      logger.info('\n🔍 MAPPED FILES THAT DON\'T EXIST:');
       missingFiles.forEach(([moduleTitle, filename]) => {
-        console.log(`  ❌ ${filename} (needed for "${moduleTitle}") - FILE MISSING`);
+        logger.info(`  ❌ ${filename} (needed for "${moduleTitle}") - FILE MISSING`);
       });
     }
 
@@ -229,49 +230,49 @@ async function analyzeDatabaseContentGap() {
     });
 
     if (modulesWithoutLessons.length > 0) {
-      console.log('\n🎯 MODULES WITHOUT PROPER CONTENT MAPPING:');
+      logger.info('\n🎯 MODULES WITHOUT PROPER CONTENT MAPPING:');
       modulesWithoutLessons.forEach(module => {
-        console.log(`  ❌ "${module.title}" (Course: ${module.courses.title})`);
+        logger.info(`  ❌ "${module.title}" (Course: ${module.courses.title})`);
       });
     }
 
     // 5. Summary and Recommendations
-    console.log('\n' + '='.repeat(70));
-    console.log('📊 SUMMARY:');
-    console.log('─'.repeat(30));
-    console.log(`📚 Courses in DB: ${courses.length}`);
-    console.log(`🎯 Modules in DB: ${modules.length}`);
-    console.log(`📝 Lessons in DB: ${totalLessons || 0}`);
-    console.log(`📄 Markdown files found: ${markdownFiles.length}`);
-    console.log(`🔗 Files mapped for seeding: ${Object.keys(moduleFileMapping).length}`);
-    console.log(`❌ Unmapped files: ${unmappedFiles.length}`);
-    console.log(`❌ Missing mapped files: ${missingFiles.length}`);
-    console.log(`❌ Modules without lessons: ${modulesWithoutLessons.length}`);
+    logger.info('\n' + '='.repeat(70));
+    logger.info('📊 SUMMARY:');
+    logger.info('─'.repeat(30));
+    logger.info(`📚 Courses in DB: ${courses.length}`);
+    logger.info(`🎯 Modules in DB: ${modules.length}`);
+    logger.info(`📝 Lessons in DB: ${totalLessons || 0}`);
+    logger.info(`📄 Markdown files found: ${markdownFiles.length}`);
+    logger.info(`🔗 Files mapped for seeding: ${Object.keys(moduleFileMapping).length}`);
+    logger.info(`❌ Unmapped files: ${unmappedFiles.length}`);
+    logger.info(`❌ Missing mapped files: ${missingFiles.length}`);
+    logger.info(`❌ Modules without lessons: ${modulesWithoutLessons.length}`);
 
     const totalMarkdownContent = markdownFiles.reduce((total, file) => total + file.size, 0);
-    console.log(`📊 Total markdown content: ${Math.round(totalMarkdownContent / 1000)}K characters`);
+    logger.info(`📊 Total markdown content: ${Math.round(totalMarkdownContent / 1000)}K characters`);
 
-    console.log('\n🔧 RECOMMENDATIONS:');
-    console.log('─'.repeat(30));
+    logger.info('\n🔧 RECOMMENDATIONS:');
+    logger.info('─'.repeat(30));
     
     if (totalLessons === 0) {
-      console.log('🚨 CRITICAL: No lessons in database! Run the seeding script.');
+      logger.info('🚨 CRITICAL: No lessons in database! Run the seeding script.');
     } else if (totalLessons < modules.length * 3) {
-      console.log('⚠️  LOW LESSON COUNT: Expected ~3 lessons per module, run seeding script.');
+      logger.info('⚠️  LOW LESSON COUNT: Expected ~3 lessons per module, run seeding script.');
     }
     
     if (unmappedFiles.length > 0) {
-      console.log(`📄 CONTENT WASTE: ${unmappedFiles.length} markdown files with rich content are not being used.`);
-      console.log('   → Update moduleFileMapping to include these files');
+      logger.info(`📄 CONTENT WASTE: ${unmappedFiles.length} markdown files with rich content are not being used.`);
+      logger.info('   → Update moduleFileMapping to include these files');
     }
     
     if (missingFiles.length > 0) {
-      console.log(`🔍 MISSING FILES: ${missingFiles.length} files expected by seeding script don't exist.`);
-      console.log('   → Create missing files or update mapping');
+      logger.info(`🔍 MISSING FILES: ${missingFiles.length} files expected by seeding script don't exist.`);
+      logger.info('   → Create missing files or update mapping');
     }
 
   } catch (error) {
-    console.error('❌ Analysis failed:', error);
+    logger.error('❌ Analysis failed:', error);
   }
 }
 

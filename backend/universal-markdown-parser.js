@@ -4,6 +4,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const logger = require('../utils/logger');
 
 class UniversalMarkdownParser {
   constructor() {
@@ -28,7 +29,7 @@ class UniversalMarkdownParser {
       const content = fs.readFileSync(filePath, 'utf8');
       return this.parseContent(content, filename);
     } catch (error) {
-      console.error(`Error parsing ${filename}:`, error.message);
+      logger.error(`Error parsing ${filename}:`, error.message);
       return null;
     }
   }
@@ -53,15 +54,15 @@ class UniversalMarkdownParser {
     // Extract course description (## Course Description section)
     const descriptionMatch = cleanContent.match(/## Course Description\s*\n([\s\S]*?)(?=\n## [^C]|\n$)/);
     if (!descriptionMatch) {
-      console.log('Debug: Looking for course description in content...');
-      console.log('First 500 chars:', cleanContent.substring(0, 500));
+      logger.info('Debug: Looking for course description in content...');
+      logger.info('First 500 chars:', cleanContent.substring(0, 500));
       throw new Error('No course description found (missing ## Course Description)');
     }
     const courseDescription = descriptionMatch[1].trim();
 
     // Validate course description length
     if (courseDescription.length < this.minCourseDescriptionLength) {
-      console.warn(`Course description too short in ${filename}: ${courseDescription.length} characters`);
+      logger.warn(`Course description too short in ${filename}: ${courseDescription.length} characters`);
     }
 
     // Extract lessons (## Lesson X: format)
@@ -147,7 +148,7 @@ class UniversalMarkdownParser {
 
     // If no lessons found with standard format, try alternative parsing
     if (lessons.length === 0) {
-      console.warn(`No standard lessons found in ${filename}, attempting alternative parsing`);
+      logger.warn(`No standard lessons found in ${filename}, attempting alternative parsing`);
       return this.parseAlternativeFormat(content, filename);
     }
 
@@ -209,14 +210,14 @@ class UniversalMarkdownParser {
     }
 
     if (lessons.length < 3) {
-      console.warn(`Only ${lessons.length} lessons found in ${filename}, expected at least 3`);
+      logger.warn(`Only ${lessons.length} lessons found in ${filename}, expected at least 3`);
     }
 
     const invalidLessons = lessons.filter(lesson => !lesson.isValid);
     if (invalidLessons.length > 0) {
-      console.warn(`${invalidLessons.length} lessons in ${filename} are too short (< ${this.minLessonLength} characters)`);
+      logger.warn(`${invalidLessons.length} lessons in ${filename} are too short (< ${this.minLessonLength} characters)`);
       invalidLessons.forEach(lesson => {
-        console.warn(`  - "${lesson.title}": ${lesson.character_count} characters`);
+        logger.warn(`  - "${lesson.title}": ${lesson.character_count} characters`);
       });
     }
   }
@@ -250,14 +251,14 @@ class UniversalMarkdownParser {
     const results = [];
     
     for (const filename of filenames) {
-      console.log(`Parsing ${filename}...`);
+      logger.info(`Parsing ${filename}...`);
       const parsed = this.parseMarkdownFile(filename);
       
       if (parsed) {
         results.push(parsed);
-        console.log(`✅ Successfully parsed ${filename}: ${parsed.lessons.length} lessons, ${parsed.totalWords} words`);
+        logger.info(`✅ Successfully parsed ${filename}: ${parsed.lessons.length} lessons, ${parsed.totalWords} words`);
       } else {
-        console.log(`❌ Failed to parse ${filename}`);
+        logger.info(`❌ Failed to parse ${filename}`);
       }
     }
 
@@ -384,7 +385,7 @@ if (require.main === module) {
     'voice-audio-mastery-elevenlabs.md'
   ];
 
-  console.log('🔍 Testing Universal Markdown Parser...\n');
+  logger.info('🔍 Testing Universal Markdown Parser...\n');
 
   // Parse all test files
   const results = parser.parseMultipleFiles(testFiles);
@@ -392,38 +393,38 @@ if (require.main === module) {
   // Generate report
   const report = parser.generateReport(results);
   
-  console.log('\n📊 PARSING REPORT');
-  console.log('==================');
-  console.log(`Total Courses: ${report.totalCourses}`);
-  console.log(`Total Lessons: ${report.totalLessons}`);
-  console.log(`Valid Lessons: ${report.validLessons}`);
-  console.log(`Invalid Lessons: ${report.invalidLessons}`);
-  console.log(`Total Words: ${report.totalWords.toLocaleString()}`);
-  console.log(`Average Lessons per Course: ${report.averageLessonsPerCourse}`);
-  console.log(`Average Words per Lesson: ${report.averageWordsPerLesson}`);
-  console.log(`Success Rate: ${report.successRate}%`);
+  logger.info('\n📊 PARSING REPORT');
+  logger.info('==================');
+  logger.info(`Total Courses: ${report.totalCourses}`);
+  logger.info(`Total Lessons: ${report.totalLessons}`);
+  logger.info(`Valid Lessons: ${report.validLessons}`);
+  logger.info(`Invalid Lessons: ${report.invalidLessons}`);
+  logger.info(`Total Words: ${report.totalWords.toLocaleString()}`);
+  logger.info(`Average Lessons per Course: ${report.averageLessonsPerCourse}`);
+  logger.info(`Average Words per Lesson: ${report.averageWordsPerLesson}`);
+  logger.info(`Success Rate: ${report.successRate}%`);
 
   // Validate each file
-  console.log('\n🔍 FILE VALIDATION');
-  console.log('===================');
+  logger.info('\n🔍 FILE VALIDATION');
+  logger.info('===================');
   
   testFiles.forEach(filename => {
     const validation = parser.validateFile(filename);
-    console.log(`\n${filename}:`);
-    console.log(`  Valid: ${validation.isValid ? '✅' : '❌'}`);
+    logger.info(`\n${filename}:`);
+    logger.info(`  Valid: ${validation.isValid ? '✅' : '❌'}`);
     
     if (validation.errors.length > 0) {
-      console.log(`  Errors: ${validation.errors.join(', ')}`);
+      logger.info(`  Errors: ${validation.errors.join(', ')}`);
     }
     
     if (validation.warnings && validation.warnings.length > 0) {
-      console.log(`  Warnings: ${validation.warnings.join(', ')}`);
+      logger.info(`  Warnings: ${validation.warnings.join(', ')}`);
     }
     
     if (validation.stats) {
-      console.log(`  Stats: ${validation.stats.lessons} lessons, ${validation.stats.totalWords} words`);
+      logger.info(`  Stats: ${validation.stats.lessons} lessons, ${validation.stats.totalWords} words`);
     }
   });
 
-  console.log('\n✅ Universal Markdown Parser testing complete!');
+  logger.info('\n✅ Universal Markdown Parser testing complete!');
 }

@@ -1,9 +1,10 @@
 // Final verification that rich content is fully accessible
 const { chromium } = require('playwright');
+const logger = require('../utils/logger');
 
 async function finalRichContentVerification() {
-  console.log('🎯 FINAL RICH CONTENT VERIFICATION');
-  console.log('==================================');
+  logger.info('🎯 FINAL RICH CONTENT VERIFICATION');
+  logger.info('==================================');
   
   const browser = await chromium.launch({ 
     headless: false,
@@ -21,7 +22,7 @@ async function finalRichContentVerification() {
   
   try {
     // Step 1: Direct API verification
-    console.log('🔬 STEP 1: Direct API verification...');
+    logger.info('🔬 STEP 1: Direct API verification...');
     
     const apiTest = await page.evaluate(async () => {
       try {
@@ -44,24 +45,24 @@ async function finalRichContentVerification() {
       }
     });
     
-    console.log('📊 API Test Results:');
-    console.log(`   Course: ${apiTest.courseTitle}`);
-    console.log(`   Modules: ${apiTest.moduleCount}`);
-    console.log(`   First Module: ${apiTest.firstModuleTitle}`);
-    console.log(`   Lessons in First Module: ${apiTest.firstModuleLessonCount}`);
-    console.log(`   First Lesson: ${apiTest.firstLessonTitle}`);
-    console.log(`   Content Length: ${apiTest.firstLessonContentLength} characters`);
-    console.log(`   Content Sample: "${apiTest.contentSample}..."`);
+    logger.info('📊 API Test Results:');
+    logger.info(`   Course: ${apiTest.courseTitle}`);
+    logger.info(`   Modules: ${apiTest.moduleCount}`);
+    logger.info(`   First Module: ${apiTest.firstModuleTitle}`);
+    logger.info(`   Lessons in First Module: ${apiTest.firstModuleLessonCount}`);
+    logger.info(`   First Lesson: ${apiTest.firstLessonTitle}`);
+    logger.info(`   Content Length: ${apiTest.firstLessonContentLength} characters`);
+    logger.info(`   Content Sample: "${apiTest.contentSample}..."`);
     
     if (apiTest.success && apiTest.moduleCount > 0 && apiTest.firstLessonContentLength > 500) {
       verification.apiWorking = true;
       verification.courseDataComplete = true;
       verification.richContentAccessible = true;
-      console.log('✅ API and rich content verified!');
+      logger.info('✅ API and rich content verified!');
     }
     
     // Step 2: Test specific lesson endpoint
-    console.log('\n🔬 STEP 2: Direct lesson API test...');
+    logger.info('\n🔬 STEP 2: Direct lesson API test...');
     
     if (apiTest.success) {
       const lessonId = await page.evaluate(async () => {
@@ -92,16 +93,16 @@ async function finalRichContentVerification() {
           }
         }, lessonId);
         
-        console.log('📝 Lesson API Test Results:');
-        console.log(`   Title: ${lessonTest.title}`);
-        console.log(`   Content Length: ${lessonTest.contentLength} characters`);
-        console.log(`   Has Rich Content: ${lessonTest.hasRichContent}`);
-        console.log(`   Preview: "${lessonTest.contentPreview}..."`);
+        logger.info('📝 Lesson API Test Results:');
+        logger.info(`   Title: ${lessonTest.title}`);
+        logger.info(`   Content Length: ${lessonTest.contentLength} characters`);
+        logger.info(`   Has Rich Content: ${lessonTest.hasRichContent}`);
+        logger.info(`   Preview: "${lessonTest.contentPreview}..."`);
       }
     }
     
     // Step 3: Frontend navigation test
-    console.log('\n🔬 STEP 3: Frontend navigation test...');
+    logger.info('\n🔬 STEP 3: Frontend navigation test...');
     
     await page.goto('http://localhost:3000');
     await page.waitForLoadState('networkidle');
@@ -121,9 +122,9 @@ async function finalRichContentVerification() {
       }));
     });
     
-    console.log('🔗 Found course links:');
+    logger.info('🔗 Found course links:');
     courseLinks.forEach((link, index) => {
-      console.log(`   ${index + 1}. ${link.text} → ${link.href}`);
+      logger.info(`   ${index + 1}. ${link.text} → ${link.href}`);
     });
     
     // Try to navigate to first course with UUID
@@ -133,7 +134,7 @@ async function finalRichContentVerification() {
     );
     
     if (uuidCourseLink) {
-      console.log(`\n🎯 Navigating to course: ${uuidCourseLink.href}`);
+      logger.info(`\n🎯 Navigating to course: ${uuidCourseLink.href}`);
       await page.goto(uuidCourseLink.href);
       await page.waitForLoadState('networkidle');
       await page.waitForTimeout(3000);
@@ -153,19 +154,19 @@ async function finalRichContentVerification() {
         };
       });
       
-      console.log('📄 Course Page Analysis:');
-      console.log(`   Module elements: ${pageContent.moduleElements}`);
-      console.log(`   Lesson elements: ${pageContent.lessonElements}`);
-      console.log(`   Page content length: ${pageContent.pageLength} characters`);
-      console.log(`   Has rich text indicators: ${pageContent.hasRichText}`);
-      console.log(`   Content sample: "${pageContent.contentSample}..."`);
+      logger.info('📄 Course Page Analysis:');
+      logger.info(`   Module elements: ${pageContent.moduleElements}`);
+      logger.info(`   Lesson elements: ${pageContent.lessonElements}`);
+      logger.info(`   Page content length: ${pageContent.pageLength} characters`);
+      logger.info(`   Has rich text indicators: ${pageContent.hasRichText}`);
+      logger.info(`   Content sample: "${pageContent.contentSample}..."`);
       
       if (pageContent.lessonElements > 0 && pageContent.pageLength > 1000) {
         verification.frontendDisplaying = true;
-        console.log('✅ Frontend is displaying rich content!');
+        logger.info('✅ Frontend is displaying rich content!');
       }
     } else {
-      console.log('⚠️ No UUID-based course links found, trying numeric navigation...');
+      logger.info('⚠️ No UUID-based course links found, trying numeric navigation...');
       
       // Try manual navigation to test URL patterns
       const testUrls = [
@@ -174,7 +175,7 @@ async function finalRichContentVerification() {
       ];
       
       for (const url of testUrls) {
-        console.log(`\n🔗 Testing URL: ${url}`);
+        logger.info(`\n🔗 Testing URL: ${url}`);
         try {
           await page.goto(url);
           await page.waitForLoadState('networkidle');
@@ -184,45 +185,45 @@ async function finalRichContentVerification() {
           const contentLength = content.length;
           const hasError = content.includes('Error') || content.includes('Not Found');
           
-          console.log(`   Content length: ${contentLength} characters`);
-          console.log(`   Has error: ${hasError}`);
+          logger.info(`   Content length: ${contentLength} characters`);
+          logger.info(`   Has error: ${hasError}`);
           
           if (contentLength > 1000 && !hasError) {
-            console.log(`✅ URL working: ${url}`);
+            logger.info(`✅ URL working: ${url}`);
             verification.frontendDisplaying = true;
           }
         } catch (error) {
-          console.log(`❌ URL failed: ${url} - ${error.message}`);
+          logger.info(`❌ URL failed: ${url} - ${error.message}`);
         }
       }
     }
     
   } catch (error) {
-    console.error('❌ Verification failed:', error.message);
+    logger.error('❌ Verification failed:', error.message);
   } finally {
     await browser.close();
   }
   
   // Final summary
-  console.log('\n🎯 FINAL VERIFICATION SUMMARY:');
-  console.log('===============================');
-  console.log(`✅ API Working: ${verification.apiWorking ? 'YES' : 'NO'}`);
-  console.log(`✅ Course Data Complete: ${verification.courseDataComplete ? 'YES' : 'NO'}`);
-  console.log(`✅ Rich Content Accessible: ${verification.richContentAccessible ? 'YES' : 'NO'}`);
-  console.log(`✅ Frontend Displaying: ${verification.frontendDisplaying ? 'YES' : 'NO'}`);
+  logger.info('\n🎯 FINAL VERIFICATION SUMMARY:');
+  logger.info('===============================');
+  logger.info(`✅ API Working: ${verification.apiWorking ? 'YES' : 'NO'}`);
+  logger.info(`✅ Course Data Complete: ${verification.courseDataComplete ? 'YES' : 'NO'}`);
+  logger.info(`✅ Rich Content Accessible: ${verification.richContentAccessible ? 'YES' : 'NO'}`);
+  logger.info(`✅ Frontend Displaying: ${verification.frontendDisplaying ? 'YES' : 'NO'}`);
   
   const allWorking = Object.values(verification).every(v => v === true);
   
   if (allWorking) {
-    console.log('\n🎉 COMPLETE SUCCESS!');
-    console.log('🚀 Rich content from markdown files is fully functional!');
-    console.log('📚 All 555 lessons with premium content are accessible!');
-    console.log('✨ The app is now delivering the full educational experience!');
+    logger.info('\n🎉 COMPLETE SUCCESS!');
+    logger.info('🚀 Rich content from markdown files is fully functional!');
+    logger.info('📚 All 555 lessons with premium content are accessible!');
+    logger.info('✨ The app is now delivering the full educational experience!');
   } else {
-    console.log('\n⚠️ PARTIAL SUCCESS:');
-    console.log('✅ Rich content is seeded and accessible via API');
-    console.log('🔧 Frontend routing may need adjustment for optimal UX');
-    console.log('💡 The core functionality is working - rich content is available!');
+    logger.info('\n⚠️ PARTIAL SUCCESS:');
+    logger.info('✅ Rich content is seeded and accessible via API');
+    logger.info('🔧 Frontend routing may need adjustment for optimal UX');
+    logger.info('💡 The core functionality is working - rich content is available!');
   }
   
   return verification;

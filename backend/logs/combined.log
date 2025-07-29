@@ -2329,3 +2329,38 @@
 {"environment":"development","level":"info","message":"AI Masterclass Supabase Server started","port":"8000","serviceKeyConfigured":"Yes","supabaseUrl":"https://fsohtauqtcftdjcjfdpq.supabase.co","timestamp":"2025-07-22 11:20:50:2050"}
 {"code":"22P02","details":null,"hint":null,"level":"error","message":"Error fetching course modules: invalid input syntax for type uuid: \"1\"","timestamp":"2025-07-22 11:38:35:3835"}
 {"code":"22P02","details":null,"hint":null,"level":"error","message":"Error fetching course modules: invalid input syntax for type uuid: \"1\"","timestamp":"2025-07-22 11:42:51:4251"}
+{"level":"info","message":"🚀 Starting AI-Masterclass Backend Server...","timestamp":"2025-07-29 17:22:24:2224"}
+{"level":"info","message":"💡 Environment loaded:","timestamp":"2025-07-29 17:22:24:2224"}
+{"level":"info","message":"Supabase authentication routes loaded","timestamp":"2025-07-29 17:22:24:2224"}
+{"level":"info","message":"Supabase progress routes loaded","timestamp":"2025-07-29 17:22:24:2224"}
+{"level":"info","message":"Supabase interactive routes loaded","timestamp":"2025-07-29 17:22:24:2224"}
+{"level":"info","message":"Health check routes loaded","timestamp":"2025-07-29 17:22:24:2224"}
+{"environment":"development","level":"info","message":"AI Masterclass Supabase Server started","port":"8000","serviceKeyConfigured":"Yes","supabaseUrl":"https://fsohtauqtcftdjcjfdpq.supabase.co","timestamp":"2025-07-29 17:22:24:2224"}
+{"level":"info","message":"🚀 Starting AI-Masterclass Backend Server...","timestamp":"2025-07-29 17:24:02:242"}
+{"level":"info","message":"💡 Environment loaded:","timestamp":"2025-07-29 17:24:02:242"}
+{"level":"info","message":"Supabase authentication routes loaded","timestamp":"2025-07-29 17:24:02:242"}
+{"level":"info","message":"Supabase progress routes loaded","timestamp":"2025-07-29 17:24:02:242"}
+{"level":"info","message":"Supabase interactive routes loaded","timestamp":"2025-07-29 17:24:02:242"}
+{"level":"info","message":"Health check routes loaded","timestamp":"2025-07-29 17:24:02:242"}
+{"environment":"development","level":"info","message":"AI Masterclass Supabase Server started","port":"8000","serviceKeyConfigured":"Yes","supabaseUrl":"https://fsohtauqtcftdjcjfdpq.supabase.co","timestamp":"2025-07-29 17:24:02:242"}
+{"code":"42703","details":null,"hint":null,"level":"error","message":"Error fetching user progress: column user_progress.exercise_id does not exist","timestamp":"2025-07-29 18:16:45:1645"}
+{"code":"42703","details":null,"hint":null,"level":"error","message":"Error fetching user progress: column user_progress.exercise_id does not exist","timestamp":"2025-07-29 18:16:46:1646"}
+{"code":"42703","details":null,"hint":null,"level":"error","message":"Error fetching user progress: column user_progress.exercise_id does not exist","timestamp":"2025-07-29 18:24:26:2426"}
+{"code":"42703","details":null,"hint":null,"level":"error","message":"Error fetching user progress: column user_progress.exercise_id does not exist","timestamp":"2025-07-29 18:24:26:2426"}
+{"code":"42703","details":null,"hint":null,"level":"error","message":"Error fetching user progress: column user_progress.exercise_id does not exist","timestamp":"2025-07-29 18:24:30:2430"}
+{"code":"42703","details":null,"hint":null,"level":"error","message":"Error fetching user progress: column user_progress.exercise_id does not exist","timestamp":"2025-07-29 18:24:30:2430"}
+{"code":"42703","details":null,"hint":null,"level":"error","message":"Error fetching user progress: column user_progress.exercise_id does not exist","timestamp":"2025-07-29 18:27:00:270"}
+{"code":"42703","details":null,"hint":null,"level":"error","message":"Error fetching user progress: column user_progress.exercise_id does not exist","timestamp":"2025-07-29 18:27:00:270"}
+{"code":"42703","details":null,"hint":null,"level":"error","message":"Error fetching user progress: column user_progress.exercise_id does not exist","timestamp":"2025-07-29 18:30:02:302"}
+{"code":"42703","details":null,"hint":null,"level":"error","message":"Error fetching user progress: column user_progress.exercise_id does not exist","timestamp":"2025-07-29 18:30:02:302"}
+{"code":"42703","details":null,"hint":null,"level":"error","message":"Error fetching user progress: column user_progress.exercise_id does not exist","timestamp":"2025-07-29 18:30:31:3031"}
+{"code":"42703","details":null,"hint":null,"level":"error","message":"Error fetching user progress: column user_progress.exercise_id does not exist","timestamp":"2025-07-29 18:30:31:3031"}
+{"code":"42703","details":null,"hint":null,"level":"error","message":"Error fetching user progress: column user_progress.exercise_id does not exist","timestamp":"2025-07-29 18:38:28:3828"}
+{"level":"info","message":"🚀 Starting AI-Masterclass Backend Server...","timestamp":"2025-07-29 18:39:08:398"}
+{"level":"info","message":"💡 Environment loaded:","timestamp":"2025-07-29 18:39:08:398"}
+{"level":"info","message":"Supabase authentication routes loaded","timestamp":"2025-07-29 18:39:08:398"}
+{"level":"info","message":"Supabase progress routes loaded","timestamp":"2025-07-29 18:39:08:398"}
+{"level":"info","message":"Supabase interactive routes loaded","timestamp":"2025-07-29 18:39:08:398"}
+{"level":"info","message":"Health check routes loaded","timestamp":"2025-07-29 18:39:08:398"}
+{"environment":"development","level":"info","message":"AI Masterclass Supabase Server started","port":"8000","serviceKeyConfigured":"Yes","supabaseUrl":"https://fsohtauqtcftdjcjfdpq.supabase.co","timestamp":"2025-07-29 18:39:08:398"}
+{"level":"info","message":"Courses API called with filter:","timestamp":"2025-07-29 18:39:18:3918"}

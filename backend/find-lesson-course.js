@@ -1,6 +1,7 @@
 // Find which course our rich content lessons belong to
 require('dotenv').config({ path: __dirname + '/.env' });
 const { createClient } = require('@supabase/supabase-js');
+const logger = require('../utils/logger');
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
@@ -14,7 +15,7 @@ const supabase = createClient(
 );
 
 async function findLessonCourse() {
-  console.log('🔍 Finding which course contains our rich content lessons...');
+  logger.info('🔍 Finding which course contains our rich content lessons...');
   
   try {
     // Get our specific lessons
@@ -23,12 +24,12 @@ async function findLessonCourse() {
       .select('*')
       .in('title', ['Debugging and Troubleshooting Prompts', 'Introduction to Google AI & Gemini']);
       
-    console.log(`Found ${lessons.length} lessons`);
+    logger.info(`Found ${lessons.length} lessons`);
     
     for (const lesson of lessons) {
-      console.log(`\n📚 Lesson: "${lesson.title}"`);
-      console.log(`- ID: ${lesson.id}`);
-      console.log(`- Course ID: ${lesson.course_id}`);
+      logger.info(`\n📚 Lesson: "${lesson.title}"`);
+      logger.info(`- ID: ${lesson.id}`);
+      logger.info(`- Course ID: ${lesson.course_id}`);
       
       // Get the course details
       const { data: course } = await supabase
@@ -38,13 +39,13 @@ async function findLessonCourse() {
         .single();
         
       if (course) {
-        console.log(`- Course: "${course.title}"`);
-        console.log(`- Course Description: ${course.description}`);
+        logger.info(`- Course: "${course.title}"`);
+        logger.info(`- Course Description: ${course.description}`);
       }
     }
     
     // Also show all courses and their lesson counts
-    console.log('\n📊 All courses and lesson counts:');
+    logger.info('\n📊 All courses and lesson counts:');
     const { data: allCourses } = await supabase
       .from('courses')
       .select('*');
@@ -55,18 +56,18 @@ async function findLessonCourse() {
         .select('id, title')
         .eq('course_id', course.id);
         
-      console.log(`\n🎓 "${course.title}" (ID: ${course.id})`);
-      console.log(`   Lessons: ${courseLessons.length}`);
+      logger.info(`\n🎓 "${course.title}" (ID: ${course.id})`);
+      logger.info(`   Lessons: ${courseLessons.length}`);
       
       if (courseLessons.length > 0) {
         courseLessons.forEach((lesson, index) => {
-          console.log(`   ${index + 1}. ${lesson.title}`);
+          logger.info(`   ${index + 1}. ${lesson.title}`);
         });
       }
     }
     
   } catch (error) {
-    console.error('❌ Error:', error);
+    logger.error('❌ Error:', error);
   }
 }
 

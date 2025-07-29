@@ -3,14 +3,15 @@ require('dotenv').config();
 const { createClient } = require('@supabase/supabase-js');
 const fs = require('fs');
 const path = require('path');
+const logger = require('../utils/logger');
 
 async function diagnoseFrontendIssue() {
-  console.log('🔍 COMPREHENSIVE FRONTEND DIAGNOSIS');
-  console.log('===================================');
+  logger.info('🔍 COMPREHENSIVE FRONTEND DIAGNOSIS');
+  logger.info('===================================');
   
   // Step 1: Check all environment files
-  console.log('1️⃣ ENVIRONMENT FILES ANALYSIS');
-  console.log('==============================');
+  logger.info('1️⃣ ENVIRONMENT FILES ANALYSIS');
+  logger.info('==============================');
   
   const envFiles = [
     '../frontend/.env',
@@ -25,8 +26,8 @@ async function diagnoseFrontendIssue() {
     try {
       if (fs.existsSync(envFile)) {
         const content = fs.readFileSync(envFile, 'utf8');
-        console.log(`\n📁 ${envFile}:`);
-        console.log('   File exists: ✅');
+        logger.info(`\n📁 ${envFile}:`);
+        logger.info('   File exists: ✅');
         
         // Extract Supabase config
         const urlMatch = content.match(/REACT_APP_SUPABASE_URL=(.+)/);
@@ -34,126 +35,126 @@ async function diagnoseFrontendIssue() {
         
         if (urlMatch) {
           const url = urlMatch[1].trim();
-          console.log(`   URL: ${url}`);
+          logger.info(`   URL: ${url}`);
           frontendConfig.url = url;
         }
         
         if (keyMatch) {
           const key = keyMatch[1].trim();
-          console.log(`   Key: ${key.substring(0, 30)}...`);
+          logger.info(`   Key: ${key.substring(0, 30)}...`);
           frontendConfig.key = key;
         }
       } else {
-        console.log(`\n📁 ${envFile}: File not found`);
+        logger.info(`\n📁 ${envFile}: File not found`);
       }
     } catch (error) {
-      console.log(`\n📁 ${envFile}: Error reading - ${error.message}`);
+      logger.info(`\n📁 ${envFile}: Error reading - ${error.message}`);
     }
   }
   
   // Step 2: Compare with backend config
-  console.log('\n2️⃣ BACKEND VS FRONTEND COMPARISON');
-  console.log('=================================');
+  logger.info('\n2️⃣ BACKEND VS FRONTEND COMPARISON');
+  logger.info('=================================');
   
   const backendUrl = process.env.SUPABASE_URL;
   const backendKey = process.env.SUPABASE_ANON_KEY;
   
-  console.log(`Backend URL:  ${backendUrl}`);
-  console.log(`Frontend URL: ${frontendConfig.url || 'NOT FOUND'}`);
-  console.log(`URLs match: ${backendUrl === frontendConfig.url ? '✅' : '❌'}`);
+  logger.info(`Backend URL:  ${backendUrl}`);
+  logger.info(`Frontend URL: ${frontendConfig.url || 'NOT FOUND'}`);
+  logger.info(`URLs match: ${backendUrl === frontendConfig.url ? '✅' : '❌'}`);
   
-  console.log(`\nBackend Key:  ${backendKey?.substring(0, 30)}...`);
-  console.log(`Frontend Key: ${frontendConfig.key?.substring(0, 30) || 'NOT FOUND'}...`);
-  console.log(`Keys match: ${backendKey === frontendConfig.key ? '✅' : '❌'}`);
+  logger.info(`\nBackend Key:  ${backendKey?.substring(0, 30)}...`);
+  logger.info(`Frontend Key: ${frontendConfig.key?.substring(0, 30) || 'NOT FOUND'}...`);
+  logger.info(`Keys match: ${backendKey === frontendConfig.key ? '✅' : '❌'}`);
   
   // Step 3: Test with frontend config
-  console.log('\n3️⃣ TESTING WITH FRONTEND CONFIGURATION');
-  console.log('======================================');
+  logger.info('\n3️⃣ TESTING WITH FRONTEND CONFIGURATION');
+  logger.info('======================================');
   
   if (frontendConfig.url && frontendConfig.key) {
     try {
       const frontendClient = createClient(frontendConfig.url, frontendConfig.key);
       
       // Test session check (what frontend does first)
-      console.log('\nTesting session check...');
+      logger.info('\nTesting session check...');
       const { data: sessionData, error: sessionError } = await frontendClient.auth.getSession();
       
       if (sessionError) {
-        console.log(`❌ Session check failed: ${sessionError.message}`);
+        logger.info(`❌ Session check failed: ${sessionError.message}`);
         
         if (sessionError.message.includes('Invalid API key')) {
-          console.log('🔥 FRONTEND CONFIG HAS INVALID API KEY!');
+          logger.info('🔥 FRONTEND CONFIG HAS INVALID API KEY!');
         }
       } else {
-        console.log('✅ Session check working');
+        logger.info('✅ Session check working');
       }
       
       // Test login with a dummy user (simulating what frontend does)
-      console.log('\nTesting login attempt...');
+      logger.info('\nTesting login attempt...');
       const { data: loginData, error: loginError } = await frontendClient.auth.signInWithPassword({
         email: 'test@example.com',
         password: 'testpass123'
       });
       
       if (loginError) {
-        console.log(`Login error: ${loginError.message}`);
+        logger.info(`Login error: ${loginError.message}`);
         
         if (loginError.message.includes('Invalid API key')) {
-          console.log('🔥 CONFIRMED: Frontend configuration has invalid API key!');
-          console.log('📋 Root cause identified!');
+          logger.info('🔥 CONFIRMED: Frontend configuration has invalid API key!');
+          logger.info('📋 Root cause identified!');
         } else {
-          console.log('✅ API key working (normal auth error expected)');
+          logger.info('✅ API key working (normal auth error expected)');
         }
       }
       
     } catch (error) {
-      console.log(`❌ Frontend config test failed: ${error.message}`);
+      logger.info(`❌ Frontend config test failed: ${error.message}`);
     }
   } else {
-    console.log('❌ Cannot test - frontend config incomplete');
+    logger.info('❌ Cannot test - frontend config incomplete');
   }
   
   // Step 4: Check if frontend is using cached build
-  console.log('\n4️⃣ FRONTEND BUILD ANALYSIS');
-  console.log('==========================');
+  logger.info('\n4️⃣ FRONTEND BUILD ANALYSIS');
+  logger.info('==========================');
   
   const buildPath = '../frontend/build';
   if (fs.existsSync(buildPath)) {
-    console.log('📦 Build directory exists');
+    logger.info('📦 Build directory exists');
     
     // Check if there are any compiled config files
     const staticJsPath = path.join(buildPath, 'static', 'js');
     if (fs.existsSync(staticJsPath)) {
-      console.log('📁 Static JS files exist (built app may use cached config)');
-      console.log('💡 Try: npm run build to rebuild with new environment variables');
+      logger.info('📁 Static JS files exist (built app may use cached config)');
+      logger.info('💡 Try: npm run build to rebuild with new environment variables');
     }
   } else {
-    console.log('📦 No build directory (development mode)');
+    logger.info('📦 No build directory (development mode)');
   }
   
   // Step 5: Generate fresh config
-  console.log('\n5️⃣ SOLUTION GENERATOR');
-  console.log('=====================');
+  logger.info('\n5️⃣ SOLUTION GENERATOR');
+  logger.info('=====================');
   
   if (backendKey && backendUrl) {
-    console.log('🛠️ CORRECTED FRONTEND CONFIG:');
-    console.log('');
-    console.log('Create/update your frontend/.env file with:');
-    console.log('');
-    console.log(`REACT_APP_SUPABASE_URL=${backendUrl}`);
-    console.log(`REACT_APP_SUPABASE_ANON_KEY=${backendKey}`);
-    console.log('REACT_APP_API_URL=http://localhost:8000');
-    console.log('');
-    console.log('🔄 THEN RUN THESE COMMANDS:');
-    console.log('cd ../frontend');
-    console.log('rm -rf build node_modules/.cache');
-    console.log('npm start');
-    console.log('');
-    console.log('🌐 BROWSER STEPS:');
-    console.log('1. Clear all browser data for localhost:3000');
-    console.log('2. Open incognito/private window');
-    console.log('3. Go to http://localhost:3000');
-    console.log('4. Try login again');
+    logger.info('🛠️ CORRECTED FRONTEND CONFIG:');
+    logger.info('');
+    logger.info('Create/update your frontend/.env file with:');
+    logger.info('');
+    logger.info(`REACT_APP_SUPABASE_URL=${backendUrl}`);
+    logger.info(`REACT_APP_SUPABASE_ANON_KEY=${backendKey}`);
+    logger.info('REACT_APP_API_URL=http://localhost:8000');
+    logger.info('');
+    logger.info('🔄 THEN RUN THESE COMMANDS:');
+    logger.info('cd ../frontend');
+    logger.info('rm -rf build node_modules/.cache');
+    logger.info('npm start');
+    logger.info('');
+    logger.info('🌐 BROWSER STEPS:');
+    logger.info('1. Clear all browser data for localhost:3000');
+    logger.info('2. Open incognito/private window');
+    logger.info('3. Go to http://localhost:3000');
+    logger.info('4. Try login again');
     
     // Write corrected config
     const correctedConfig = `REACT_APP_SUPABASE_URL=${backendUrl}
@@ -164,9 +165,9 @@ REACT_APP_CLIENT_URL=http://localhost:3000
     
     try {
       fs.writeFileSync('../frontend/.env', correctedConfig);
-      console.log('\n✅ CORRECTED CONFIG WRITTEN TO frontend/.env');
+      logger.info('\n✅ CORRECTED CONFIG WRITTEN TO frontend/.env');
     } catch (error) {
-      console.log(`\n❌ Could not write corrected config: ${error.message}`);
+      logger.info(`\n❌ Could not write corrected config: ${error.message}`);
     }
   }
 }

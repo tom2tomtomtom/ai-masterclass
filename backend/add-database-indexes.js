@@ -1,11 +1,12 @@
 const { createClient } = require('@supabase/supabase-js');
+const logger = require('../utils/logger');
 
 // Supabase configuration
 const supabaseUrl = process.env.SUPABASE_URL || 'https://fsohtauqtcftdjcjfdpq.supabase.co';
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 if (!supabaseServiceKey) {
-  console.error("CRITICAL: SUPABASE_SERVICE_ROLE_KEY environment variable not set");
+  logger.error("CRITICAL: SUPABASE_SERVICE_ROLE_KEY environment variable not set");
   process.exit(1);
 }
 
@@ -293,8 +294,8 @@ const indexes = [
 
 async function addDatabaseIndexes() {
   try {
-    console.log('🚀 Starting database index creation...');
-    console.log(`📊 Total indexes to create: ${indexes.length}`);
+    logger.info('🚀 Starting database index creation...');
+    logger.info(`📊 Total indexes to create: ${indexes.length}`);
     
     let successCount = 0;
     let errorCount = 0;
@@ -302,7 +303,7 @@ async function addDatabaseIndexes() {
     
     for (const index of indexes) {
       try {
-        console.log(`  📝 Creating index: ${index.name} on table ${index.table}`);
+        logger.info(`  📝 Creating index: ${index.name} on table ${index.table}`);
         
         // Execute the index creation SQL using Supabase RPC
         const { data, error } = await supabase.rpc('exec_sql', {
@@ -311,39 +312,39 @@ async function addDatabaseIndexes() {
         
         if (error) {
           if (error.message.includes('already exists')) {
-            console.log(`  ✅ Index ${index.name} already exists - skipping`);
+            logger.info(`  ✅ Index ${index.name} already exists - skipping`);
             successCount++;
           } else {
-            console.log(`  ❌ Failed to create index ${index.name}: ${error.message}`);
+            logger.info(`  ❌ Failed to create index ${index.name}: ${error.message}`);
             errors.push({ index: index.name, error: error.message });
             errorCount++;
           }
         } else {
-          console.log(`  ✅ Successfully created index: ${index.name}`);
+          logger.info(`  ✅ Successfully created index: ${index.name}`);
           successCount++;
         }
       } catch (err) {
-        console.log(`  ❌ Error creating index ${index.name}: ${err.message}`);
+        logger.info(`  ❌ Error creating index ${index.name}: ${err.message}`);
         errors.push({ index: index.name, error: err.message });
         errorCount++;
       }
     }
     
-    console.log('\\n🎉 Database index creation completed!');
-    console.log(`📊 Final Statistics:`);
-    console.log(`   - Total indexes processed: ${indexes.length}`);
-    console.log(`   - Successfully created/verified: ${successCount}`);
-    console.log(`   - Errors: ${errorCount}`);
+    logger.info('\\n🎉 Database index creation completed!');
+    logger.info(`📊 Final Statistics:`);
+    logger.info(`   - Total indexes processed: ${indexes.length}`);
+    logger.info(`   - Successfully created/verified: ${successCount}`);
+    logger.info(`   - Errors: ${errorCount}`);
     
     if (errors.length > 0) {
-      console.log('\\n❌ Errors encountered:');
+      logger.info('\\n❌ Errors encountered:');
       errors.forEach(({ index, error }) => {
-        console.log(`   - ${index}: ${error}`);
+        logger.info(`   - ${index}: ${error}`);
       });
     }
     
     // Verify some key indexes
-    console.log('\\n🔍 Verifying key indexes...');
+    logger.info('\\n🔍 Verifying key indexes...');
     await verifyIndexes();
     
     return {
@@ -355,7 +356,7 @@ async function addDatabaseIndexes() {
     };
     
   } catch (error) {
-    console.error('❌ Fatal error during index creation:', error);
+    logger.error('❌ Fatal error during index creation:', error);
     throw error;
   }
 }
@@ -365,7 +366,7 @@ async function verifyIndexes() {
   
   for (const table of keyTables) {
     try {
-      console.log(`  🔍 Verifying table ${table} exists...`);
+      logger.info(`  🔍 Verifying table ${table} exists...`);
       
       const { data, error } = await supabase
         .from(table)
@@ -374,22 +375,22 @@ async function verifyIndexes() {
       
       if (error) {
         if (error.code === '42P01') {
-          console.log(`  ⚠️ Table ${table} does not exist - indexes cannot be created`);
+          logger.info(`  ⚠️ Table ${table} does not exist - indexes cannot be created`);
         } else {
-          console.log(`  ❌ Error accessing table ${table}: ${error.message}`);
+          logger.info(`  ❌ Error accessing table ${table}: ${error.message}`);
         }
       } else {
-        console.log(`  ✅ Table ${table} exists and is accessible`);
+        logger.info(`  ✅ Table ${table} exists and is accessible`);
       }
     } catch (err) {
-      console.log(`  ❌ Error verifying table ${table}: ${err.message}`);
+      logger.info(`  ❌ Error verifying table ${table}: ${err.message}`);
     }
   }
 }
 
 // Performance monitoring queries
 async function performanceAnalysis() {
-  console.log('\\n📈 Running performance analysis...');
+  logger.info('\\n📈 Running performance analysis...');
   
   const queries = [
     {
@@ -413,9 +414,9 @@ async function performanceAnalysis() {
       const endTime = Date.now();
       const duration = endTime - startTime;
       
-      console.log(`  📊 ${name}: ${duration}ms (${result.count || 0} records)`);
+      logger.info(`  📊 ${name}: ${duration}ms (${result.count || 0} records)`);
     } catch (err) {
-      console.log(`  ❌ ${name} failed: ${err.message}`);
+      logger.info(`  ❌ ${name} failed: ${err.message}`);
     }
   }
 }
@@ -424,7 +425,7 @@ async function performanceAnalysis() {
 if (require.main === module) {
   addDatabaseIndexes()
     .then(async (result) => {
-      console.log('\\n🎯 Index Creation Result:', result);
+      logger.info('\\n🎯 Index Creation Result:', result);
       
       // Run performance analysis
       await performanceAnalysis();
@@ -432,7 +433,7 @@ if (require.main === module) {
       process.exit(result.success ? 0 : 1);
     })
     .catch((error) => {
-      console.error('\\n💥 Index creation failed:', error);
+      logger.error('\\n💥 Index creation failed:', error);
       process.exit(1);
     });
 }

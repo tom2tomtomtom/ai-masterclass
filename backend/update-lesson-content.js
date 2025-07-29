@@ -1,6 +1,7 @@
 // Backend script to update lesson content using service role key
 require('dotenv').config({ path: __dirname + '/.env' });
 const { createClient } = require('@supabase/supabase-js');
+const logger = require('../utils/logger');
 
 // Use service role key for admin operations
 const supabase = createClient(
@@ -207,7 +208,7 @@ Understanding these distinctions ensures you select the optimal Gemini variant f
 };
 
 async function updateLessonContent() {
-  console.log('🚀 Updating lesson content with service role key...');
+  logger.info('🚀 Updating lesson content with service role key...');
   
   try {
     // First, check current content
@@ -217,11 +218,11 @@ async function updateLessonContent() {
       .limit(5);
       
     if (error) {
-      console.error('❌ Error fetching lessons:', error);
+      logger.error('❌ Error fetching lessons:', error);
       return;
     }
     
-    console.log(`📚 Found ${lessons.length} lessons`);
+    logger.info(`📚 Found ${lessons.length} lessons`);
     
     // Update lessons that match our content
     let updated = 0;
@@ -229,9 +230,9 @@ async function updateLessonContent() {
       const newContent = richContent[lesson.title];
       
       if (newContent) {
-        console.log(`📝 Updating: ${lesson.title}`);
-        console.log(`   Old content length: ${lesson.content ? lesson.content.length : 0}`);
-        console.log(`   New content length: ${newContent.length}`);
+        logger.info(`📝 Updating: ${lesson.title}`);
+        logger.info(`   Old content length: ${lesson.content ? lesson.content.length : 0}`);
+        logger.info(`   New content length: ${newContent.length}`);
         
         const { error: updateError } = await supabase
           .from('lessons')
@@ -239,18 +240,18 @@ async function updateLessonContent() {
           .eq('id', lesson.id);
           
         if (updateError) {
-          console.error(`❌ Update failed for ${lesson.title}:`, updateError);
+          logger.error(`❌ Update failed for ${lesson.title}:`, updateError);
         } else {
           updated++;
-          console.log(`✅ Updated ${lesson.title}`);
+          logger.info(`✅ Updated ${lesson.title}`);
         }
       }
     }
     
-    console.log(`\\n🎉 Updated ${updated} lessons!`);
+    logger.info(`\\n🎉 Updated ${updated} lessons!`);
     
     // Verify the updates
-    console.log('\\n🔍 Verifying updates...');
+    logger.info('\\n🔍 Verifying updates...');
     const { data: updatedLessons } = await supabase
       .from('lessons')
       .select('title, content')
@@ -259,18 +260,18 @@ async function updateLessonContent() {
     updatedLessons?.forEach(lesson => {
       const hasRichContent = richContent[lesson.title];
       if (hasRichContent) {
-        console.log(`   📊 ${lesson.title}: ${lesson.content.length} chars (${lesson.content.startsWith('#') ? 'MARKDOWN' : 'PLAIN'})`);
+        logger.info(`   📊 ${lesson.title}: ${lesson.content.length} chars (${lesson.content.startsWith('#') ? 'MARKDOWN' : 'PLAIN'})`);
       }
     });
     
   } catch (error) {
-    console.error('❌ Script error:', error);
+    logger.error('❌ Script error:', error);
   }
 }
 
 if (!process.env.SUPABASE_SERVICE_ROLE_KEY) {
-  console.error('❌ SUPABASE_SERVICE_ROLE_KEY not found in .env file');
-  console.log('Please add your service role key to the .env file');
+  logger.error('❌ SUPABASE_SERVICE_ROLE_KEY not found in .env file');
+  logger.info('Please add your service role key to the .env file');
 } else {
   updateLessonContent();
 }

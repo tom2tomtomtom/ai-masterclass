@@ -1,24 +1,25 @@
 const fs = require('fs');
+const logger = require('../utils/logger');
 
 function validateJavaScriptSyntax(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    console.log(`📊 File Analysis:`);
-    console.log(`- Total lines: ${content.split('\n').length}`);
-    console.log(`- Total characters: ${content.length}`);
-    console.log(`- Estimated words: ${Math.round(content.length / 5)}`);
+    logger.info(`📊 File Analysis:`);
+    logger.info(`- Total lines: ${content.split('\n').length}`);
+    logger.info(`- Total characters: ${content.length}`);
+    logger.info(`- Estimated words: ${Math.round(content.length / 5)}`);
     
     // Try to check basic syntax by looking for common patterns
     const lessonCount = (content.match(/title:\s*'/g) || []).length;
-    console.log(`- Estimated lessons: ${lessonCount}`);
+    logger.info(`- Estimated lessons: ${lessonCount}`);
     
     // Check for template literal closures
     const templateLiteralClosures = (content.match(/\`,\s*$/gm) || []).length;
-    console.log(`- Template literal closures found: ${templateLiteralClosures}`);
+    logger.info(`- Template literal closures found: ${templateLiteralClosures}`);
     
     // Check for proper object structures
     const orderIndexCount = (content.match(/order_index:/g) || []).length;
-    console.log(`- Lessons with order_index: ${orderIndexCount}`);
+    logger.info(`- Lessons with order_index: ${orderIndexCount}`);
     
     return { 
       valid: true, 
@@ -40,16 +41,16 @@ function validateJavaScriptSyntax(filePath) {
 const filePath = './seed-complete-courses.js';
 const result = validateJavaScriptSyntax(filePath);
 
-console.log('\n🔍 Syntax Validation Results:');
+logger.info('\n🔍 Syntax Validation Results:');
 if (result.valid) {
-  console.log('✅ Basic validation passed');
-  console.log(`📈 Content preserved: ~${result.estimatedWords.toLocaleString()} words`);
+  logger.info('✅ Basic validation passed');
+  logger.info(`📈 Content preserved: ~${result.estimatedWords.toLocaleString()} words`);
   
   if (result.estimatedWords >= 200000) {
-    console.log('✅ Content volume target met (206K+ words)');
+    logger.info('✅ Content volume target met (206K+ words)');
   } else {
-    console.log(`⚠️ Content volume below target: ${result.estimatedWords.toLocaleString()} < 206,000 words`);
+    logger.info(`⚠️ Content volume below target: ${result.estimatedWords.toLocaleString()} < 206,000 words`);
   }
 } else {
-  console.log('❌ Validation failed:', result.error);
+  logger.info('❌ Validation failed:', result.error);
 }

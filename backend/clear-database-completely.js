@@ -6,6 +6,7 @@
  */
 
 const { createClient } = require('@supabase/supabase-js');
+const logger = require('../utils/logger');
 require('dotenv').config();
 
 const supabase = createClient(
@@ -14,14 +15,14 @@ const supabase = createClient(
 );
 
 async function clearDatabaseCompletely() {
-  console.log('🧹 COMPLETE DATABASE CLEAR - PREPARING FOR REBUILD');
-  console.log('==================================================');
-  console.log('⚠️  This will remove ALL existing content from the database');
-  console.log('📊 Current content will be permanently deleted\n');
+  logger.info('🧹 COMPLETE DATABASE CLEAR - PREPARING FOR REBUILD');
+  logger.info('==================================================');
+  logger.info('⚠️  This will remove ALL existing content from the database');
+  logger.info('📊 Current content will be permanently deleted\n');
 
   try {
     // Step 1: Check current content
-    console.log('1️⃣ Checking current database content...');
+    logger.info('1️⃣ Checking current database content...');
     
     const { data: courses, error: coursesError } = await supabase
       .from('courses')
@@ -36,63 +37,63 @@ async function clearDatabaseCompletely() {
       .select('id, title');
 
     if (coursesError || modulesError || lessonsError) {
-      console.error('❌ Error checking database:', coursesError || modulesError || lessonsError);
+      logger.error('❌ Error checking database:', coursesError || modulesError || lessonsError);
       return false;
     }
 
-    console.log(`📚 Current courses: ${courses?.length || 0}`);
-    console.log(`🎯 Current modules: ${modules?.length || 0}`);
-    console.log(`📝 Current lessons: ${lessons?.length || 0}`);
+    logger.info(`📚 Current courses: ${courses?.length || 0}`);
+    logger.info(`🎯 Current modules: ${modules?.length || 0}`);
+    logger.info(`📝 Current lessons: ${lessons?.length || 0}`);
 
     if ((courses?.length || 0) === 0 && (modules?.length || 0) === 0 && (lessons?.length || 0) === 0) {
-      console.log('✅ Database is already empty - no clearing needed');
+      logger.info('✅ Database is already empty - no clearing needed');
       return true;
     }
 
     // Step 2: Clear in dependency order (lessons -> modules -> courses)
-    console.log('\n2️⃣ Clearing database content...');
+    logger.info('\n2️⃣ Clearing database content...');
     
     // Clear lessons first (they depend on modules)
-    console.log('🗑️ Clearing lessons...');
+    logger.info('🗑️ Clearing lessons...');
     const { error: lessonsDeleteError } = await supabase
       .from('lessons')
       .delete()
       .neq('id', '00000000-0000-0000-0000-000000000000'); // Delete all
     
     if (lessonsDeleteError) {
-      console.error('❌ Error clearing lessons:', lessonsDeleteError);
+      logger.error('❌ Error clearing lessons:', lessonsDeleteError);
       return false;
     }
-    console.log('✅ Lessons cleared');
+    logger.info('✅ Lessons cleared');
 
     // Clear modules (they depend on courses)
-    console.log('🗑️ Clearing modules...');
+    logger.info('🗑️ Clearing modules...');
     const { error: modulesDeleteError } = await supabase
       .from('modules')
       .delete()
       .neq('id', '00000000-0000-0000-0000-000000000000'); // Delete all
     
     if (modulesDeleteError) {
-      console.error('❌ Error clearing modules:', modulesDeleteError);
+      logger.error('❌ Error clearing modules:', modulesDeleteError);
       return false;
     }
-    console.log('✅ Modules cleared');
+    logger.info('✅ Modules cleared');
 
     // Clear courses
-    console.log('🗑️ Clearing courses...');
+    logger.info('🗑️ Clearing courses...');
     const { error: coursesDeleteError } = await supabase
       .from('courses')
       .delete()
       .neq('id', '00000000-0000-0000-0000-000000000000'); // Delete all
     
     if (coursesDeleteError) {
-      console.error('❌ Error clearing courses:', coursesDeleteError);
+      logger.error('❌ Error clearing courses:', coursesDeleteError);
       return false;
     }
-    console.log('✅ Courses cleared');
+    logger.info('✅ Courses cleared');
 
     // Step 3: Verify clearing
-    console.log('\n3️⃣ Verifying database is empty...');
+    logger.info('\n3️⃣ Verifying database is empty...');
     
     const { count: courseCount } = await supabase
       .from('courses')
@@ -106,22 +107,22 @@ async function clearDatabaseCompletely() {
       .from('lessons')
       .select('*', { count: 'exact', head: true });
 
-    console.log(`📚 Remaining courses: ${courseCount || 0}`);
-    console.log(`🎯 Remaining modules: ${moduleCount || 0}`);
-    console.log(`📝 Remaining lessons: ${lessonCount || 0}`);
+    logger.info(`📚 Remaining courses: ${courseCount || 0}`);
+    logger.info(`🎯 Remaining modules: ${moduleCount || 0}`);
+    logger.info(`📝 Remaining lessons: ${lessonCount || 0}`);
 
     if ((courseCount || 0) === 0 && (moduleCount || 0) === 0 && (lessonCount || 0) === 0) {
-      console.log('\n🎉 DATABASE COMPLETELY CLEARED!');
-      console.log('✅ Ready for complete content rebuild');
-      console.log('📊 All tables are now empty and ready for seeding');
+      logger.info('\n🎉 DATABASE COMPLETELY CLEARED!');
+      logger.info('✅ Ready for complete content rebuild');
+      logger.info('📊 All tables are now empty and ready for seeding');
       return true;
     } else {
-      console.log('\n⚠️ Some content may still remain');
+      logger.info('\n⚠️ Some content may still remain');
       return false;
     }
 
   } catch (error) {
-    console.error('❌ Database clearing failed:', error);
+    logger.error('❌ Database clearing failed:', error);
     return false;
   }
 }
@@ -131,16 +132,16 @@ if (require.main === module) {
   clearDatabaseCompletely()
     .then(success => {
       if (success) {
-        console.log('\n🚀 READY FOR COMPLETE SYSTEM REBUILD!');
-        console.log('Next step: Create master seeding script for all 3,162 files');
+        logger.info('\n🚀 READY FOR COMPLETE SYSTEM REBUILD!');
+        logger.info('Next step: Create master seeding script for all 3,162 files');
         process.exit(0);
       } else {
-        console.log('\n❌ Database clearing failed');
+        logger.info('\n❌ Database clearing failed');
         process.exit(1);
       }
     })
     .catch(error => {
-      console.error('💥 Unexpected error:', error);
+      logger.error('💥 Unexpected error:', error);
       process.exit(1);
     });
 }
